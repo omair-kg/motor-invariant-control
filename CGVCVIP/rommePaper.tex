@@ -1,0 +1,175 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+
+\documentclass[a4paper]{article}
+
+
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{pstricks,pstricks-add}
+\newcommand{\figurepath}{Figures}
+
+\newcommand{\titlesize}{\fontsize{16pt} \selectfont}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{\titlesize \bf Adaptive Character Motion Synthesis By Qualitative Approach}
+
+\author{
+Fangde Liu\\
+\\National Center For Computer Animation\\Media School\\
+\\Bournemouth University\\
+Email: fliu@bmth.ac.uk
+\and
+Xiaosong Yang\\
+NCCA\\Media School\\
+Bournemouth University\\
+xyang@bournemouth.ac.uk
+\and
+Jianjun Zhang 
+NCCA\\Media School\\
+Bournemouth University\\
+jzhang@bournemouth.ac.uk
+}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+%\author{\IEEEauthorblockN{Fangde Liu}
+%\IEEEauthorblockA{National Center For Computer Animation\\Media School\\
+%Bournemouth University\\
+%Email: fliu@bmth.ac.uk}
+
+
+%\and
+
+%\IEEEauthorblockN{Xiaosong Yang}
+%\IEEEauthorblockA{NCCA\\Media School\\
+%Bournemouth University\\
+%xyang@bournemouth.ac.uk
+%}
+%\and
+%\IEEEauthorblockN{Jianjun Zhang}
+%\IEEEauthorblockA{NCCA\\Media School\\
+%Bournemouth University\\
+%jzhang@bournemouth.ac.uk
+%}
+%}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+Adaptive motion synthesis normally involves very complicate computation from physical simulation.  However based on the biological research, the neural system of human being and animals only take very little effect to control their motion. Instead of controlling each part of its body, natural life only maintains or tweaks some qualitative properties of its motion system to finish very complicate interaction with environment. Inspired by this special working pattern, in this paper, we proposed a new efficient adaptive motion synthesis method based on the qualitative control theory. It involves only very little computation to control the qualitative properties of motion. Adaptive motion control is achieved through manipulating the topological structure of the dynamic system to enhance the structural stability, rather than counteracting the perturbation effects. Compared with current simulation method, our algorithm is more computational efficient and has the potential to be accelerated by GPU.
+\end{abstract}
+
+{\bf keywords:}
+
+Charater Motion Synthesis, Qualitative Dynamic, Physics Based Animation
+
+
+
+
+
+\input{intro}
+\input{prework}
+\input{theory}
+\input{app}
+
+
+
+
+\section{Discussion and Future Work}
+Qualitative Control Theory can synthesize motion with adaptive behaviour while keeping the qualitative properties of motion.
+It provides a new method to synthesize adaptive motion efficiently. Since very little computation involved in each controller, compared with traditional optimiaztion based method, this method can generate motions in realtime. And most importantly, our method is parallel in nature. Each CPG only control on single degree of freedom. For complicate characters, many different CPGs can be simulated in parallel without referencing each other. Since many physical simulation modules have been implemented efficiently using GPU, in future, most of the computational burden of our method can be shifted to GPU. This will make our algorithm generating agile motions even with very complicated environment and involving whole body structures. 
+
+
+However since we bring in a new theory into the motion synthesis area, many works need to be done in the future. For example, our current model only involves the lower body structure, upper body and more joints will be considered in our future design. To proof the adaptivness, we will need experiment on more complicate terrian instead of just upslope and downslope.
+
+More Central Pattern Generators are needed for different kinds of motions. And how to turn the CPG parameters for the animator purpose are still open.
+These topics will be covered in the future research.
+
+
+
+
+
+
+
+\bibliographystyle{plainnat}
+\bibliography{rommePaper}
+
+
+
+
+\end{document}
+
+

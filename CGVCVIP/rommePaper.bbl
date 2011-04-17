@@ -1,0 +1,212 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Anderson and Pandy(2001)]{Anderson2001}
+F.C. Anderson and M.G. Pandy.
+\newblock {Dynamic Optimization of Human Walking}.
+\newblock \emph{Journal of Biomechanical Engineering}, 123:\penalty0 381, 2001.
+
+\bibitem[Andronov and Pontryagin(1937)]{Andronov1937}
+AA~Andronov and LS~Pontryagin.
+\newblock {Rough systems}.
+\newblock In \emph{Doklady Academy Nauk SSSR}, volume~14, pages 247--250, 1937.
+
+\bibitem[Baraff(1994)]{Baraff1994}
+D.~Baraff.
+\newblock {Fast contact force computation for nonpenetrating rigid bodies}.
+\newblock pages 23--34, 1994.
+
+\bibitem[Cohen(1988)]{Cohen1988}
+A.H. Cohen.
+\newblock {Evolution of the vertebrate central pattern generator for
+  locomotion}.
+\newblock \emph{Neural control of rhythmic movements in vertebrates}, pages
+  129--166, 1988.
+
+\bibitem[Cohen(1992)]{Cohen1992}
+Michael~F. Cohen.
+\newblock Interactive spacetime control for animation.
+\newblock In \emph{SIGGRAPH '92: Proceedings of the 19th annual conference on
+  Computer graphics and interactive techniques}, pages 293--302, New York, NY,
+  USA, 1992. ACM.
+\newblock ISBN 0-89791-479-1.
+\newblock \doi{http://doi.acm.org/10.1145/133994.134083}.
+
+\bibitem[Glynn(2003)]{Glynn2003}
+I.~Glynn.
+\newblock \emph{{An anatomy of thought: The origin and machinery of the mind}}.
+\newblock Oxford University Press, USA, 2003.
+
+\bibitem[Gonz{\'a}lez-Miranda(2004)]{Gonz'alez-Miranda2004}
+J.M. Gonz{\'a}lez-Miranda.
+\newblock \emph{{Synchronization and control of chaos: an introduction for
+  scientists and engineers}}.
+\newblock Imperial College Pr, 2004.
+
+\bibitem[Hodgins et~al.(1995)Hodgins, Wooten, Brogan, and O'Brien]{Hodgins1995}
+Jessica~K. Hodgins, Wayne~L. Wooten, David~C. Brogan, and James~F. O'Brien.
+\newblock Animating human athletics.
+\newblock In \emph{SIGGRAPH '95: Proceedings of the 22nd annual conference on
+  Computer graphics and interactive techniques}, pages 71--78, New York, NY,
+  USA, 1995. ACM.
+\newblock ISBN 0-89791-701-4.
+\newblock \doi{http://doi.acm.org/10.1145/218380.218414}.
+
+\bibitem[Hogan(1985)]{hogan1985ica}
+N.~Hogan.
+\newblock {Impedance control-An approach to manipulation. I-Theory.
+  II-Implementation. III-Applications}.
+\newblock \emph{ASME, Transactions, Journal of Dynamic Systems, Measurement,
+  and Control (ISSN 0022-0434)}, 107, 1985.
+
+\bibitem[Jain et~al.(2009)Jain, Ye, and Liu]{Jain2009}
+Sumit Jain, Yuting Ye, and C.~Karen Liu.
+\newblock Optimization-based interactive motion synthesis.
+\newblock \emph{ACM Trans. Graph.}, 28\penalty0 (1):\penalty0 1--12, 2009.
+\newblock ISSN 0730-0301.
+\newblock \doi{http://doi.acm.org/10.1145/1477926.1477936}.
+
+\bibitem[Jonckheere(1997)]{Jonckheere1997}
+E.A. Jonckheere.
+\newblock \emph{{Algebraic and differential topology of robust stability}}.
+\newblock Oxford University Press, USA, 1997.
+
+\bibitem[Laszlo et~al.(1996)Laszlo, van~de Panne, and Fiume]{Laszlo1996}
+Joseph Laszlo, Michiel van~de Panne, and Eugene Fiume.
+\newblock Limit cycle control and its application to the animation of balancing
+  and walking.
+\newblock In \emph{SIGGRAPH '96: Proceedings of the 23rd annual conference on
+  Computer graphics and interactive techniques}, pages 155--162, New York, NY,
+  USA, 1996. ACM.
+\newblock ISBN 0-89791-746-4.
+\newblock \doi{http://doi.acm.org/10.1145/237170.237231}.
+
+\bibitem[Latash(2008)]{latash2008neurophysiological}
+M.L. Latash.
+\newblock \emph{{Neurophysiological basis of movement}}.
+\newblock Human Kinetics Publishers, 2008.
+
+\bibitem[Liu(2009)]{Liu2009}
+C.~Karen Liu.
+\newblock Dextrous manipulation from a grasping pose.
+\newblock In \emph{SIGGRAPH '09: ACM SIGGRAPH 2009 papers}, pages 1--6, New
+  York, NY, USA, 2009. ACM.
+\newblock ISBN 978-1-60558-726-4.
+\newblock \doi{http://doi.acm.org/10.1145/1576246.1531365}.
+
+\bibitem[Liu(2005)]{Liu2005}
+Cheng-Yun~Karen Liu.
+\newblock \emph{Towards a generative model of natural motion}.
+\newblock PhD thesis, Seattle, WA, USA, 2005.
+\newblock Chair-Popovic, Zoran.
+
+\bibitem[Liu et~al.(1994)Liu, Gortler, and Cohen]{Liu1994}
+Zicheng Liu, Steven~J. Gortler, and Michael~F. Cohen.
+\newblock Hierarchical spacetime control.
+\newblock In \emph{SIGGRAPH '94: Proceedings of the 21st annual conference on
+  Computer graphics and interactive techniques}, pages 35--42, New York, NY,
+  USA, 1994. ACM.
+\newblock ISBN 0-89791-667-0.
+\newblock \doi{http://doi.acm.org/10.1145/192161.192169}.
+
+\bibitem[Macchietto et~al.(2009)Macchietto, Zordan, and
+  Shelton]{BalanceControl}
+Adriano Macchietto, Victor Zordan, and Christian~R. Shelton.
+\newblock Momentum control for balance.
+\newblock In \emph{SIGGRAPH '09: ACM SIGGRAPH 2009 papers}, pages 1--8, New
+  York, NY, USA, 2009. ACM.
+\newblock ISBN 978-1-60558-726-4.
+\newblock \doi{http://doi.acm.org/10.1145/1576246.1531386}.
+
+\bibitem[Matsuoka(1985)]{neurooscillation}
+K.~Matsuoka.
+\newblock {Sustained oscillations generated by mutually inhibiting neurons with
+  adaptation}.
+\newblock \emph{Biological Cybernetics}, 52\penalty0 (6):\penalty0 367--376,
+  1985.
+
+\bibitem[Matsuoka(1987)]{Matsuoka1987}
+K.~Matsuoka.
+\newblock {Mechanisms of frequency and pattern control in the neural rhythm
+  generators}.
+\newblock \emph{Biological Cybernetics}, 56\penalty0 (5):\penalty0 345--353,
+  1987.
+
+\bibitem[McGeer(1990{\natexlab{a}})]{McGeer1990}
+T.~McGeer.
+\newblock {Passive dynamic walking}.
+\newblock \emph{The International Journal of Robotics Research}, 9\penalty0
+  (2):\penalty0 62, 1990{\natexlab{a}}.
+
+\bibitem[McGeer(1990{\natexlab{b}})]{McGeer1990a}
+T.~McGeer.
+\newblock {Passive walking with knees}.
+\newblock In \emph{Proceedings of the IEEE Conference on Robotics and
+  Automation}, volume~2, pages 1640--1645. Piscataway, NJ, USA: IEEE,
+  1990{\natexlab{b}}.
+
+\bibitem[Mirtich(1996)]{Mirtich1996}
+B.V. Mirtich.
+\newblock \emph{{Impulse-based dynamic simulation of rigid body systems}}.
+\newblock PhD thesis, UNIVERSITY of CALIFORNIA, 1996.
+
+\bibitem[Nishikawa et~al.(2007)Nishikawa, Biewener, Aerts, Ahn, Chiel, Daley,
+  Daniel, et~al.]{nishikawa2007neuromechanics}
+K.~Nishikawa, A.A. Biewener, P.~Aerts, A.N. Ahn, H.J. Chiel, M.A. Daley, T.L.
+  Daniel, et~al.
+\newblock {Neuromechanics: an integrative approach for understanding motor
+  control}.
+\newblock \emph{Integrative and Comparative Biology}, 2007.
+
+\bibitem[Pfeifer and Iida(2005)]{Pfeifer2005}
+R.~Pfeifer and F.~Iida.
+\newblock {Morphological computation: Connecting body, brain and environment}.
+\newblock \emph{Japanese Scientific Monthly}, 58\penalty0 (2):\penalty0 48--54,
+  2005.
+
+\bibitem[Popovi\'{c} and Witkin(1999)]{Popovi'c1999}
+Zoran Popovi\'{c} and Andrew Witkin.
+\newblock Physically based motion transformation.
+\newblock In \emph{SIGGRAPH '99: Proceedings of the 26th annual conference on
+  Computer graphics and interactive techniques}, pages 11--20, New York, NY,
+  USA, 1999. ACM Press/Addison-Wesley Publishing Co.
+\newblock ISBN 0-201-48560-5.
+\newblock \doi{http://doi.acm.org/10.1145/311535.311536}.
+
+\bibitem[Raibert and Hodgins(1991)]{Raibert1991}
+M.H. Raibert and J.K. Hodgins.
+\newblock {Animation of dynamic legged locomotion}.
+\newblock \emph{ACM SIGGRAPH Computer Graphics}, 25\penalty0 (4):\penalty0
+  349--358, 1991.
+
+\bibitem[Stewart and Trinkle(2000)]{Stewart2000}
+D.~Stewart and J.C. Trinkle.
+\newblock {An implicit time-stepping scheme for rigid body dynamics with
+  coulomb friction}.
+\newblock In \emph{IEEE International Conference on Robotics and Automation},
+  volume~1, pages 162--169. IEEE; 1999, 2000.
+
+\bibitem[Williamson(1998)]{Williamson1998}
+M.M. Williamson.
+\newblock {Exploiting natural dynamics in robot control}, 1998.
+
+\bibitem[Wisse and Schwab(2005)]{Wisse2005}
+M.~Wisse and A.L. Schwab.
+\newblock {First steps in passive dynamic walking}.
+\newblock In \emph{Proceedings of the International Conference on Climbing and
+  Walking Robots}. Springer, 2005.
+
+\bibitem[Witkin and Kass(1988)]{Witkin1988}
+Andrew Witkin and Michael Kass.
+\newblock Spacetime constraints.
+\newblock In \emph{SIGGRAPH '88: Proceedings of the 15th annual conference on
+  Computer graphics and interactive techniques}, pages 159--168, New York, NY,
+  USA, 1988. ACM.
+\newblock ISBN 0-89791-275-6.
+\newblock \doi{http://doi.acm.org/10.1145/54852.378507}.
+
+\end{thebibliography}

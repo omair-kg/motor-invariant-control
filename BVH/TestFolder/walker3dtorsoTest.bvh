@@ -1,0 +1,69 @@
+HIERARCHY
+ROOT root
+{
+	OFFSET 0.0000 0.0000 0.0000
+	CHANNELS 6 Xposition Yposition Zposition Zrotation Xrotation Yrotation
+	JOINT rfemur
+	{
+		OFFSET -8.5590 -9.8555 2.1513
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT rtibia
+		{
+			OFFSET -7.2751 -41.2593 0.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT rfoot
+			{
+				OFFSET -6.5686 -37.2525 -0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT rtoes
+				{
+					OFFSET 3.2326 -4.1860 10.4122
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					End Site
+					{
+						OFFSET 0.0000 0.0000 0.0000
+					}
+				}
+			}
+		}
+	}
+	JOINT lfemur
+	{
+		OFFSET 8.5590 -9.8555 2.1513
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT ltibia
+		{
+			OFFSET 7.2751 -41.2593 0.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT lfoot
+			{
+				OFFSET 6.5686 -37.2525 -0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT ltoes
+				{
+					OFFSET 3.2326 -4.1860 10.4122
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					End Site
+					{
+						OFFSET -0.0000 -0.0000 0.0000
+					}
+				}
+			}
+		}
+	}
+	JOINT Torsoack
+	{
+		OFFSET 0.0000 0.0000 0.0000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		End Site
+		{
+			OFFSET -0.0000 70.0000 0.0000
+		}
+		
+		
+	}
+}
+MOTION
+Frames: 1
+Frame Time: 0.008333
+0.0000 96.9821 -24.3817 0.0000 0.0000 0.0000 0.0000 -14.1120 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 14.1177 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 10.0000 0.0000

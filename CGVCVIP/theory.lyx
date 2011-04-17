@@ -1,0 +1,626 @@
+#LyX file created by tex2lyx 1.6.5
+\lyxformat 264
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 10
+\spacing single
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+Qualitative Control Theoy For CMS
+\end_layout
+
+\begin_layout Standard
+
+Inspired by the biological research, in this paper we adopt a different strategy for motion adaptation. In the new motion synthesis system, we will allow the environment to freely affect the motion, and motion control is only applied when the qualitative properties of motion are violated. This leads us to the idea of qualitative control CMS.
+\end_layout
+
+\begin_layout Subsection
+
+The Qualitative Control Theory
+\end_layout
+
+\begin_layout Standard
+
+The Qualitative Control Theory is a mathematical description of the Morphological Computation Theory. In qualitative control theory the basic patterns of motion are called 
+\series bold
+motion primitive
+\series default
+. In mathematic terms, motion primitives are 
+\series bold
+structural stable autonomous systems
+\series default
+.
+\end_layout
+
+\begin_layout Subsubsection
+
+Basic Concepts of Qualitative Dynamics
+\end_layout
+
+\begin_layout Standard
+
+The configuration of system is described using state value in the state space. We use vector 
+\begin_inset Formula $q$
+\end_inset
+
+ to represent the state of a system, 
+\begin_inset Formula $M$
+\end_inset
+
+ is the state space which is a manifold, the motion trajectory over time is 
+\begin_inset Formula $q(t)$
+\end_inset
+
+. For a dynamic system, 
+\begin_inset Formula $q(t)$
+\end_inset
+
+ is usually represetned in the form of ordinary differential equation. 
+\begin_inset Formula \begin{equation}
+\dot{q}=F_{u}(q)=F(q,u),q\in M
+\label{eq:ode}
+\end{equation}
+\end_inset
+
+ where 
+\begin_inset Formula $u$
+\end_inset
+
+ is the control effort. 
+\begin_inset Formula $F$
+\end_inset
+
+ is determined by the system's natural property. If 
+\begin_inset Formula $u=0$
+\end_inset
+
+, no control effort is applied. Such systems are 
+\series bold
+autonomous systems
+\series default
+. For every point 
+\begin_inset Formula $q \in M$
+\end_inset
+
+, 
+\begin_inset Formula $F$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ determines a derivative vector 
+\begin_inset Formula $\dot{q}$
+\end_inset
+
+. All the vectors over the full space of 
+\begin_inset Formula $M$
+\end_inset
+
+ form the 
+\series bold
+vector field
+\series default
+ 
+\begin_inset Formula $V$
+\end_inset
+
+. There is a corresponding geometry structure for Equation 
+\begin_inset LatexCommand eqref
+reference "eq:ode"
+
+\end_inset
+
+, a differentiable manifold. The motion trajectory can be found by apply the integral operation on the vector field. The result trajectory is defined as 
+\series bold
+flow
+\series default
+ 
+\begin_inset Formula $\Phi$
+\end_inset
+
+, all the flows form another geometry structure, the 
+\series bold
+phase portrait
+\series default
+, which illustrates all the possible motions of the dynamic system.
+\end_layout
+
+\begin_layout Standard
+
+On the phase plane, flows can only intersect at some special position.
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Fix Point
+\series default
+ The first type of intersection is fix point or equilibrium point\InsetSpace ~
+
+\begin_inset Formula $q_{e}$
+\end_inset
+
+. 
+\begin_inset Formula \[
+	H(q_{e})=0
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Period Flow
+\series default
+ Another type of intersection is a periodic flow. For any point 
+\begin_inset Formula $q$
+\end_inset
+
+ on the circle, we have 
+\begin_inset Formula \[
+	H(q(0))=H(q(T))
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Intersections like fixed point are also called 
+\series bold
+equlibria
+\series default
+,
+\end_layout
+
+\begin_layout Standard
+
+At each 
+\series bold
+equilbria
+\series default
+, the local space can be divided into three subspace of submanifold: centre submanifold, stable manifold, and unstable submanifold.
+\end_layout
+
+\begin_layout Standard
+
+For nonlinear system, globally, the shape of stable and unstable submanifold may be bending and connect with itself or each other. The equilibra and its connectivity of sub manifolds form a topological structure. The phase plane is divide into different regions, result in a cellular structure. In each region, there is only one attractor, all the flow in this region will converge to the attractor, and the corresponding region is called 
+\series bold
+basin of attraction
+\series default
+.
+\end_layout
+
+\begin_layout Subsubsection
+
+Motion Adaptation under Qualitative Control
+\end_layout
+
+\begin_layout Standard
+
+A mechanical system can be extremely stable without any control effort. This kind of stability is rough stability or structure stability 
+\begin_inset LatexCommand citep
+after ""
+before ""
+key "Andronov1937"
+
+\end_inset
+
+ which is determined by the topology structure of the system
+\begin_inset LatexCommand citep
+after ""
+before ""
+key "Jonckheere1997"
+
+\end_inset
+
+. Using Qualitative Control, motion will be defined by the topological structure of the corresponding differential equation. Motion adaptation can be modelled as homeomorphism. Homeomorphic flows can be generated if the differentiable manifolds are homeomorphic, which means they share the same topological structure, but with different shapes. Structure stable autonomous systems have the ability to maintain its topology structure under perturbations, thus the resulting motion is adaptive but qualitatively unchanged.
+\end_layout
+
+\begin_layout Subsection
+
+Motion Synthesis based on Qualitative Control
+\end_layout
+
+\begin_layout Standard
+
+In our method, only the final motion is concerned. In mathematical viewport, only the attractors of flows are controlled, while the flow shape is not considered in motion control. So according to the types of attractors, motion can be categorized into two groups.
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Discrete Motion
+\series default
+ Such motions have fixed attractors. Typical motions include posture control and picking up motion of the arm.
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Peridotic Motion
+\series default
+ Such motion have periodic attractors, typical motion include walking, running and heartbeating.
+\end_layout
+
+\begin_layout Standard
+
+Motions are made up of motion primitives. Neural control system only tweaks the basic motion primitives to achieve specific objective. According to qualitative control theory, our approach will preserve the three natural motion features:
+\newline
+ 
+\series bold
+Adaptive
+\series default
+ Using this method, different perturbations will result in different shapes of the manifold, i.e. different motions. Motion will be changed with the environment change.
+\newline
+ 
+\series bold
+Efficient
+\series default
+ Motion will be generated passively and follow the least energy path.
+\newline
+ 
+\series bold
+Agile
+\series default
+ Because qualitative control does not rely on high precise calculation, topological structure can be manipulated and maintained by some very simple computation.
+\end_layout
+
+\begin_layout Subsection
+
+The New Control Scheme from Qualitative Control Theory
+\end_layout
+
+\begin_layout Standard
+
+An animal's body and environment can be extremely complex. This usually leads to high dimensional manifolds with complicated topological structure. Many CMS research have asked the same question whether such complex system can be controlled with a simple method. Biology Research suggested that the motion is mainly controlled by the Central Pattern Generator (CPG), which is a small autonomous network that generating rhythmic signals. The existence of CPG is very common, from primitive animals like lamprey and fish, to high level animals like bird, mammal and human
+\begin_inset LatexCommand citep
+after ""
+before ""
+key "Cohen1988"
+
+\end_inset
+
+. We think that motor control by rhythmic signals can be modelled as entrainment 
+\begin_inset LatexCommand citep
+after ""
+before ""
+key "Gonz'alez-Miranda2004"
+
+\end_inset
+
+. Based on Qualitative Control Theory, in this section, we will discuss a new control scheme using biological entrainment.
+\end_layout
+
+\begin_layout Subsubsection
+
+The Biological Entrainment
+\end_layout
+
+\begin_layout Standard
+
+Entrainment is the phenomenon that two coupled oscillator systems oscillate in a synchronize way. Although the mechanism can be very complex, the phenomenon is universal.
+\end_layout
+
+\begin_layout Standard
+
+Entrainment will happen when coupling two oscillators with similar oscillation frequencies but with very different characteristics. A simple explanation is that energy fluctuates between the two oscillating system. For some cases, stability can be enhanced and chaotic behaviour can be suppressed.
+\end_layout
+
+\begin_layout Standard
+
+Our new control scheme is based on the entrainment. The neural system form one electrical oscillator; body and environment form the other mechanical oscillator. Mechanical oscillator can be controlled by the oscillation property of the neural system through entrainment effects. The property of neural oscillator will greatly affect the mechanical motion results.
+\end_layout
+
+\begin_layout Subsubsection
+
+The Structural Stability of Neural Oscillator
+\end_layout
+
+\begin_layout Standard
+
+One extensively studied oscillation model is developed by 
+\begin_inset LatexCommand citet
+after ""
+before ""
+key "neurooscillation"
+
+\end_inset
+
+. The mathematical presentation is as follows: 
+\begin_inset Formula \begin{eqnarray}
+\tau_{1} \dot{x_{1}}&=&c-x_{1}-\beta v_{1}-\gamma [x_{2}]^{+}-\sum_{j}h_{j}[g_{j}]^{+}\\
+\tau_{2} \dot{v_{1}}&=&[x_{1}]^{+}-v_{1}\\
+\tau_{1} \dot{x_{2}}&=&c-x_{2}-\beta v_{2}-\gamma [x_{1}]^{-}-\sum_{j}h_{j}[g_{j}]^{-}\\
+\tau_{2} \dot{v_{2}}&=&[x_{2}]^{+}-v_{2}\\
+y_{i}&=&\mbox{max}(x_{i},0)\\
+y_{out}&=&[x_{1}]^{+}-[x_{2}]^{+}=y_{1}-y{2}
+\label{eq:matsuta}
+\end{eqnarray}
+\end_inset
+
+ where 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are state variables of the oscillator, 
+\begin_inset Formula $\tau$
+\end_inset
+
+,
+\begin_inset Formula $c$
+\end_inset
+
+,
+\begin_inset Formula $\beta$
+\end_inset
+
+,
+\begin_inset Formula $\gamma$
+\end_inset
+
+ are parameters of the oscillator.
+\end_layout
+
+\begin_layout Standard
+
+Early Research shows that Matuoka oscillator is autonomous oscillator and adaptive; Entrainment behaviour can happen when couple it with different oscillators. But because of the nonlinear properties, its behavior is not completely understood. Matsuta
+\begin_inset LatexCommand citep
+after ""
+before ""
+key "Matsuoka1987"
+
+\end_inset
+
+ explains the adaptive properties from the location of the roots of characteristic equation. Wilimas
+\begin_inset LatexCommand citep
+after ""
+before ""
+key "Williamson1998"
+
+\end_inset
+
+ explains the properties in frequency domain.
+\end_layout
+
+\begin_layout Standard
+
+Here we provide an idea about structural stability from the topological viewport. Basically, neural oscillator shows three important properties:
+\newline
+ 
+\series bold
+Simple Structure
+\series default
+ The topology structure of neural oscillator is simple, it includes one attractive limit circle and one fix repellor.
+\newline
+ 
+\series bold
+Large Basin of Attraction
+\series default
+ All the simulations we carried out converged to the same limited circle.
+\newline
+ 
+\series bold
+Fast Converging Speed
+\series default
+ In most of the case, the flow will converge to the limit circle within one period time.
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Features above are shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+figurename
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset LatexCommand ref
+reference "fig:matsuta oscilation"
+
+\end_inset
+
+. 
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subfigure[time state]{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename \figurepath/neural_attraction.eps
+	width 1.5in
+
+\end_inset
+
+ 
+\begin_inset LatexCommand label
+name "fig:time_timeAttraction"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\hfill
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subfigure[Phase Portrait]{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename \figurepath/neural_attraction_phase.eps
+	width 1.5in
+
+\end_inset
+
+ 
+\begin_inset LatexCommand label
+name "fig:phase_attraction"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Standard
+Matsuta Oscilator
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand label
+name "fig:matsuta oscilation"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Through this example, we believe neural oscillator is structure stable. The large area of basin of attraction means the final behavior is totally determined by parameters. Initial conditions will have no effects on the final oscillation. The converging speed can be seen as quick recovery ability. When an impulse perturbation happens, it will recover in one period time.
+\end_layout
+
+\begin_layout Standard
+
+These properties are very valuable in CMS research. An intuitive idea is that we couple the neural oscillator with mechanical oscillator of body and environment, thus make the motion structual stable. 
+\end_layout
+
+\end_body
+\end_document
