@@ -1,0 +1,14 @@
+function Tables=listChannel(ske)
+inode=1;
+ic=1;
+Tables=[' ',' ']
+for t=ske.tree(1:end)
+	
+	name=t.name
+	for c=t.channels
+	ic
+	Tables=[Tables;name,ic]
+	end
+
+
+end

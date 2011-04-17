@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: rommePaper.aux
+The style file: plainnat.bst
+Database file #1: rommePaper.bib
+Warning--can't use both volume and number fields in Andronov1937
+Warning--empty journal in Baraff1994
+Warning--can't use both author and editor fields in latash2008neurophysiological
+Warning--empty school in Liu2005
+You've used 30 entries,
+            2773 wiz_defined-function locations,
+            815 strings with 10252 characters,
+and the built_in function-call counts, 13770 in all, are:
+= -- 1337
+> -- 561
+< -- 40
++ -- 199
+- -- 168
+* -- 953
+:= -- 2046
+add.period$ -- 119
+call.type$ -- 30
+change.case$ -- 139
+chr.to.int$ -- 29
+cite$ -- 64
+duplicate$ -- 730
+empty$ -- 1212
+format.name$ -- 214
+if$ -- 3017
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 31
+newline$ -- 176
+num.names$ -- 120
+pop$ -- 307
+preamble$ -- 1
+purify$ -- 115
+quote$ -- 0
+skip$ -- 553
+stack$ -- 0
+substring$ -- 545
+swap$ -- 143
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 310
+warning$ -- 4
+while$ -- 141
+width$ -- 0
+write$ -- 447
+(There were 4 warnings)

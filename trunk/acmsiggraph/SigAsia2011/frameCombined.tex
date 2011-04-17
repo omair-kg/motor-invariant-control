@@ -1,0 +1,30 @@
+\section{Combination}
+
+\subsection{Symmetry of CPG}
+For a dynamic system L, we have global invarant controller  Ugc, and local Invariant Controller Ulc.
+A question is how to combine them together.
+Our method is combine the different controller following the same symmetry.
+When a system L has a symmetry of $G_a$, $G_a$ is applied also tow $G_gl$
+The Simmetry of Global Oscilator.
+Neural oscillator are couple with mechanical oscillator in the following manner.
+\begin{equation}
+\dot{x}=F(x,u1)
+\dot{x_c}=S(x_c,u2);
+u1=ho*O(x_c)
+u2=hi*I(x)
+\end{equation}
+Pose offset:
+When the original $G_off$ is apply to the x,
+If we keep $I(x)$ is the invariant of $G_off$, then the Symmetry of the how system will be kept.
+Pose scalling group
+When $G_scal$ is applied to the x, if we $hi=hi/scal$.
+Then the symmetry is kept.
+Time scalling
+If the scale factor is ts, we keep modify modify the original equation by %$\tao=tao*ts$.
+hou=hou*ts*ts.
+Time offset
+This involves modify the state on the limit circle.
+\subsection{Motion Transition}
+When an character transform from one motion into another, character should in the state space $(q,\dot{q})$
+For when motion is translated from motion ma to motion mb.
+The state of %$(q,\dot{q} \in Boa(ma) \union Boa(mb)$

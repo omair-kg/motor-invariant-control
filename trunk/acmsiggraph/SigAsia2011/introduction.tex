@@ -1,0 +1,64 @@
+\section{Introduction}
+It is important to know the things being animated when we develop animation system. 
+Physically based character motor synthesis includes modelling both the body mechanics and the neural system behaviour. 
+While techniques for simulating mechanics of body is sophisticated, little is known about the biological motor control principles. 
+In mathematical view port, the key problem in motion synthesis comes from the redundant degrees of freedom.  
+For a motion task like picking up an apple, human has many different ways to finish it. 
+Many biology researches suggested that natural motion is  energy efficient, thus current Researches follow the pioneering work by Wikin(spacetime constraint), formulating the motion synthesis as constrained variational optimization. 
+However, space-time constraint entails large computational burden and sensitive to errors, makes it highly unlikely the paradigm for biological motor control. 
+Besides energy efficient result, biological motor control also has to be agile, adaptive. 
+After putting weight on shoulder, human adjust his gait immediately, without thinking for long.  
+Also it is highly unlikely that human detect motion artefacts in this manner, human detects motion artefacts immediately, without long computation.
+
+In this paper, we propose a motion synthesis framework based on a different biological motor control paradigm. 
+Some Biology Research suggested that motor repertoires are composed of a number of basic elements, motion primitives. 
+Neural system tweaks the motion primitives for environment constraint or special motion purpose. 
+Complicate motions are formed by connecting different motion primitives together, just like combining alphabet into sentences. 
+The new framework can generate adaptive and energy efficient motion with low computational cost. 
+
+
+
+The mathematical framework we developed is based on group action and invariants. 
+New motion $m_n$is treated as an element $m$  that modified by a group action $g$ formulated as Equation \eqref{eq:mgm})
+\begin{equation}
+	m_n=g(m)
+\label{eq:mgm}
+\end{equation}
+	 										
+The important property of $g$  is that some motor features are kept invariant, which are motor invariants  $I$. 
+Actions $g$ and $m$  keeps motor invariant form the action space $G$ and motion space $M$ as Equation (2). 
+To synthesize target motion $m_n$ , we need to find $g  \mid m_n=g(m)$ .
+\begin{equation}
+	I(g(m))=I(m),g \in G, m \in M
+\end{equation}								
+
+For animation purpose, $I$ should contain features that natural looking. 
+A biological hypothesis is that when $I$ is violated, human will detect artefacts in motion. 
+Mathematics provides some deeper information about $I$.
+ For physically based animation, m is the solution of a differential equation that described the dynamics. 
+In this paper, we propose two important motor invariants. 
+The global motor invariant determines the qualitative properties and local motor invariant which determines the details of motion. 
+In mathematical view, they are the Topology and Lie Group Symmetry of the corresponding differential equations that describe the dynamics of motion.
+
+\subsection*{contribution}
+
+\textit{Adaptive}
+This framework solves the stability controls and retargeting problem in a unified manner, thus provide more types of adaptation. 
+Traditionally, for walking example, for impulse perturbation, terrain, and crippling leg, traditional we need different controllers, while our method can generate all the adaptive motions for all conditions above.
+
+\textit{Computational Efficient}
+Finding element in and group involves much less computational work than optimization.
+The computational load of our method is extremely low; calculation only involves close form calculation. 
+Compared with mechanical simulation, the computational load can even be neglected.
+
+\textit{Artists Directable}
+Usually, physically based animation, it is not very intuitive to modify control parameters modify motion. T
+he control parameters of our method are more intuitive use. For walking motion, we include some parameters like walking speed, step size or upslope angle.
+
+\subsection*{outline}
+After a quick review of physically-based character motion synthesis in Section 2.1,  we also reviewed some important research related to our work on biological motor control and Mechanical Symmetry.
+In Section 3 investigate the global motor invariant, details about its effects on motion stability and adaptation. A biological based method for keep global motor invariant is presented in section 3.4
+Section 4 focuses on local motor invariant; we propose two groups that modifies the space and time properties of motion independently. A computation efficient method for control is presented in Section 4.3
+Section 5 focus on combined the methods maintain global and local motor invariants together.
+Application and Motion Synthesis result in presented in section 5 and Section 6 discuss some features of this method and further research work.
+

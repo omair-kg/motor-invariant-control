@@ -1,0 +1,87 @@
+HIERARCHY
+ROOT root
+{
+	OFFSET 0.0000 0.0000 0.0000
+	CHANNELS 6 Xposition Yposition Zposition Zrotation Xrotation Yrotation
+	JOINT rfemur
+	{
+		OFFSET -8.5590 -9.8555 2.1513
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT rtibia
+		{
+			OFFSET -7.2751 -41.2593 0.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT rfoot
+			{
+				OFFSET -6.5686 -37.2525 -0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT rtoes
+				{
+					OFFSET 3.2326 -4.1860 10.4122
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					End Site
+					{
+						OFFSET 0.0000 0.0000 0.0000
+					}
+				}
+			}
+		}
+	}
+	JOINT lfemur
+	{
+		OFFSET 8.5590 -9.8555 2.1513
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT ltibia
+		{
+			OFFSET 7.2751 -41.2593 0.0000
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT lfoot
+			{
+				OFFSET 6.5686 -37.2525 -0.0000
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT ltoes
+				{
+					OFFSET 3.2326 -4.1860 10.4122
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					End Site
+					{
+						OFFSET -0.0000 -0.0000 0.0000
+					}
+				}
+			}
+		}
+	}
+	JOINT lowerback
+	{
+		OFFSET 0.0000 0.0000 0.0000
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT upperback
+		{
+			OFFSET 0.0000 11.0962 -0.4289
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT thorax
+			{
+				OFFSET 0.0000 11.0405 -0.3169
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT neck
+				{
+					OFFSET 0.0000 11.1642 0.0841
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					JOINT head
+					{
+						OFFSET 0.0000 15.5530 -0.6089
+						CHANNELS 3 Zrotation Xrotation Yrotation
+						End Site
+						{
+							OFFSET -0.0000 0.0000 0.0000
+						}
+					}
+				}
+			}
+		}
+	}
+}
+MOTION
+Frames: 1
+Frame Time: 0.008333
+-159.4884 94.9058 -200.7184 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 -16.6200 0.0000 0.0000 -1.5100 0.0000 0.0000 14.9700 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 
