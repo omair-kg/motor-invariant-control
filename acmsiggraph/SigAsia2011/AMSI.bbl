@@ -1,3 +1,74 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{\protect\citename{Macchietto et~al\mbox{.} }2009}
+
+\bibitem[\protect\citename{Baraff }1994]{Baraff1994}
+{\sc Baraff, D.}
+\newblock 1994.
+\newblock {Fast contact force computation for nonpenetrating rigid bodies}.
+\newblock 23--34.
+
+\bibitem[\protect\citename{Hodgins et~al\mbox{.} }1995]{Hodgins1995}
+{\sc Hodgins, J.~K., Wooten, W.~L., Brogan, D.~C., and O'Brien, J.~F.}
+\newblock 1995.
+\newblock Animating human athletics.
+\newblock In {\em SIGGRAPH '95: Proceedings of the 22nd annual conference on
+  Computer graphics and interactive techniques}, ACM, New York, NY, USA,
+  71--78.
+
+\bibitem[\protect\citename{Jain et~al\mbox{.} }2009]{Jain2009}
+{\sc Jain, S., Ye, Y., and Liu, C.~K.}
+\newblock 2009.
+\newblock Optimization-based interactive motion synthesis.
+\newblock {\em ACM Trans. Graph. 28}, 1, 1--12.
+
+\bibitem[\protect\citename{Laszlo et~al\mbox{.} }1996]{Laszlo1996}
+{\sc Laszlo, J., van~de Panne, M., and Fiume, E.}
+\newblock 1996.
+\newblock Limit cycle control and its application to the animation of balancing
+  and walking.
+\newblock In {\em SIGGRAPH '96: Proceedings of the 23rd annual conference on
+  Computer graphics and interactive techniques}, ACM, New York, NY, USA,
+  155--162.
+
+\bibitem[\protect\citename{Liu }2009]{Liu2009}
+{\sc Liu, C.~K.}
+\newblock 2009.
+\newblock Dextrous manipulation from a grasping pose.
+\newblock In {\em SIGGRAPH '09: ACM SIGGRAPH 2009 papers}, ACM, New York, NY,
+  USA, 1--6.
+
+\bibitem[\protect\citename{Macchietto et~al\mbox{.} }2009]{BalanceControl}
+{\sc Macchietto, A., Zordan, V., and Shelton, C.~R.}
+\newblock 2009.
+\newblock Momentum control for balance.
+\newblock In {\em SIGGRAPH '09: ACM SIGGRAPH 2009 papers}, ACM, New York, NY,
+  USA, 1--8.
+
+\bibitem[\protect\citename{Mirtich }1996]{Mirtich1996}
+{\sc Mirtich, B.}
+\newblock 1996.
+\newblock {\em {Impulse-based dynamic simulation of rigid body systems}}.
+\newblock PhD thesis, UNIVERSITY of CALIFORNIA.
+
+\bibitem[\protect\citename{Raibert and Hodgins }1991]{Raibert1991}
+{\sc Raibert, M., and Hodgins, J.}
+\newblock 1991.
+\newblock {Animation of dynamic legged locomotion}.
+\newblock {\em ACM SIGGRAPH Computer Graphics 25}, 4, 349--358.
+
+\bibitem[\protect\citename{Stewart and Trinkle }2000]{Stewart2000}
+{\sc Stewart, D., and Trinkle, J.}
+\newblock 2000.
+\newblock {An implicit time-stepping scheme for rigid body dynamics with
+  coulomb friction}.
+\newblock In {\em IEEE International Conference on Robotics and Automation},
+  vol.~1, IEEE; 1999, 162--169.
+
+\bibitem[\protect\citename{Witkin and Kass }1988]{Witkin1988}
+{\sc Witkin, A., and Kass, M.}
+\newblock 1988.
+\newblock Spacetime constraints.
+\newblock In {\em SIGGRAPH '88: Proceedings of the 15th annual conference on
+  Computer graphics and interactive techniques}, ACM, New York, NY, USA,
+  159--168.
 
 \end{thebibliography}
