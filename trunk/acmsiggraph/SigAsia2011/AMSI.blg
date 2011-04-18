@@ -1,52 +1,52 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: AMSI.aux
 The style file: acmsiggraph.bst
-I couldn't open database file ASMI.bib
----line 51 of file AMSI.aux
- : \bibdata{ASMI
- :              }
-I'm skipping whatever remains of this command
-I found no \citation commands---while reading file AMSI.aux
-I found no database files---while reading file AMSI.aux
-You've used 0 entries,
+Database file #1: AMSI.bib
+Warning--empty journal in Baraff1994
+Warning--empty organization in Hodgins1995
+Warning--empty organization in Laszlo1996
+Warning--empty organization in Liu2009
+Warning--empty organization in BalanceControl
+Warning--empty organization in Witkin1988
+You've used 10 entries,
             2748 wiz_defined-function locations,
-            595 strings with 4375 characters,
-and the built_in function-call counts, 24 in all, are:
-= -- 0
-> -- 0
+            665 strings with 6139 characters,
+and the built_in function-call counts, 4039 in all, are:
+= -- 422
+> -- 149
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 10
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 2
++ -- 47
+- -- 53
+* -- 327
+:= -- 685
+add.period$ -- 40
+call.type$ -- 10
+change.case$ -- 61
+chr.to.int$ -- 10
+cite$ -- 16
+duplicate$ -- 158
+empty$ -- 327
+format.name$ -- 60
+if$ -- 817
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 9
+newline$ -- 63
+num.names$ -- 30
+pop$ -- 62
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 52
 quote$ -- 0
-skip$ -- 2
+skip$ -- 83
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 230
+swap$ -- 29
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 3 error messages)
+type$ -- 80
+warning$ -- 6
+while$ -- 44
+width$ -- 14
+write$ -- 153
+(There were 6 warnings)

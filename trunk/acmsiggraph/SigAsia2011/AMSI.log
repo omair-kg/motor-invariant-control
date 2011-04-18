@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  18 APR 2011 12:10
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  18 APR 2011 14:28
 entering extended mode
  %&-line parsing enabled.
 **AMSI
@@ -338,7 +338,17 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 13.24796pt on input line 112.
- (./abstract.tex
+File: images/sampleteaser.eps Graphic file (type eps)
+
+<images/sampleteaser.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 112.
+See the caption package documentation for explanation.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
+(./abstract.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 11.03998pt on input line 1.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
@@ -346,11 +356,8 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 11.03998pt on input line 1.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 126.
 File: icons/iconacm.eps Graphic file (type eps)
-
-<icons/iconacm.eps>
+ <icons/iconacm.eps>
 File: icons/iconpdf.eps Graphic file (type eps)
  <icons/iconpdf.eps> (./introduction.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
@@ -359,14 +366,15 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 9.19998pt on input line 43.
- [1
+
+[1
 
 
-])
-(./background.tex
+]) (./background.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
+ [2]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -383,12 +391,12 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [2]) (./globalInvariant.tex
+) (./globalInvariant.tex [3]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 )
-(./localInvariant.tex [3]
+(./localInvariant.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 8.27998pt on input line 58.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
@@ -399,21 +407,34 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 
 LaTeX Warning: Command \d invalid in math mode on input line 60.
 
-) (./application.tex (./bb.tex [4]) (./walk.tex) (./stance.tex) (./boid.tex
-[5])) (./futurework.tex) (./AMSI.bbl
+[4]) (./application.tex (./bb.tex) (./walk.tex) (./stance.tex
+File: images/uncontrolled.eps Graphic file (type eps)
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+<images/uncontrolled.eps>
+File: images/AttractiveCircle.eps Graphic file (type eps)
+ <images/AttractiveCircle.eps> [5]
+File: images/LieAttractiveCircle.eps Graphic file (type eps)
 
-) [6
+<images/LieAttractiveCircle.eps>
+File: images/stanceState.eps Graphic file (type eps)
+ <images/stanceState.eps>
+File: images/s2walk.eps Graphic file (type eps)
+ <images/s2walk.eps>)
+(./boid.tex [6]
+File: images/phaseShift.eps Graphic file (type eps)
+ <images/phaseShift.eps>
+File: images/swim.eps Graphic file (type eps)
+ <images/swim.eps>)) (./futurework.tex)
+(./AMSI.bbl [7]) [8
 
 ] (./AMSI.aux) ) 
 Here is how much of TeX's memory you used:
- 5904 strings out of 495062
- 87790 string characters out of 1182644
- 171765 words of memory out of 3000000
- 8965 multiletter control sequences out of 15000+50000
- 17334 words of font info for 46 fonts, out of 3000000 for 9000
+ 5937 strings out of 495062
+ 88293 string characters out of 1182644
+ 167765 words of memory out of 3000000
+ 8989 multiletter control sequences out of 15000+50000
+ 18879 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 45i,15n,40p,575b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,15n,40p,40981b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on AMSI.dvi (6 pages, 53568 bytes).
+Output written on AMSI.dvi (8 pages, 67952 bytes).

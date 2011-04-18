@@ -1,4 +1,8 @@
 \subsection{Hyper Dof and Boid System}
+\teaser{
+   \includegraphics[height=1.5in]{images/sampleteaser}
+   \caption{Spring Training 2009, Peoria, AZ.}
+}
 Boid like system
 some animals like snake and fish have a very flexible verberate. And such system are refered to as hyper dof system.
 For such kind of system, motion control seems more difficult.
@@ -14,6 +18,11 @@ The limit cricle will garanty that the final motion will converge to the same on
 so the all the agent will move in an unifield manner.
 The different between agent is an phase shift.
 That is although all the agent are controlled by the same limit circle, but there is a phase offset between them.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=3in]{images/phaseShift.eps}
+  \caption{Fish SWimming}
+\end{figure}
 
 
 We apply this method modeling the motion of a long tail fish.
@@ -24,3 +33,8 @@ also, numberic error is not a big problem.
 So the new system is controllable and also stable.
 
 Figure down shows an mass spring system controlled with cpg.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=2.5in]{images/swim.eps}
+  \caption{Fish SWimming}
+\end{figure}
