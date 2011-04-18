@@ -1,0 +1,40 @@
+\subsection{Bipedal Walking}
+\subsubsection{Dynamic Model}
+iure 1 shows the a two dimensional walking model.
+Like bouncing ball, this system is also an hybrid system.
+The motion include four phases.
+1 in free swing phase.
+Mddq/dt+Cdq+N=0
+2 the knee strike phase
+Qq=Qq
+3 the knee lock phase
+Mddq/dt+Cdq+N=0
+4 the keel strike phase.
+Qq=Qq
+this system can do passive walking
+under specific initial position, the walker can walk passively downstairs.
+And exhibit a limit circle.
+
+\subsubsection{Global Invarian Control}
+just like mass spring system, the basic idea of control is using the entrainment oscillator to 
+motion adaptation. 
+The input of the nerual oscillator is the angle between the two legs.
+The output of the nerual oscillator is acting on the hip joint
+\[
+g_in=h*(q1-q2)
+yout=hout*neural.
+\]
+the period is double and the step is not symmetrical any more. So the two legs move in a slight different manner, but still, it keeps walking.
+
+\subsubsection{Local Invariant Control}
+lie group symmetry provide method for adapting the walking motion for different terrain and for at different speed.
+
+
+Slope Change.
+N=N*g.
+u=N(g*cos(theta)-g)
+Speed Change
+u=Ng*(speed*speed-1)
+
+4 Walking on any slope with any speed with any walking style
+when Combined together, our system can walking on different terrian with any speed and any style.
