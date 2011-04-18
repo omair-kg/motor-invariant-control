@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: AMSI.aux
 The style file: acmsiggraph.bst
 I couldn't open database file ASMI.bib
----line 22 of file AMSI.aux
+---line 51 of file AMSI.aux
  : \bibdata{ASMI
  :              }
 I'm skipping whatever remains of this command

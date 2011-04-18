@@ -1,0 +1,52 @@
+\subsection{Boucing Ball}
+\subsubsection*{Dynamic Model}
+Bouncing ball is system bouncing by moving a pedal, a system with simple dynamic but difficult to control. 
+While this example capture the complexity of human interatction with the environment and object. 
+And can be the basic model for many motion tasks, like catch and throw, ball playing, and even walking.
+
+Hybrid dynamics, in incoperate two phase, 
+ 
+
+%d^2p_ball/dt^2=-g x>0 		p_ball>p_pedal	(1)
+
+%(v_ball-v_mass)=e(v_ball+-v_mass+)	p_vall=p_pedal(2)
+
+Equation (1), is the flying phase equation, equation(2) is the bouncing equation
+The -1<e<0.
+
+Basically, the ball will continue bouncing with smaller height.
+\subsubsection*{Global Invariant Control}
+couple with neural oscillator boucing we get an limit circle
+\[g_in=g_in*v_ball, (3)
+Pos_pedal=h*out_oscillator.  (4)
+\]
+The input of neural oscillator is the velocity of the ball multiply by the input coefficient, the output of neural oscillator  drive the pedal position.
+An limit circle emerge as the result of entrainment.
+As show in figure drop from different position, all the ball will bouncing a about the same height of 5.
+
+\subsubsection*{Local Invariant Control}
+Control Bouncing at different Height.
+For example boucing at height 10, or 15.
+if we define the a*5
+the the boucing ball system have energy symmetry.
+Controlled Symmetry
+If  x(t) is a solution,
+So it ax(sqrt(at)) is also a solution
+
+Thus the neural oscillator is modified as follows.
+tao=tao*sqrt(a)
+out=ta*sqrt(a)
+in=in/sqrt(a)
+
+than the a*height is mapped the limit circle.
+
+Following example shows the mapping effect, with a=1, a=3, where the bouncing height is controlled at about height =5 and height =15.
+The two pictures are almost the same; this is because the symmetry is perfect.
+
+
+With Limit Circle At aoubt 15, a=3
+
+With limit circle at about 5, a=1
+
+\subsubsection*{Conclusion}
+No matter where the initial position is ,the limit bouncing height can be exactly controlled by modifying the parameters of oscillator.
