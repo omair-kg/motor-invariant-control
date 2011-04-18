@@ -83,6 +83,8 @@ for index=1:N+1
 	[T,Y]=ode45(@msno,[0,100],X0);
 	data{index}=interp1(T,Y,ti);
 end
+
+save snakeData
 %{
 drawdata=[];
 for i=1:41
