@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\pagestyle{empty}
+\begin{document}
+	\begin{TeXtoEPS}
+	\begin{pspicture}(0,-2)(10,10)
+
+		\SpecialCoor
+		\psline[linestyle=dashed](!0 -10 5 sin mul)(!10 5 cos mul  -10 5 sin mul)
+		\psline[linewidth=2pt]{->}(9,8)(9,6)
+		\rput(8.5,7){$\mathbf g$}
+
+		\rput(2,7)
+		{
+		 $\mathbf x_{n}$,$\mathbf y_{n}$ 	
+		}
+		
+		\rput{-5}(0,0)
+		{
+		\psgrid
+		\psline[linewidth=3pt](0,0)(10,0)
+		\psarc[linewidth=0.5pt]{<-}(10,0){9}{-180}{-175}
+		\psgrid
+		\rput(0.5,-0.5){$\mathbf \gamma$}
+		\SpecialCoor
+		\pscircle(!2 30 cos 6 mul 2 add){0.1}
+		\SpecialCoor
+		\psline[linewidth=0.5pt,linestyle=dashed](!2 30 cos 6 mul 2 add)(2,0)
+		\psline[linewidth=0.5pt](2,0.5)(1.5,0.5)
+		\psline[linewidth=0.5pt](1.5,0.5)(1.5,0)
+		\SpecialCoor
+		\rput{30}(!2 30 cos 6 mul 2 add)
+		{
+		
+		\psarc[linewidth=0.5pt,linestyle=dashed]{->}(0,0){3}{-120}{-90}
+		\SpecialCoor	
+		\rput(3.3;-105){$\mathbf \phi_{1}$}
+		
+		\psline[linecolor=blue,linewidth=3pt](0,0)(0,-8)
+		\psline[linewidth=0.5pt](0,0)(-2.3,0)
+		\psline[linewidth=0.5pt](0,-8)(-2.3,-8)
+		\psline[linewidth=0.5pt]{<->}(-2,0)(-2,-8)
+		\rput(-2.2,-4){ $\mathbf l_{1}$}
+		
+		\psline[linewidth=0.5pt](0,-4)(-1.1,-4)	
+		\psline[linewidth=0.5pt]{<->}(-1,0)(-1,-4)
+		\rput(-1.2,-2){$\mathbf c_{1}$}
+
+		\psdots[dotstyle=Bo,dotscale=3.0,fillcolor=blue](1,-4)
+		\psline[linewidth=0.5pt](1,-3.5)(1,-4.5)
+		\psline[linewidth=0.5pt](0,-4.3)(1,-4.3)
+		\rput(1.3,-3.7){$\mathbf m_{1}$,$\mathbf I_{1}$}
+		\rput(0.5,-4.5){$\mathbf w_{1}$}
+		
+		\psarc[linecolor=blue,linewidth=3pt](0,-6){2}{210}{330}
+			\rput{-90}(0,-6)
+			{
+			\SpecialCoor
+			\psline[linewidth=0.5pt]{->}(0,0)(2;45)
+			\rput{65}(0.8,1){$\mathbf r_{1}$}
+
+			}
+		}
+		\SpecialCoor
+		
+		\rput{60}(!2 30 cos 6 mul 2 add)
+		{
+
+		\psarc[linewidth=0.5pt,linestyle=dashed]{->}(0,0){5.5}{-150}{-90}
+		\SpecialCoor	
+		\rput(6;-105){$\mathbf \phi_{2}$}	
+		\psline[linecolor=red,linewidth=3pt](0,0)(0,-8)
+		\psline[linewidth=0.5pt](0,0)(2.3,0)
+		\psline[linewidth=0.5pt](0,-8)(2.3,-8)
+		\psline[linewidth=0.5pt]{<->}(2,0)(2,-8)
+		\rput(2.2,-4){$\mathbf l_{2}$}
+		
+		\psline[linewidth=0.5pt](0,-4)(1.5,-4)	
+		\psline[linewidth=0.5pt]{<->}(1.2,0)(1.2,-4)
+		\rput(1.5,-2){$\mathbf c_{2}$}
+
+		\psdots[dotstyle=Bo,dotscale=3.0,fillcolor=red](1,-4)
+		\psline[linewidth=0.5pt](1,-3.5)(1,-4.5)
+		\psline[linewidth=0.5pt]{<->}(0,-4.3)(1,-4.3)
+		\rput(1,-3.7){$\mathbf m_{2}$,$\mathbf I_{2}$}
+		\rput(0.5,-4.5){$\mathbf w_{2}$}
+		\psarc[linecolor=red,linewidth=3pt](0,-6){2}{210}{330}
+		\rput{-90}(0,-6)
+		{
+		\SpecialCoor
+		\psline[linewidth=0.5pt]{->}(0,0)(2;45)
+		\rput{35}(0.8,1){$\mathbf r2$}
+		}
+		}
+	}
+\end{pspicture}
+\end{TeXtoEPS}
+
+
+\end{document}
+
+
