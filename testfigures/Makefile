@@ -1,6 +1,6 @@
 # make -f Makefile_latex
 
-R = LimitCircle
+R = stanceConfigure
 
 eps: 	$(R).tex
 	latex $(R).tex

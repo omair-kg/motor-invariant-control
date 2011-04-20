@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  19 APR 2011 18:04
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  20 APR 2011 17:26
 entering extended mode
  %&-line parsing enabled.
 **LimitCircle.tex
@@ -182,10 +182,10 @@ PSTricks: Converting TeX box to EPS.
 Here is how much of TeX's memory you used:
  2584 strings out of 495062
  30039 string characters out of 1182644
- 101529 words of memory out of 3000000
+ 102215 words of memory out of 3000000
  5786 multiletter control sequences out of 15000+50000
  3940 words of font info for 15 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 31i,3n,37p,224b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,3n,37p,224b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on LimitCircle.dvi (1 page, 4668 bytes).
+Output written on LimitCircle.dvi (1 page, 11272 bytes).

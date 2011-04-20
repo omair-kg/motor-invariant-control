@@ -4,7 +4,7 @@
 \pagestyle{empty}
 \begin{document}
 \begin{TeXtoEPS}
-\begin{pspicture}(0,-1)(32,10)
+\begin{pspicture}(0,-10)(32,10)
 		%\psgrid
 
 		\psline[linewidth=3pt](0,0)(50,0)
@@ -188,6 +188,22 @@
 				
 			}
 		}
+		\rput(16,-5)
+		{
+			\psframe[fillcolor=red,fillstyle=solid](-17,-4)(17,4)
+			\psframe[fillcolor=yellow,fillstyle=solid](-10,-4)(10,4)	
+			\psframe[fillcolor=green,fillstyle=solid](-5,-4)(5,4)
+			\rput(0,0){Double Support}
+			\rput(-7,0){Left Support}
+			\rput(7,0){Right Support}
+			\rput(11,0){Fall}
+			\rput(-11,0){Fall}
+
+		}
+		\psline[linewidth=2pt]{->}(13,-5)(12,-0.5)
+		\psline[linewidth=2pt]{->}(19,-5)(20,-0.5)
+		\psline[linewidth=2pt]{->}(8,-5)(4,-0.5)
+		\psline[linewidth=2pt]{->}(24,-5)(28,-0.5)
 \end{pspicture}
 \end{TeXtoEPS}
 

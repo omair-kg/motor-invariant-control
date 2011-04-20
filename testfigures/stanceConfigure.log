@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  19 APR 2011 16:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  20 APR 2011 18:03
 entering extended mode
  %&-line parsing enabled.
 **stanceConfigure.tex
@@ -181,10 +181,10 @@ PSTricks: Converting TeX box to EPS.
 Here is how much of TeX's memory you used:
  2609 strings out of 495062
  30339 string characters out of 1182644
- 107567 words of memory out of 3000000
+ 109981 words of memory out of 3000000
  5800 multiletter control sequences out of 15000+50000
  7982 words of font info for 29 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  31i,8n,39p,228b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on stanceConfigure.dvi (1 page, 15404 bytes).
+Output written on stanceConfigure.dvi (1 page, 17852 bytes).
