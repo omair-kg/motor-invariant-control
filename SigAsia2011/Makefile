@@ -25,6 +25,7 @@ $(R).pdf: $(R).ps
 	-dMonoImageFilter=/FlateEncode \
 	-dDownsampleColorImages=false \
 	-dDownsampleGrayImages=false $(R).ps $(R).pdf
+	latex2rtf $(R)
 
 clean:
 	rm -f $(R).log $(R).aux $(R).bbl $(R).blg $(R).dvi $(R).ps $(R).out

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  21 APR 2011 12:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  21 APR 2011 12:29
 entering extended mode
  %&-line parsing enabled.
 **AMSI
@@ -431,10 +431,10 @@ File: images/swim.eps Graphic file (type eps)
  <images/swim.eps>))
 (./futurework.tex [7]) (./AMSI.bbl) [8] (./AMSI.aux) ) 
 Here is how much of TeX's memory you used:
- 5942 strings out of 495062
- 88404 string characters out of 1182644
- 168225 words of memory out of 3000000
- 8993 multiletter control sequences out of 15000+50000
+ 5941 strings out of 495062
+ 88363 string characters out of 1182644
+ 167965 words of memory out of 3000000
+ 8992 multiletter control sequences out of 15000+50000
  18879 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,15n,40p,40981b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
