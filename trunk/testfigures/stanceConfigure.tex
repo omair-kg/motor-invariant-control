@@ -1,0 +1,213 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{amsmath}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(0,-10)(32,10)
+		%\psgrid
+
+		\psline[linewidth=3pt](0,0)(50,0)
+		\rput{0}(4,0)
+		{
+			%ground
+			\psline[linewidth=3pt](0,0)(50,0)
+						
+			\SpecialCoor
+			\rput{0}(!0 10 cos 8 mul)
+			{	
+				\psline[linewidth=3pt,linestyle=dashed](0,0)(0,5)
+		
+				%left leg		
+				\rput{-10}(0,0)
+				{
+					
+					\rput{10}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=blue]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=blue]{->}(0,-8)(0,-1)
+					\rput(-0.5,-4){$\mathbf F_l$}
+					
+					
+				}
+				
+				\rput{20}(0,0)
+				{
+					
+					
+					\rput{-20}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=red]{->}(0,-8)(0,0)
+					
+					
+				}
+			\psdots[dotstyle=Bo,dotscale=5.0](0,0)
+				
+				
+			}
+		}
+
+		
+		\rput{0}(12,0)
+		{
+			%ground
+			\psline[linewidth=3pt](0,0)(50,0)
+						
+			\SpecialCoor
+			\rput{0}(!0 20 cos 8 mul)
+			{	
+				\psline[linewidth=3pt,linestyle=dashed](0,0)(0,5)
+		
+				%left leg		
+				\rput{-20}(0,0)
+				{
+					
+					\rput{20}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=blue]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=blue]{->}(0,-8)(0,-3)
+					\rput(-0.5,-4){$\mathbf F_l$}
+					
+					
+				}
+				
+				\rput{20}(0,0)
+				{
+					
+					
+					\rput{-20}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=red]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=red]{->}(0,-8)(0,-5)
+					\rput(0.5,-4){$\mathbf F_r$}
+					
+					
+				}\psdots[dotstyle=Bo,dotscale=5.0](0,0)
+				
+				
+			}
+		}
+		\rput{0}(20,0)
+		{
+			%ground
+			\psline[linewidth=3pt](0,0)(50,0)
+						
+			\SpecialCoor
+			\rput{0}(!0 20 cos 8 mul)
+			{	
+				\psline[linewidth=3pt,linestyle=dashed](0,0)(0,5)
+		
+				%left leg		
+				\rput{-20}(0,0)
+				{
+					
+					\rput{20}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=blue]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=blue]{->}(0,-8)(0,-5)
+					\rput(-0.5,-4){$\mathbf F_l$}
+					
+					
+				}
+				
+				\rput{20}(0,0)
+				{
+					
+					
+					\rput{-20}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=red]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=red]{->}(0,-8)(0,-3)
+					\rput(0.5,-4){$\mathbf F_r$}
+					
+					
+				}\psdots[dotstyle=Bo,dotscale=5.0](0,0)
+				
+				
+			}
+		}
+		\rput{0}(28,0)
+		{
+			%ground
+			\psline[linewidth=3pt](0,0)(50,0)
+						
+			\SpecialCoor
+			\rput{0}(!0 10 cos 8 mul)
+			{	
+				\psline[linewidth=3pt,linestyle=dashed](0,0)(0,5)
+		
+				%left leg		
+				\rput{-20}(0,0)
+				{
+					
+					\rput{10}(0,-8)
+						{
+							\pstriangle(0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=blue]{->}(0,-8)(0,0)
+					%\psline[linewidth=3pt,linecolor=blue]{->}(0,-8)(0,-1)
+					%\rput(-0.5,-4){$\mathbf Fl$}
+					
+					
+				}
+				
+				\rput{10}(0,0)
+				{
+					
+					
+					\rput{-10}(0,-8)
+						{
+							\pstriangle(0,0)(1,0.3)
+							
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=red]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=red]{->}(0,-8)(0,-1)
+					\rput(0.5,-4){$\mathbf F_r$}
+				}
+			\psdots[dotstyle=Bo,dotscale=5.0](0,0)
+				
+				
+			}
+		}
+		\rput(16,-5)
+		{
+			\psframe[fillcolor=red,fillstyle=solid](-17,-4)(17,4)
+			\psframe[fillcolor=yellow,fillstyle=solid](-10,-4)(10,4)	
+			\psframe[fillcolor=green,fillstyle=solid](-5,-4)(5,4)
+			\rput(0,0){Double Support}
+			\rput(-7,0){Left Support}
+			\rput(7,0){Right Support}
+			\rput(11,0){Fall}
+			\rput(-11,0){Fall}
+
+		}
+		\psline[linewidth=2pt]{->}(13,-5)(12,-0.5)
+		\psline[linewidth=2pt]{->}(19,-5)(20,-0.5)
+		\psline[linewidth=2pt]{->}(8,-5)(4,-0.5)
+		\psline[linewidth=2pt]{->}(24,-5)(28,-0.5)
+\end{pspicture}
+\end{TeXtoEPS}
+
+
+\end{document}
+
+
