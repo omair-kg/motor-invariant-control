@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  18 APR 2011 14:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  18 APR 2011 14:56
 entering extended mode
  %&-line parsing enabled.
 **AMSI
@@ -407,34 +407,38 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 
 LaTeX Warning: Command \d invalid in math mode on input line 60.
 
-[4]) (./application.tex (./bb.tex) (./walk.tex) (./stance.tex
+[4]) (./application.tex (./bb.tex) (./walk.tex) (./stance.tex [5]
 File: images/uncontrolled.eps Graphic file (type eps)
 
 <images/uncontrolled.eps>
 File: images/AttractiveCircle.eps Graphic file (type eps)
- <images/AttractiveCircle.eps> [5]
+ <images/AttractiveCircle.eps>
 File: images/LieAttractiveCircle.eps Graphic file (type eps)
 
 <images/LieAttractiveCircle.eps>
 File: images/stanceState.eps Graphic file (type eps)
- <images/stanceState.eps>
+ <images/stanceState.eps> [6]
 File: images/s2walk.eps Graphic file (type eps)
- <images/s2walk.eps>)
-(./boid.tex [6]
+
+<images/s2walk.eps>) (./boid.tex
 File: images/phaseShift.eps Graphic file (type eps)
  <images/phaseShift.eps>
 File: images/swim.eps Graphic file (type eps)
- <images/swim.eps>)) (./futurework.tex)
-(./AMSI.bbl [7]) [8
+ <images/swim.eps>))
+(./futurework.tex) (./AMSI.bbl [7]) [8
 
-] (./AMSI.aux) ) 
+] (./AMSI.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5937 strings out of 495062
- 88293 string characters out of 1182644
+ 5938 strings out of 495062
+ 88305 string characters out of 1182644
  167765 words of memory out of 3000000
- 8989 multiletter control sequences out of 15000+50000
+ 8990 multiletter control sequences out of 15000+50000
  18879 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,15n,40p,40981b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on AMSI.dvi (8 pages, 67952 bytes).
+Output written on AMSI.dvi (8 pages, 69220 bytes).
