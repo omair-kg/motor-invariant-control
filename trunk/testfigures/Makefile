@@ -1,5 +1,6 @@
 # make -f Makefile_latex
 
+
 R = stanceConfigure
 
 eps: 	$(R).tex
