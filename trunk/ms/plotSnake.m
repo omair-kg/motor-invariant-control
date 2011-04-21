@@ -50,11 +50,13 @@ set(snake,...
    'Color',[0 0 1],...
    'LineWidth',1,...
    'Marker','X')
-
+clf
 axis equal
+axis off
+
 hold on
 
-orig=[0;0]
+orig=[0;0];
 for i=1:length(data)
 	orig=orig+v(i)*[cos(av(i));sin(av(i))]*0.2;	
 	offsetX(i,:)=offsetX(i,:)+orig(1);
@@ -62,13 +64,15 @@ for i=1:length(data)
 	
 	if(mod(i,100)==0)
 %		set(snake,'Xdata',[offsetX(i,:)],'Ydata',[offsetY(i,:)]);
-		plot(offsetX(i,:),offsetY(i,:),'-X');
+		plot(offsetX(i,:),offsetY(i,:),'-X','LineWidth',2);
 		drawnow
 		pause(0.01)
 	else
 		continue
 	end
 end
+title ('Swimming Fish')
+
 hold off
 saveas(gca,'swim.eps','psc2')
 end
