@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(0,-1)(10,10)
+		%\psgrid
+		
+		\SpecialCoor
+		\psline[linestyle=dashed](!0 -10 5 sin mul)(!10 5 cos mul  -10 5 sin mul)
+		%\psgrid		
+		\psline[linewidth=2pt]{->}(7,8)(7,6)
+		\rput(6,7){$\mathbf g$}
+
+		%\rput(2,7)
+		%{
+		% $\mathbf x_{n}$,$\mathbf y_{n}$ 	
+		%}
+		
+		\rput{-5}(0,0)
+		{
+			%\psgrid
+			%ground
+			\psline[linewidth=3pt](0,0)(10,0)
+			\psarc[linewidth=0.5pt]{<-}(10,0){9}{-180}{-175}
+			%\psgrid
+			\rput(0.5,-0.5){$\mathbf \gamma$}
+			
+						
+			
+			%\SpecialCoor
+			%\psline[linewidth=0.5pt,linestyle=dashed](!2 10 cos 8 mul)(2,0)
+			%\psline[linewidth=0.5pt](2,0.5)(1.5,0.5)
+			%\psline[linewidth=0.5pt](1.5,0.5)(1.5,0)
+						
+			\SpecialCoor
+			\rput{0}(!2 10 cos 8 mul)
+			{	
+				\psline[linewidth=3pt,linestyle=dashed](0,0)(0,6)
+				%left leg		
+				\rput{10}(0,0)
+				{
+					%\psgrid
+					
+					\psline[linecolor=blue,linewidth=3pt](0,0)(0,-4)
+					\pscircle(0,0){0.1}
+					\rput{0}(0,-4)
+					{
+					\psline[linecolor=blue,linewidth=3pt](0,0)(0,-4)
+					\pscircle(0,0){0.1}
+					\psdots[dotstyle=Bo,dotscale=3.0](0,-2)
+					}
+		
+				
+		
+					
+					\psline[linewidth=0.5pt](0,0)(-2.3,0)
+					\psline[linewidth=0.5pt](0,-8)(-2.3,-8)
+					\psline[linewidth=0.5pt]{<->}(-2,0)(-2,-8)
+					\rput(-2.2,-4){ $\mathbf L$}
+		
+					\psline[linewidth=0.5pt](0,-2)(-1.1,-2)	
+					\psline[linewidth=0.5pt]{<->}(-1,0)(-1,-2)
+					\rput(-1.2,-1.5){$\mathbf b_{2}$}
+
+					\psline[linewidth=0.5pt](0,-4)(-1.1,-4)	
+					\psline[linewidth=0.5pt]{<->}(-1,-2)(-1,-4)
+					\rput(-1.2,-3.5){$\mathbf a_{2}$}
+
+
+					\psdots[dotstyle=Bo,dotscale=3.0](0,-2)
+					\rput(0.7,-2.2){$\mathbf m_{s}$,$\mathbf I_{s}$}
+
+
+					
+					\rput{-5}(0,-8)
+					{
+					\psline[linewidth=0.5pt,linestyle=dashed](0.1,0)(0.1,4)
+					\psarc[linewidth=0.5pt,linestyle=dashed]{->}(0.1,0){3.8}{90}{95}
+					\rput(0.5,4.1){$\mathbf q_{1}$}
+					}
+					%\psarc[linecolor=blue,linewidth=3pt](0,-6){2}{210}{330}
+					
+				}
+				%right leg
+				\rput{40}(0,0)
+				{
+					%\psarc[linewidth=0.5pt,linestyle=dashed]{->}(0,0){5.5}{-150}{-90}
+					%\SpecialCoor	
+					%\rput(6;-105){$\mathbf \phi_{2}$}	
+					\psline[linecolor=red,linewidth=3pt](0,0)(0,-4)
+					\pscircle(0,0){0.1}
+					\psdots[dotstyle=Bo,dotscale=3.0](0,-2)
+					
+					\rput{-35}(0,-4)
+					{
+					\psline[linewidth=0.5pt,linestyle=dashed](0,0)(0,1.5)
+					\psarc[linewidth=0.5pt,linestyle=dashed]{->}(0,0){1}{90}{125}
+					\rput(0.3,1){$\mathbf q_{2}$}
+					}
+					
+					\rput{-10}(0,-4)
+					{
+					\psline[linecolor=red,linewidth=3pt](0,0)(0,-4)
+					\pscircle(0,0){0.1}
+
+				
+					\psline[linewidth=0.5pt](0,0)(1.1,0)
+					\psline[linewidth=0.5pt](0,-2)(1.1,-2)	
+					\psline[linewidth=0.5pt]{<->}(1,0)(1,-2)
+					\rput(1.2,-1.5){$\mathbf b_{1}$}
+
+					\psline[linewidth=0.5pt](0,-4)(1.1,-4)	
+					\psline[linewidth=0.5pt]{<->}(1,-2)(1,-4)
+					\rput(1.2,-3.5){$\mathbf a_{1}$}
+					\psdots[dotstyle=Bo,dotscale=3.0](0,-2)
+					\rput(-0.7,-2){$\mathbf m_{t}$,$\mathbf I_{t}$}
+					
+					\rput{-25}(0,0)
+					{
+						\psline[linewidth=0.5pt,linestyle=dashed](0,0)(0,-1.5)
+						\psarc[linewidth=0.5pt,linestyle=dashed]{->}(0,0){1.4}{270}{295}
+						\rput(-0.3,-1){$\mathbf q_{3}$}
+					}
+					}
+
+				}
+				\psdots[dotstyle=Bo,dotscale=3.0](0,0)
+				\rput(0.7,0){$\mathbf m_{H}$}
+			}
+		}
+\end{pspicture}
+\end{TeXtoEPS}
+
+
+\end{document}
+
+
