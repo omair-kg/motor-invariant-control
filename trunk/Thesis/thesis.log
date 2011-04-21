@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  21 APR 2011 14:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  21 APR 2011 15:34
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -317,21 +317,21 @@ LaTeX Warning: Unused global option(s):
 (./Appendix2/appendix2.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-Package hyperref Info: Link coloring ON on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+Package hyperref Info: Link coloring ON on input line 53.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -341,49 +341,48 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count99
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
  (./thesis.out)
 (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 54.
+Package backref Info: ** backref set up for natbib ** on input line 53.
 \AtBeginShipoutBox=\box27
-LaTeX Font Info:    Try loading font information for U+msa on input line 75.
- (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 75.
-
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
 File: ThesisFigs/UnivShield.eps Graphic file (type eps)
-
-<ThesisFigs/UnivShield.eps> [1
+ <ThesisFigs/UnivShield.eps> [1
 
 ]
 \openout2 = `Dedication/dedication.aux'.
 
- (./Dedication/dedication.tex [1
+ (./Dedication/dedication.tex
+[1
 
 
 ])
 \openout2 = `Acknowledgement/acknowledgement.aux'.
 
-
-(./Acknowledgement/acknowledgement.tex [2
+ (./Acknowledgement/acknowledgement.tex [2
 
 
 ])
 \openout2 = `Abstract/abstract.aux'.
 
- (./Abstract/abstract.tex [3
+ (./Abstract/abstract.tex
+[3
 
 
-])
-(./thesis.toc [4
+]) (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [4
 \FN@pp@footnotehinttrue 
 
 
@@ -475,12 +474,12 @@ Chapter 5.
 (./Conclusions/conclusions.aux) (./Appendix1/appendix1.aux)
 (./Appendix2/appendix2.aux)) ) 
 Here is how much of TeX's memory you used:
- 5774 strings out of 495062
- 82043 string characters out of 1182644
- 158045 words of memory out of 3000000
- 8746 multiletter control sequences out of 15000+50000
- 19340 words of font info for 73 fonts, out of 3000000 for 9000
+ 5750 strings out of 495062
+ 81651 string characters out of 1182644
+ 157024 words of memory out of 3000000
+ 8724 multiletter control sequences out of 15000+50000
+ 13453 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,50p,4359b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (19 pages, 45952 bytes).
+Output written on thesis.dvi (19 pages, 45804 bytes).
