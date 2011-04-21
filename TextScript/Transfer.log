@@ -1,0 +1,403 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2010.10.11)  13 JAN 2011 14:52
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Transfer
+(./Transfer.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(/usr/share/texmf/tex/latex/html/html.sty
+Package: html 1999/07/19 v1.38 hypertext commands for latex2html (nd, hws, rrm)
+
+\c@lpart=\count88
+\c@lchapter=\count89
+\c@lsection=\count90
+\c@lsubsection=\count91
+\c@lsubsubsection=\count92
+\c@lparagraph=\count93
+\c@lsubparagraph=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+)
+(/usr/share/texmf-texlive/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip10
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks15
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip47
+\subfigcapskip=\skip48
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip49
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip50
+\c@subfigure=\count108
+\c@lofdepth=\count109
+\c@subtable=\count110
+\c@lotdepth=\count111
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip51
+\subfig@bottom=\skip52
+)
+(/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read1
+)
+(/usr/share/texmf-texlive/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/share/texmf-texlive/tex/generic/pstricks/pstricks.tex
+`PSTricks' v1.29  <2009/05/19> (tvz)
+\pst@dima=\dimen116
+\pst@dimb=\dimen117
+\pst@dimc=\dimen118
+\pst@dimd=\dimen119
+\pst@dimg=\dimen120
+\pst@dimh=\dimen121
+\pst@hbox=\box28
+\pst@boxg=\box29
+\pst@cnta=\count112
+\pst@cntb=\count113
+\pst@cntc=\count114
+\pst@cntd=\count115
+\pst@cntg=\count116
+\pst@cnth=\count117
+\pst@toks=\toks22
+(/usr/share/texmf-texlive/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen122
+\psxunit=\dimen123
+\psyunit=\dimen124
+\pslinewidth=\dimen125
+\pst@customdefs=\toks23
+\pslinearc=\dimen126
+\everypsbox=\toks24
+\psframesep=\dimen127
+\pslabelsep=\dimen128
+\pst@shift=\dimen129
+\theoverlaybox=\box30
+)
+File: pstricks.tex 2009/05/19 v1.29 `PSTricks' (tvz,hv)
+
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/share/texmf-texlive/tex/latex/pstricks-add/pstricks-add.sty
+Package: pstricks-add 2009/03/17 v. 0.13 package wrapper for pstricks-add.tex (
+hv)
+
+(/usr/share/texmf-texlive/tex/generic/pstricks-add/pstricks-add.tex
+(/usr/share/texmf-texlive/tex/generic/pstricks/pst-plot.tex
+(/usr/share/texmf-texlive/tex/generic/multido/multido.tex
+ v1.41, 2004/05/18 <tvz>
+\multido@count=\count118
+\multidocount=\count119
+\multido@stuff=\toks25
+)  v1.04, 2009/06/08)
+(/usr/share/texmf-texlive/tex/generic/pstricks/pst-node.tex  v1.01, 2008/11/26
+\psrow=\count120
+\pscol=\count121
+\psmatrixcnt=\count122
+\psrowsep=\skip53
+\pscolsep=\skip54
+) (/usr/share/texmf-texlive/tex/generic/pst-3d/pst-3d.tex
+(/usr/share/texmf-texlive/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+(/usr/share/texmf-texlive/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/share/texmf-texlive/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+\XKV@depth=\count123
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+)))
+`PST-3d' v1.00, 2005/09/03 (tvz))
+(/usr/share/texmf-texlive/tex/generic/pstricks-add/pst-fp.tex
+`pst-fp' v0.02, 2009/04/02 (hv)
+\pstFP@xs=\count124
+\pstFP@xia=\count125
+\pstFP@xib=\count126
+\pstFP@xfa=\count127
+\pstFP@xfb=\count128
+\pstFP@rega=\count129
+\pstFP@regb=\count130
+\pstFP@regs=\count131
+\pstFP@times=\count132
+)
+(/usr/share/texmf-texlive/tex/generic/pst-math/pst-math.tex
+`pst-math' v0.23 , (CJ,hv)) `pstricks-add' v3.35, 2009/10/12 (dr,hv)
+\pst@dimm=\dimen130
+\pst@dimn=\dimen131
+\pst@dimo=\dimen132
+\pst@dimp=\dimen133
+\pst@cntm=\count133
+\pst@cntn=\count134
+\pst@cnto=\count135
+\pst@cntp=\count136
+\@zero=\count137
+\pstRadUnit=\dimen134
+\pstRadUnitInv=\dimen135
+\pshooklength=\dimen136
+\pshookwidth=\dimen137
+\@digitcounter=\count138
+\psk@subticksize=\dimen138
+\pst@xticksizeA=\dimen139
+\pst@xticksizeB=\dimen140
+\pst@xticksizeC=\dimen141
+\pst@yticksizeA=\dimen142
+\pst@yticksizeB=\dimen143
+\pst@yticksizeC=\dimen144
+\psk@llx=\dimen145
+\psk@lly=\dimen146
+\psk@urx=\dimen147
+\psk@ury=\dimen148
+\pst@xunit=\dimen149
+\pst@yunit=\dimen150
+\linecnt=\count139
+\chart@ColorIndex=\dimen151
+\chart@ColorStep=\dimen152
+\pst@chartHeight=\dimen153
+\pst@chartStackDepth=\dimen154
+\pst@chartStackWidth=\dimen155
+\chart@Toggle=\count140
+)
+File: pstricks-add.tex 2009/10/12 v3.35 `PSTricks-add' (hv)
+)
+(/usr/share/texmf-texlive/tex/latex/natbib/natbib.sty
+Package: natbib 2009/07/16 8.31 (PWD, AO)
+\bibhang=\skip55
+\bibsep=\skip56
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count141
+) (./Transfer.aux
+(./Abstract.aux) (./Introduction.aux) (./LiteratureReview.aux)
+(./TheoryAndBackground.aux) (./Framework.aux) (./Application.aux)
+(./FutureWork.aux))
+\openout1 = `Transfer.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+ [1
+
+] (./Transfer.toc [1
+
+])
+\tf@toc=\write4
+\openout4 = `Transfer.toc'.
+
+ [2]
+\openout2 = `Abstract.aux'.
+
+ (./Abstract.tex [1
+
+])
+\openout2 = `Introduction.aux'.
+
+
+(./Introduction.tex
+Chapter 1.
+[1
+
+
+
+] (./Figures/ShipExample.tex) [2] (./Figures/ShipMovement.tex)
+(./Figures/ShipEquilibrium.tex) (./Figures/stablePosition.tex)
+(./Figures/unstablePosition.tex) (./Figures/ShipGlobalFlow.tex) [3] [4]
+[5] (./Figures/topoloyStructure.tex) [6] (./Figures/ShipStir.tex)
+(./Figures/ShipStir2D.tex) (./Figures/moreStableMotion.tex) [7] [8] [9])
+[10]
+\openout2 = `LiteratureReview.aux'.
+
+ (./LiteratureReview.tex
+Chapter 2.
+[11
+
+
+
+] [12] [13] [14]) [15]
+\openout2 = `TheoryAndBackground.aux'.
+
+ (./TheoryAndBackground.tex
+Chapter 3.
+[16
+
+
+
+] [17]
+Overfull \hbox (0.65677pt too wide) in paragraph at lines 133--139
+\OT1/cmr/m/n/10.95 flu-enced by the en-vi-ron-ment. This is the Un-con-trolled 
+Man-i-fold Hy-poth-e-sis(UMH)[Latash,
+ []
+
+[18]
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ¯ in font cmr10!
+ [19] [20]
+File: Figures/mass_spring.eps Graphic file (type eps)
+ <Figures/mass_spring.eps> [21] [22] [23] [24]
+File: Figures/mass_spring.eps Graphic file (type eps)
+
+<Figures/mass_spring.eps>
+File: Figures/duffin.eps Graphic file (type eps)
+ <Figures/duffin.eps>
+File: Figures/pendulum.eps Graphic file (type eps)
+ <Figures/pendulum.eps> [25]
+File: Figures/pendulum.eps Graphic file (type eps)
+
+<Figures/pendulum.eps>
+File: Figures/spring_damping.eps Graphic file (type eps)
+ <Figures/spring_damping.eps>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 642.
+
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 642.
+ [26]
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ¥ in font cmr10!
+ [27]
+File: Figures/bouncing_ball.eps Graphic file (type eps)
+
+<Figures/bouncing_ball.eps>
+File: Figures/bouncing_ball_phaseplot.eps Graphic file (type eps)
+ <Figures/bouncing_ball_phaseplot.eps> [28] [29]
+[30]
+File: Figures/oscillation.eps Graphic file (type eps)
+ <Figures/oscillat

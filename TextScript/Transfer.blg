@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: Transfer.aux
+A level-1 auxiliary file: Abstract.aux
+A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: LiteratureReview.aux
+A level-1 auxiliary file: TheoryAndBackground.aux
+A level-1 auxiliary file: Framework.aux
+A level-1 auxiliary file: Application.aux
+A level-1 auxiliary file: FutureWork.aux
+The style file: plainnat.bst
+Database file #1: Transfer.bib
+Warning--empty publisher in abraham1978foundations
+Warning--can't use both volume and number fields in Andronov1937
+Warning--empty journal in Baraff1994
+Warning--empty journal in Gleicher1998a
+Warning--empty publisher in Goldstein2002
+Warning--empty journal in kovar2008motion
+Warning--can't use both author and editor fields in latash2008neurophysiological
+Warning--empty school in Liu2005
+Warning--empty school in Ng-Thow-Hing2001
+Warning--empty journal in Sims
+Warning--empty year in Sims
+Warning--empty year in Sims
+Warning--empty journal in Sugihara2002
+Warning--empty school in Tedrake2008
+You've used 59 entries,
+            2774 wiz_defined-function locations,
+            1002 strings with 15027 characters,
+and the built_in function-call counts, 25542 in all, are:
+= -- 2419
+> -- 1221
+< -- 63
++ -- 426
+- -- 366
+* -- 1779
+:= -- 3953
+add.period$ -- 212
+call.type$ -- 59
+change.case$ -- 222
+chr.to.int$ -- 58
+cite$ -- 132
+duplicate$ -- 1283
+empty$ -- 2184
+format.name$ -- 456
+if$ -- 5516
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 64
+newline$ -- 324
+num.names$ -- 236
+pop$ -- 627
+preamble$ -- 1
+purify$ -- 179
+quote$ -- 0
+skip$ -- 946
+stack$ -- 0
+substring$ -- 910
+swap$ -- 198
+text.length$ -- 21
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 594
+warning$ -- 14
+while$ -- 258
+width$ -- 0
+write$ -- 818
+(There were 14 warnings)
