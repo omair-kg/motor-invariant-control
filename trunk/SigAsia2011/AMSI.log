@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  18 APR 2011 14:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  21 APR 2011 12:20
 entering extended mode
  %&-line parsing enabled.
 **AMSI
@@ -374,6 +374,12 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 45.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 8.27998pt on input line 45.
  [2]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -388,26 +394,24 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 ) (./framework.tex
+File: images/LimitCircle.eps Graphic file (type eps)
+ <images/LimitCircle.eps>
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-) (./globalInvariant.tex [3]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-)
-(./localInvariant.tex
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 58.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 58.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 8.27998pt on input line 58.
 
+Underfull \vbox (badness 6575) has occurred while \output is active []
+
+)
+(./globalInvariant.tex [3]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+) (./localInvariant.tex [4]
 
 LaTeX Warning: Command \d invalid in math mode on input line 60.
 
-[4]) (./application.tex (./bb.tex) (./walk.tex) (./stance.tex [5]
+) (./application.tex (./bb.tex [5]) (./walk.tex) (./stance.tex
 File: images/uncontrolled.eps Graphic file (type eps)
 
 <images/uncontrolled.eps>
@@ -425,20 +429,14 @@ File: images/phaseShift.eps Graphic file (type eps)
  <images/phaseShift.eps>
 File: images/swim.eps Graphic file (type eps)
  <images/swim.eps>))
-(./futurework.tex) (./AMSI.bbl [7]) [8
-
-] (./AMSI.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(./futurework.tex [7]) (./AMSI.bbl) [8] (./AMSI.aux) ) 
 Here is how much of TeX's memory you used:
- 5938 strings out of 495062
- 88305 string characters out of 1182644
- 167765 words of memory out of 3000000
- 8990 multiletter control sequences out of 15000+50000
+ 5942 strings out of 495062
+ 88404 string characters out of 1182644
+ 168225 words of memory out of 3000000
+ 8993 multiletter control sequences out of 15000+50000
  18879 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,15n,40p,40981b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on AMSI.dvi (8 pages, 69220 bytes).
+Output written on AMSI.dvi (8 pages, 70608 bytes).
