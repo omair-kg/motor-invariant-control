@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  21 APR 2011 15:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  26 APR 2011 13:12
 entering extended mode
  %&-line parsing enabled.
-**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCo
-de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
-{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
-documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
- tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
-\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode xhtml,mozilla.a.b.c.\input 
- AMSI.tex
-(./AMSI.tex (./acmsiggraph.cls
+**AMSI
+(./AMSI.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(./acmsiggraph.cls
 Document Class: acmsiggraph 2011/03/02 ACM SIGGRAPH class
 \ACMpointsize=\skip41
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
@@ -221,20 +219,6 @@ File: pdfmark.def 2009/10/09 v6.79a Hyperref definitions for pdfmark specials
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 503.
 )
-(/usr/share/texmf/tex/generic/tex4ht/tex4ht.sty
-version 2008-10-27-17:23
-Package: tex4ht 
---------------------------------------
---- Note --- for _ at preamble, use the command line option `early_'
---------------------------------------
---------------------------------------
---- Note --- for ^ at preamble, use the command line option `early^'
---------------------------------------
-\tmp:toks=\toks21
-)
-(/usr/share/texmf/tex/generic/tex4ht/usepackage.4ht
-version 2009-05-21-09:32
-)
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip48
@@ -245,7 +229,7 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks22
+\@emptytoks=\toks21
 \ex@=\dimen119
 ))
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
@@ -275,269 +259,184 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \dotsspace@=\muskip11
 \c@parentequation=\count108
 \dspbrk@lvl=\count109
-\tag@help=\toks23
+\tag@help=\toks22
 \row@=\count110
 \column@=\count111
 \maxfields@=\count112
-\andhelp@=\toks24
+\andhelp@=\toks23
 \eqnshift@=\dimen122
 \alignsep@=\dimen123
 \tagshift@=\dimen124
 \tagwidth@=\dimen125
 \totwidth@=\dimen126
 \lineht@=\dimen127
-\@envbody=\toks25
+\@envbody=\toks24
 \multlinegap=\skip49
 \multlinetaggap=\skip50
-\mathdisplay@stack=\toks26
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-)
-(/usr/share/texmf/tex/generic/tex4ht/tex4ht.4ht
-version 2009-01-07-07:11
---------------------------------------
---- Note --- for additional information, use the command line option `info'
---------------------------------------
+) (./AMSI.aux)
+\openout1 = `AMSI.aux'.
 
-::::::::::::::::::::::::::::::::::::::::::
- TeX4ht info is available in the log file 
-::::::::::::::::::::::::::::::::::::::::::
---------------------------------------
---- Note --- For MathML on MSIE + MathPlayer use the command line option `mathp
-layer'
---------------------------------------
-) (/usr/share/texmf/tex/generic/tex4ht/tex4ht.sty
-version 2008-10-27-17:23
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 96.
 
---- needs --- tex4ht AMSI ---
-\tmp:cnt=\count113
-\openout15 = `AMSI.tmp'.
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
 
-(./AMSI.tmp)
-\tmp:dim=\skip51
- (./AMSI.xref)
-\:refout=\write3
-\openout3 = `AMSI.xref'.
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
- (/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- to remove the <?xml version=...?> processing instruction use the c
-ommand line option `no-VERSION'
---------------------------------------
---------------------------------------
---- Note --- to remove the DOCTYPE declaration use the command line option `no-
-DOCTYPE'
---------------------------------------
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-(/usr/share/texmf/tex/generic/tex4ht/unicode.4ht
-version 2009-02-23-20:45
-)
-(/usr/share/texmf/tex/generic/tex4ht/mathml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/html-mml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/mozilla.4ht
-version 2008-01-02-08:15
-)
---------------------------------------
---- Note --- for marking of the base font, use the command line option `fonts+'
+Package color Info: Driver file: dvips.def on input line 130.
 
---------------------------------------
---------------------------------------
---- Note --- for non active _, use the command line option `no_'
---------------------------------------
---------------------------------------
---- Note --- for _ of catcode 13, use the command line option `_13'
---------------------------------------
---------------------------------------
---- Note --- for non active ^, use the command line option `no^'
---------------------------------------
---------------------------------------
---- Note --- for ^ of catcode 13, use the command line option `^13'
---------------------------------------
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- for alternative charset, use the command line option `charset=...'
-
---------------------------------------
---------------------------------------
---- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
-on
---------------------------------------
---------------------------------------
---- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for content and toc in 2 frames, use the command line option `fram
-es'
---------------------------------------
---------------------------------------
---- Note --- for content, toc, and footnotes in 3 frames, use the command line 
-option `frames-fn'
---------------------------------------
---------------------------------------
---- Note --- for file extension name xht, use the command line option `xht'
---------------------------------------
-TeX4ht package options: xhtml,mozilla,html
---------------------------------------
---- Note --- to ignore CSS code, use the command line option `-css
---------------------------------------
---------------------------------------
---- Note --- for inline CSS code, use the command line option `css-in'
---------------------------------------
---------------------------------------
---- Note --- for pop ups on mouse over, use the command line option `mouseover'
-
---------------------------------------
---------------------------------------
---- Note --- for addressing images in a subdirectory, use the command line opti
-on `imgdir:.../'
---------------------------------------
-)
-(/usr/share/texmf/tex/generic/tex4ht/unicode.4ht
-version 2009-02-23-20:45
-)
-(/usr/share/texmf/tex/generic/tex4ht/mathml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/html-mml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/mozilla.4ht
-version 2008-01-02-08:15
---------------------------------------
---- Note --- For multi-platform MathML through stylesheet transforms, use the c
-ommand line option `pmathml'. If css rendering is preferred, use `pmathml-css'.
-
---------------------------------------
-)
-\:tokwrite=\toks27
-\:tokpage=\toks28
---------------------------------------
---- Note --- for back links to toc, use the command line option `sections+'
---------------------------------------
---------------------------------------
---- Note --- for linear crosslinks of pages, use the command line option `next'
-
---------------------------------------
-\openout15 = `AMSI.4ct'.
-
-\:tocout=\write4
-\openout4 = `AMSI.4tc'.
-
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/unicode.4ht
-version 2009-02-23-20:45
-)
-(/usr/share/texmf/tex/generic/tex4ht/mathml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/html-mml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/mozilla.4ht
-version 2008-01-02-08:15
-)
-(/usr/share/texmf/tex/generic/tex4ht/latex.4ht
-version 2009-05-21-09:32
---------------------------------------
---- Note --- for links into captions, instead of float heads, use the command l
-ine option `refcaption'
---------------------------------------
-
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
---------------------------------------
---- Note --- For mini tocs immediately aftter the header use the command line o
-ption `minitoc<'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements with valued data, use the command lin
-e option `enumerate+'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements li's with value attributes, use the c
-ommand line option `enumerate-'
---------------------------------------
---------------------------------------
---- Note --- for CSS2 code, use the command line option `css2'
---------------------------------------
---------------------------------------
---- Note --- for pictorial tabular, use the command line option `pic-tabular'
---------------------------------------
---------------------------------------
---- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
---------------------------------------
---------------------------------------
---- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
-
---------------------------------------
---------------------------------------
---- Note --- for inline footnotes use command line option `fn-in'
---------------------------------------
---------------------------------------
---- Note --- for tracing of latex font commands, use the command line option `f
-onts'
---------------------------------------
---------------------------------------
---- Note --- for width specifications of tabular p entries, use the `p-width' c
-ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
-style="width:\HColWidth"}}
---------------------------------------
-)
-(/usr/share/texmf/tex/generic/tex4ht/unicode.4ht
-version 2009-02-23-20:45
-)
-(/usr/share/texmf/tex/generic/tex4ht/mathml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/html-mml.4ht
-version 2009-04-18-11:08
-)
-(/usr/share/texmf/tex/generic/tex4ht/mozilla.4ht
-version 2008-01-02-08:15
+(/usr/share/texmf-texlive/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-(/usr/share/texmf/tex/generic/tex4ht/fontmath.4ht
-version 2009-05-21-09:32
+Package hyperref Info: Link coloring ON on input line 96.
 
-(/usr/share/texmf/tex/generic/tex4ht/html4.4ht
-version 2009-05-18-23:01
-)
-(/usr/share/texmf/tex/generic/tex4ht/unicode.4ht
-version 2009-02-23-20:45
-)
-(/usr/share/texmf/tex/generic/tex4ht/mathml.4ht
-version 2009-04-18-11:08
-\tmp:bx=\box30
+(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
-! Undefined control sequence.
-\@makecol ->\@LN@orig@makecol 
-                              \setbox \@outputbox \vbox {\boxmaxdepth \@maxd...
-l.1369 ...riant="bold-script">}{</\a:mathml mi>}{}
-                                                  
-? X
- 
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count113
+)
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+\AtBeginShipoutBox=\box30
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 113.
+
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 113.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 113.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 13.24796pt on input line 113.
+File: images/sampleteaser.eps Graphic file (type eps)
+
+<images/sampleteaser.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 113.
+See the caption package documentation for explanation.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
+(./abstract.tex
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 1.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 11.03998pt on input line 1.
+)
+File: icons/iconacm.eps Graphic file (type eps)
+ <icons/iconacm.eps>
+File: icons/iconpdf.eps Graphic file (type eps)
+ <icons/iconpdf.eps> (./introduction.tex
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 43.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 43.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 9.19998pt on input line 43.
+
+[1
+
+
+]) (./background.tex
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 45.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 8.27998pt on input line 45.
+ [2]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+) (./framework.tex
+File: images/LimitCircle.eps Graphic file (type eps)
+ <images/LimitCircle.eps>
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+
+Underfull \vbox (badness 6575) has occurred while \output is active []
+
+)
+(./globalInvariant.tex [3]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+) (./localInvariant.tex [4]
+
+LaTeX Warning: Command \d invalid in math mode on input line 60.
+
+) (./application.tex (./bb.tex [5]) (./walk.tex) (./stance.tex
+File: images/uncontrolled.eps Graphic file (type eps)
+
+<images/uncontrolled.eps>
+File: images/AttractiveCircle.eps Graphic file (type eps)
+ <images/AttractiveCircle.eps>
+File: images/LieAttractiveCircle.eps Graphic file (type eps)
+
+<images/LieAttractiveCircle.eps>
+File: images/stanceState.eps Graphic file (type eps)
+ <images/stanceState.eps> [6]
+File: images/s2walk.eps Graphic file (type eps)
+
+<images/s2walk.eps>) (./boid.tex
+File: images/phaseShift.eps Graphic file (type eps)
+ <images/phaseShift.eps>
+File: images/swim.eps Graphic file (type eps)
+ <images/swim.eps>))
+(./futurework.tex [7]) (./AMSI.bbl) [8] (./AMSI.aux) ) 
 Here is how much of TeX's memory you used:
- 8569 strings out of 495062
- 110587 string characters out of 1182644
- 257033 words of memory out of 3000000
- 11638 multiletter control sequences out of 15000+50000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 5941 strings out of 495062
+ 88363 string characters out of 1182644
+ 167965 words of memory out of 3000000
+ 8992 multiletter control sequences out of 15000+50000
+ 18879 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 45i,0n,40p,746b,209s stack positions out of 5000i,500n,10000p,200000b,50000s
-No pages of output.
+ 45i,15n,40p,40981b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on AMSI.dvi (8 pages, 70608 bytes).
