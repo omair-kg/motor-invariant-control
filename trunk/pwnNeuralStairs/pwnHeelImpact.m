@@ -34,7 +34,7 @@ cal=cos(q1-q2);
 Q22m=zeros(2,2);
 
 Q22m(1,2)= -ms*a1*(lt+b1)-mt*b2*(ls+a2);
-Q22m(1,1)=Q22m(1,2)+(mh*l+2*mt*(a2+ls)+ms*a1)*l*cal;
+Q22m(1,1)=Q22m(1,2)+(mh*l+2*(mt*(a2+ls)+ms*a1))*l*cal;
 Q22m(2,1)=Q22m(1,2);
 Q22m(2,2)=0;
 

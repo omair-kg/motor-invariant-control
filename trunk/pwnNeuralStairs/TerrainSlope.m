@@ -5,8 +5,8 @@ global maxLeng
 
 xpos=[	0.0,	 5	9.72   	14.75 	maxLeng];
 ypos=[ 	0.0,	 0.4	1.2    	2.6	4.8];
-xspeed=[0.0,		9.52,	9.73,  12.0,14.7	maxLeng];
-speed=[0.0, 		0.2, 	0.1,    0.2 0.2	0.0];
+xspeed=[0.0,	9.52,	9.73,  12.0,14.7	maxLeng];
+speed=[0.0, 	0.2, 	0.1,    0.2 0.2	0.0];
 
 xp=min(xpos):0.01:max(xpos);
 yp=interp1(xpos,ypos,xp);
