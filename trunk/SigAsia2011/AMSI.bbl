@@ -1,10 +1,85 @@
-\begin{thebibliography}{\protect\citename{Macchietto et~al\mbox{.} }2009}
+\begin{thebibliography}{\protect\citename{Chevallereau et~al\mbox{.} }2009}
+
+\bibitem[\protect\citename{Abraham and Marsden }1978]{abraham1978foundations}
+{\sc Abraham, R., and Marsden, J.}
+\newblock 1978.
+\newblock {\em {Foundations of mechanics}}.
+
+\bibitem[\protect\citename{Ames et~al\mbox{.} }2007]{ames2007geometric}
+{\sc Ames, A., Gregg, R., and Spong, M.}
+\newblock 2007.
+\newblock {A geometric approach to three-dimensional hipped bipedal robotic
+  walking}.
+\newblock In {\em Decision and Control, 2007 46th IEEE Conference on}, IEEE,
+  5123--5130.
 
 \bibitem[\protect\citename{Baraff }1994]{Baraff1994}
 {\sc Baraff, D.}
 \newblock 1994.
 \newblock {Fast contact force computation for nonpenetrating rigid bodies}.
 \newblock 23--34.
+
+\bibitem[\protect\citename{Chen et~al\mbox{.} }2007]{chen2007passive}
+{\sc Chen, H., et~al.}
+\newblock 2007.
+\newblock {Passive dynamic walking with knees: A point foot model}.
+
+\bibitem[\protect\citename{Chevallereau et~al\mbox{.}
+  }2009]{chevallereau2009asymptotically}
+{\sc Chevallereau, C., Grizzle, J., and Shih, C.}
+\newblock 2009.
+\newblock {Asymptotically stable walking of a five-link underactuated 3-D
+  bipedal robot}.
+\newblock {\em Robotics, IEEE Transactions on 25}, 1, 37--50.
+
+\bibitem[\protect\citename{Cohen }1988]{Cohen1988}
+{\sc Cohen, A.}
+\newblock 1988.
+\newblock {Evolution of the vertebrate central pattern generator for
+  locomotion}.
+\newblock {\em Neural control of rhythmic movements in vertebrates\/},
+  129--166.
+
+\bibitem[\protect\citename{Collins et~al\mbox{.} }2009]{Collins2009}
+{\sc Collins, S., Adamczyk, P., and Kuo, A.}
+\newblock 2009.
+\newblock {Dynamic arm swinging in human walking}.
+\newblock {\em Proceedings of the Royal Society B: Biological Sciences 276},
+  1673, 3679.
+
+\bibitem[\protect\citename{Faloutsos et~al\mbox{.}
+  }2001]{faloutsos2001composable}
+{\sc Faloutsos, P., van~de Panne, M., and Terzopoulos, D.}
+\newblock 2001.
+\newblock {Composable controllers for physics-based character animation}.
+\newblock In {\em Proceedings of the 28th annual conference on Computer
+  graphics and interactive techniques}, ACM New York, NY, USA, 251--260.
+
+\bibitem[\protect\citename{Feldman }1986]{feldman1986ome}
+{\sc Feldman, A.}
+\newblock 1986.
+\newblock {Once more on the equilibrium-point hypothesis($\lambda$ model) for
+  motor control}.
+\newblock {\em Journal of motor behavior 18}, 1, 17--54.
+
+\bibitem[\protect\citename{Flash and Handzel }2007]{flash2007affine}
+{\sc Flash, T., and Handzel, A.}
+\newblock 2007.
+\newblock {Affine differential geometry analysis of human arm movements}.
+\newblock {\em Biological cybernetics 96}, 6, 577--601.
+
+\bibitem[\protect\citename{Goldstein et~al\mbox{.} }2002]{Goldstein2002}
+{\sc Goldstein, H., Poole, C., Safko, J., and Addison, S.}
+\newblock 2002.
+\newblock {\em {Classical mechanics}}, vol.~70.
+
+\bibitem[\protect\citename{Grizzle et~al\mbox{.}
+  }2001]{grizzle2001asymptotically}
+{\sc Grizzle, J., Abba, G., and Plestan, F.}
+\newblock 2001.
+\newblock {Asymptotically stable walking for biped robots: Analysis via systems
+  with impulse effects}.
+\newblock {\em Automatic Control, IEEE Transactions on 46}, 1, 51--64.
 
 \bibitem[\protect\citename{Hodgins et~al\mbox{.} }1995]{Hodgins1995}
 {\sc Hodgins, J.~K., Wooten, W.~L., Brogan, D.~C., and O'Brien, J.~F.}
@@ -29,6 +104,12 @@
   Computer graphics and interactive techniques}, ACM, New York, NY, USA,
   155--162.
 
+\bibitem[\protect\citename{Latash }2008]{latash2008neurophysiological}
+{\sc Latash, M.}
+\newblock 2008.
+\newblock {\em {Neurophysiological basis of movement}}.
+\newblock Human Kinetics Publishers.
+
 \bibitem[\protect\citename{Liu }2009]{Liu2009}
 {\sc Liu, C.~K.}
 \newblock 2009.
@@ -43,17 +124,66 @@
 \newblock In {\em SIGGRAPH '09: ACM SIGGRAPH 2009 papers}, ACM, New York, NY,
   USA, 1--8.
 
+\bibitem[\protect\citename{Marsden and Ratiu }1999]{marsden1999introduction}
+{\sc Marsden, J., and Ratiu, T.}
+\newblock 1999.
+\newblock {\em {Introduction to mechanics and symmetry}}, vol.~17.
+\newblock Citeseer.
+
+\bibitem[\protect\citename{Melli }2008]{melli2008hierarchy}
+{\sc Melli, J.}
+\newblock 2008.
+\newblock {\em {A hierarchy of models for the control of fish-like
+  locomotion}}.
+\newblock PhD thesis, Princeton University.
+
 \bibitem[\protect\citename{Mirtich }1996]{Mirtich1996}
 {\sc Mirtich, B.}
 \newblock 1996.
 \newblock {\em {Impulse-based dynamic simulation of rigid body systems}}.
 \newblock PhD thesis, UNIVERSITY of CALIFORNIA.
 
+\bibitem[\protect\citename{Nishikawa et~al\mbox{.}
+  }2007]{nishikawa2007neuromechanics}
+{\sc Nishikawa, K., Biewener, A., Aerts, P., Ahn, A., Chiel, H., Daley, M.,
+  Daniel, T., et~al.}
+\newblock 2007.
+\newblock {Neuromechanics: an integrative approach for understanding motor
+  control}.
+\newblock {\em Integrative and Comparative Biology\/}.
+
+\bibitem[\protect\citename{Olver et~al\mbox{.} }1986]{olver1986applications}
+{\sc Olver, P., Olver, P., Olver, P., Olver, P., and Mathematician, G.}
+\newblock 1986.
+\newblock {\em {Applications of Lie groups to differential equations}},
+  vol.~107.
+\newblock Springer-Verlag.
+
+\bibitem[\protect\citename{Ostrowski }1995]{ostrowski1995mechanics}
+{\sc Ostrowski, J.}
+\newblock 1995.
+\newblock {The mechanics and control of undulatory robotic locomotion}.
+\newblock {\em California Institute of Technology, Pasadena CA\/}.
+
 \bibitem[\protect\citename{Raibert and Hodgins }1991]{Raibert1991}
 {\sc Raibert, M., and Hodgins, J.}
 \newblock 1991.
 \newblock {Animation of dynamic legged locomotion}.
 \newblock {\em ACM SIGGRAPH Computer Graphics 25}, 4, 349--358.
+
+\bibitem[\protect\citename{Spong and Bullo }2005]{spong2005controlled}
+{\sc Spong, M., and Bullo, F.}
+\newblock 2005.
+\newblock {Controlled symmetries and passive walking}.
+\newblock {\em Automatic Control, IEEE Transactions on 50}, 7, 1025--1031.
+
+\bibitem[\protect\citename{Stephens and Atkeson }2009]{stephens2009modeling}
+{\sc Stephens, B., and Atkeson, C.}
+\newblock 2009.
+\newblock {Modeling and control of periodic humanoid balance using the linear
+  biped model}.
+\newblock In {\em Humanoid Robots, 2009. Humanoids 2009. 9th IEEE-RAS
+  International Conference on}, IEEE, 379--384.
 
 \bibitem[\protect\citename{Stewart and Trinkle }2000]{Stewart2000}
 {\sc Stewart, D., and Trinkle, J.}
@@ -63,6 +193,19 @@
 \newblock In {\em IEEE International Conference on Robotics and Automation},
   vol.~1, IEEE; 1999, 162--169.
 
+\bibitem[\protect\citename{Taga et~al\mbox{.} }1991]{taga1991self}
+{\sc Taga, G., Yamaguchi, Y., and Shimizu, H.}
+\newblock 1991.
+\newblock {Self-organized control of bipedal locomotion by neural oscillators
+  in unpredictable environment}.
+\newblock {\em Biological Cybernetics 65}, 3, 147--159.
+
+\bibitem[\protect\citename{Williamson }1999]{Williamson1999}
+{\sc Williamson, M.}
+\newblock 1999.
+\newblock {\em {Robot arm control exploiting natural dynamics}}.
+\newblock PhD thesis, Citeseer.
+
 \bibitem[\protect\citename{Witkin and Kass }1988]{Witkin1988}
 {\sc Witkin, A., and Kass, M.}
 \newblock 1988.
@@ -70,5 +213,11 @@
 \newblock In {\em SIGGRAPH '88: Proceedings of the 15th annual conference on
   Computer graphics and interactive techniques}, ACM, New York, NY, USA,
   159--168.
+
+\bibitem[\protect\citename{Wu and Popovi{\'c} }2003]{wu2003realistic}
+{\sc Wu, J., and Popovi{\'c}, Z.}
+\newblock 2003.
+\newblock {Realistic modeling of bird flight animations}.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, vol.~22, ACM, 888--895.
 
 \end{thebibliography}

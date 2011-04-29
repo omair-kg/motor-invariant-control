@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  26 APR 2011 13:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  29 APR 2011 14:54
 entering extended mode
  %&-line parsing enabled.
 **AMSI
@@ -429,14 +429,53 @@ File: images/phaseShift.eps Graphic file (type eps)
  <images/phaseShift.eps>
 File: images/swim.eps Graphic file (type eps)
  <images/swim.eps>))
-(./futurework.tex [7]) (./AMSI.bbl) [8] (./AMSI.aux) ) 
+(./futurework.tex [7]) (./backgroundAndCite.tex
+Underfull \hbox (badness 3029) in paragraph at lines 33--35
+[]\OT1/ptm/b/n/9 high level con-troller \OT1/ptm/m/n/9 Falout-sos[[][][][][][]]
+ de-vleop
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
+[]\OT1/ptm/m/n/9 An dif-fer-ent idea is mor-phy-locial com-pu-ta-
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 62--67
+\OT1/ptm/m/n/9 inspired by the sys-tem in-sipred new range of bi-olig-i-cal
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 62--67
+\OT1/ptm/m/n/9 based wich in-spired the nat-u-ral dy-nam-ics of the eniron-
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 62--67
+\OT1/ptm/m/n/9 ment. $\OML/cmm/m/it/9 ^^U$ \OT1/ptm/m/n/9 model[[][][][][][]],C
+PG[[][][][][][]], Lie
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+[]\OT1/ptm/m/n/9 high de-gree mo-tio gen-er-ate from me-chan-i-cal cou-pling
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+\OT1/ptm/m/n/9 [[][][][][][]] torso,arm and side-way dy-nam-ics
+ []
+
+) (./SecondaryMotionAndHighOrderDof.tex) (./AMSI.bbl [9]) [10
+
+] (./AMSI.aux) ) 
 Here is how much of TeX's memory you used:
- 5941 strings out of 495062
- 88363 string characters out of 1182644
- 167965 words of memory out of 3000000
- 8992 multiletter control sequences out of 15000+50000
+ 5970 strings out of 495062
+ 88989 string characters out of 1182644
+ 169373 words of memory out of 3000000
+ 9015 multiletter control sequences out of 15000+50000
  18879 words of font info for 49 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,15n,40p,40981b,372s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on AMSI.dvi (8 pages, 70608 bytes).
+Output written on AMSI.dvi (10 pages, 96692 bytes).

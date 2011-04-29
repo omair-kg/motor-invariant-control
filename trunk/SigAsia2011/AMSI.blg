@@ -2,51 +2,56 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: AMSI.aux
 The style file: acmsiggraph.bst
 Database file #1: AMSI.bib
+Warning--empty publisher in abraham1978foundations
 Warning--empty journal in Baraff1994
+Warning--empty journal in chen2007passive
+Warning--empty publisher in Goldstein2002
 Warning--empty organization in Hodgins1995
 Warning--empty organization in Laszlo1996
+Warning--can't use both author and editor fields in latash2008neurophysiological
 Warning--empty organization in Liu2009
 Warning--empty organization in BalanceControl
 Warning--empty organization in Witkin1988
-You've used 10 entries,
+Warning--can't use both volume and number fields in wu2003realistic
+You've used 32 entries,
             2748 wiz_defined-function locations,
-            665 strings with 6139 characters,
-and the built_in function-call counts, 4039 in all, are:
-= -- 422
-> -- 149
+            796 strings with 9666 characters,
+and the built_in function-call counts, 12229 in all, are:
+= -- 1258
+> -- 510
 < -- 0
-+ -- 47
-- -- 53
-* -- 327
-:= -- 685
-add.period$ -- 40
-call.type$ -- 10
-change.case$ -- 61
-chr.to.int$ -- 10
-cite$ -- 16
-duplicate$ -- 158
-empty$ -- 327
-format.name$ -- 60
-if$ -- 817
++ -- 164
+- -- 183
+* -- 990
+:= -- 2076
+add.period$ -- 125
+call.type$ -- 32
+change.case$ -- 195
+chr.to.int$ -- 32
+cite$ -- 43
+duplicate$ -- 457
+empty$ -- 945
+format.name$ -- 205
+if$ -- 2461
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 9
-newline$ -- 63
-num.names$ -- 30
-pop$ -- 62
+missing$ -- 34
+newline$ -- 192
+num.names$ -- 96
+pop$ -- 190
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 171
 quote$ -- 0
-skip$ -- 83
+skip$ -- 288
 stack$ -- 0
-substring$ -- 230
-swap$ -- 29
+substring$ -- 621
+swap$ -- 96
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
-warning$ -- 6
-while$ -- 44
-width$ -- 14
-write$ -- 153
-(There were 6 warnings)
+type$ -- 236
+warning$ -- 11
+while$ -- 124
+width$ -- 37
+write$ -- 455
+(There were 11 warnings)

@@ -1,0 +1,45 @@
+\section{Mechanical Coupling and Secondary Motion}
+Neural Oscilator and Symmetry Control can provided a principle for motor control.
+While for mechanical system, like human, usually, the dof is much larger than your application examples.
+Given the waking example, besides the two legs, there are also the torsqo,arm and swaying and yawling dof.
+there are two basic method for incooprate more dofs.
+
+(1) develop the dynamic system for the fullbody and try to work out the symetry.
+(2) the extra dof are not controlled and freely influenced by the controlled dof through mechanical coupling.
+
+
+for animation application purpose,
+we use the second one.
+
+
+\subsection{mechanical coupling}
+for a dynamic system $X=[q_1,\dot{q_1},q_2,\dot{q_2}]$
+described by the differential equation.
+\[
+\dot{X}=F(X)
+\]
+can be write in a different manner
+\[
+\dot{x_1}=F_1(x_1)+C_1(x_1,x_2)
+\]
+\[
+\dot{x_2}=F_2(x_2)+C_2(x_1,x_2)
+\]
+\[
+x_1=[q_1,\dot{q_1}]
+\]
+\[
+x_2=[q_2,\dot{q_2)}]
+\]
+
+if $C_{1,2}<<f_{1,2}$
+dynamic property is domonited by $f$, and $c$ can be treated just perturbation.
+
+
+for the walking example, the knee, arm and torso, have little effect on the basic walking motion,
+we can add sidesway and torso to the orignal walker,
+we found the basic motion pattern is kept, only a small variation to the original model.
+
+figure bellown compare the motion include the sidesway and torso.
+
+
