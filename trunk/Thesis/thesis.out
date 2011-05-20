@@ -8,4 +8,25 @@
 \BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Ship Floating}{section.1.3}
 \BOOKMARK [2][]{subsection.1.3.2}{1.3.2 The Mass-Spring Vibration}{section.1.3}
 \BOOKMARK [1][]{section.1.4}{1.4 Overview of the Thesis}{chapter.1}
-\BOOKMARK [0][]{section*.15}{References}{}
+\BOOKMARK [0][]{chapter.2}{2 BACKGROUND}{}
+\BOOKMARK [1][]{section.2.1}{2.1 Motion Synthesis Research}{chapter.2}
+\BOOKMARK [1][]{section.2.2}{2.2 Biological Motor Control}{chapter.2}
+\BOOKMARK [1][]{section.2.3}{2.3 Bionomic robotic research Evidence}{chapter.2}
+\BOOKMARK [1][]{section.2.4}{2.4 Our Research}{chapter.2}
+\BOOKMARK [0][]{chapter.3}{3 Global Motion Invariant}{}
+\BOOKMARK [1][]{section.3.1}{3.1 Introduction}{chapter.3}
+\BOOKMARK [1][]{section.3.2}{3.2 Basic Concepts of Qualitative Dynamics}{chapter.3}
+\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Dynamic System and Differential Manifold}{section.3.2}
+\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Global Motor Invariant}{section.3.2}
+\BOOKMARK [2][]{subsection.3.2.3}{3.2.3 Motion Adaptation and Stability}{section.3.2}
+\BOOKMARK [2][]{subsection.3.2.4}{3.2.4 Structural Stability explanation Morphological Computation}{section.3.2}
+\BOOKMARK [1][]{section.3.3}{3.3 Global Motor Invariant Control}{chapter.3}
+\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 CPG and Entrainment}{section.3.3}
+\BOOKMARK [2][]{subsection.3.3.2}{3.3.2 Neural Oscillator Stability}{section.3.3}
+\BOOKMARK [1][]{section.3.4}{3.4 Global Motor Invaraint Control Example}{chapter.3}
+\BOOKMARK [0][]{chapter.4}{4 Local Motor Invariant}{}
+\BOOKMARK [1][]{section.4.1}{4.1 Introduction}{chapter.4}
+\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Group and Symmetry}{section.4.1}
+\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Lie Group and Symmetry of Dynamic System}{section.4.1}
+\BOOKMARK [1][]{section.4.2}{4.2 Controlled Symmetry}{chapter.4}
+\BOOKMARK [0][]{section*.24}{References}{}

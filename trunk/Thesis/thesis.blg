@@ -2,48 +2,52 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Abstract/abstract.aux
 A level-1 auxiliary file: Introduction/introduction.aux
+A level-1 auxiliary file: Background/background.aux
+A level-1 auxiliary file: GlobalInvariant/gInvariant.aux
+A level-1 auxiliary file: LocalInvariant/localInvariant.aux
 The style file: plainnat.bst
-I found no \citation commands---while reading file thesis.aux
-Database file #1: References/references.bib
-You've used 0 entries,
+Database file #1: References/AMSI.bib
+Warning--empty publisher in abraham1978foundations
+Warning--can't use both author and editor fields in latash2008neurophysiological
+You've used 20 entries,
             2773 wiz_defined-function locations,
-            594 strings with 4895 characters,
-and the built_in function-call counts, 33 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 10
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+            750 strings with 8619 characters,
+and the built_in function-call counts, 8983 in all, are:
+= -- 849
+> -- 400
+< -- 20
++ -- 140
+- -- 120
+* -- 663
+:= -- 1367
+add.period$ -- 79
+call.type$ -- 20
+change.case$ -- 96
+chr.to.int$ -- 20
+cite$ -- 42
+duplicate$ -- 458
+empty$ -- 790
+format.name$ -- 148
+if$ -- 1931
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 23
+newline$ -- 121
+num.names$ -- 80
+pop$ -- 206
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 80
 quote$ -- 0
-skip$ -- 1
+skip$ -- 332
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 335
+swap$ -- 61
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 200
+warning$ -- 2
+while$ -- 92
 width$ -- 0
-write$ -- 7
-(There was 1 error message)
+write$ -- 299
+(There were 2 warnings)
