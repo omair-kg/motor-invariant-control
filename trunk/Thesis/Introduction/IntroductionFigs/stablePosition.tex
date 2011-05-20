@@ -1,0 +1,27 @@
+\begin{center}
+\def\Func{y[1]|-y[1]-sin(y[0])}
+\psset{unit=1.5cm,algebraic=true,linewidth=0.5pt}
+
+\begin {pspicture}(-3,-3)(3,3)
+\psframe(-1,-1)(1,)
+\psaxes{->}(0,0)(-2,-2)(2,2)
+
+\psset{method=rk4,plotpoints=20,linecolor=blue,linewidth=1pt,
+	whichabs=0,whichord=1,arrows=->,ArrowInside=->,arrowscale=0.7}
+\multido{\row=-1+0.2}{10}{%
+	\psplotDiffEqn{0}{5}{\row\space -1}{\Func}
+	\psplotDiffEqn{0}{5}{\row\space 1}{\Func}
+	\psdots[dotstyle=Bo,dotscale=0.5,fillcolor=red](\row,-1)
+	\psdots[dotstyle=Bo,dotscale=0.5,fillcolor=red](\row,1)
+	}
+\multido{\row=-1+0.2}{10}{%
+	\psplotDiffEqn{0}{5}{-1 \row}{\Func}
+	\psplotDiffEqn{0}{5}{1 \row}{\Func}
+	\psdots[dotstyle=Bo,dotscale=0.5,fillcolor=red](-1,\row)
+	\psdots[dotstyle=Bo,dotscale=0.5,fillcolor=red](1,\row)
+	}
+	
+\psdots[dotstyle=Bo,dotscale=2.0,fillcolor=red](0,0)		
+\end{pspicture}
+\end{center}
+
