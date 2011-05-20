@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  21 APR 2011 15:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  20 MAY 2011 15:53
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -309,7 +309,8 @@ Package: watermark 2002/01/29 v1.00 Watermarks (NCC)
 LaTeX Warning: Unused global option(s):
     [pdftex].
 
-No file thesis.aux.
+(./thesis.aux (./Abstract/abstract.aux) (./Introduction/introduction.aux)
+(./Chapter1/chapter1.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -327,6 +328,7 @@ LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 Package hyperref Info: Link coloring ON on input line 53.
+
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
@@ -337,53 +339,46 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 LaTeX Info: Redefining \ref on input line 53.
 LaTeX Info: Redefining \pageref on input line 53.
+ (./thesis.out)
+(./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
 Package backref Info: ** backref set up for natbib ** on input line 53.
 \AtBeginShipoutBox=\box27
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-File: ThesisFigs/UnivShield.eps Graphic file (type eps)
-<ThesisFigs/UnivShield.eps> [1
+ [1
 
 ]
-\openout2 = `Dedication/dedication.aux'.
-
- (./Dedication/dedication.tex [1
-
-
-])
-\openout2 = `Acknowledgement/acknowledgement.aux'.
-
-
-(./Acknowledgement/acknowledgement.tex [2
-
-
-])
 \openout2 = `Abstract/abstract.aux'.
 
- (./Abstract/abstract.tex [3
+ (./Abstract/abstract.tex [1
 
 
-]
-[4])
+]) (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [5
+ [2
 \FN@pp@footnotehinttrue 
 
 
-]
+] (./thesis.lof)
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
+ (./thesis.nls [3
 
-No file thesis.nls.
-[6
+]) [4
 
 ]
 \openout2 = `Introduction/introduction.aux'.
@@ -395,40 +390,173 @@ Chapter 1.
 
 
 ]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [2]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [3]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [4]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+File: Introduction/IntroductionFigs/EPS/ShipExample.eps Graphic file (type eps)
+
+
+<Introduction/IntroductionFigs/EPS/ShipExample.eps>
+File: Introduction/IntroductionFigs/EPS/ShipMovement.eps Graphic file (type eps
+)
+
+<Introduction/IntroductionFigs/EPS/ShipMovement.eps> [5] [6] [7]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [8]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [9]
+[10]) [11]
+\openout2 = `Chapter1/chapter1.aux'.
+
+ (./Chapter1/chapter1.tex
 Chapter 2.
-[2
-
-] [3]
-
-LaTeX Warning: Reference `sec:limitation' on page 4 undefined on input line 71.
+File: Chapter1/Chapter1Figs/EPS/aflow.eps Graphic file (type eps)
+<Chapter1/Chapter1Figs/EPS/aflow.eps> [12
 
 
 
-LaTeX Warning: Reference `fig:ShipExample' on page 4 undefined on input line 88
-.
+] [13]) [14] (./thesis.bbl
+(./thesis.brf)
+\tf@brf=\write7
+\openout7 = `thesis.brf'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 89.
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 89.
+) [15
 
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.92 \end{figure}
-                 
-? X
- 
+
+
+] (./thesis.aux (./Abstract/abstract.aux)
+(./Introduction/introduction.aux) (./Chapter1/chapter1.aux)) ) 
 Here is how much of TeX's memory you used:
- 5582 strings out of 495062
- 78855 string characters out of 1182644
- 151733 words of memory out of 3000000
- 8643 multiletter control sequences out of 15000+50000
- 10748 words of font info for 40 fonts, out of 3000000 for 9000
+ 5696 strings out of 495062
+ 80472 string characters out of 1182644
+ 152672 words of memory out of 3000000
+ 8720 multiletter control sequences out of 15000+50000
+ 13154 words of font info for 50 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 45i,11n,45p,272b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on thesis.dvi (10 pages, 18648 bytes).
+ 45i,12n,45p,740b,383s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on thesis.dvi (20 pages, 61100 bytes).
