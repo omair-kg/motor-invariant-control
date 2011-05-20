@@ -103,7 +103,7 @@ This idea is illustrate by the ship floating example
 The first example is the ship floating. In real life, usually the high of the ship is much larger than the width. When wave comes, also comes the question how the ship maintains its posture.
 To our surprise, we find maintain posture is “easy”.
 
-Figure 1 The sway motion of the floating ship.
+
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -113,8 +113,8 @@ Figure 1 The sway motion of the floating ship.
     \else
       \includegraphics{ShipExample}
     \fi
-    \caption{Airfoil Picture}
-    \label{ShipFloating}
+    \caption{Floating Ship Example}
+    \label{fig:ShipFloating}
   \end{center}
 \end{figure}
 
@@ -141,16 +141,16 @@ There are only two postures that the external torque is zero as show in picture 
   \begin{center}
     \leavevmode
     \ifpdf
-      \includegraphics[height=6in]{ShipMovement}
+      \includegraphics[height=6in]{ShipEquilibrium}
     \else
-      \includegraphics{ShipMovement}
+      \includegraphics{ShipEquilibrium}
     \fi
-    \caption{Airfoil Picture}
-    \label{ShipEqulibrium}
+    \caption{Two Equilibrium Posture}
+    \label{fig:ShipEqulibrium}
   \end{center}
 \end{figure}
 
-Figure 2
+
 
 The two postures are qualitative different.
 The left posture is attractive, if small perturbation moves the ship away from the left equilibrium posture, then it will return to equilibrium posture.
@@ -159,18 +159,53 @@ The right posture is repelling.
 If a small perturbation moves the state of the ship away from the equilibrium posture, it will move away from the posture.
 
 The differences of the two postures can be illustrated with the phase plot.
-On phase plot, x axis is the angle, y axis is the angle velocity. Then the movement of the ship can be presented by a curve.
+On phase plot, x axis is the angle, y axis is the angle velocity. 
+Then the movement of the ship can be presented by a curve.
 Figure 3 shows motion about the left equilibrium posture, they will automatically move to the left equilibrium posture.
 Figure 4 shows the ship motion about the right equilibrium posture.
  
-Figure 3
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{stablePosition}
+    \else
+      \includegraphics{stablePosition}
+    \fi
+    \caption{StablePosture}
+    \label{fig:StablePosture}
+  \end{center}
+\end{figure}
 
 
-Figure 4
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{unstablePosition}
+    \else
+      \includegraphics{unstablePosition}
+    \fi
+    \caption{Unstable Posture}
+    \label{fig:unStablePosture}
+  \end{center}
+\end{figure}
+
+
 \subsubsection*{''Easiness''}
 If we plot all the possible motion of the ship, we get the phase portrait of the ship. We find out that all the curves will move away from the repelling posture to the attractive posture. Several curves are show in figure 5
-
-Figure 5
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{ShipGlobalFlow}
+    \else
+      \includegraphics[width=0.7\textwidth]{ShipGlobalFlow}
+    \fi
+    \caption{Unstable Posture}
+    \label{fig:unStablePosture}
+  \end{center}
+\end{figure}
 
 Thus we come to the conclusion, the ship can automatically control maintain its left equilibrium posture. 
  Ship can keep its upside up as long as the centre of buoyancy force is above the centre of gravity, 
@@ -185,7 +220,20 @@ Or put in a different phrase, ship will adapt its motion during maintain posture
 As long as the centre of buoyancy is above the centre of gravity, maintaining posture is “easy”.
 One phase plot, all the ships share some properties: one repealing point, one attractive point and all motion curves moves away the repelling point to the attractive point. As how in figure 6
 
-Figure 6
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{topologyStructure}
+    \else
+      \includegraphics{topologyStructure}
+    \fi
+    \caption{The Topology Structure}
+    \label{fig:topologyStructure}
+  \end{center}
+\end{figure}
+
+
 Such properties are “topological property”.
 As long as the topology is maintained, for different kinds of ship,maintaining posture is “easy”.
 
@@ -209,7 +257,18 @@ This idea is illustrative in the following mass spring example
 
 \subsubsection*{Dynamics}
 
-Figure 7
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{MassSpring}
+    \else
+      \includegraphics[width=0.7\textwidth]{MassSpring}
+    \fi
+    \caption{Mass Spring}
+    \label{fig:massspring}
+  \end{center}
+\end{figure}
 Although simple, this system in figure 7 captures some of the important properties of motor control system.
 The biological motor actuation or muscle works more like spring rather than the artificial electrical motor. Neural control adjusts spring rather applying force direct at the mass (which model the skeleton).
 
@@ -220,6 +279,18 @@ The canonical equation of mass spring system is equation (2)
 In a similar manner, we can draw the state of mass spring system on the phase plot, as show in figure 8
 
 
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{MassSpringPhasePlot}
+    \else
+      \includegraphics[width=0.5\textwidth]{MassSpringPhasePlot}
+    \fi
+    \caption{Mass Spring Phase Plot}
+    \label{fig:massSpringPhasePlot}
+  \end{center}
+\end{figure}
 Figure 8
 \subsubsection*{Symmetry and Transformation}
 Even it is simple, it is highly unlikely the knowledge of the mass spring is encoded in our brain in the form of equation (2).

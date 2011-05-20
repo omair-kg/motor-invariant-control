@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  20 MAY 2011 15:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  20 MAY 2011 17:48
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -309,8 +309,11 @@ Package: watermark 2002/01/29 v1.00 Watermarks (NCC)
 LaTeX Warning: Unused global option(s):
     [pdftex].
 
-(./thesis.aux (./Abstract/abstract.aux) (./Introduction/introduction.aux)
-(./Chapter1/chapter1.aux))
+(./thesis.aux (./Abstract/abstract.aux) (./Introduction/introduction.aux
+
+LaTeX Warning: Label `fig:unStablePosture' multiply defined.
+
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -328,8 +331,7 @@ LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 Package hyperref Info: Link coloring ON on input line 53.
-
-(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
@@ -376,9 +378,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- (./thesis.nls [3
-
-]) [4
+ (./thesis.nls) [3
 
 ]
 \openout2 = `Introduction/introduction.aux'.
@@ -463,16 +463,39 @@ File: Introduction/IntroductionFigs/EPS/ShipExample.eps Graphic file (type eps)
 
 
 <Introduction/IntroductionFigs/EPS/ShipExample.eps>
-File: Introduction/IntroductionFigs/EPS/ShipMovement.eps Graphic file (type eps
-)
+File: Introduction/IntroductionFigs/EPS/ShipEquilibrium.eps Graphic file (type 
+eps)
 
-<Introduction/IntroductionFigs/EPS/ShipMovement.eps> [5] [6] [7]
+<Introduction/IntroductionFigs/EPS/ShipEquilibrium.eps> [5] [6] [7]
+File: Introduction/IntroductionFigs/EPS/stablePosition.eps Graphic file (type e
+ps)
+
+<Introduction/IntroductionFigs/EPS/stablePosition.eps>
+File: Introduction/IntroductionFigs/EPS/unstablePosition.eps Graphic file (type
+ eps)
+
+<Introduction/IntroductionFigs/EPS/unstablePosition.eps>
+File: Introduction/IntroductionFigs/EPS/ShipGlobalFlow.eps Graphic file (type e
+ps)
+
+<Introduction/IntroductionFigs/EPS/ShipGlobalFlow.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
+ [8] [9]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+File: Introduction/IntroductionFigs/EPS/topologyStructure.eps Graphic file (typ
+e eps)
+
+<Introduction/IntroductionFigs/EPS/topologyStructure.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -485,12 +508,7 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
+ [10]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -506,13 +524,19 @@ Missing character: There is no ù in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [8]
+File: Introduction/IntroductionFigs/EPS/MassSpring.eps Graphic file (type eps)
+
+<Introduction/IntroductionFigs/EPS/MassSpring.eps>
+File: MassSpringPhasePlot.eps Graphic file (type eps)
+ <MassSpringPhasePlot.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
+
+[11] [12]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -528,35 +552,30 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [9]
-[10]) [11]
-\openout2 = `Chapter1/chapter1.aux'.
-
- (./Chapter1/chapter1.tex
-Chapter 2.
-File: Chapter1/Chapter1Figs/EPS/aflow.eps Graphic file (type eps)
-<Chapter1/Chapter1Figs/EPS/aflow.eps> [12
-
-
-
-] [13]) [14] (./thesis.bbl
-(./thesis.brf)
+ [13] [14]) [15] (./thesis.bbl
+No file thesis.brf.
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
-) [15
+
+Package natbib Warning: Empty `thebibliography' environment on input line 8.
+
+) [16
 
 
 
-] (./thesis.aux (./Abstract/abstract.aux)
-(./Introduction/introduction.aux) (./Chapter1/chapter1.aux)) ) 
+] (./thesis.aux (./Abstract/abstract.aux) (./Introduction/introduction.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5696 strings out of 495062
- 80472 string characters out of 1182644
+ 5650 strings out of 495062
+ 80163 string characters out of 1182644
  152672 words of memory out of 3000000
- 8720 multiletter control sequences out of 15000+50000
- 13154 words of font info for 50 fonts, out of 3000000 for 9000
+ 8683 multiletter control sequences out of 15000+50000
+ 10756 words of font info for 40 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,45p,740b,383s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (20 pages, 61100 bytes).
+Output written on thesis.dvi (20 pages, 56352 bytes).
