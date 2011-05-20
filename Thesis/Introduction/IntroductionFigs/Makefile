@@ -1,7 +1,7 @@
 # make -f Makefile_latex
 
 
-R = ShipMovement
+R =topologyStructure
 
 eps: 	$(R).tex
 	latex $(R).tex

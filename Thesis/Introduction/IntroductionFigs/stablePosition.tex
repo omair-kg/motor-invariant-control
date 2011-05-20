@@ -1,4 +1,10 @@
-\begin{center}
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
 \def\Func{y[1]|-y[1]-sin(y[0])}
 \psset{unit=1.5cm,algebraic=true,linewidth=0.5pt}
 
@@ -23,5 +29,6 @@
 	
 \psdots[dotstyle=Bo,dotscale=2.0,fillcolor=red](0,0)		
 \end{pspicture}
-\end{center}
+\end{TeXtoEPS}
+\end{document}
 
