@@ -3,9 +3,11 @@
 
  \documentclass[oneside,12pt]{Classes/CUEDthesisPSnPDF}
 
+ 
+
 
 \ifpdf
-    \pdfinfo { /Title  (Adaptive Motion Synthesis)
+    \pdfinfo { /Title  (Adaptive Motion Synthesis and Motor Invariant Theory)
                /Creator (TeX)
                /Producer (pdfTeX)
                /Author (Fangde Liu fliu@bmth.ac.uk)
@@ -17,14 +19,14 @@
                   /OpenAction (fitbh)  }
 \fi
 
-\title{Adaptive Motion Synthesis}
+\title{Adaptive Motion Synthesis and Motor Invariant Theory}
 
 \ifpdf
   \author{\href{mailto:fliu@bmth.ac.uk}{Fangde Liu}}
   \collegeordept{\href{http://www.bournemouth.ac.uk}{Media School}}
   \university{\href{http://www.bournemouth.ac.uk}{Bournemouth University}}
 % insert below the file name that contains the crest in-place of 'UnivShield'
-  \crest{\includegraphics[width=30mm]{UnivShield}}
+  %\crest{\includegraphics[width=30mm]{UnivShield}}
 \else
   \author{Fangde Liu}
   \collegeordept{NCCA,Media School}
@@ -46,9 +48,28 @@
 
 % Put all the style files you want in the directory StyleFiles and usepackage like this:
 \usepackage{StyleFiles/watermark}
-
+\usepackage{amsmath}
+\usepackage{subfigure}
 % Comment out the next line to get single spacing
 \onehalfspacing
+
+
+\newcommand{\amp}[1]{\mathbf{amp}\left(#1\right)}
+\newcommand{\hin}{h_{\mathrm{in}}}
+\newcommand{\hout}{h_{\mathrm{out}}}
+\newcommand{\gamin}{\gamma_{\mathrm{in}}}
+\newcommand{\gamout}{\gamma_{\mathrm{out}}}
+\newcommand{\qd}{\dot{q}}
+\newcommand{\xd}{\dot{x}}
+\newcommand{\goff}{g_{\mathrm{off}}}
+\newcommand{\gts}{g_{\mathrm{ts}}}
+\newcommand{\gen}{g_{\mathrm{en}}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\uin}{u_{\mathrm{in}}}
+\newcommand{\uout}{u_{\mathrm{out}}}
+\newcommand{\ulocal}{u_{\mathrm{local}}}
+
+\newcommand{\HiItem}[1]{\item \textbf{#1}}
 
 \begin{document}
 
@@ -90,6 +111,9 @@
 
 \mainmatter % book mode only
 \include{Introduction/introduction}
+\include{Background/background}
+\include{GlobalInvariant/gInvariant}
+\include{LocalInvariant/localInvariant}
 %\include{Chapter1/chapter1}
 %\include{Chapter2/chapter2}
 %\include{Chapter3/chapter3}
@@ -105,6 +129,6 @@
 %\bibliographystyle{Classes/jmb}
 %\bibliographystyle{Classes/jmb} % bibliography style
 \renewcommand{\bibname}{References} % changes default name Bibliography to References
-\bibliography{References/references} % References file
+\bibliography{References/AMSI} % References file
 
 \end{document}
