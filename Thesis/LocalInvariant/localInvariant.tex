@@ -1,4 +1,11 @@
 \chapter{Local Motor Invariant}
+
+\ifpdf
+    \graphicspath{{LocalInvariant/LocalInvariantFigs/PNG/}{LocalInvariant/LocalInvariantFigs/PDF/}{LocalInvariant/LocalInvariantFigs/}}
+\else
+    \graphicspath{{LocalInvariant/LocalInvariantFigs/EPS/}{LocalInvariant/LocalInvariantFigs/}}
+\fi
+
 \section{Introduction}
 Global Motor Invariant keeps the topology motion primitives.
 For animal motion is also of high accuracy.
@@ -17,6 +24,18 @@ For the square examples, rotation it by 90 degree will make it exactly the same 
 
 
 
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{Symmetry}
+    \else
+      \includegraphics[width=0.7\textwidth]{Symmetry}
+    \fi
+    \caption{Symmetry}
+    \label{fig:symmetry}
+\end{center}
+\end{figure}
 All the action that can preserve the symmetry is defined as the set as group.
 A group has the following properties.
 If g1 ,g2 in G
@@ -24,7 +43,7 @@ g1*g2 in G
 g1 *g2=e;
 
 In algebra, a shape can implicitly defined by an function I(x)=0;
-The group transformation is define by x’=g(x),
+The group transformation is define by x’=g(x)
 If symmetry is met, we have I(x)=I(g(x)).
 We can say I(x) is an invariant function of group G.
 
@@ -33,7 +52,18 @@ In fact ,many shape is invariant, and form a space, the invariant space.
 In fact, we can pick up and two shape and combination is also an invariant shape. 
 
 
-
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{SymmetrySpace}
+    \else
+      \includegraphics[width=0.7\textwidth]{SymmetrySpace}
+    \fi
+    \caption{Symmetry}
+    \label{fig:symmetry}
+\end{center}
+\end{figure}
 
 
 
@@ -110,6 +140,18 @@ Which keep speed, but modify the pos. thus keep the K but modify V
 \ulocal(\x) = \frac{\partial}{\partial q} \left(V(\goff(q)) - V(q)\right).
 \end{equation}
 
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{g_off}
+    \else
+      \includegraphics[width=0.7\textwidth]{g_off}
+    \fi
+    \caption{Offset Action}
+    \label{fig:goff}
+\end{center}
+\end{figure}
 on phase space, if q is the horizontal axis, and $\dot{q}$ is the vertical axis, this has the effect of moving the phase plot right and right.
 \subsection*{Time Scalling}
 
@@ -120,6 +162,18 @@ $T\gts(\qd)=\alpha \qd$
 \ulocal(\x) = (\alpha^2 - 1) \frac{\partial V(q)}{\partial q}.
 \end{equation}
 
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{g_ts}
+    \else
+      \includegraphics[width=0.7\textwidth]{g_ts}
+    \fi
+    \caption{Time Scaling Action}
+    \label{fig:gts}
+\end{center}
+\end{figure}
 on phase space, this has the effect strength the phase plot in the vertical direction
 
 \subsection*{energy scaling}
@@ -132,7 +186,20 @@ For such
 U can be developed by applying the pos scaling and time scaling in a combined manner.
 
 On phase plot, this has the effect enlarge the phase portrait.
-4 time offset
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{g_en}
+    \else
+      \includegraphics[width=0.7\textwidth]{g_en}
+    \fi
+    \caption{Energe Scaling Action}
+    \label{fig:gen}
+\end{center}
+\end{figure}
+\subsection*{time offset}
 Is q(t) is solution to f(q)
 
 %g_{toff}(q(t) \dot{q}(t))=(q(t+toff),\dot{q}(t+toff))
@@ -142,6 +209,18 @@ For system with limit circle, this $g_toff$ has a special effects like phase mod
 On phase plot, this has the effect rotate on the limit circle about an angle.
 
 
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{g_off}
+    \else
+      \includegraphics[width=0.7\textwidth]{g_off}
+    \fi
+    \caption{Offset Action}
+    \label{fig:goff}
+\end{center}
+\end{figure}
 
 
 
