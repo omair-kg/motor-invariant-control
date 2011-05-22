@@ -29,5 +29,5 @@
 \contentsline {section}{\numberline {4.1}Introduction}{38}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Group and Symmetry}{38}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Lie Group and Symmetry of Dynamic System}{39}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Controlled Symmetry}{39}{section.4.2}
-\contentsline {chapter}{References}{42}{section*.24}
+\contentsline {section}{\numberline {4.2}Controlled Symmetry}{40}{section.4.2}
+\contentsline {chapter}{References}{47}{section*.28}

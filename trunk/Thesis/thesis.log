@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  20 MAY 2011 20:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.30)  22 MAY 2011 12:09
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -391,7 +391,14 @@ LaTeX Warning: Unused global option(s):
 LaTeX Warning: Label `fig:unStablePosture' multiply defined.
 
 ) (./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
-(./LocalInvariant/localInvariant.aux))
+(./LocalInvariant/localInvariant.aux
+
+LaTeX Warning: Label `fig:symmetry' multiply defined.
+
+
+LaTeX Warning: Label `fig:goff' multiply defined.
+
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -409,8 +416,7 @@ LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 Package hyperref Info: Link coloring ON on input line 74.
-
-(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
@@ -606,16 +612,17 @@ Missing character: There is no ô in font cmr12!
 File: Introduction/IntroductionFigs/EPS/MassSpring.eps Graphic file (type eps)
 
 <Introduction/IntroductionFigs/EPS/MassSpring.eps>
-File: MassSpringPhasePlot.eps Graphic file (type eps)
- <MassSpringPhasePlot.eps>
+File: Introduction/IntroductionFigs/EPS/MassSpringPhasePlot.eps Graphic file (t
+ype eps)
+
+<Introduction/IntroductionFigs/EPS/MassSpringPhasePlot.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-
-[11] [12]
+ [11] [12]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -631,7 +638,8 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [13] [14]) [15]
+ [13]
+[14]) [15]
 \openout2 = `Background/background.aux'.
 
  (./Background/background.tex
@@ -746,36 +754,53 @@ hic file (type eps)
 
  (./LocalInvariant/localInvariant.tex
 Chapter 4.
+File: LocalInvariant/LocalInvariantFigs/Symmetry.eps Graphic file (type eps)
+<LocalInvariant/LocalInvariantFigs/Symmetry.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-[38
+File: LocalInvariant/LocalInvariantFigs/SymmetrySpace.eps Graphic file (type ep
+s)
+
+<LocalInvariant/LocalInvariantFigs/SymmetrySpace.eps> [38
 
 
 
-] [39] [40]) [41] (./thesis.bbl (./thesis.brf)
+] [39] [40]
+File: LocalInvariant/LocalInvariantFigs/g_off.eps Graphic file (type eps)
+
+<LocalInvariant/LocalInvariantFigs/g_off.eps>
+File: LocalInvariant/LocalInvariantFigs/g_ts.eps Graphic file (type eps)
+
+<LocalInvariant/LocalInvariantFigs/g_ts.eps> [41] [42] [43]
+File: LocalInvariant/LocalInvariantFigs/g_en.eps Graphic file (type eps)
+
+<LocalInvariant/LocalInvariantFigs/g_en.eps>
+File: LocalInvariant/LocalInvariantFigs/g_off.eps Graphic file (type eps)
+
+<LocalInvariant/LocalInvariantFigs/g_off.eps>) [44] [45] [46] (./thesis.bbl
+(./thesis.brf)
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [42
+ [47
 
 
 
-] [43]) [44] (./thesis.aux (./Abstract/abstract.aux) (./Introduction/introducti
-on.aux)
-(./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
-(./LocalInvariant/localInvariant.aux))
+] [48]) [49] (./thesis.aux (./Abstract/abstract.aux)
+(./Introduction/introduction.aux) (./Background/background.aux)
+(./GlobalInvariant/gInvariant.aux) (./LocalInvariant/localInvariant.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6642 strings out of 495062
- 93943 string characters out of 1182644
- 167721 words of memory out of 3000000
- 9615 multiletter control sequences out of 15000+50000
+ 6658 strings out of 495062
+ 94369 string characters out of 1182644
+ 167894 words of memory out of 3000000
+ 9624 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,50p,740b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (49 pages, 169540 bytes).
+Output written on thesis.dvi (54 pages, 179600 bytes).
