@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{amsmath}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(0,-1)(10,10)
+		%\psgrid
+		\psline[linewidth=2pt]{->}(9,8)(9,6)
+		\rput(8,7){$\mathbf g$}
+
+		\psline[linewidth=3pt](0,0)(10,0)
+		\rput{0}(5,0)
+		{
+			%ground
+			\psline[linewidth=3pt](0,0)(10,0)
+			
+			
+			\SpecialCoor			
+			\psline[linewidth=0.5pt,linestyle=dashed](!0 20 cos 8 mul)(!-4.5 20 cos 8 mul)
+			\SpecialCoor			
+			\psline[linewidth=0.5pt]{<->}(-4.2,0)(!-4.2 20 cos 8 mul)
+			\rput(-4.5,4){ $\mathbf L$}			
+			
+						
+			
+
+						
+			\SpecialCoor
+			\rput{0}(!0 20 cos 8 mul)
+			{	
+				\psline[linewidth=3pt,linestyle=dashed](0,0)(0,5)
+				\psline[linewidth=3pt,linestyle=dashed]{->}(0,0)(2,0)
+				\rput(2.3,0){$\mathbf{ \ddot{Y}}$}
+				%left leg		
+				\rput{-20}(0,0)
+				{
+					\rput{17.7528}(0,0)
+					{
+					\psline[linecolor=blue,linewidth=1pt](0,0)(0,-4.2)
+					%\pscircle(0,0){0.1}
+						\rput{-35.5056}(0,-4.2)
+						{
+							\psline[linecolor=blue,linewidth=1pt](0,0)(0,-4.2)
+						
+						
+						}
+					}
+					\rput{20}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							\rput(0,-0.3){$\mathbf Yl$}
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=blue]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=blue]{->}(0,-8)(0,-4)
+					\rput(-0.5,-4){$\mathbf Fl$}
+					
+					
+				}
+				
+				\rput{20}(0,0)
+				{
+					
+					%\psline[linecolor=blue,linewidth=1pt](0,0)(0,-4)
+					%\pscircle(0,0){0.1}
+					%\rput{0}(0,-4)
+					%{
+					%	\psline[linecolor=blue,linewidth=1pt](0,0)(0,-4)
+					%	\pscircle(0,0){0.1}
+					%	
+					%}
+
+					\rput{17.7528}(0,0)
+					{
+					\psline[linecolor=red,linewidth=1pt](0,0)(0,-4.2)
+					%\pscircle(0,0){0.1}
+						\rput{-35.5056}(0,-4.2)
+						{
+							\psline[linecolor=red,linewidth=1pt](0,0)(0,-4.2)
+						
+						
+						}
+					}
+					\rput{-20}(0,-8)
+						{
+							\pstriangle[fillcolor=blue](0,0)(1,0.3)
+							\rput(0,-0.3){$\mathbf Yr$}
+						}
+					\psline[linewidth=3pt,linestyle=dashed,linecolor=red]{->}(0,-8)(0,0)
+					\psline[linewidth=3pt,linecolor=red]{->}(0,-8)(0,-5)
+					\rput(0.5,-5){$\mathbf Fr$}
+					
+				}
+				%right leg
+				%\rput{43}(0,0)
+				%{
+	
+				%	\psline[linecolor=red,linewidth=1pt](0,0)(0,-4)
+				%	\pscircle(0,0){0.1}				
+				%	\rput{-43}(0,-4)
+				%	{
+				%	\psline[linecolor=red,linewidth=1pt](0,0)(0,-4)
+				%	\pscircle(0,0){0.1}
+				%	\rput{0}(0,-4)
+				%		{
+				%			\pstriangle(0,0)(1,0.3)
+				%		}
+				%	
+				%	}
+				%	\psline[linewidth=3pt,linestyle=dashed,linecolor=red]{->}(0,-8)(0,0)
+
+				%}
+				
+			
+				\psline[linewidth=0.5pt,linestyle=dashed](0,0)(0,-8)
+				\rput(0,-8.1){$\mathbf Y$}
+				\psdots[dotstyle=Bo,dotscale=5.0](0,0)
+				\rput(0.7,0.3){$\mathbf m$}
+				
+			}
+		}
+\end{pspicture}
+\end{TeXtoEPS}
+
+
+\end{document}
+
+
