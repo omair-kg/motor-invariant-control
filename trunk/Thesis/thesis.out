@@ -29,4 +29,14 @@
 \BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Group and Symmetry}{section.4.1}
 \BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Lie Group and Symmetry of Dynamic System}{section.4.1}
 \BOOKMARK [1][]{section.4.2}{4.2 Controlled Symmetry}{chapter.4}
-\BOOKMARK [0][]{section*.28}{References}{}
+\BOOKMARK [1][]{section.4.3}{4.3 Simple Example}{chapter.4}
+\BOOKMARK [0][]{chapter.5}{5 Motion Synthesis Based Motor Invariant}{}
+\BOOKMARK [1][]{section.5.1}{5.1 Combined Global and Local Motor Invariant}{chapter.5}
+\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 \040motor control idea based on Global and Local Motor Invariant.}{section.5.1}
+\BOOKMARK [2][]{subsection.5.1.2}{5.1.2 \040Controlled Symmetry Preserved The Topology}{section.5.1}
+\BOOKMARK [2][]{subsection.5.1.3}{5.1.3 \040Symmetry of Neural Oscillator.}{section.5.1}
+\BOOKMARK [2][]{subsection.5.1.4}{5.1.4 A simple example}{section.5.1}
+\BOOKMARK [1][]{section.5.2}{5.2 Combine Motion Primitives}{chapter.5}
+\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 The Motion Primitives Graph}{section.5.2}
+\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 The Motion Primitives Transition}{section.5.2}
+\BOOKMARK [0][]{section*.32}{References}{}

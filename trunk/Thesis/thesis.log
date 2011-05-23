@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.30)  22 MAY 2011 12:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  23 MAY 2011 11:59
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -398,25 +398,29 @@ LaTeX Warning: Label `fig:symmetry' multiply defined.
 
 LaTeX Warning: Label `fig:goff' multiply defined.
 
-))
+
+LaTeX Warning: Label `fig:bouncing5' multiply defined.
+
+) (./CombineFramework/cframework.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-Package hyperref Info: Link coloring ON on input line 74.
- (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+Package hyperref Info: Link coloring ON on input line 73.
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
@@ -424,14 +428,14 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
  (./thesis.out)
 (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 74.
+Package backref Info: ** backref set up for natbib ** on input line 73.
 \AtBeginShipoutBox=\box29
  [1
 
@@ -442,12 +446,12 @@ Package backref Info: ** backref set up for natbib ** on input line 74.
 
 
 ]) (./thesis.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -612,17 +616,16 @@ Missing character: There is no ô in font cmr12!
 File: Introduction/IntroductionFigs/EPS/MassSpring.eps Graphic file (type eps)
 
 <Introduction/IntroductionFigs/EPS/MassSpring.eps>
-File: Introduction/IntroductionFigs/EPS/MassSpringPhasePlot.eps Graphic file (t
-ype eps)
-
-<Introduction/IntroductionFigs/EPS/MassSpringPhasePlot.eps>
+File: MassSpringPhasePlot.eps Graphic file (type eps)
+ <MassSpringPhasePlot.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [11] [12]
+
+[11] [12]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -638,8 +641,7 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [13]
-[14]) [15]
+ [13] [14]) [15]
 \openout2 = `Background/background.aux'.
 
  (./Background/background.tex
@@ -754,53 +756,73 @@ hic file (type eps)
 
  (./LocalInvariant/localInvariant.tex
 Chapter 4.
-File: LocalInvariant/LocalInvariantFigs/Symmetry.eps Graphic file (type eps)
-<LocalInvariant/LocalInvariantFigs/Symmetry.eps>
+File: LocalInvariant/LocalInvariantFigs/EPS/Symmetry.eps Graphic file (type eps
+)
+<LocalInvariant/LocalInvariantFigs/EPS/Symmetry.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-File: LocalInvariant/LocalInvariantFigs/SymmetrySpace.eps Graphic file (type ep
-s)
+File: LocalInvariant/LocalInvariantFigs/EPS/SymmetrySpace.eps Graphic file (typ
+e eps)
 
-<LocalInvariant/LocalInvariantFigs/SymmetrySpace.eps> [38
+<LocalInvariant/LocalInvariantFigs/EPS/SymmetrySpace.eps> [38
 
 
 
 ] [39] [40]
-File: LocalInvariant/LocalInvariantFigs/g_off.eps Graphic file (type eps)
+File: LocalInvariant/LocalInvariantFigs/EPS/g_off.eps Graphic file (type eps)
 
-<LocalInvariant/LocalInvariantFigs/g_off.eps>
-File: LocalInvariant/LocalInvariantFigs/g_ts.eps Graphic file (type eps)
+<LocalInvariant/LocalInvariantFigs/EPS/g_off.eps>
+File: LocalInvariant/LocalInvariantFigs/EPS/g_ts.eps Graphic file (type eps)
 
-<LocalInvariant/LocalInvariantFigs/g_ts.eps> [41] [42] [43]
-File: LocalInvariant/LocalInvariantFigs/g_en.eps Graphic file (type eps)
+<LocalInvariant/LocalInvariantFigs/EPS/g_ts.eps> [41] [42] [43]
+File: LocalInvariant/LocalInvariantFigs/EPS/g_en.eps Graphic file (type eps)
 
-<LocalInvariant/LocalInvariantFigs/g_en.eps>
-File: LocalInvariant/LocalInvariantFigs/g_off.eps Graphic file (type eps)
+<LocalInvariant/LocalInvariantFigs/EPS/g_en.eps>
+File: LocalInvariant/LocalInvariantFigs/EPS/g_off.eps Graphic file (type eps)
 
-<LocalInvariant/LocalInvariantFigs/g_off.eps>) [44] [45] [46] (./thesis.bbl
-(./thesis.brf)
+<LocalInvariant/LocalInvariantFigs/EPS/g_off.eps> [44] [45]
+File: LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDr
+opAt5.eps Graphic file (type eps)
+
+<LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDropAt5
+.eps>
+File: LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDr
+opAt10.eps Graphic file (type eps)
+
+<LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDropAt1
+0.eps>) [46] [47]
+\openout2 = `CombineFramework/cframework.aux'.
+
+ (./CombineFramework/cframework.tex
+Chapter 5.
+[48
+
+
+
+] [49] [50] [51]) [52] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [47
+ [53
 
 
 
-] [48]) [49] (./thesis.aux (./Abstract/abstract.aux)
-(./Introduction/introduction.aux) (./Background/background.aux)
-(./GlobalInvariant/gInvariant.aux) (./LocalInvariant/localInvariant.aux))
+] [54]) [55]
+(./thesis.aux (./Abstract/abstract.aux) (./Introduction/introduction.aux)
+(./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
+(./LocalInvariant/localInvariant.aux) (./CombineFramework/cframework.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6658 strings out of 495062
- 94369 string characters out of 1182644
- 167894 words of memory out of 3000000
- 9624 multiletter control sequences out of 15000+50000
+ 6681 strings out of 495062
+ 94997 string characters out of 1182644
+ 169526 words of memory out of 3000000
+ 9638 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,50p,740b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (54 pages, 179600 bytes).
+Output written on thesis.dvi (60 pages, 203128 bytes).

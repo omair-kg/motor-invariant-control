@@ -5,13 +5,14 @@ A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Background/background.aux
 A level-1 auxiliary file: GlobalInvariant/gInvariant.aux
 A level-1 auxiliary file: LocalInvariant/localInvariant.aux
+A level-1 auxiliary file: CombineFramework/cframework.aux
 The style file: plainnat.bst
 Database file #1: References/AMSI.bib
 Warning--empty publisher in abraham1978foundations
 Warning--can't use both author and editor fields in latash2008neurophysiological
 You've used 20 entries,
             2773 wiz_defined-function locations,
-            750 strings with 8619 characters,
+            751 strings with 8650 characters,
 and the built_in function-call counts, 8983 in all, are:
 = -- 849
 > -- 400
