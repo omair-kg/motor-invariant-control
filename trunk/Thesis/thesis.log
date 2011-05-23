@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  23 MAY 2011 11:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  23 MAY 2011 18:10
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -401,7 +401,14 @@ LaTeX Warning: Label `fig:goff' multiply defined.
 
 LaTeX Warning: Label `fig:bouncing5' multiply defined.
 
-) (./CombineFramework/cframework.aux))
+) (./CombineFramework/cframework.aux
+
+LaTeX Warning: Label `fig:manyprimitives' multiply defined.
+
+
+LaTeX Warning: Label `fig:motion-transition' multiply defined.
+
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
@@ -419,8 +426,7 @@ LaTeX Font Info:    ... okay on input line 73.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
 Package hyperref Info: Link coloring ON on input line 73.
-
-(/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
@@ -446,12 +452,12 @@ Package backref Info: ** backref set up for natbib ** on input line 73.
 
 
 ]) (./thesis.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -463,13 +469,13 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [3] (./thesis.lof)
+ [3] (./thesis.lof [4
+
+])
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- (./thesis.nls) [4
-
-]
+ (./thesis.nls) [5]
 \openout2 = `Introduction/introduction.aux'.
 
  (./Introduction/introduction.tex
@@ -796,20 +802,55 @@ opAt10.eps Graphic file (type eps)
 
  (./CombineFramework/cframework.tex
 Chapter 5.
-[48
+File: CombineFramework/CombineFrameworkFigs/EPS/LimitCircle.eps Graphic file (t
+ype eps)
+<CombineFramework/CombineFrameworkFigs/EPS/LimitCircle.eps> [48
 
 
 
-] [49] [50] [51]) [52] (./thesis.bbl (./thesis.brf)
+] [49] [50]
+File: CombineFramework/CombineFrameworkFigs/EPS/BouncingBallPhasePlotAction1.ep
+s Graphic file (type eps)
+
+<CombineFramework/CombineFrameworkFigs/EPS/BouncingBallPhasePlotAction1.eps>
+File: CombineFramework/CombineFrameworkFigs/EPS/BouncingBallPhasePlotAction3.ep
+s Graphic file (type eps)
+
+<CombineFramework/CombineFrameworkFigs/EPS/BouncingBallPhasePlotAction3.eps>
+[51]
+File: CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveGraph.eps Graphi
+c file (type eps)
+ <CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveGraph.eps>
+File: CombineFramework/CombineFrameworkFigs/EPS/motiongraphtopology.eps Graphic
+ file (type eps)
+
+<CombineFramework/CombineFrameworkFigs/EPS/motiongraphtopology.eps>
+File: CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveTransition.eps G
+raphic file (type eps)
+
+<CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveTransition.eps>
+[52]
+File: CombineFramework/CombineFrameworkFigs/EPS/OverLayTransition.eps Graphic f
+ile (type eps)
+ <CombineFramework/CombineFrameworkFigs/EPS/OverLayTransition.eps>
+File: CombineFramework/CombineFrameworkFigs/EPS/OffsetTransition.eps Graphic fi
+le (type eps)
+
+<CombineFramework/CombineFrameworkFigs/EPS/OffsetTransition.eps> [53] [54]
+[55]
+File: CombineFramework/CombineFrameworkFigs/EPS/ConbineMethod.eps Graphic file 
+(type eps)
+ <CombineFramework/CombineFrameworkFigs/EPS/ConbineMethod.eps>) [56]
+[57] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [53
+ [58
 
 
 
-] [54]) [55]
-(./thesis.aux (./Abstract/abstract.aux) (./Introduction/introduction.aux)
+] [59]) [60] (./thesis.aux
+(./Abstract/abstract.aux) (./Introduction/introduction.aux)
 (./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
 (./LocalInvariant/localInvariant.aux) (./CombineFramework/cframework.aux))
 
@@ -817,12 +858,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6681 strings out of 495062
- 94997 string characters out of 1182644
- 169526 words of memory out of 3000000
- 9638 multiletter control sequences out of 15000+50000
+ 6707 strings out of 495062
+ 95965 string characters out of 1182644
+ 169848 words of memory out of 3000000
+ 9654 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,50p,740b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (60 pages, 203128 bytes).
+Output written on thesis.dvi (66 pages, 216568 bytes).
