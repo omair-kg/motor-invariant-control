@@ -1,5 +1,35 @@
-\chapter{Global Motion Invariant}
+\chapter{GLOBAL MOTOR INVARIANT}
+\label{chap:gi}
 \section{Introduction}
+
+\nomenclature{$q$}{Generalized Coordinates}
+\nomenclature{$Q$}{Configureation Space or Configuration Manifold}
+\nomenclature{$\qd$}{Gneralized Velocity}
+\nomenclature{$TQ$}{Tangenet Bundle of $Q$}
+\nomenclature{$u$}{Control Input}
+\nomenclature{$\state$}{State Variable}
+\nomenclature{$M$}{State Space Manifold}
+\nomenclature{$TM$}{Tangent Boundle Manifold}
+\nomenclature{$A$}{Attractor}
+\nomenclature{$B(A)$}{Basin of Attration of $A$}
+\nomenclature{$S$}{Neural Oscilator}
+\nomenclature{$\uin$}{Input Signal to the Neural Oscilator}
+\nomenclature{$\uout$}{Output of the Neural Oscilator}
+\nomenclature{$\hin$}{Input Coefficient of the Neural Oscilator}
+\nomenclature{$\hout$}{Output Coefficent of the Neural Oscilator}
+
+
+
+%\nomenclature[zcif]{$CIF$}{Cauchy's Integral Formula}                                % first letter Z is for Acronyms 
+%\nomenclature[aF]{$F$}{complex function}                                                   % first letter A is for Roman symbols
+%\nomenclature[gp]{$\pi$}{ $\simeq 3.14\ldots$}                                             % first letter G is for Greek Symbols
+%\nomenclature[gi]{$\iota$}{unit imaginary number $\sqrt{-1}$}                      % first letter G is for Greek Symbols
+%\nomenclature[gg]{$\gamma$}{a simply closed curve on a complex plane}  % first letter G is for Greek Symbols
+%\nomenclature[xi]{$\oint_\gamma$}{integration around a curve $\gamma$} % first letter X is for Other Symbols
+%\nomenclature[rj]{$j$}{superscript index}                                                       % first letter R is for superscripts
+%\nomenclature[s0]{$0$}{subscript index}                                                        % first letter S is for subscripts
+
+
 
 \ifpdf
     \graphicspath{{GlobalInvariant/GlobalInvariantFigs/PNG/}{GlobalInvariant/GlobalInvariantFigs/PDF/}{GlobalInvariant/GlobalInvariantFigs/}}
@@ -8,12 +38,12 @@
 \fi
 
 Motion varies greatly, different people walk with different gait. 
-A question is why the different motion of different people is all called walk.
+A question is why the different motions of different people are all called walk.
 Our answer is walk is not determined by the details how it is carried out.
 Walk capture the qualitative properties, and we agree on the walk becomes it is a property encoded in all our body, we all have the walking ability inborn, so that’s the reason why we can all identify it.
 
 
-Our basic idea is motion primitives are “easy” to finish. 
+Our basic idea is motion primitives are ''easy'' to finish. 
 In this chapter, we will try to give the “easiness” definition.
 The biological ideas can be provide a clear mathematical meaning.
 
@@ -21,8 +51,9 @@ The biological ideas can be provide a clear mathematical meaning.
 \section{Basic Concepts of Qualitative Dynamics}
 This section develops the mathematical conceptualization of Global Motor Invariant.
 Some mathematical background is needed in this discussion.
-Throughout this paper, we take the geometrical viewport of mechanical system, a.For analyzing qualitative properties, we introduce the ideas from differential topology.
-This idea can be traced back to Poincare\citep{Poincar'e1899,Poincar'e1885} and recently developed by the Smale School.
+Throughout this paper, we take the geometrical viewport of mechanical system.
+For analyzing qualitative properties, we introduce the ideas from differential topology.
+This idea can be traced back to Poincare\citep{Poincar'e1899,Poincar'e1885} and recently developed by the Smale School\citep{Smale1970}.
 Please refer to other books and lectures such as \citep{abraham1978foundations}for introduction in details.
 
 
@@ -35,82 +66,73 @@ Global Motor Invariant is defined by the topology structure.
 
 \subsection{Dynamic System and Differential Manifold}
 
-The dynamic of a mechanical system is determined by its configuration  $q$ and speed $\dot{q}$, configure ration and speed form the state $s=[q,\dot{q}]$, is described using state value in the state space.
-
-we represent the state of a system as a vector $q$,  $M$ is the state space, which is a manifold.
-The motion is a trajectory in the state space parameterized by time. $q(t)$.
 
 
+The dynamic of a mechanical system is determined by its configuration  $q$ and generalized speed $\qd$. 
+we represent the state of a system as a vector $\state=[q,\qd] \in M$,  $M$ is the state space, or state manifold.
+The motion is a trajectory $t \mapsto q(t)$ in the configuration space parameterized by time~$t$.
 For a dynamic system, $q(t)$ usually described in the form of  ordinary differential equation. 
+
+
+For every point $q \in Q$, 
+$F$ and $u$ determines a derivative vector $\qd in T_{q}Q$ in the Tangent Space. 
+All the vectors over the full space of $q$ form the \textbf{vector field} $\mathbf{X}$,describe by the differential equaiton~ \ref{eq:ode}
+which described by the differential equation
 \begin{equation}
-\dot{s}=F_{u}(s)=F(s,u),q\in M
 \label{eq:ode}
+\dot{\state}=F_{u}(\state)=F(\state,u),\state\in M
 \end{equation}
+
 where $u$ is the control effort. 
 $F$ is determined by the system's natural property.
 If $u=0$,  no control effort is applied.
-Such systems are \textbf{autonomous systems}.
+Such systems are \textbf{autonomous systems}. 
 
-For every point $q \in M$, 
-$F$ and $u$ determines a derivative vector $\dot{q}$. 
-All the vectors over the full space of $M$ form the \textbf{vector field} $V$. 
-
-The motion trajectory can be found by apply the integral operation on the vector filed $V$.
-\[
-I:M \times V \rightarrow M
-\]
-The result trajectory is defined as \textbf{flow} $\Phi$, all the flows form 
-the \textbf{phase portrait}, which illustrates all the possible motions of the dynamic system.
-
-We usually visualize the differential manifold by phase plot.
+The motion trajectory $q(t)$ can be obtained by solving the \textbf{intergral curve}to equation~\ref{eq:ode}, 
+\textbf{flow} $\Phi(\state)$ of $\mathbf{X}$ is the \textbf{intergral curve} through $\state$. 
+all the flows form the \textbf{phase portrait}, which illustrates all the possible motions of the dynamic system.
+We usually visualize the differential manifold by \textbf{phase plot}.
 
 
 An illustrative example repeatedly used in this report is the mass-spring system. 
 After linear transformation,  
-a linear mass spring system can be described in canonical form 
-\begin{equation}
-\label{eq:mass-spring}
-\ddot{x}+x=0.
-\end{equation}
-where $x$ is the position of the mass, $\dot{x}$ is the speed, and $\ddot{x}$ is the acceleration of mass.
+a linear mass spring system can be described in canonical form equation ~\ref{eq:mass-spring}
+where $q$ is the position of the mass, $\qd$ is the speed, and $\ddot{q}$ is the acceleration of mass.
  
-If we chose the state variable $q=[x,\dot{x}]$, the ODE model should be 
-\[
-\dot{q}=
+If we chose the state variable $\state=[q,\qd]$, the ODE model should be in the form of equation~\ref{eq:stateform}
+\begin{equation}
+\label{eq:stateform}
+\dot{\state}=
 \left[ 
 \begin{array}{cc}
 0 &-1\\
 1 &0 
 \end{array}
-\right]q
-\]
+\right]\state
+\end{equation}
 
 
 
 \subsection{Global Motor Invariant}
-
-Flows can only intersect at some special position called \textbf{equlibria}.
-Basically there are three type of equilibrium. 
-
-if we want to include the chaos, inspectional position is also called no wandering points
-
+Flows can only intersect at some special position called \textbf{equilibria}.
+Basically there are three type of equilibrium.
 At each \textbf{equilbria}, 
 the local space can be divided into three subspace of sub manifold: centre sub manifold, stable manifold, and unstable sub manifold.
 \begin{description} 
 \item[centre sub manifold]
-If a flow $\theta$ pass through a point $m$ on centre sub manifold $W_{c}$,
+If a flow $\theta$ pass through a point $\state_{c}$ on centre sub manifold $W_{c}$,
 flow$\theta$ will remain on the Centre Manifold 
 \[
 \theta_{c}(t) \in W_{c}, t \in R
 \]
  An equilibria must be on center manifold. 
 \item [stable sub manifold]
-For the flow $\theta_{s}$ passes through a point $m$ on stable sub manifold $W_{s}$, the flow will finally converge to a no wandering point on centre sub manifold.
+For the flow $\theta_{s}$ passes through a point $\state_{s}$ on stable sub manifold $W_{s}$, the flow will finally converge to a no wandering point on centre sub manifold.
 \[
 \theta_{s}(+\infty)=\theta_{c}
 \]
 \item[unstable sub manifold]
-For the flow passes through a point $m$ on unstable sub manifold $W_{u}$, the flow will be repelled from the no wandering points on centre manifold.
+For the flow $\theta_u$ passes through a point $\state_u$ on unstable sub manifold $W_{u}$, the flow will be repelled from the no wandering points on centre manifold.
 An alternative perspective is the inverse of the flow converge to no wandering point. 
 \[
 \theta_{u}(-\infty)=\theta_{c}
@@ -127,15 +149,24 @@ For nonlinear system, globally, the shape of stable and unstable sub manifold ma
 The unstable manifold of one equilibrium may be the stable sub manifold of another.
 The equilibra and its connectivity sub manifold form a topological structure.
 Thus the phase plane will be divide into different regions,result in a cellular structure.
-there is only one attractor, all the flow in this region will converge to the attractor.
-and the corresponding region is called basin of attraction.
+there is only one attractor, all the flow in this region will converge to the attractor ~$A$.
+and the corresponding region is called basin of attraction ~$B(A)$.
 
-In theory, in human perception and experiment, only observe the attractor of the dynamic system can be observed, motion task should be only rely on the attractor.
+In theory, only observe the attractor of the dynamic system can be observed, motion task should be only rely on the attractor.
+Two types of attrator are of great interest in motor control:(1) fixed point, as show inf Figure~\ref{fig:StablePosture},(2)Limit Cycle,as shown in Figure ~\ref{phase_plot}
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.4\textheight]{phase_plot}
+\end{center}
+\caption{Limit Cycle}
+\label{fig:time_timeAttraction}
+\end{figure}
+
+
 
 Global Motor Primitive is defined by the attractor type and its basin of attraction in the topology space.
-
 We can also give the biological ideas clear mathematical meaning.
-
 The UMH, the uncontrolled manifold is the basin of attraction.
 For EPH, the equilibrium point is the attractor.
 For Impendence Control, impedance control is control the shape of basin of attraction.
@@ -187,7 +218,7 @@ Even bifurcation happens; the attractor of motion primitives should not be affec
 \end{itemize}
 
 
-\subsection{Structural Stability explanation Morphological Computation}
+\subsection{Structural Stability in Morphological Computation}
 Structural Stability is neglected in CMS research.
 It is reasonable for natural animals to rely on structural stable autonomous system. 
 In natural environment, perturbation and uncertainty are everywhere. In many cases, if neural system
@@ -212,7 +243,6 @@ We can also know motion primitives are not only defined by the body, it also def
 \subsection{CPG and Entrainment}
 In nature, an animal's body and environment can be extremely complex. 
 It leads to high dimensional manifolds with complicated topological structure, which provides many motion primitives for our use.
-
 For CMS application, one question we want to ask is the so many motion primitives can be controlled with a simple method.
 
 We propose that even there are many type of motion primitives, the type of attractor is limited. Basically there are only two types of attrator, limit circle and fix point.
@@ -225,13 +255,20 @@ Thus we can only focus on the type of attractor.
 
 Biology Research suggested that the motor is mainly controlled by the Central Pattern Generator, which is a small autonomous network that generating rhythmic signals.
 The idea of control motion by rhythmic signals can be modelled as entrainment \citep{Gonz'alez-Miranda2004}.
+When coupling two oscillation system together, entrainment can happen when two system oscillator in synchronize. 
+This effect will enhance the oscillation and also know as resonant. 
 
-When coupling two oscillation system together, entrainment can happen when two system oscillator in synchronize. This effect will enhance the oscillation and also know as resonant. 
 
 
 
-Neural Oscillator
-In previous section, we discussed two types of attractors: fix point and Limited Circle. One idea limit circle is a necessary, fix point can be controlled with by (1) terminate a circle, (2)a different controller, (3)approximate by a limit circle with small amplitude or damping the limit circle, (4) change the limit circle into a fix point through by bifurcation. It is a still open question which type is more important and serve as the foundation as motor control.
+In previous section, we discussed two types of attractors: Fixed point and Limited Cycle. 
+It is a still open question which type is more important and serve as the foundation as motor control\citep{Degallier2010}.
+One idea limit circle is a necessary, fix point can be controlled with by (
+1) terminate a circle, 
+(2)a different controller, 
+(3)approximate by a limit circle with small amplitude or damping the limit circle, 
+(4) change the limit circle into a fix point through by bifurcation. 
+
 
 
 In this paper, 
@@ -250,41 +287,36 @@ For CMS research, both type of motion trajectory can be simulated with periodic 
 A simple example.
 Although it is difficult for neural system to carry out complex computation, it is easy to build oscillator structure with neurons. 
 It only needs two neurons with mutual inhibitive property.
-
-The dynamic of a neuron can be model as a dynamic equation:
-\begin{equation}
-\dot{S}=L(S)+I(u)
-\end{equation}
-Where $S$ is the output electrical signal of neuron and $u$ is the input signal from other neuron.
-An inhibit input $I$ has the property that when $u1>u2,I(u1)<I(u2)$.
-
 One extensively studied oscillation model is developed by \citet{neurooscillation}. 
 The mathematical presentation is as follows:
 \begin{eqnarray}
-\tau_{1} \dot{x_{1}}&=&c-x_{1}-\beta v_{1}-\gamma [x_{2}]^{+}-\sum_{j}h_{j}[g_{j}]^{+}\\
-\tau_{2} \dot{v_{1}}&=&[x_{1}]^{+}-v_{1}\\
-\tau_{1} \dot{x_{2}}&=&c-x_{2}-\beta v_{2}-\gamma [x_{1}]^{-}-\sum_{j}h_{j}[g_{j}]^{-}\\
-\tau_{2} \dot{v_{2}}&=&[x_{2}]^{+}-v_{2}\\
-y_{i}&=&\mbox{max}(x_{i},0)\\
-y_{out}&=&[x_{1}]^{+}-[x_{2}]^{+}=y_{1}-y{2}
+\tau_{1} \dot{s_{1}}&=&c-s_{1}-\beta l_{1}-\gamma [s_{2}]^{+}-\sum_{j}h_{j}[w_{j}]^{+}\\
+\tau_{2} \dot{l_{1}}&=&[s_{1}]^{+}-l_{1}\\
+\tau_{1} \dot{s_{2}}&=&c-s_{2}-\beta l_{2}-\gamma [s_{1}]^{-}-\sum_{j}h_{j}[w_{j}]^{-}\\
+\tau_{2} \dot{l_{2}}&=&[s_{2}]^{+}-l_{2}\\
+y_{i}&=&\mbox{max}(s_{i},0)\\
+y_{o}&=&=[s_{1}]^{+}-[s_{2}]^{+}=y_{1}-y{2}
 \label{eq:matsuta}
 \end{eqnarray}
 
-where $x$ and $v$ are state variables of the oscillator, $\tau$,$c$,$\beta$,$\gamma$ are parameters of the oscillator.
+$c$,$\beta$,$\gamma$ are parameters of the oscillator,in our research are kept constant.
+$\tau$ constrolls the oscilation frequency.
 
-Matuoka oscillator is an autonomous oscillator; it can begin to oscillator without any control effort.
-Figure \ref{fig:natural-oscilation} shows the natural oscillator output.
+
+
+
+
+
+
+Matuoka oscillator is an autonomous oscillator; 
+it can begin to oscillator without any control effort.
+Figure ~\ref{fig:natural-oscilation} shows the natural oscillator output.
 \begin{figure}[h]
 \includegraphics[height=0.4\textheight]{oscillation.eps}
 \caption{Natural Oscillation}
 \label{fig:natural-oscilation}
 \end{figure}
 
-\begin{figure}[h]
-\includegraphics[height=0.4\textheight]{entraint_oscilation.eps}
-\caption{Entrainment Oscillation}
-\label{fig:entraint-oscilation}
-\end{figure}
 
 
 
@@ -292,13 +324,19 @@ Figure \ref{fig:natural-oscilation} shows the natural oscillator output.
 It is also adaptive; entrainment behaviour can happen between one Matuoka oscillator and different oscillators. 
 Figure \ref{fig:entraint-oscilation} shows the entrain oscillation,
 where the oscillation of Matuoka oscillator synchronise with the input signal.
+\begin{figure}[h]
+\includegraphics[height=0.4\textheight]{entraint_oscilation.eps}
+\caption{Entrainment Oscillation}
+\label{fig:entraint-oscilation}
+\end{figure}
+
 But because of the nonlinear properties, its behavior is not completely understood. 
 Matsuta\citep{Matsuoka1987} explains the adaptive properties from the location of the roots of  characteristic equation. 
 Wilimas\citep{Williamson1998} explains the properties in frequency domain.
 
 
 
-In our research, we find some important properties of neural oscillator by investigating simulation results.
+In our research, we find some important properties of neural oscillator by empirical.
 
 \begin{figure}
 \begin{center}
@@ -347,6 +385,18 @@ Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
  
 The large area of basin of attraction means the final behaviour is totally determined by parameters. 
 Initial condition will have no effects on the oscillator final output. 
+Thus we treat matsuta oscilator as in a simple one input, one out put system, controlled by three parameter and input signal. 
+we usually reformed equation ~\ref{eq:matsuta} in the simplified form
+\begin{equation}
+\uout=S_{[\hin,\hout,\tau]}(\uin)
+\label{eq:simplematsuta}
+\end{equation}
+where $\uin=\sum_{j}h_{j}[w_{j}]=hw$,$\uout=\hout y_{o}$
+
+
+
+
+
 The converging speed can be seen as quick recovery ability.
 When an impulse perturbation happens, it will recover in one period time.
 
@@ -366,32 +416,45 @@ Hybrid dynamics, in incoperate two phase,
 \ddot{q}&=-g&\mathrm{if}\,\,q &> 0\,\,\mathrm{(free\,\,flying)} \nonumber\\
 \dot{q}^{+}_{\mathrm{ball}} - \dot{q}^{+}_{\mathrm{paddle}} &=  \epsilon(\dot{q}^{-}_{\mathrm{ball}} - \dot{q}^{-}_{\mathrm{paddle}})&\mathrm{if}\,\,q &\leq 0\,\,\mathrm{(paddle\,\,strike)}\nonumber
 \end{align}
-X: user not authorized to run the X server, aborting.
 
-
-Basically, the ball will continue bouncing with smaller height.
-
-
-\subsection*{Global Invaraint Control}
-couple with neural oscillator boucing we get an limit circle
-
-%g_in=g_in*v_ball, (3)
-%Pos_pedal=h*out_oscillator.  (4)
-
-The input of neural oscillator is the velocity of the ball multiply by the input coefficient, the output of neural oscillator  drive the pedal position.
-An limit circle emerge as the result of entrainment.
-As show in figure drop from different position, all the ball will bouncing a about the same height of 5.
+Basically, the ball will continue bouncing with smaller height,as show in Figure~\ref{fig:bborg}.
 
 \begin{figure}[h]
 \begin{center}
 	\subfigure[state plot]
 	{
-	\includegraphics[width=0.45\textwidth]{bb_ms_os_attraction_phase.eps}
+	\includegraphics[width=0.45\textwidth]{bouncing_ball}
+	\label{fig:bb}
+	}
+	\subfigure[Phase Plane]
+	{
+	\includegraphics[width=0.45\textwidth]{bouncing_ball_phaseplot}
+	\label{fig:bbp}
+	}
+	
+\end{center}
+\caption{Original Bourncing Ball System}
+\label{fig:bborg}
+\end{figure}
+
+
+
+\subsection*{Emergence of Limit Cycle}
+couple with neural oscillator boucing we get an limit circle
+The input of neural oscillator is the velocity $\uin=\dot{q}_{ball}$, the output of neural oscillator  drive the pedal position $q_{pedal}=\uout$.
+An limit circle emerge as the result of entrainment.
+As show in figure drop from different position, all the ball will bouncing a about the same height of 5,as show in Figure~\ref{fig:bb_attractive_circle}
+
+\begin{figure}[h]
+\begin{center}
+	\subfigure[state plot]
+	{
+	\includegraphics[width=0.45\textwidth]{bb_ms_os_attraction_phase}
 	\label{fig:bb_attractive_entraint}
 	}
 	\subfigure[Phase Plane]
 	{
-	\includegraphics[width=0.45\textwidth]{bb_ms_os_StateTimeAttraction.eps}
+	\includegraphics[width=0.45\textwidth]{bb_ms_os_StateTimeAttraction}
 	\label{fig:bb_attractive_entraint_time}
 	}
 	

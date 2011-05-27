@@ -55,20 +55,22 @@
 
 
 \newcommand{\amp}[1]{\mathbf{amp}\left(#1\right)}
-\newcommand{\hin}{h_{\mathrm{in}}}
-\newcommand{\hout}{h_{\mathrm{out}}}
+\newcommand{\hin}{h_{\mathrm{i}}}
+\newcommand{\hout}{h_{\mathrm{o}}}
 \newcommand{\gamin}{\gamma_{\mathrm{in}}}
 \newcommand{\gamout}{\gamma_{\mathrm{out}}}
 \newcommand{\qd}{\dot{q}}
 \newcommand{\xd}{\dot{x}}
-\newcommand{\goff}{g_{\mathrm{off}}}
-\newcommand{\gts}{g_{\mathrm{ts}}}
-\newcommand{\gen}{g_{\mathrm{en}}}
 \newcommand{\x}{\mathbf{x}}
-\newcommand{\uin}{u_{\mathrm{in}}}
-\newcommand{\uout}{u_{\mathrm{out}}}
-\newcommand{\ulocal}{u_{\mathrm{local}}}
+\newcommand{\goff}{g_{\mathrm{f}}}
+\newcommand{\gts}{g_{\mathrm{t}}}
+\newcommand{\gen}{g_{\mathrm{e}}}
+\newcommand{\uin}{u_{\mathrm{i}}}
+\newcommand{\uout}{u_{\mathrm{o}}}
+\newcommand{\ulocal}{u_{\mathrm{l}}}
+\newcommand{\state}{\mathbf{x}}
 \newcommand{\HiItem}[1]{\item \textbf{#1}}
+\newcommand{\note}[1]{\textcolor{red}{Note:#1}}
 
 \begin{document}
 
@@ -101,6 +103,7 @@
 \pagenumbering{roman}
 %\include{Dedication/dedication}
 %\include{Acknowledgement/acknowledgement}
+\include{todolist}
 \include{Abstract/abstract}
 
 \tableofcontents
@@ -114,10 +117,14 @@
 \include{GlobalInvariant/gInvariant}
 \include{LocalInvariant/localInvariant}
 \include{CombineFramework/cframework}
+\include{BipedWalk/bwalk}
+\include{WalkStance/stance}
+\include{HiDof/hidof}
+
 %\include{Chapter1/chapter1}
 %\include{Chapter2/chapter2}
 %\include{Chapter3/chapter3}
-%\include{Conclusions/conclusions}
+\include{Conclusions/conclusions}
 
 \backmatter % book mode only
 \appendix

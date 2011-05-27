@@ -1,0 +1,18 @@
+\nomenclatureentry{a$q$@[{$q$}]\begingroup Generalized Coordinates\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$Q$@[{$Q$}]\begingroup Configureation Space or Configuration Manifold\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$\qd$@[{$\qd$}]\begingroup Gneralized Velocity\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$TQ$@[{$TQ$}]\begingroup Tangenet Bundle of $Q$\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$u$@[{$u$}]\begingroup Control Input\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$\state$@[{$\state$}]\begingroup State Variable\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$M$@[{$M$}]\begingroup State Space Manifold\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$TM$@[{$TM$}]\begingroup Tangent Boundle Manifold\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$A$@[{$A$}]\begingroup Attractor\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$B(A)$@[{$B(A)$}]\begingroup Basin of Attration of $A$\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$S$@[{$S$}]\begingroup Neural Oscilator\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$\uin$@[{$\uin$}]\begingroup Input Signal to the Neural Oscilator\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$\uout$@[{$\uout$}]\begingroup Output of the Neural Oscilator\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$\hin$@[{$\hin$}]\begingroup Input Coefficient of the Neural Oscilator\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$\hout$@[{$\hout$}]\begingroup Output Coefficent of the Neural Oscilator\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$G$@[{$G$}]\begingroup A Lie Group\nomeqref {4.0}|nompageref}{39}
+\nomenclatureentry{a$g_a$@[{$g_a$}]\begingroup an elemetn in Lie Group $G$ with parameter $a$\nomeqref {4.0}|nompageref}{39}
+\nomenclatureentry{a$I(x)$@[{$I(x)$}]\begingroup Invariant Function of $x$\nomeqref {4.0}|nompageref}{39}

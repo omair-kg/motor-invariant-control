@@ -1,5 +1,6 @@
 %%% Thesis Introduction --------------------------------------------------
 \chapter{INTRODUCTION}
+\label{chap:intro}
 \ifpdf
     \graphicspath{{Introduction/IntroductionFigs/PNG/}{Introduction/IntroductionFigs/PDF/}{Introduction/IntroductionFigs/}}
 \else
@@ -25,59 +26,68 @@ For this situation, high level animation tools are badly needed.
 
 \section{Rethink about Motor Control}
 The foundation of these problems is our misunderstanding of the biological motor control system.
-Although motion of animals have fancied us for thousands years, some basic questions of motor control and motion perception remain open. And answers to such questions become even more valuable nowadays. Advance in this topic will greatly influence the biology, robotic engineering even intelligent research.
+Although motion of animals have fancied us for thousands years, some basic questions of motor control and motion perception remain open. 
+And answers to such questions become even more valuable nowadays. 
+Advance in this topic will greatly influence the biology, robotic engineering even intelligent research.
 
 The paradoxes is even human are good at motor control and motion perception; human still don’t have an idea of how we move and how we perceive motion.
 Before going into details into the research ideas, we first review some puzzles troubles the foundation of CMS. 
 \begin{itemize}
-\item The first puzzle comes from the huge number of degrees of freedom (DOF). Unlike the artificial system, biological systems have many more (DOF). Artificial ship is a fixed rigid body, while fish has a very flexible vertebrate, which is of tens of DOFs. In principle, we know that more degrees of freedom allow animals to generate motion variation and make motion adaptive to the environment. But for control system, extra degrees of freedom propose a challenging problem, for human example, it is difficult to answer how the neural  system controls more than 200 bones and 600 muscles to walk one step.
+\HiItem {degrees of freedom (DOF)}. Unlike the artificial system, biological systems have many more (DOF). Artificial ship is a fixed rigid body, while fish has a very flexible vertebrate, which is of tens of DOFs. In principle, we know that more degrees of freedom allow animals to generate motion variation and make motion adaptive to the environment. But for control system, extra degrees of freedom propose a challenging problem, for human example, it is difficult to answer how the neural  system controls more than 200 bones and 600 muscles to walk one step.
  
-\item The second puzzle comes from the dexterity.
+\HiItem {dexterity}
 Human can finish much more motion task than the artificial system.
-Beside the walking, swimming and object manipulation, human can also utilize a large number of artificial tools, driving a car, skate, cycling, and playing tennis, and even some function the feeding, breading, language, vision all depends on motor control. The key questions how much resources are needed for so many motion abilities.
+Beside the walking, swimming and object manipulation, human can also utilize a large number of artificial tools, driving a car, skate, cycling, and playing tennis, and even some function the feeding, breading, language, vision all depends on motor control. 
+The key questions how much resources are needed for so many motion abilities.
 
-\item The third puzzle is the perception. We don’t judge motion by check the physically correctness, for some artefacts, we will identify them instantly, while for some impossible motions, we don’t notice the mistakes.  If we acquire many motion tasks through learning, what we see is closely how we learn our motion ability, then here follows the  question do we ignore some artefacts because they are not important for motor control?
+\HiItem {perception} 
+We don’t judge motion by check the physically correctness.
+For some artefacts, we will identify them instantly, while for some impossible motions, we don’t notice the mistakes. 
+If we acquire many motion tasks through learning, what we see is closely how we learn our motion ability, then here follows the  question do we ignore some artefacts because they are not important for motor control?
 \end{itemize}
 After a close look, we have to recognize we know little about the biological motor control.
 
 For computer animation research, the key principle is we should know the things we animate.
 Natural motion system has many valuable properties which are not captured by current motion synthesis methods.
 \begin{itemize} 
- \item \textbf{ Adaptive and robust}
+ \HiItem{ Adaptive and robust}
 Natural motions are adaptive to the changes in the environment or body conditions. 
 A common example is human locomotion. 
 Walking on different terrains will exhibit different gait while the balance is maintained. 
 
-\item \textbf{real-time performance}
+\HiItem{real-time performance}
 Some motions of animals are very fast, honey birds may vibrate their wings in kHz.
 The astonishment is to the speed of motion, more puzzling is that the neural system can solve the complex motion control problem in such a short time. 
 When an animal avoids obstacles at very high running speed, 
 it must continue its running, make a turning and keep balance at the same time. 
 It seems easy for the neural system to plan complicate motions.
-\item \textbf{Energy Efficient}
+\HiItem{Energy Efficient}
 Natural Motions are energy efficient.
 In theory, this idea is supported by Darwin's Theory of Evolution.
 But animals spent far less energy than our expectation.
-An example is that the energy consumed by human walking is only 10% of that for a robot of the same scale.
+An example is that the energy consumed by human walking is only 10\% of that for a robot of the same scale.
 \end{itemize}
+
+
+\section{A Different Motor Control Idea}
+
+
 When design a motion synthesis framework, the key is the several decision making.
 
 \begin{itemize}
-\item \textbf{ Memory or Computation}
+\HiItem {Memory or Computation}
 The first question is how we achieve our motor ability. Some argue that it depends on our motion memory. Given the uncountable variations of motion, it seems impossible for us to remember possible motion. Some argues motion is based on computation or our reasoning power; it will put heavy burden on our neural system and we need think hard to walk.
 	
-\item \textbf{ Feedback or Feedforward}
+\HiItem{ Feedback or Feedforward}
 The second is which control strategy plays more important role in motor control, feedback or feed forward. Artificial control theory is feedback based, if so, human must have a power sensing system which is accurate and fast, and move in a “careful and nervous manner”. 
 A different control idea is feed forward based control, if we can predict something, we can take some measures to prevent motion failure, and we can extend our arms when walking or change the shoes if tomorrow will snow.
 Feedforward will make the task “easier”, it free human of the sensing requirement in accuracy and speed, which our human are not good, it depends on the prediction and experience, which our human beings are fond of since the old day.
 	
-\item \textbf{Disadvantage or Advantage}
+\HiItem{Disadvantage or Advantage}
 Maybe the most important problem is our attitude of the body structure. The body structure is the product of natural selection in millions of years. A complex system is not necessarily difficult to use. Seen in this way, the body structure should be a heritage rather than a burden.  We prefer to think the body structure as an over powerful tool beyond our current comprehension. 
 It is not that the nature makes a big mistake; it is we don’t understand the great design yet.
 
 \end{itemize}
-
-\section{A Different Motor Control Idea}
 In this research, we propose a different motion synthesis method based on a different motor control theory.
  An insightful discovery is that motor control can be “easy”.
 For some situation, some tasks mainly explore the properties of the body and environment and can be achieved with little control effort.
@@ -91,16 +101,20 @@ The inspiration of our idea comes from related biological research, which covers
 
 \section{llustrate principle ideas through simple examples}
 
-Although some obscure knowledge is needed to for the mathematical model, the principle is illustrative through some daily example. Here provides two examples about our idea of the “easy” motion and how can we “tweak” them.
+Although some obscure knowledge is needed to for the mathematical model, the principle is illustrative through some daily example. 
+Here provides two examples about our idea of the “easy” motion and how can we “tweak” them.
 
-The world is complex, the first question is how much information we need for accomplish a motor task. Our discovery that some motion task is so easy that e we need no control effort and blindness to some information doesn’t matter.
+The world is complex, the first question is how much information we need for accomplish a motor task. 
+Our discovery that some motion task is so easy that e we need no control effort and blindness to some information doesn’t matter.
 This idea is illustrate by the ship floating example
 
 \subsection{Ship Floating}
 
 
 \subsubsection*{Dynamics}
-The first example is the ship floating. In real life, usually the high of the ship is much larger than the width. When wave comes, also comes the question how the ship maintains its posture.
+The first example is the ship floating. 
+In real life, usually the high of the ship is much larger than the width. 
+When wave comes, also comes the question how the ship maintains its posture.
 To our surprise, we find maintain posture is “easy”.
 
 
@@ -120,12 +134,13 @@ To our surprise, we find maintain posture is “easy”.
 
 
 
-The side sway motion as shown in figure (1) is described by the dynamic equation(1)
+The side sway motion as shown in Figure ~\ref{fig:ShipFloating} is described by the dynamic ~\ref{eq:shipflow}
 \begin{equation}
-I \ddot{\theta}+d\dot{\theta}=T_{G}+T_{B}+T_{F}=(Gl_{g}-Bl_{b})sin(\theta)+T_{F}
+I_netia\ddot{q}+d\dot{\theta}=T_{G}+T_{B}+T_{F}=(Gl_{g}-Bl_{b})sin(\theta)+T_{F}
+\label{eq:shipflow}
 \end{equation}
-$\theta$ is the swaying angle,
-$I$ is the inertia,  
+$q$ is the swaying angle,
+$I_netia$ is the inertia,  
 $d$ is the damping coefficient,
 $T_{G}$ is the torque of gravity, and $T_{B}$ is the Torque of buoyancy.
 $T_{F}$ is the external control torque.
@@ -134,9 +149,10 @@ if $T_{F}=0$, external control force is applied, the system is an \textbf{autono
 
 
 
+
 \subsubsection*{Equilibrium Posture}
 Ship will only rest at postures when external torques are zero.
-There are only two postures that the external torque is zero as show in picture (2)
+There are only two postures that the external torque is zero as show in Figure ~\ref{fig:ShipEqulibrium}
 \begin{figure}[!htbp]
   \begin{center}
     \leavevmode
@@ -161,8 +177,8 @@ If a small perturbation moves the state of the ship away from the equilibrium po
 The differences of the two postures can be illustrated with the phase plot.
 On phase plot, x axis is the angle, y axis is the angle velocity. 
 Then the movement of the ship can be presented by a curve.
-Figure 3 shows motion about the left equilibrium posture, they will automatically move to the left equilibrium posture.
-Figure 4 shows the ship motion about the right equilibrium posture.
+Figure~\ref{fig:StablePosture}  shows motion about the left equilibrium posture, they will automatically move to the left equilibrium posture.
+Figure~\ref{fig:unStablePosture} shows the ship motion about the right equilibrium posture.
  
 \begin{figure}[!htbp]
   \begin{center}
@@ -193,7 +209,9 @@ Figure 4 shows the ship motion about the right equilibrium posture.
 
 
 \subsubsection*{''Easiness''}
-If we plot all the possible motion of the ship, we get the phase portrait of the ship. We find out that all the curves will move away from the repelling posture to the attractive posture. Several curves are show in figure 5
+If we plot all the possible motion of the ship, we get the phase portrait of the ship. 
+We find out that all the curves will move away from the repelling posture to the attractive posture.
+ Several curves are show in figure ~\ref{fig:globalflow}
 \begin{figure}[!htbp]
   \begin{center}
     \leavevmode
@@ -202,23 +220,23 @@ If we plot all the possible motion of the ship, we get the phase portrait of the
     \else
       \includegraphics[width=0.7\textwidth]{ShipGlobalFlow}
     \fi
-    \caption{Unstable Posture}
-    \label{fig:unStablePosture}
+    \caption{Several Possible Moiton of Ship}
+    \label{fig:globalflow}
   \end{center}
 \end{figure}
 
 Thus we come to the conclusion, the ship can automatically control maintain its left equilibrium posture. 
- Ship can keep its upside up as long as the centre of buoyancy force is above the centre of gravity, 
-maintaining posture of the ship is very”easy”.
+Ship can keep its upside up as long as the centre of buoyancy force is above the centre of gravity.
+Maintaining posture of the ship is very”easy”.
 
 
 \subsubsection*{Different Ships} 
 Something interesting in our analysis is the conclusion is independent of the detail information about the size, weight and design of the ship. 
 It is obvious different ship will maintain its posture with different motions. 
-Or put in a different phrase, ship will adapt its motion during maintain posture when we change its parameters.
+Or put in a different phrase, ship will adapt its motion during maintain posture when we change the ship  parameters.
 
 As long as the centre of buoyancy is above the centre of gravity, maintaining posture is “easy”.
-One phase plot, all the ships share some properties: one repealing point, one attractive point and all motion curves moves away the repelling point to the attractive point. As how in figure 6
+One phase plot, all the ships share some properties: one repealing point, one attractive point and all motion curves moves away the repelling point to the attractive point. As how in Figure~\ref{fig:topologyStructure}
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -239,19 +257,19 @@ As long as the topology is maintained, for different kinds of ship,maintaining p
 
 
 \subsubsection*{Global Motor Invariant and System Adaptation}
-In our motion synthesis framework, the topology is called global invariant, and they encapsulate the qualitative properties of a dynamic system.
+In our motion synthesis framework, the topology is called \textbf{global invariant}, and they encapsulate the qualitative properties of a dynamic system.
 
 For “easy” task, no control is need.
 Following this idea, to find the “easy” motion task, we should investigate the topology of the phase portrait.
 
-Another important idea is motion will adapt when we change the parameters of the dynamic system.
+Another important idea is motion will adapt when we change the parameters of the dynamic system,which is called \textbf{System Adaptation}
 
 
 \subsection{The Mass-Spring Vibration}
 Human can finish motion tasks require high accuracy.
-For dynamic motion synthesis, the key question facing both the computer graphic researcher and neural science researchers is how the neural system solves the dynamic problem of motion. 
-The biological motor control is very complex; it involves chemical, neural, electrical and mechanical process. 
 The question is how neural systems solve the complex dynamic problem instantly with high accuracy.
+The biological motor control is very complex; it involves chemical, neural, electrical and mechanical process. 
+
 An alternative idea is we don’t find the solution by solving the dynamics; we only need to know how to transform one solution into another.
 This idea is illustrative in the following mass spring example
 
@@ -269,14 +287,18 @@ This idea is illustrative in the following mass spring example
     \label{fig:massspring}
   \end{center}
 \end{figure}
-Although simple, this system in figure 7 captures some of the important properties of motor control system.
-The biological motor actuation or muscle works more like spring rather than the artificial electrical motor. Neural control adjusts spring rather applying force direct at the mass (which model the skeleton).
+Although simple, this system in Figure~\ref{fig:massspring} captures some of the important properties of motor control system.
+The biological motor actuation or muscle works more like spring rather than the artificial electrical motor. 
+Neural control adjusts spring rather applying force direct at the mass (which model the skeleton).
 
 
-The canonical equation of mass spring system is equation (2)
-(2)
+The canonical equation of mass spring system is equation (\ref{eq:mass-spring})
+\begin{equation}
+\label{eq:mass-spring}
+\ddot{q}+q=0.
+\end{equation}
 
-In a similar manner, we can draw the state of mass spring system on the phase plot, as show in figure 8
+In a similar manner, we can draw the state of mass spring system on the phase plot, as show in Figure~\ref{fig:massSpringPhasePlot}
 
 
 \begin{figure}[!htbp]
@@ -291,55 +313,67 @@ In a similar manner, we can draw the state of mass spring system on the phase pl
     \label{fig:massSpringPhasePlot}
   \end{center}
 \end{figure}
-Figure 8
+
 \subsubsection*{Symmetry and Transformation}
-Even it is simple, it is highly unlikely the knowledge of the mass spring is encoded in our brain in the form of equation (2).
+Even it is simple, it is highly unlikely the knowledge of the mass spring is encoded in our brain in the form of equation (\ref{eq:mass-spring}).
 Very possible we know a possible motion like the red one.
- Given a state q, we can easily work out the motion curve, it is on the green circle that shares the centre with the red one, but has a bigger radius.
- We can say the green curve is a scale transformed red curve.
- The property that we can transform one motion into another is called “symmetry”.
+ Given a state $[x,\dot{x}]$, we can easily work out the motion curve, it is on the green circle that shares the centre with the red one, but has a bigger radius.
+ We can say the green curve is a scale red curve.
+ The property that we can transform one motion into another is called ''symmetry''.
 
 Using transformation, the new motion can be calculated easily.
- In fact we can ignore the complexity of the dynamic system, as long as we know the “symmetry “property of a dynamic system. Given one motion, we can work out all the possible motions.
+In fact we can ignore the complexity of the dynamic system, as long as we know the ''symmetry'' property of a dynamic system. 
+Given one motion, we can work out all the possible motions.
 
 \subsubsection*{Dynamic Encoding}
 
-The dynamic system can be encoded in a different manner,
-A possible way is store a motion curve and its symmetrical property.
-Impact of this idea for motor control is far reaching. 
-First, it greatly reduces the computational cost in motor control.
-It also provides us with an idea of motion perception. 
-In fact we don’t calculate the details dynamic of motion; we can check the “symmetry”. If we can transformed the observed motion(green) into our memorized one (red), than we think the motion are realistic, otherwise we detect artefacts.
+The dynamic system can be encoded in a different manner,a possible way is store a motion curve and its symmetrical property.
 
+Impact of this idea for motor control is far reaching. 
+\begin{itemize}
+\item it greatly reduces the computational cost in motor control.
+\item It also provides us with an idea of motion perception. 
+In fact we don’t calculate the details dynamic of motion; we can check the ''symmetry''.
+If we can transformed the observed motion(green) into our memorized one (red), than we think the motion are realistic, otherwise we detect artefacts.
+\end{itemize}
 
 \subsubsection*{Local Motor Invariant and Transform Adaption}
-When comparing the observed motion and the memorized motion, there is a better method than work out the transformation directly. Some property should be kept invariant under such transformation, for the mass spring system, we can say the shape is kept during scale transformation. From Differential Geometry view port, we can say the curvature is kept. From mechanical view, we can say for each motion, the energy is kept along the curve, and different motion is of different energy. 
+When comparing the observed motion and the memorized motion, there is a better method than work out the transformation directly. 
+Some property should be kept invariant under such transformation, for the mass spring system, we can say the shape is kept during scale transformation. 
+From Differential Geometry view port, we can say the curvature is kept. 
+From mechanical view, we can say for each motion, the energy is kept along the curve, and different motion is of different energy. 
 
-Energy and Curvature are called Local Invariant. And the transformation from one motion to another motion is called transform adaptation.
+Energy and Curvature are called Local Invariant. 
+And the transformation from one motion to another motion is called transform adaptation.
 
 
 
 \section{Overview of the Thesis}
 Global Motor Invariant contains the qualitative properties while Local Motor Invariant contains quantitative properties. 
-
-For our motion synthesis method, the design idea is keep the both motor invariants. Motion Adaptation is achieved by changing the system parameters and changing the transformation.
-
+For our motion synthesis method, the design idea is to keep the both motor invariants. 
+Motion Adaptation is achieved through System Adaption(change system parameters) and Transform Adaptation.
 In application, this method easy to compute and result realistic motion adaptation.
 
 
 
 This thesis is organized as follows.
  
-In Chapter 2, we will discuss some background of motion synthesis research and biological motor control research. These are the motivation and justification of our ideas.
+In Chapter~\ref{chap:background}, we will discuss some previous research work of motion synthesis  and biological motor control. 
+These are the motivation and justification of our ideas.
  
-In Chapter 3, we will focus on the Global Motor Invariant. We try to identify the qualitative properties of motion and investigate method maintaining the global motor invariant based on some biological ideas.
+In Chapter~\ref{chap:gi}, we will focus on the Global Motor Invariant. 
+We try to identify the qualitative properties of motion and investigate method maintaining the global motor invariant based on some biological ideas.
 
-In Chapter 4, we discuss on the idea of Local Motor Invariant and Symmetry.
-Mathematical tools are developed and we show how to apply control effort to ensure symmetry. We show the computational complexity is greatly reduced by symmetry.
+In Chapter~\ref{chap:li}, we discuss on the idea of Local Motor Invariant and Symmetry.
+Mathematical tools are developed and we show how to apply control effort to ensure symmetry. 
+We show the computational complexity is greatly reduced by symmetry.
 
-In chapter 5, we discuss how the Global Motor Invariant and Local Motor Invariant Controller work together. Simple example is included to discuss the mathematical idea. Also we give an idea about how to connect motion primitives together to form more complex motion behaviour.
+In Chapter~\ref{chap:msf}, we discuss how the Global Motor Invariant and Local Motor Invariant Controller work together. 
+Simple example is included to discuss the mathematical idea. 
+Also we give an idea about how to connect motion primitives together to form more complex motion behaviour.
 
-Chapter 3, 4, 5 lay the theory foundation for the motion synthesis control and be treated as the Motion Invariant Theory.
+Chapter ~\ref{chap:gi},\ref{chap:li},\ref{chap:msf} lay the theory foundation for the motion synthesis control and be treated as the Motion Invariant Theory.
+
 
 In Chapter 6, we focus on synthesizing motion of one motion primitives
  we apply our method for one of the most interesting and challenging motion synthesis research topic, bipedal walking. We show how our method main the stability and adaptive to different walking situation.
