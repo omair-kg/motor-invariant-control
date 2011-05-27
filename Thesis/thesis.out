@@ -1,6 +1,6 @@
 \BOOKMARK [0][]{section*.2}{Contents}{}
 \BOOKMARK [0][]{section*.4}{List of Figures}{}
-\BOOKMARK [0][]{section*.4}{Nomenclature}{}
+\BOOKMARK [0][]{chapter*.5}{Nomenclature}{}
 \BOOKMARK [0][]{chapter.1}{1 INTRODUCTION}{}
 \BOOKMARK [1][]{section.1.1}{1.1 Rethink about Motor Control}{chapter.1}
 \BOOKMARK [1][]{section.1.2}{1.2 A Different Motor Control Idea}{chapter.1}
@@ -10,16 +10,21 @@
 \BOOKMARK [1][]{section.1.4}{1.4 Overview of the Thesis}{chapter.1}
 \BOOKMARK [0][]{chapter.2}{2 BACKGROUND}{}
 \BOOKMARK [1][]{section.2.1}{2.1 Motion Synthesis Research}{chapter.2}
+\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Data Driven}{section.2.1}
+\BOOKMARK [2][]{subsection.2.1.2}{2.1.2 Procedure Method}{section.2.1}
 \BOOKMARK [1][]{section.2.2}{2.2 Biological Motor Control}{chapter.2}
-\BOOKMARK [1][]{section.2.3}{2.3 Bionomic robotic research Evidence}{chapter.2}
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Biological Constraints}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Motion Primitives}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Motor Control Objective}{section.2.2}
+\BOOKMARK [1][]{section.2.3}{2.3 \040Evidences from Bionomic Robotic Research}{chapter.2}
 \BOOKMARK [1][]{section.2.4}{2.4 Our Research}{chapter.2}
-\BOOKMARK [0][]{chapter.3}{3 Global Motion Invariant}{}
+\BOOKMARK [0][]{chapter.3}{3 GLOBAL MOTOR INVARIANT}{}
 \BOOKMARK [1][]{section.3.1}{3.1 Introduction}{chapter.3}
 \BOOKMARK [1][]{section.3.2}{3.2 Basic Concepts of Qualitative Dynamics}{chapter.3}
 \BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Dynamic System and Differential Manifold}{section.3.2}
 \BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Global Motor Invariant}{section.3.2}
 \BOOKMARK [2][]{subsection.3.2.3}{3.2.3 Motion Adaptation and Stability}{section.3.2}
-\BOOKMARK [2][]{subsection.3.2.4}{3.2.4 Structural Stability explanation Morphological Computation}{section.3.2}
+\BOOKMARK [2][]{subsection.3.2.4}{3.2.4 Structural Stability in Morphological Computation}{section.3.2}
 \BOOKMARK [1][]{section.3.3}{3.3 Global Motor Invariant Control}{chapter.3}
 \BOOKMARK [2][]{subsection.3.3.1}{3.3.1 CPG and Entrainment}{section.3.3}
 \BOOKMARK [2][]{subsection.3.3.2}{3.3.2 Neural Oscillator Stability}{section.3.3}
@@ -30,7 +35,7 @@
 \BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Lie Group and Symmetry of Dynamic System}{section.4.1}
 \BOOKMARK [1][]{section.4.2}{4.2 Controlled Symmetry}{chapter.4}
 \BOOKMARK [1][]{section.4.3}{4.3 Simple Example}{chapter.4}
-\BOOKMARK [0][]{chapter.5}{5 Motion Synthesis Based Motor Invariant}{}
+\BOOKMARK [0][]{chapter.5}{5 MOTION SYNTHESIS FRAMEWORK}{}
 \BOOKMARK [1][]{section.5.1}{5.1 Combined Global and Local Motor Invariant}{chapter.5}
 \BOOKMARK [2][]{subsection.5.1.1}{5.1.1 \040motor control idea based on Global and Local Motor Invariant.}{section.5.1}
 \BOOKMARK [2][]{subsection.5.1.2}{5.1.2 \040Controlled Symmetry Preserved The Topology}{section.5.1}
@@ -39,4 +44,23 @@
 \BOOKMARK [1][]{section.5.2}{5.2 Combine Motion Primitives}{chapter.5}
 \BOOKMARK [2][]{subsection.5.2.1}{5.2.1 The Motion Primitives Graph}{section.5.2}
 \BOOKMARK [2][]{subsection.5.2.2}{5.2.2 The Motion Primitives Transition}{section.5.2}
-\BOOKMARK [0][]{section*.32}{References}{}
+\BOOKMARK [0][]{chapter.6}{6 TWEAING SINGLE MOTION PRIMITIVE:BIPEDAL WALKING}{}
+\BOOKMARK [1][]{section.6.1}{6.1 Motion Primitives}{chapter.6}
+\BOOKMARK [1][]{section.6.2}{6.2 Global Motor Control And Adaptive Gaits}{chapter.6}
+\BOOKMARK [2][]{subsection.6.2.1}{6.2.1 Entrainment}{section.6.2}
+\BOOKMARK [2][]{subsection.6.2.2}{6.2.2 System Gait Adaptation}{section.6.2}
+\BOOKMARK [1][]{section.6.3}{6.3 Transform Gait Adaptation}{chapter.6}
+\BOOKMARK [0][]{chapter.7}{7 MOTION PRIMITIVE TRANSITION:WALK AND STANCE}{}
+\BOOKMARK [1][]{section.7.1}{7.1 Motion Primitives}{chapter.7}
+\BOOKMARK [1][]{section.7.2}{7.2 Motor Invariant Control}{chapter.7}
+\BOOKMARK [2][]{subsection.7.2.1}{7.2.1 Entraintment}{section.7.2}
+\BOOKMARK [2][]{subsection.7.2.2}{7.2.2 lie group control}{section.7.2}
+\BOOKMARK [2][]{subsection.7.2.3}{7.2.3 Fast Stable}{section.7.2}
+\BOOKMARK [1][]{section.7.3}{7.3 \040Walking Stance Transition}{chapter.7}
+\BOOKMARK [0][]{chapter.8}{8 TOWARDS HIGH DIMENSION}{}
+\BOOKMARK [1][]{section.8.1}{8.1 Dimension Reduction}{chapter.8}
+\BOOKMARK [1][]{section.8.2}{8.2 Small Perturbation}{chapter.8}
+\BOOKMARK [1][]{section.8.3}{8.3 Coupled Network}{chapter.8}
+\BOOKMARK [1][]{section.8.4}{8.4 Boid and Adhoc}{chapter.8}
+\BOOKMARK [0][]{chapter.9}{9 My Conclusions ...}{}
+\BOOKMARK [0][]{section*.34}{References}{}

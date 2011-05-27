@@ -6,49 +6,58 @@ A level-1 auxiliary file: Background/background.aux
 A level-1 auxiliary file: GlobalInvariant/gInvariant.aux
 A level-1 auxiliary file: LocalInvariant/localInvariant.aux
 A level-1 auxiliary file: CombineFramework/cframework.aux
+A level-1 auxiliary file: BipedWalk/bwalk.aux
+A level-1 auxiliary file: WalkStance/stance.aux
+A level-1 auxiliary file: HiDof/hidof.aux
+A level-1 auxiliary file: Conclusions/conclusions.aux
 The style file: plainnat.bst
 Database file #1: References/AMSI.bib
+Repeated entry---line 1407 of file References/AMSI.bib
+ : @conference{stephens2009modeling
+ :                                 ,
+I'm skipping whatever remains of this entry
 Warning--empty publisher in abraham1978foundations
+Warning--empty journal in kovar2008motion
 Warning--can't use both author and editor fields in latash2008neurophysiological
-You've used 20 entries,
+You've used 36 entries,
             2773 wiz_defined-function locations,
-            751 strings with 8650 characters,
-and the built_in function-call counts, 8983 in all, are:
-= -- 849
-> -- 400
-< -- 20
-+ -- 140
-- -- 120
-* -- 663
-:= -- 1367
-add.period$ -- 79
-call.type$ -- 20
-change.case$ -- 96
-chr.to.int$ -- 20
-cite$ -- 42
-duplicate$ -- 458
-empty$ -- 790
-format.name$ -- 148
-if$ -- 1931
+            865 strings with 11269 characters,
+and the built_in function-call counts, 16021 in all, are:
+= -- 1500
+> -- 759
+< -- 34
++ -- 264
+- -- 228
+* -- 1201
+:= -- 2454
+add.period$ -- 130
+call.type$ -- 36
+change.case$ -- 177
+chr.to.int$ -- 36
+cite$ -- 75
+duplicate$ -- 792
+empty$ -- 1380
+format.name$ -- 284
+if$ -- 3408
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 23
-newline$ -- 121
-num.names$ -- 80
-pop$ -- 206
+missing$ -- 38
+newline$ -- 203
+num.names$ -- 144
+pop$ -- 360
 preamble$ -- 1
-purify$ -- 80
+purify$ -- 147
 quote$ -- 0
-skip$ -- 332
+skip$ -- 591
 stack$ -- 0
-substring$ -- 335
-swap$ -- 61
-text.length$ -- 6
+substring$ -- 630
+swap$ -- 95
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 200
-warning$ -- 2
-while$ -- 92
+type$ -- 371
+warning$ -- 3
+while$ -- 162
 width$ -- 0
-write$ -- 299
-(There were 2 warnings)
+write$ -- 508
+(There was 1 error message)
