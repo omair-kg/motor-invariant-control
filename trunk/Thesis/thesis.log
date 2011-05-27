@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  27 MAY 2011 11:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  27 MAY 2011 16:49
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -386,8 +386,9 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 LaTeX Warning: Unused global option(s):
     [pdftex].
 
-(./thesis.aux (./Abstract/abstract.aux) (./Introduction/introduction.aux)
-(./Background/background.aux) (./GlobalInvariant/gInvariant.aux
+(./thesis.aux (./todolist.aux) (./Abstract/abstract.aux)
+(./Introduction/introduction.aux) (./Background/background.aux)
+(./GlobalInvariant/gInvariant.aux
 
 LaTeX Warning: Label `fig:time_timeAttraction' multiply defined.
 
@@ -435,10 +436,10 @@ LaTeX Warning: Label `fig:diffterrainphase' multiply defined.
 
 ) (./WalkStance/stance.aux
 
-LaTeX Warning: Label `fig:passivekneewalker' multiply defined.
+LaTeX Warning: Label `fig:stancepostures' multiply defined.
 
 
-LaTeX Warning: Label `fig:passivekneewalker' multiply defined.
+LaTeX Warning: Label `fig:fastconverg' multiply defined.
 
 ) (./HiDof/hidof.aux) (./Conclusions/conclusions.aux))
 \openout1 = `thesis.aux'.
@@ -479,38 +480,44 @@ Package backref Info: ** backref set up for natbib ** on input line 75.
  [1
 
 ]
+\openout2 = `todolist.aux'.
+
+ (./todolist.tex) [1
+
+
+]
 \openout2 = `Abstract/abstract.aux'.
 
- (./Abstract/abstract.tex [1
+ (./Abstract/abstract.tex [2
 
 
-]) (./thesis.toc
+])
+(./thesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
-
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [2
+) [3
 \FN@pp@footnotehinttrue 
 
 
-] [3])
+] [4])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [4] (./thesis.lof [5
+ [5] (./thesis.lof [6
 
-] [6])
+] [7])
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- (./thesis.nls [7] [8
+ (./thesis.nls [8] [9
 
-]) [9]
+]) [10]
 \openout2 = `Introduction/introduction.aux'.
 
 
@@ -1011,24 +1018,62 @@ s)
 (./WalkStance/stance.tex
 Chapter 7.
 
-LaTeX Warning: Reference `' on page 78 undefined on input line 14.
+LaTeX Warning: Reference `bipedalstance' on page 78 undefined on input line 14.
+
 
 File: WalkStance/WalkStanceFigs/EPS/stancefigure.eps Graphic file (type eps)
 <WalkStance/WalkStanceFigs/EPS/stancefigure.eps>
-File: WalkStance/WalkStanceFigs/EPS/stanceConfigure.eps Graphic file (type eps)
 
+LaTeX Warning: Reference `fig:stanceopostures' on page 78 undefined on input li
+ne 39.
+
+File: WalkStance/WalkStanceFigs/EPS/stanceConfigure.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/stanceConfigure.eps> [78
 
 
 
-] [79]) [80]
+] [79] [80]
+File: WalkStance/WalkStanceFigs/EPS/uncontrolled.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/uncontrolled.eps> [81]
+File: WalkStance/WalkStanceFigs/EPS/TimeScaling.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/TimeScaling.eps>
+File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
+
+LaTeX Warning: Reference `energyscaling' on page 82 undefined on input line 166
+.
+
+File: WalkStance/WalkStanceFigs/EPS/EnergyControlled.eps Graphic file (type eps
+)
+<WalkStance/WalkStanceFigs/EPS/EnergyControlled.eps> [82]
+File: WalkStance/WalkStanceFigs/EPS/FastCoverge.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/FastCoverge.eps>
+File: WalkStance/WalkStanceFigs/EPS/walk_to_stand.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/walk_to_stand.eps> [83] [84]
+File: WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps Graphic file (type eps)
+
+
+<WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps> [85]
+File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
+File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps> [86]
+File: WalkStance/WalkStanceFigs/EPS/stancefigure.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/stancefigure.eps> [87]) [88]
 \openout2 = `HiDof/hidof.aux'.
 
-
-(./HiDof/hidof.tex
+ (./HiDof/hidof.tex
 Chapter 8.
-) [81
+) [89
 
 
 
@@ -1037,7 +1082,7 @@ Chapter 8.
 
  (./Conclusions/conclusions.tex
 Chapter 9.
-) [82
+) [90
 
 
 
@@ -1045,12 +1090,12 @@ Chapter 9.
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [83
+ [91
 
 
 
-] [84] [85]) [86] (./thesis.aux
-(./Abstract/abstract.aux) (./Introduction/introduction.aux)
+] [92] [93]) [94] (./thesis.aux
+(./todolist.aux) (./Abstract/abstract.aux) (./Introduction/introduction.aux)
 (./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
 (./LocalInvariant/localInvariant.aux) (./CombineFramework/cframework.aux)
 (./BipedWalk/bwalk.aux) (./WalkStance/stance.aux) (./HiDof/hidof.aux)
@@ -1063,12 +1108,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6983 strings out of 495062
- 101552 string characters out of 1182644
- 178750 words of memory out of 3000000
- 9878 multiletter control sequences out of 15000+50000
+ 7021 strings out of 495062
+ 102410 string characters out of 1182644
+ 179920 words of memory out of 3000000
+ 9902 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 45i,12n,50p,697b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,50p,697b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (96 pages, 338212 bytes).
+Output written on thesis.dvi (105 pages, 374104 bytes).

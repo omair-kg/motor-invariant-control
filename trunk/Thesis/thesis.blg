@@ -1,5 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: todolist.aux
 A level-1 auxiliary file: Abstract/abstract.aux
 A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Background/background.aux
@@ -21,7 +22,7 @@ Warning--empty journal in kovar2008motion
 Warning--can't use both author and editor fields in latash2008neurophysiological
 You've used 36 entries,
             2773 wiz_defined-function locations,
-            865 strings with 11269 characters,
+            866 strings with 11281 characters,
 and the built_in function-call counts, 16021 in all, are:
 = -- 1500
 > -- 759
