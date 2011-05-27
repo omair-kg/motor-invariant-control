@@ -29,7 +29,7 @@
 \BOOKMARK [2][]{subsection.3.3.1}{3.3.1 CPG and Entrainment}{section.3.3}
 \BOOKMARK [2][]{subsection.3.3.2}{3.3.2 Neural Oscillator Stability}{section.3.3}
 \BOOKMARK [1][]{section.3.4}{3.4 Global Motor Invaraint Control Example}{chapter.3}
-\BOOKMARK [0][]{chapter.4}{4 Local Motor Invariant}{}
+\BOOKMARK [0][]{chapter.4}{4 LOCAL MOTOR INVARIANT}{}
 \BOOKMARK [1][]{section.4.1}{4.1 Introduction}{chapter.4}
 \BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Group and Symmetry}{section.4.1}
 \BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Lie Group and Symmetry of Dynamic System}{section.4.1}
@@ -44,7 +44,7 @@
 \BOOKMARK [1][]{section.5.2}{5.2 Combine Motion Primitives}{chapter.5}
 \BOOKMARK [2][]{subsection.5.2.1}{5.2.1 The Motion Primitives Graph}{section.5.2}
 \BOOKMARK [2][]{subsection.5.2.2}{5.2.2 The Motion Primitives Transition}{section.5.2}
-\BOOKMARK [0][]{chapter.6}{6 TWEAING SINGLE MOTION PRIMITIVE:BIPEDAL WALKING}{}
+\BOOKMARK [0][]{chapter.6}{6 MOTION PRIMITIVE TWEAKING:BIPEDAL WALKING}{}
 \BOOKMARK [1][]{section.6.1}{6.1 Motion Primitives}{chapter.6}
 \BOOKMARK [1][]{section.6.2}{6.2 Global Motor Control And Adaptive Gaits}{chapter.6}
 \BOOKMARK [2][]{subsection.6.2.1}{6.2.1 Entrainment}{section.6.2}
@@ -52,15 +52,17 @@
 \BOOKMARK [1][]{section.6.3}{6.3 Transform Gait Adaptation}{chapter.6}
 \BOOKMARK [0][]{chapter.7}{7 MOTION PRIMITIVE TRANSITION:WALK AND STANCE}{}
 \BOOKMARK [1][]{section.7.1}{7.1 Motion Primitives}{chapter.7}
-\BOOKMARK [1][]{section.7.2}{7.2 Motor Invariant Control}{chapter.7}
+\BOOKMARK [1][]{section.7.2}{7.2 Stance Control}{chapter.7}
 \BOOKMARK [2][]{subsection.7.2.1}{7.2.1 Entraintment}{section.7.2}
-\BOOKMARK [2][]{subsection.7.2.2}{7.2.2 lie group control}{section.7.2}
-\BOOKMARK [2][]{subsection.7.2.3}{7.2.3 Fast Stable}{section.7.2}
-\BOOKMARK [1][]{section.7.3}{7.3 \040Walking Stance Transition}{chapter.7}
+\BOOKMARK [2][]{subsection.7.2.2}{7.2.2 Local Invariant Control}{section.7.2}
+\BOOKMARK [1][]{section.7.3}{7.3 Walking and Stance Transition}{chapter.7}
+\BOOKMARK [2][]{subsection.7.3.1}{7.3.1 Walk to Stance}{section.7.3}
+\BOOKMARK [2][]{subsection.7.3.2}{7.3.2 Stance to Walk}{section.7.3}
+\BOOKMARK [2][]{subsection.7.3.3}{7.3.3 Speed Action Connection}{section.7.3}
 \BOOKMARK [0][]{chapter.8}{8 TOWARDS HIGH DIMENSION}{}
 \BOOKMARK [1][]{section.8.1}{8.1 Dimension Reduction}{chapter.8}
 \BOOKMARK [1][]{section.8.2}{8.2 Small Perturbation}{chapter.8}
 \BOOKMARK [1][]{section.8.3}{8.3 Coupled Network}{chapter.8}
 \BOOKMARK [1][]{section.8.4}{8.4 Boid and Adhoc}{chapter.8}
 \BOOKMARK [0][]{chapter.9}{9 My Conclusions ...}{}
-\BOOKMARK [0][]{section*.34}{References}{}
+\BOOKMARK [0][]{section*.38}{References}{}
