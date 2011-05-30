@@ -61,9 +61,19 @@
 \contentsline {subsection}{\numberline {7.3.2}Stance to Walk}{86}{subsection.7.3.2}
 \contentsline {subsection}{\numberline {7.3.3}Speed Action Connection}{88}{subsection.7.3.3}
 \contentsline {chapter}{\numberline {8}TOWARDS HIGH DIMENSION}{89}{chapter.8}
-\contentsline {section}{\numberline {8.1}Dimension Reduction}{89}{section.8.1}
-\contentsline {section}{\numberline {8.2}Small Perturbation}{89}{section.8.2}
-\contentsline {section}{\numberline {8.3}Coupled Network}{89}{section.8.3}
-\contentsline {section}{\numberline {8.4}Boid and Adhoc}{89}{section.8.4}
-\contentsline {chapter}{\numberline {9}My Conclusions ...}{90}{chapter.9}
-\contentsline {chapter}{References}{91}{section*.38}
+\contentsline {section}{\numberline {8.1}Introduction}{89}{section.8.1}
+\contentsline {section}{\numberline {8.2}neglectable}{90}{section.8.2}
+\contentsline {section}{\numberline {8.3}Symmetry Reduction}{91}{section.8.3}
+\contentsline {section}{\numberline {8.4}Coupled Network}{91}{section.8.4}
+\contentsline {section}{\numberline {8.5}Boid and Adhoc}{92}{section.8.5}
+\contentsline {section}{\numberline {8.6}From Low Dimention To High Dimension}{93}{section.8.6}
+\contentsline {chapter}{\numberline {9}My Conclusions ...}{94}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusion}{94}{section.9.1}
+\contentsline {section}{\numberline {9.2}Futher Work}{94}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Local Frame Based Method}{94}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Integrable System}{95}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Symmetry of PDE}{95}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}System Transform and Muscle Actuation}{95}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}Perception Dynamics}{96}{subsection.9.2.5}
+\contentsline {subsection}{\numberline {9.2.6}Rethink abouth the uncanny valley}{97}{subsection.9.2.6}
+\contentsline {chapter}{References}{98}{section*.41}
