@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  27 MAY 2011 16:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  30 MAY 2011 13:42
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -1073,33 +1073,33 @@ File: WalkStance/WalkStanceFigs/EPS/stancefigure.eps Graphic file (type eps)
 
  (./HiDof/hidof.tex
 Chapter 8.
-) [89
+[89
 
 
 
-]
+] [90] [91] [92]) [93]
 \openout2 = `Conclusions/conclusions.aux'.
 
  (./Conclusions/conclusions.tex
 Chapter 9.
-) [90
+[94
 
 
 
-] (./thesis.bbl (./thesis.brf)
+] [95] [96]) [97] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [91
+ [98
 
 
 
-] [92] [93]) [94] (./thesis.aux
-(./todolist.aux) (./Abstract/abstract.aux) (./Introduction/introduction.aux)
-(./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
-(./LocalInvariant/localInvariant.aux) (./CombineFramework/cframework.aux)
-(./BipedWalk/bwalk.aux) (./WalkStance/stance.aux) (./HiDof/hidof.aux)
-(./Conclusions/conclusions.aux))
+] [99] [100]) [101]
+(./thesis.aux (./todolist.aux) (./Abstract/abstract.aux)
+(./Introduction/introduction.aux) (./Background/background.aux)
+(./GlobalInvariant/gInvariant.aux) (./LocalInvariant/localInvariant.aux)
+(./CombineFramework/cframework.aux) (./BipedWalk/bwalk.aux)
+(./WalkStance/stance.aux) (./HiDof/hidof.aux) (./Conclusions/conclusions.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1108,12 +1108,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7021 strings out of 495062
- 102410 string characters out of 1182644
- 179920 words of memory out of 3000000
- 9902 multiletter control sequences out of 15000+50000
+ 7032 strings out of 495062
+ 102584 string characters out of 1182644
+ 181001 words of memory out of 3000000
+ 9913 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,50p,697b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (105 pages, 374104 bytes).
+Output written on thesis.dvi (112 pages, 404736 bytes).
