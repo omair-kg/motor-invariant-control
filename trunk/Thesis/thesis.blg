@@ -11,54 +11,51 @@ A level-1 auxiliary file: BipedWalk/bwalk.aux
 A level-1 auxiliary file: WalkStance/stance.aux
 A level-1 auxiliary file: HiDof/hidof.aux
 A level-1 auxiliary file: Conclusions/conclusions.aux
+A level-1 auxiliary file: Appendix1/appendix1.aux
 The style file: plainnat.bst
 Database file #1: References/AMSI.bib
-Repeated entry---line 1407 of file References/AMSI.bib
- : @conference{stephens2009modeling
- :                                 ,
-I'm skipping whatever remains of this entry
 Warning--empty publisher in abraham1978foundations
 Warning--empty journal in kovar2008motion
 Warning--can't use both author and editor fields in latash2008neurophysiological
-You've used 36 entries,
+You've used 37 entries,
             2773 wiz_defined-function locations,
-            866 strings with 11281 characters,
-and the built_in function-call counts, 16021 in all, are:
-= -- 1500
-> -- 759
-< -- 34
-+ -- 264
-- -- 228
-* -- 1201
-:= -- 2454
-add.period$ -- 130
-call.type$ -- 36
-change.case$ -- 177
-chr.to.int$ -- 36
-cite$ -- 75
-duplicate$ -- 792
-empty$ -- 1380
-format.name$ -- 284
-if$ -- 3408
+            871 strings with 11479 characters,
+and the built_in function-call counts, 16539 in all, are:
+= -- 1537
+> -- 807
+< -- 35
++ -- 280
+- -- 243
+* -- 1250
+:= -- 2539
+add.period$ -- 133
+call.type$ -- 37
+change.case$ -- 184
+chr.to.int$ -- 37
+cite$ -- 77
+duplicate$ -- 813
+empty$ -- 1413
+format.name$ -- 300
+if$ -- 3511
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 38
-newline$ -- 203
-num.names$ -- 144
-pop$ -- 360
+missing$ -- 40
+newline$ -- 208
+num.names$ -- 148
+pop$ -- 378
 preamble$ -- 1
-purify$ -- 147
+purify$ -- 154
 quote$ -- 0
-skip$ -- 591
+skip$ -- 608
 stack$ -- 0
-substring$ -- 630
-swap$ -- 95
-text.length$ -- 8
+substring$ -- 632
+swap$ -- 97
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 371
+type$ -- 377
 warning$ -- 3
-while$ -- 162
+while$ -- 165
 width$ -- 0
-write$ -- 508
-(There was 1 error message)
+write$ -- 521
+(There were 3 warnings)

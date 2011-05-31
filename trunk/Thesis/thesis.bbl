@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -166,6 +166,13 @@ K.~Nishikawa, A.A. Biewener, P.~Aerts, A.N. Ahn, H.J. Chiel, M.A. Daley, T.L.
   control}.
 \newblock \emph{Integrative and Comparative Biology}, 2007.
 
+\bibitem[Olver et~al.(1986)Olver, Olver, Olver, Olver, and
+  Mathematician]{olver1986applications}
+P.J. Olver, P.J. Olver, P.J. Olver, P.J. Olver, and G.B. Mathematician.
+\newblock \emph{{Applications of Lie groups to differential equations}}, volume
+  107.
+\newblock Springer-Verlag, 1986.
+
 \bibitem[Parent(2002)]{Parent2002}
 R.~Parent.
 \newblock \emph{{Computer animation: algorithms and techniques}}.
@@ -210,8 +217,8 @@ M.W. Spong and F.~Bullo.
 
 \bibitem[Stephens and Atkeson(2009)]{stephens2009modeling}
 B.~Stephens and C.~Atkeson.
-\newblock Modeling and control of periodic humanoid balance using the linear
-  biped model.
+\newblock {Modeling and control of periodic humanoid balance using the linear
+  biped model}.
 \newblock In \emph{Humanoid Robots, 2009. Humanoids 2009. 9th IEEE-RAS
   International Conference on}, pages 379--384. IEEE, 2009.
 

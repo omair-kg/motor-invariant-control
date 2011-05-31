@@ -8,6 +8,8 @@
 		\nompageref{24}
   \item [{$\qd$}]\begingroup Gneralized Velocity\nomeqref {3.0}
 		\nompageref{24}
+  \item [{$\simeq$}]\begingroup Topology Conjungacy\nomeqref {3.0}
+		\nompageref{24}
   \item [{$\state$}]\begingroup State Variable\nomeqref {3.0}
 		\nompageref{24}
   \item [{$\uin$}]\begingroup Input Signal to the Neural Oscilator\nomeqref {3.0}
@@ -17,11 +19,11 @@
   \item [{$A$}]\begingroup Attractor\nomeqref {3.0}\nompageref{24}
   \item [{$B(A)$}]\begingroup Basin of Attration of $A$\nomeqref {3.0}
 		\nompageref{24}
-  \item [{$G$}]\begingroup A Lie Group\nomeqref {4.0}\nompageref{39}
+  \item [{$G$}]\begingroup A Lie Group\nomeqref {4.0}\nompageref{42}
   \item [{$g_a$}]\begingroup an elemetn in Lie Group $G$ with parameter $a$\nomeqref {4.0}
-		\nompageref{39}
+		\nompageref{42}
   \item [{$I(x)$}]\begingroup Invariant Function of $x$\nomeqref {4.0}
-		\nompageref{39}
+		\nompageref{42}
   \item [{$M$}]\begingroup State Space Manifold\nomeqref {3.0}
 		\nompageref{24}
   \item [{$Q$}]\begingroup Configureation Space or Configuration Manifold\nomeqref {3.0}
