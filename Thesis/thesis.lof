@@ -6,89 +6,94 @@
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Unstable Posture}}{9}{figure.1.4}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Several Possible Moiton of Ship}}{9}{figure.1.5}
 \contentsline {figure}{\numberline {1.6}{\ignorespaces The Topology Structure}}{10}{figure.1.6}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Mass Spring}}{11}{figure.1.7}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Mass Spring}}{12}{figure.1.7}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Mass Spring Phase Plot}}{12}{figure.1.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Limit Cycle}}{27}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Natural Oscillation}}{32}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Entrainment Oscillation}}{33}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The states of neural oscillator over Time}}{34}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The phase portrait of Neural Oscillators}}{35}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Neural output with different initial position}}{36}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Phase plot of oscillation with different initial condition}}{36}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Original Bourncing Ball System}}{37}{figure.3.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {state plot}}}{37}{figure.3.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Phase Plane}}}{37}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Attractive Limited Circle}}{38}{figure.3.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {state plot}}}{38}{figure.3.9}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Phase Plane}}}{38}{figure.3.9}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Celluar Structure of Phase Space}}{28}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Mass Spring System}}{29}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Duffin Phase Plot}}{29}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces damping perturbation onmass spring system}}{31}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Natural Oscillation}}{35}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Entrainment Oscillation}}{36}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The states of neural oscillator over Time}}{37}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The phase portrait of Neural Oscillators}}{38}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Neural output with different initial position}}{39}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Phase plot of oscillation with different initial condition}}{39}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Original Bourncing Ball System}}{40}{figure.3.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {state plot}}}{40}{figure.3.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Phase Plane}}}{40}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Attractive Limited Circle}}{41}{figure.3.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {state plot}}}{41}{figure.3.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Phase Plane}}}{41}{figure.3.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Symmetry}}{40}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Symmetry Space}}{41}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Offset Action}}{43}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Time Scaling Action}}{44}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Energe Scaling Action}}{45}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Offset Action}}{46}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Drop at Filen}}{47}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Drop at 10}}{47}{figure.4.8}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Symmetry}}{43}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Symmetry Space}}{44}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Offset Action}}{47}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Time Scaling Action}}{49}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Energe Scaling Action}}{50}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Offset Action}}{52}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Drop at 5}}{53}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Drop at 10}}{53}{figure.4.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces System Over View }}{49}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Energy Scalling}}{51}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Energy Scaling}}{52}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Phase Plot of Motion Primitives}}{53}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Phase Plot of Motion Primitives}}{54}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Motion Primitive Transition}}{55}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Over Lay Transition}}{55}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Offset Transiton}}{56}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Comined Method}}{57}{figure.5.9}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces System Over View }}{55}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Energy Scalling}}{59}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Energy Scaling}}{59}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Phase Plot of Motion Primitives}}{60}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Phase Plot of Motion Primitives}}{61}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Motion Primitive Transition}}{62}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Over Lay Transition}}{63}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Offset Transiton}}{63}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Comined Method}}{64}{figure.5.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A Passive Walking Model with Knee}}{60}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{61}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces The four phases in Walking}}{61}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Place Holder}}{64}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Place Holder}}{64}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Place Holder}}{64}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Without Neural Oscilator On Plain}}{65}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces With Neural Oscilator on Plain}}{65}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{65}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{66}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Place Holder}}{67}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Place Holder}}{67}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Place Holder}}{67}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{68}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Place Holder1}}{68}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Place Holder2}}{69}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Place Holder3}}{69}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces different step size walking}}{69}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Place Holder1}}{70}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Place Holder2}}{70}{figure.6.20}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Place Holder3}}{70}{figure.6.21}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Different Leg Mass Stable Gaits}}{71}{figure.6.22}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Place Holder1}}{71}{figure.6.23}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Place Holder2}}{72}{figure.6.24}
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Place Holder3}}{72}{figure.6.25}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Place Holder}}{72}{figure.6.26}
-\contentsline {figure}{\numberline {6.27}{\ignorespaces Different Leg Mass Stable Gaits}}{73}{figure.6.27}
-\contentsline {figure}{\numberline {6.28}{\ignorespaces Varying Terrain}}{74}{figure.6.28}
-\contentsline {figure}{\numberline {6.29}{\ignorespaces Varying Terrain}}{74}{figure.6.29}
-\contentsline {figure}{\numberline {6.30}{\ignorespaces Varying Terrain}}{75}{figure.6.30}
-\contentsline {figure}{\numberline {6.31}{\ignorespaces Varying Terrain}}{76}{figure.6.31}
-\contentsline {figure}{\numberline {6.32}{\ignorespaces Place Holder1}}{76}{figure.6.32}
-\contentsline {figure}{\numberline {6.33}{\ignorespaces Place Holder2}}{76}{figure.6.33}
-\contentsline {figure}{\numberline {6.34}{\ignorespaces Place Holder3}}{77}{figure.6.34}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A Passive Walking Model with Knee}}{68}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{69}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces The four phases in Walking}}{69}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Place Holder}}{72}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Place Holder}}{72}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Place Holder}}{72}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Without Neural Oscilator On Plain}}{73}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces With Neural Oscilator on Plain}}{73}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{73}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{74}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Place Holder}}{75}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Place Holder}}{75}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Place Holder}}{75}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{76}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Place Holder1}}{76}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Place Holder2}}{77}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Place Holder3}}{77}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces different step size walking}}{77}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Place Holder1}}{78}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Place Holder2}}{78}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Place Holder3}}{78}{figure.6.21}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Different Leg Mass Stable Gaits}}{79}{figure.6.22}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Place Holder1}}{79}{figure.6.23}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Place Holder2}}{80}{figure.6.24}
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Place Holder3}}{80}{figure.6.25}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Place Holder}}{80}{figure.6.26}
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Different Leg Mass Stable Gaits}}{81}{figure.6.27}
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Varying Terrain}}{82}{figure.6.28}
+\contentsline {figure}{\numberline {6.29}{\ignorespaces Varying Terrain}}{82}{figure.6.29}
+\contentsline {figure}{\numberline {6.30}{\ignorespaces Varying Terrain}}{83}{figure.6.30}
+\contentsline {figure}{\numberline {6.31}{\ignorespaces Varying Terrain}}{84}{figure.6.31}
+\contentsline {figure}{\numberline {6.32}{\ignorespaces Place Holder1}}{84}{figure.6.32}
+\contentsline {figure}{\numberline {6.33}{\ignorespaces Place Holder2}}{84}{figure.6.33}
+\contentsline {figure}{\numberline {6.34}{\ignorespaces Place Holder3}}{85}{figure.6.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces The Stance Motion Primitives}}{79}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces The Stance Motion Posture}}{79}{figure.7.2}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces un controlled motion}}{81}{figure.7.3}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Time Scaling}}{82}{figure.7.4}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Place Holder}}{82}{figure.7.5}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Energy Scaling}}{83}{figure.7.6}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Fast Converge}}{84}{figure.7.7}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Fast Converge}}{84}{figure.7.8}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Walk to Balance}}{85}{figure.7.9}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Place Holder}}{86}{figure.7.10}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Place Holder}}{86}{figure.7.11}
-\contentsline {figure}{\numberline {7.12}{\ignorespaces The Place Holder}}{87}{figure.7.12}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces The Stance Motion Primitives}}{87}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces The Stance Motion Posture}}{87}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces un controlled motion}}{89}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Time Scaling}}{90}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Place Holder}}{90}{figure.7.5}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Energy Scaling}}{91}{figure.7.6}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Fast Converge}}{92}{figure.7.7}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Fast Converge}}{92}{figure.7.8}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Walk to Balance}}{93}{figure.7.9}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Place Holder}}{94}{figure.7.10}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Place Holder}}{94}{figure.7.11}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces The Place Holder}}{95}{figure.7.12}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -17,7 +17,7 @@
 \nomenclature{$\uout$}{Output of the Neural Oscilator}
 \nomenclature{$\hin$}{Input Coefficient of the Neural Oscilator}
 \nomenclature{$\hout$}{Output Coefficent of the Neural Oscilator}
-
+\nomenclature{$\simeq$}{Topology Conjungacy}
 
 
 %\nomenclature[zcif]{$CIF$}{Cauchy's Integral Formula}                                % first letter Z is for Acronyms 
@@ -54,6 +54,7 @@ Some mathematical background is needed in this discussion.
 Throughout this paper, we take the geometrical viewport of mechanical system.
 For analyzing qualitative properties, we introduce the ideas from differential topology.
 This idea can be traced back to Poincare\citep{Poincar'e1899,Poincar'e1885} and recently developed by the Smale School\citep{Smale1970}.
+It is impossible to put the a whole discipline in one chapter.
 Please refer to other books and lectures such as \citep{abraham1978foundations}for introduction in details.
 
 
@@ -71,25 +72,26 @@ Global Motor Invariant is defined by the topology structure.
 The dynamic of a mechanical system is determined by its configuration  $q$ and generalized speed $\qd$. 
 we represent the state of a system as a vector $\state=[q,\qd] \in M$,  $M$ is the state space, or state manifold.
 The motion is a trajectory $t \mapsto q(t)$ in the configuration space parameterized by time~$t$.
-For a dynamic system, $q(t)$ usually described in the form of  ordinary differential equation. 
+For a dynamic system, $q(t)$ usually is derived from the state trajectory $\state(t)$, which is described by differential equaiton. 
 
 
-For every point $q \in Q$, 
-$F$ and $u$ determines a derivative vector $\qd in T_{q}Q$ in the Tangent Space. 
-All the vectors over the full space of $q$ form the \textbf{vector field} $\mathbf{X}$,describe by the differential equaiton~ \ref{eq:ode}
+For every point $x \in M$, 
+$F$ and $u$ determines a derivative vector $\dot{x} in T_{x}M$ in the Tangent Space. 
+All the vectors over the full space of $x$ form the \textbf{vector field} $\mathbf{V}$,describe by the differential equaiton~ \ref{eq:ode}
 which described by the differential equation
 \begin{equation}
 \label{eq:ode}
-\dot{\state}=F_{u}(\state)=F(\state,u),\state\in M
+\dot{\state}=F_a(\state,u),\state\in M
 \end{equation}
 
 where $u$ is the control effort. 
+$a$ is the system parameters
 $F$ is determined by the system's natural property.
 If $u=0$,  no control effort is applied.
 Such systems are \textbf{autonomous systems}. 
 
-The motion trajectory $q(t)$ can be obtained by solving the \textbf{intergral curve}to equation~\ref{eq:ode}, 
-\textbf{flow} $\Phi(\state)$ of $\mathbf{X}$ is the \textbf{intergral curve} through $\state$. 
+By solving the \textbf{intergral curve}to equation~\ref{eq:ode}, 
+\textbf{flow} $\Phi(\state)$ of $\mathbf{V}$ is the \textbf{intergral curve} through $\state$. 
 all the flows form the \textbf{phase portrait}, which illustrates all the possible motions of the dynamic system.
 We usually visualize the differential manifold by \textbf{phase plot}.
 
@@ -105,8 +107,8 @@ If we chose the state variable $\state=[q,\qd]$, the ODE model should be in the 
 \dot{\state}=
 \left[ 
 \begin{array}{cc}
-0 &-1\\
-1 &0 
+0 &1\\
+-1 &0 
 \end{array}
 \right]\state
 \end{equation}
@@ -120,22 +122,22 @@ At each \textbf{equilbria},
 the local space can be divided into three subspace of sub manifold: centre sub manifold, stable manifold, and unstable sub manifold.
 \begin{description} 
 \item[centre sub manifold]
-If a flow $\theta$ pass through a point $\state_{c}$ on centre sub manifold $W_{c}$,
-flow$\theta$ will remain on the Centre Manifold 
+If a flow $\phi$ pass through a point $\state_{c}$ on centre sub manifold $W_{c}$,
+flow$\phi$ will remain on the Centre Manifold 
 \[
-\theta_{c}(t) \in W_{c}, t \in R
+\phi_{c}(t) \in W_{c}, t \in R
 \]
  An equilibria must be on center manifold. 
 \item [stable sub manifold]
-For the flow $\theta_{s}$ passes through a point $\state_{s}$ on stable sub manifold $W_{s}$, the flow will finally converge to a no wandering point on centre sub manifold.
+For the flow $\phi_{s}$ passes through a point $\state_{s}$ on stable sub manifold $W_{s}$, the flow will finally converge to a no wandering point on centre sub manifold.
 \[
-\theta_{s}(+\infty)=\theta_{c}
+\phi_{s}(+\infty)=\theta_{c}
 \]
 \item[unstable sub manifold]
-For the flow $\theta_u$ passes through a point $\state_u$ on unstable sub manifold $W_{u}$, the flow will be repelled from the no wandering points on centre manifold.
+For the flow $\phi_u$ passes through a point $\state_u$ on unstable sub manifold $W_{u}$, the flow will be repelled from the no wandering points on centre manifold.
 An alternative perspective is the inverse of the flow converge to no wandering point. 
 \[
-\theta_{u}(-\infty)=\theta_{c}
+\phi_{u}(-\infty)=\theta_{c}
 \] 
 
 \end{description}
@@ -145,43 +147,97 @@ For some cases, the $W_{s}$ ( $W_{u}$) may not exist,
 this can be seen as the dimension of $W_{s}$($W_{u}$) is $0$.
 \textbf{Attractors} are the equilbria where the whole local space is stable, the dimension of unstable submanifold is zero $\mathbf{dim}(W_{u})=0$.
 \textbf{Repellors} are the equilibrias where the whole local space is unstable,the dimension of stable submanifold is zero $\mathbf{dim}(W_{s})=0$.
-For nonlinear system, globally, the shape of stable and unstable sub manifold may be bending and connect with itself or each other.
-The unstable manifold of one equilibrium may be the stable sub manifold of another.
-The equilibra and its connectivity sub manifold form a topological structure.
-Thus the phase plane will be divide into different regions,result in a cellular structure.
-there is only one attractor, all the flow in this region will converge to the attractor ~$A$.
-and the corresponding region is called basin of attraction ~$B(A)$.
+
+
+
+
+
+
 
 In theory, only observe the attractor of the dynamic system can be observed, motion task should be only rely on the attractor.
-Two types of attrator are of great interest in motor control:(1) fixed point, as show inf Figure~\ref{fig:StablePosture},(2)Limit Cycle,as shown in Figure ~\ref{phase_plot}
+Two types of attrator are of great interest in motor control:(1) fixed point, as show inf Figure~\ref{fig:StablePosture},(2)Limit Cycle,as shown in Figure ~\ref{fig:limit_circle}
 
 \begin{figure}
 \begin{center}
 \includegraphics[height=0.4\textheight]{phase_plot}
 \end{center}
 \caption{Limit Cycle}
-\label{fig:time_timeAttraction}
+\label{fig:limit_circle}
 \end{figure}
 
 
 
-Global Motor Primitive is defined by the attractor type and its basin of attraction in the topology space.
+
+For nonlinear system, globally, the shape of stable and unstable sub manifold may be bending and connect with itself or each other.
+The unstable manifold of one equilibrium may be the stable sub manifold of another.
+The equilibra and its connectivity sub manifold form a topological structure.
+Thus the phase plane will be divide into different regions,result in a cellular structure.
+there is only one attractor, all the flow in this region will converge to the attractor ~$A$.
+and the corresponding region is called basin of attraction ~$B(A)$.
+as shown in figure~\ref{fig:manyboa}
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.4\textheight]{basinOfAttraction}
+\end{center}
+\caption{Celluar Structure of Phase Space}
+\label{fig:manyboa}
+\end{figure}
+
+
 We can also give the biological ideas clear mathematical meaning.
 The UMH, the uncontrolled manifold is the basin of attraction.
 For EPH, the equilibrium point is the attractor.
 For Impendence Control, impedance control is control the shape of basin of attraction.
 
+\subsection{Analogous System And Topology Conjugacy}
+many dynamic system are have different dynamic equation, but they share the same topology.
+an example is the mass-spring system and the duffine system, described by equation ~\ref{eq:fuffin}
+\begin{equation}
+\label{eq:duffin}
+\ddot{q}+q+q^{3}=0
+\end{equation}
+and the phase plot of the two system are show in figure~\ref{fig:msphaseplot},\ref{fig:duffin}
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.4\textheight]{massspring}
+\end{center}
+\caption{Mass Spring System}
+\label{fig:msphaseplot}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.4\textheight]{duffin}
+\end{center}
+\caption{Duffin Phase Plot}
+\label{fig:duffin}
+\end{figure}
+
+
+one phase plot, the two system are similar, and we cand '' deform '' one into another.
+in mathematical term, there is an equilalence relationship  for the two system. the \textbf{topological conjugacy}.
+
+Let $X$ and $Y$ be topological spaces, and let $f\colon X\to X$ and $g\colon Y\to Y$
+be continuous functions. We say that $f$ is
+\emph{topologically semiconjugate} to $g$, if there exists a continuous
+surjection $h\colon Y\to X$ such that $fh=hg$. If $h$ is a homeomorphism,
+then we say that $f$ and $g$ are \emph{topologically conjugate}, and we call
+$h$ a \emph{topological conjugation} between $f$ and $g$.
 
 
 
-\subsection{Motion Adaptation and Stability}
+if two system are topological conjugate, they are analogous systems
+
+
+
+
+
+\section{Global Motor Invariant and Motion Adaptation}
+Global Motor Primitive is defined by the attractor type and its basin of attraction in the topology space.
+
+
 Motion adaptation because of different reasons and in different situations.
-
-If the state is in the basin of attraction then, it will converge to the attractor. 
-Start from different state position, it will result different flows, thus different motion.
-
-The perturbation that move the state off the attractor is called State Perturbation, for only the state is changed, the dynamic system underline is not changed.
-
 Such two kinds of perturbation are treated separately and result in differentiation strategy or control.
 
 \begin{itemize}
@@ -206,32 +262,47 @@ Motion controller should try to enlarge the basin of attraction.
 
 \HiItem{Structure Perturbation}
 
-Another type of Perturbation will affect the dynamic system; such kind of perturbation is called Structure Perturbation. Such kind of perturbation happens commonly in our daily life, when a man put a heavy box on his shoulder, it will result a change in the dynamic system.
+Another type of Perturbation will affect the dynamic system; such kind of perturbation is called Structure Perturbation. 
+Such kind of perturbation happens commonly in our daily life, when a man put a heavy box on his shoulder, it will result a change in the dynamic system.
 
-Structural Perturbation will change the phase portrait; sometimes it will result in a different shape but keep the topology. As a result, the even the current state is on the attractor, motion will change, this kind of motion adaptation is called system adaptation, and one important application is dynamic motion retargeting, when you change the character, the dynamic system changed.
+Structural Perturbation will change the phase portrait; some perturbation will make the system into an analogous system.
+As a result, the even the current state is on the attractor, motion will change, this kind of motion adaptation is called system adaptation, and one important application is dynamic motion retargeting, when you change the character, the dynamic system changed.
 
 Sometimes it will change the topology the underlying dynamic system, such effects are called bifurcation.
+an example is the damping effects on the mass spring system.
+as show in figure~\ref{fig:dampmass}
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.4\textheight]{spring_damping}
+\end{center}
+\caption{damping perturbation onmass spring system}
+\label{fig:dampmass}
+\end{figure}
 
 If ability of a dynamic system maintains its topology structure is structural stability.
 To make characters more adaptive to environment and body change, motor controller should boost the structural stability of the motion.
-Even bifurcation happens; the attractor of motion primitives should not be affected.
+Control effort should be prevent bifurcation.
 \end{itemize}
 
 
-\subsection{Structural Stability in Morphological Computation}
+\subsection{remarks on biological motor control}
 Structural Stability is neglected in CMS research.
 It is reasonable for natural animals to rely on structural stable autonomous system. 
 In natural environment, perturbation and uncertainty are everywhere. In many cases, if neural system
 can’t respond quickly enough, the better solution is to select a more structure stable motion primitives.
 
-Structural Stability and Qualitative Idea provides a better explanation for some motion phenomena than quantitative theory.
+Structural Stability and Qualitative Idea provides a better explanation for some motion phenomena than quantitative theory like optimization and feedback shooting.
 Qualitative Control Theory may help us understand the evolution of locomotion and neural Control.
 Animals shift from the sea to the land. From quantitative computing viewport, the natural dynamics of the body and fluid environment are hard to predict or compute precisely. From the qualitative viewport, fluid is continuous
 and uniform, the topology structure is very simple and stable, thus with little neural control fish can maintain its posture. On the other side, for human walking, although the rigid like
-Environment can be calculated precisely, the topology structure is much more complex. On
-the phase plane, there exist many equilibrium points, the topology structure is more complex and unstable. The control system has to be more complex to control the more complex qualitative properties.
+Environment can be calculated precisely, the topology structure is much more complex. 
+Onthe phase plane, there exist many equilibrium points, the topology structure is more complex and unstable. 
+The control system has to be more complex to control the more complex qualitative properties.
 
-Qualitative theory can also help to explain another fact of biological motion system. Animals that live in similar environment and moves in a similar manner usually have similar body structure, in spite of their different position on evolution chain. This is because animals moving in a similar is based on the same motion primitive, similarity in body structure promise the dynamic systems have the same topological structure.
+Qualitative theory can also help to explain another fact of biological motion system. 
+Animals that live in similar environment and moves in a similar manner usually have similar body structure, in spite of their different position on evolution chain. 
+This is because animals moving in a similar is based on the same motion primitive, similarity in body structure promise the topologial conjugacy.
 
 This idea may help us to understand the body and environment effect in morphological computation theory. 
 For specific environment, body evolves to provide us with a structural stable dynamic system, thus save lots of control effort for neural control.
@@ -263,8 +334,8 @@ This effect will enhance the oscillation and also know as resonant.
 
 In previous section, we discussed two types of attractors: Fixed point and Limited Cycle. 
 It is a still open question which type is more important and serve as the foundation as motor control\citep{Degallier2010}.
-One idea limit circle is a necessary, fix point can be controlled with by (
-1) terminate a circle, 
+One idea limit circle is a necessary, fix point can be controlled with by 
+(1) terminate a circle, 
 (2)a different controller, 
 (3)approximate by a limit circle with small amplitude or damping the limit circle, 
 (4) change the limit circle into a fix point through by bifurcation. 
@@ -284,7 +355,7 @@ For CMS research, both type of motion trajectory can be simulated with periodic 
 
 \subsection{Neural Oscillator Stability}
 
-A simple example.
+
 Although it is difficult for neural system to carry out complex computation, it is easy to build oscillator structure with neurons. 
 It only needs two neurons with mutual inhibitive property.
 One extensively studied oscillation model is developed by \citet{neurooscillation}. 
@@ -388,8 +459,8 @@ Initial condition will have no effects on the oscillator final output.
 Thus we treat matsuta oscilator as in a simple one input, one out put system, controlled by three parameter and input signal. 
 we usually reformed equation ~\ref{eq:matsuta} in the simplified form
 \begin{equation}
-\uout=S_{[\hin,\hout,\tau]}(\uin)
 \label{eq:simplematsuta}
+\uout=S_{[\hin,\hout,\tau]}(\uin)
 \end{equation}
 where $\uin=\sum_{j}h_{j}[w_{j}]=hw$,$\uout=\hout y_{o}$
 
@@ -401,7 +472,7 @@ The converging speed can be seen as quick recovery ability.
 When an impulse perturbation happens, it will recover in one period time.
 
 
-\section{Global Motor Invaraint Control Example}
+\section{Example:Maintain Bouncing Height}
 
 Bouncing ball is system ball bouncing by moving a pedal, a system with simple dynamic but difficult to control with optimizaiton or pd. 
 While this example capture the complexity of human interatction with the environment and object. 

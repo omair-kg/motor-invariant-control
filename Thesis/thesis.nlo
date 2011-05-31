@@ -13,6 +13,7 @@
 \nomenclatureentry{a$\uout$@[{$\uout$}]\begingroup Output of the Neural Oscilator\nomeqref {3.0}|nompageref}{24}
 \nomenclatureentry{a$\hin$@[{$\hin$}]\begingroup Input Coefficient of the Neural Oscilator\nomeqref {3.0}|nompageref}{24}
 \nomenclatureentry{a$\hout$@[{$\hout$}]\begingroup Output Coefficent of the Neural Oscilator\nomeqref {3.0}|nompageref}{24}
-\nomenclatureentry{a$G$@[{$G$}]\begingroup A Lie Group\nomeqref {4.0}|nompageref}{39}
-\nomenclatureentry{a$g_a$@[{$g_a$}]\begingroup an elemetn in Lie Group $G$ with parameter $a$\nomeqref {4.0}|nompageref}{39}
-\nomenclatureentry{a$I(x)$@[{$I(x)$}]\begingroup Invariant Function of $x$\nomeqref {4.0}|nompageref}{39}
+\nomenclatureentry{a$\simeq$@[{$\simeq$}]\begingroup Topology Conjungacy\nomeqref {3.0}|nompageref}{24}
+\nomenclatureentry{a$G$@[{$G$}]\begingroup A Lie Group\nomeqref {4.0}|nompageref}{42}
+\nomenclatureentry{a$g_a$@[{$g_a$}]\begingroup an elemetn in Lie Group $G$ with parameter $a$\nomeqref {4.0}|nompageref}{42}
+\nomenclatureentry{a$I(x)$@[{$I(x)$}]\begingroup Invariant Function of $x$\nomeqref {4.0}|nompageref}{42}

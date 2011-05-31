@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  30 MAY 2011 13:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  31 MAY 2011 17:30
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -382,24 +382,26 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip62
 \subfig@bottom=\skip63
 )
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip64
+\thm@postskip=\skip65
+\thm@headsep=\skip66
+\dth@everypar=\toks31
+)
 
 LaTeX Warning: Unused global option(s):
     [pdftex].
 
 (./thesis.aux (./todolist.aux) (./Abstract/abstract.aux)
 (./Introduction/introduction.aux) (./Background/background.aux)
-(./GlobalInvariant/gInvariant.aux
-
-LaTeX Warning: Label `fig:time_timeAttraction' multiply defined.
-
-) (./LocalInvariant/localInvariant.aux
-
-LaTeX Warning: Label `fig:goff' multiply defined.
-
-
-LaTeX Warning: Label `fig:bouncing5' multiply defined.
-
-) (./CombineFramework/cframework.aux
+(./GlobalInvariant/gInvariant.aux) (./LocalInvariant/localInvariant.aux)
+(./CombineFramework/cframework.aux
 
 LaTeX Warning: Label `fig:manyprimitives' multiply defined.
 
@@ -407,9 +409,6 @@ LaTeX Warning: Label `fig:manyprimitives' multiply defined.
 LaTeX Warning: Label `fig:motion-transition' multiply defined.
 
 ) (./BipedWalk/bwalk.aux
-
-LaTeX Warning: Label `chap:background' multiply defined.
-
 
 LaTeX Warning: Label `fig:fwalkingphase' multiply defined.
 
@@ -441,24 +440,25 @@ LaTeX Warning: Label `fig:stancepostures' multiply defined.
 
 LaTeX Warning: Label `fig:fastconverg' multiply defined.
 
-) (./HiDof/hidof.aux) (./Conclusions/conclusions.aux))
+) (./HiDof/hidof.aux) (./Conclusions/conclusions.aux)
+(./Appendix1/appendix1.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-Package hyperref Info: Link coloring ON on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+Package hyperref Info: Link coloring ON on input line 78.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -468,14 +468,14 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
  (./thesis.out)
 (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 75.
+Package backref Info: ** backref set up for natbib ** on input line 78.
 \AtBeginShipoutBox=\box29
  [1
 
@@ -531,12 +531,12 @@ Chapter 1.
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 40.
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
@@ -646,28 +646,28 @@ Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
  [10]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 File: Introduction/IntroductionFigs/EPS/MassSpring.eps Graphic file (type eps)
 
-<Introduction/IntroductionFigs/EPS/MassSpring.eps> [11]
+<Introduction/IntroductionFigs/EPS/MassSpring.eps>
 File: MassSpringPhasePlot.eps Graphic file (type eps)
-
-<MassSpringPhasePlot.eps> [12]
+ <MassSpringPhasePlot.eps>
+[11] [12]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
@@ -732,27 +732,43 @@ Missing character: There is no ù in font cmr12!
 
 
 
-] [25] [26]
-
-LaTeX Warning: Reference `phase_plot' on page 27 undefined on input line 156.
-
+] [25]
 File: GlobalInvariant/GlobalInvariantFigs/EPS/phase_plot.eps Graphic file (type
  eps)
-<GlobalInvariant/GlobalInvariantFigs/EPS/phase_plot.eps> [27] [28]
+ <GlobalInvariant/GlobalInvariantFigs/EPS/phase_plot.eps>
+File: GlobalInvariant/GlobalInvariantFigs/EPS/basinOfAttraction.eps Graphic fil
+e (type eps)
+
+<GlobalInvariant/GlobalInvariantFigs/EPS/basinOfAttraction.eps> [26]
+
+LaTeX Warning: Reference `eq:fuffin' on page 27 undefined on input line 194.
+
+[27]
+File: GlobalInvariant/GlobalInvariantFigs/EPS/massspring.eps Graphic file (type
+ eps)
+ <GlobalInvariant/GlobalInvariantFigs/EPS/massspring.eps>
+File: GlobalInvariant/GlobalInvariantFigs/EPS/duffin.eps Graphic file (type eps
+)
+
+<GlobalInvariant/GlobalInvariantFigs/EPS/duffin.eps> [28] [29] [30]
+File: GlobalInvariant/GlobalInvariantFigs/EPS/spring_damping.eps Graphic file (
+type eps)
+
+<GlobalInvariant/GlobalInvariantFigs/EPS/spring_damping.eps>
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [29]
-[30]
+ [31] [32] [33]
 File: GlobalInvariant/GlobalInvariantFigs/EPS/oscillation.eps Graphic file (typ
 e eps)
- <GlobalInvariant/GlobalInvariantFigs/EPS/oscillation.eps>
+
+<GlobalInvariant/GlobalInvariantFigs/EPS/oscillation.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: GlobalInvariant/GlobalInvariantFigs/EPS/entraint_oscilation.eps Graphic f
 ile (type eps)
-<GlobalInvariant/GlobalInvariantFigs/EPS/entraint_oscilation.eps> [31]
+<GlobalInvariant/GlobalInvariantFigs/EPS/entraint_oscilation.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -762,7 +778,7 @@ e (type eps)
 File: GlobalInvariant/GlobalInvariantFigs/EPS/neural1phase.eps Graphic file (ty
 pe eps)
 
-<GlobalInvariant/GlobalInvariantFigs/EPS/neural1phase.eps> [32]
+<GlobalInvariant/GlobalInvariantFigs/EPS/neural1phase.eps> [34]
 File: GlobalInvariant/GlobalInvariantFigs/EPS/neural_attraction.eps Graphic fil
 e (type eps)
 
@@ -770,15 +786,16 @@ e (type eps)
 File: GlobalInvariant/GlobalInvariantFigs/EPS/neural_attraction_phase.eps Graph
 ic file (type eps)
 
-<GlobalInvariant/GlobalInvariantFigs/EPS/neural_attraction_phase.eps> [33]
-[34] [35] [36]
+<GlobalInvariant/GlobalInvariantFigs/EPS/neural_attraction_phase.eps> [35]
 File: GlobalInvariant/GlobalInvariantFigs/EPS/bouncing_ball.eps Graphic file (t
 ype eps)
- <GlobalInvariant/GlobalInvariantFigs/EPS/bouncing_ball.eps>
+
+<GlobalInvariant/GlobalInvariantFigs/EPS/bouncing_ball.eps>
 File: GlobalInvariant/GlobalInvariantFigs/EPS/bouncing_ball_phaseplot.eps Graph
 ic file (type eps)
 
-<GlobalInvariant/GlobalInvariantFigs/EPS/bouncing_ball_phaseplot.eps> [37]
+<GlobalInvariant/GlobalInvariantFigs/EPS/bouncing_ball_phaseplot.eps> [36]
+[37] [38] [39]
 File: GlobalInvariant/GlobalInvariantFigs/EPS/bb_ms_os_attraction_phase.eps Gra
 phic file (type eps)
 
@@ -786,15 +803,18 @@ phic file (type eps)
 File: GlobalInvariant/GlobalInvariantFigs/EPS/bb_ms_os_StateTimeAttraction.eps 
 Graphic file (type eps)
 
-<GlobalInvariant/GlobalInvariantFigs/EPS/bb_ms_os_StateTimeAttraction.eps>)
-[38]
+<GlobalInvariant/GlobalInvariantFigs/EPS/bb_ms_os_StateTimeAttraction.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [40] [41]
 \openout2 = `LocalInvariant/localInvariant.aux'.
 
  (./LocalInvariant/localInvariant.tex
 Chapter 4.
 File: LocalInvariant/LocalInvariantFigs/EPS/Symmetry.eps Graphic file (type eps
 )
-<LocalInvariant/LocalInvariantFigs/EPS/Symmetry.eps> [39
+<LocalInvariant/LocalInvariantFigs/EPS/Symmetry.eps> [42
 
 
 
@@ -802,40 +822,51 @@ File: LocalInvariant/LocalInvariantFigs/EPS/Symmetry.eps Graphic file (type eps
 File: LocalInvariant/LocalInvariantFigs/EPS/SymmetrySpace.eps Graphic file (typ
 e eps)
 
-<LocalInvariant/LocalInvariantFigs/EPS/SymmetrySpace.eps> [40] [41] [42]
+<LocalInvariant/LocalInvariantFigs/EPS/SymmetrySpace.eps> [43] [44] [45]
+[46]
 File: LocalInvariant/LocalInvariantFigs/EPS/g_off.eps Graphic file (type eps)
-
-<LocalInvariant/LocalInvariantFigs/EPS/g_off.eps>
+ <LocalInvariant/LocalInvariantFigs/EPS/g_off.eps> [47]
 File: LocalInvariant/LocalInvariantFigs/EPS/g_ts.eps Graphic file (type eps)
 
-<LocalInvariant/LocalInvariantFigs/EPS/g_ts.eps> [43] [44]
+<LocalInvariant/LocalInvariantFigs/EPS/g_ts.eps> [48] [49]
 File: LocalInvariant/LocalInvariantFigs/EPS/g_en.eps Graphic file (type eps)
 
-<LocalInvariant/LocalInvariantFigs/EPS/g_en.eps> [45]
-File: LocalInvariant/LocalInvariantFigs/EPS/g_off.eps Graphic file (type eps)
+<LocalInvariant/LocalInvariantFigs/EPS/g_en.eps> [50]
+File: LocalInvariant/LocalInvariantFigs/EPS/g_toff.eps Graphic file (type eps)
 
-<LocalInvariant/LocalInvariantFigs/EPS/g_off.eps>
+<LocalInvariant/LocalInvariantFigs/EPS/g_toff.eps>
+
+LaTeX Warning: Reference `bouncing5' on page 51 undefined on input line 353.
+
 File: LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDr
 opAt5.eps Graphic file (type eps)
 
 <LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDropAt5
 .eps>
+
+LaTeX Warning: Reference `bouncing5' on page 51 undefined on input line 364.
+
 File: LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDr
 opAt10.eps Graphic file (type eps)
 
 <LocalInvariant/LocalInvariantFigs/EPS/BouncingBallPhasePlotuncontrolledDropAt1
-0.eps>) [46] [47]
+0.eps>) [51] [52] [53]
 \openout2 = `CombineFramework/cframework.aux'.
 
  (./CombineFramework/cframework.tex
 Chapter 5.
+[54
+
+
+
+]
 File: CombineFramework/CombineFrameworkFigs/EPS/LimitCircle.eps Graphic file (t
 ype eps)
-<CombineFramework/CombineFrameworkFigs/EPS/LimitCircle.eps> [48
+ <CombineFramework/CombineFrameworkFigs/EPS/LimitCircle.eps> [55]
 
+LaTeX Warning: Reference `eg:cc' on page 56 undefined on input line 90.
 
-
-] [49] [50]
+[56] [57]
 File: CombineFramework/CombineFrameworkFigs/EPS/BouncingBallPhasePlotAction1.ep
 s Graphic file (type eps)
 
@@ -844,48 +875,56 @@ File: CombineFramework/CombineFrameworkFigs/EPS/BouncingBallPhasePlotAction3.ep
 s Graphic file (type eps)
 
 <CombineFramework/CombineFrameworkFigs/EPS/BouncingBallPhasePlotAction3.eps>
-[51]
+[58] [59]
 File: CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveGraph.eps Graphi
 c file (type eps)
  <CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveGraph.eps>
 File: CombineFramework/CombineFrameworkFigs/EPS/motiongraphtopology.eps Graphic
  file (type eps)
 
-<CombineFramework/CombineFrameworkFigs/EPS/motiongraphtopology.eps>
+<CombineFramework/CombineFrameworkFigs/EPS/motiongraphtopology.eps> [60]
+[61]
 File: CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveTransition.eps G
 raphic file (type eps)
-
-<CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveTransition.eps>
-[52]
+ <CombineFramework/CombineFrameworkFigs/EPS/MotionPrimitiveTransition.eps>
 File: CombineFramework/CombineFrameworkFigs/EPS/OverLayTransition.eps Graphic f
 ile (type eps)
- <CombineFramework/CombineFrameworkFigs/EPS/OverLayTransition.eps>
+
+<CombineFramework/CombineFrameworkFigs/EPS/OverLayTransition.eps>
 File: CombineFramework/CombineFrameworkFigs/EPS/OffsetTransition.eps Graphic fi
 le (type eps)
 
-<CombineFramework/CombineFrameworkFigs/EPS/OffsetTransition.eps> [53] [54]
-[55]
+<CombineFramework/CombineFrameworkFigs/EPS/OffsetTransition.eps> [62] [63]
 File: CombineFramework/CombineFrameworkFigs/EPS/ConbineMethod.eps Graphic file 
 (type eps)
- <CombineFramework/CombineFrameworkFigs/EPS/ConbineMethod.eps>) [56]
-[57]
+
+<CombineFramework/CombineFrameworkFigs/EPS/ConbineMethod.eps> [64]
+
+LaTeX Warning: Reference `eq:neural_oscillator' on page 65 undefined on input l
+ine 318.
+
+
+LaTeX Warning: Reference `sec:control_symmetry' on page 65 undefined on input l
+ine 320.
+
+) [65]
 \openout2 = `BipedWalk/bwalk.aux'.
 
  (./BipedWalk/bwalk.tex
 Chapter 6.
-[58
+[66
 
 
 
 ]
 File: BipedWalk/BipedWalkFigs/EPS/PWI.eps Graphic file (type eps)
- <BipedWalk/BipedWalkFigs/EPS/PWI.eps> [59] [60]
+ <BipedWalk/BipedWalkFigs/EPS/PWI.eps> [67] [68]
 File: BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps Graphic file (type eps)
 
 <BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps>
 File: BipedWalk/BipedWalkFigs/EPS/Fourphase.eps Graphic file (type eps)
 
-<BipedWalk/BipedWalkFigs/EPS/Fourphase.eps> [61] [62]
+<BipedWalk/BipedWalkFigs/EPS/Fourphase.eps> [69] [70]
 File: BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps Graphic file (type eps)
 
 <BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps>
@@ -907,14 +946,14 @@ s)
 <BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>
 File: BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps Graphic file (type eps)
 
-<BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps> [63] [64] [65]
+<BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps> [71] [72] [73]
 
-LaTeX Warning: Reference `fig_differentmh' on page 66 undefined on input line 2
+LaTeX Warning: Reference `fig_differentmh' on page 74 undefined on input line 2
 86.
 
 File: BipedWalk/BipedWalkFigs/EPS/MassDistributionEffectsOnLimitCircle.eps Grap
 hic file (type eps)
-<BipedWalk/BipedWalkFigs/EPS/MassDistributionEffectsOnLimitCircle.eps> [66]
+<BipedWalk/BipedWalkFigs/EPS/MassDistributionEffectsOnLimitCircle.eps> [74]
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
@@ -931,7 +970,7 @@ File: BipedWalk/BipedWalkFigs/EPS/LegLengthDistributionEffectsOnLimitCircle.eps
  Graphic file (type eps)
 
 <BipedWalk/BipedWalkFigs/EPS/LegLengthDistributionEffectsOnLimitCircle.eps>
-[67]
+[75]
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
  <BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>
@@ -944,10 +983,10 @@ s)
 
 <BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>
 
-LaTeX Warning: Reference `fig:diffstepsize' on page 68 undefined on input line 
+LaTeX Warning: Reference `fig:diffstepsize' on page 76 undefined on input line 
 398.
 
-[68]
+[76]
 File: BipedWalk/BipedWalkFigs/EPS/DifferentStepSizeWalking.eps Graphic file (ty
 pe eps)
  <BipedWalk/BipedWalkFigs/EPS/DifferentStepSizeWalking.eps>
@@ -962,7 +1001,7 @@ s)
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [69] [70]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [77] [78]
 File: BipedWalk/BipedWalkFigs/EPS/DifferentLegMassLimitCircle.eps Graphic file 
 (type eps)
 
@@ -978,11 +1017,11 @@ s)
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [71]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [79]
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [72]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [80]
 File: BipedWalk/BipedWalkFigs/EPS/LieGroupAction.eps Graphic file (type eps)
 
 <BipedWalk/BipedWalkFigs/EPS/LieGroupAction.eps>
@@ -1003,7 +1042,7 @@ File: BipedWalk/BipedWalkFigs/EPS/walk_terrain2.eps Graphic file (type eps)
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [73] [74]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [81] [82]
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
@@ -1011,32 +1050,32 @@ s)
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>) [75] [76] [77]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>) [83] [84] [85]
 \openout2 = `WalkStance/stance.aux'.
 
 
 (./WalkStance/stance.tex
 Chapter 7.
 
-LaTeX Warning: Reference `bipedalstance' on page 78 undefined on input line 14.
+LaTeX Warning: Reference `bipedalstance' on page 86 undefined on input line 14.
 
 
 File: WalkStance/WalkStanceFigs/EPS/stancefigure.eps Graphic file (type eps)
 <WalkStance/WalkStanceFigs/EPS/stancefigure.eps>
 
-LaTeX Warning: Reference `fig:stanceopostures' on page 78 undefined on input li
+LaTeX Warning: Reference `fig:stanceopostures' on page 86 undefined on input li
 ne 39.
 
 File: WalkStance/WalkStanceFigs/EPS/stanceConfigure.eps Graphic file (type eps)
 
-<WalkStance/WalkStanceFigs/EPS/stanceConfigure.eps> [78
+<WalkStance/WalkStanceFigs/EPS/stanceConfigure.eps> [86
 
 
 
-] [79] [80]
+] [87] [88]
 File: WalkStance/WalkStanceFigs/EPS/uncontrolled.eps Graphic file (type eps)
 
-<WalkStance/WalkStanceFigs/EPS/uncontrolled.eps> [81]
+<WalkStance/WalkStanceFigs/EPS/uncontrolled.eps> [89]
 File: WalkStance/WalkStanceFigs/EPS/TimeScaling.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/TimeScaling.eps>
@@ -1044,62 +1083,70 @@ File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
 
-LaTeX Warning: Reference `energyscaling' on page 82 undefined on input line 166
+LaTeX Warning: Reference `energyscaling' on page 90 undefined on input line 166
 .
 
 File: WalkStance/WalkStanceFigs/EPS/EnergyControlled.eps Graphic file (type eps
 )
-<WalkStance/WalkStanceFigs/EPS/EnergyControlled.eps> [82]
+<WalkStance/WalkStanceFigs/EPS/EnergyControlled.eps> [90]
 File: WalkStance/WalkStanceFigs/EPS/FastCoverge.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/FastCoverge.eps>
 File: WalkStance/WalkStanceFigs/EPS/walk_to_stand.eps Graphic file (type eps)
 
-<WalkStance/WalkStanceFigs/EPS/walk_to_stand.eps> [83] [84]
+<WalkStance/WalkStanceFigs/EPS/walk_to_stand.eps> [91] [92]
 File: WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps Graphic file (type eps)
 
 
-<WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps> [85]
+<WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps> [93]
 File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
 File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
 
-<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps> [86]
+<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps> [94]
 File: WalkStance/WalkStanceFigs/EPS/stancefigure.eps Graphic file (type eps)
 
-<WalkStance/WalkStanceFigs/EPS/stancefigure.eps> [87]) [88]
+<WalkStance/WalkStanceFigs/EPS/stancefigure.eps> [95]) [96]
 \openout2 = `HiDof/hidof.aux'.
 
  (./HiDof/hidof.tex
 Chapter 8.
-[89
+[97
 
 
 
-] [90] [91] [92]) [93]
+] [98] [99] [100]) [101]
 \openout2 = `Conclusions/conclusions.aux'.
 
  (./Conclusions/conclusions.tex
 Chapter 9.
-[94
+[102
 
 
 
-] [95] [96]) [97] (./thesis.bbl (./thesis.brf)
+] [103] [104]) [105]
+\openout2 = `Appendix1/appendix1.aux'.
+
+ (./Appendix1/appendix1.tex) [106
+
+
+
+
+] (./thesis.bbl
+(./thesis.brf)
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [98
+ [107
 
 
-
-] [99] [100]) [101]
-(./thesis.aux (./todolist.aux) (./Abstract/abstract.aux)
-(./Introduction/introduction.aux) (./Background/background.aux)
-(./GlobalInvariant/gInvariant.aux) (./LocalInvariant/localInvariant.aux)
-(./CombineFramework/cframework.aux) (./BipedWalk/bwalk.aux)
-(./WalkStance/stance.aux) (./HiDof/hidof.aux) (./Conclusions/conclusions.aux))
+] [108] [109]) [110] (./thesis.aux (./todolist.aux)
+(./Abstract/abstract.aux) (./Introduction/introduction.aux)
+(./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
+(./LocalInvariant/localInvariant.aux) (./CombineFramework/cframework.aux)
+(./BipedWalk/bwalk.aux) (./WalkStance/stance.aux) (./HiDof/hidof.aux)
+(./Conclusions/conclusions.aux) (./Appendix1/appendix1.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1108,12 +1155,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7032 strings out of 495062
- 102584 string characters out of 1182644
- 181001 words of memory out of 3000000
- 9913 multiletter control sequences out of 15000+50000
+ 7141 strings out of 495062
+ 104315 string characters out of 1182644
+ 183699 words of memory out of 3000000
+ 10005 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 45i,12n,50p,697b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,50p,697b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (112 pages, 404736 bytes).
+Output written on thesis.dvi (121 pages, 426872 bytes).
