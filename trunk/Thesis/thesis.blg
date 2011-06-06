@@ -17,45 +17,45 @@ Database file #1: References/AMSI.bib
 Warning--empty publisher in abraham1978foundations
 Warning--empty journal in kovar2008motion
 Warning--can't use both author and editor fields in latash2008neurophysiological
-You've used 37 entries,
+You've used 38 entries,
             2773 wiz_defined-function locations,
-            871 strings with 11479 characters,
-and the built_in function-call counts, 16539 in all, are:
-= -- 1537
-> -- 807
-< -- 35
-+ -- 280
-- -- 243
-* -- 1250
-:= -- 2539
-add.period$ -- 133
-call.type$ -- 37
-change.case$ -- 184
-chr.to.int$ -- 37
-cite$ -- 77
-duplicate$ -- 813
-empty$ -- 1413
-format.name$ -- 300
-if$ -- 3511
+            876 strings with 11576 characters,
+and the built_in function-call counts, 16884 in all, are:
+= -- 1564
+> -- 827
+< -- 36
++ -- 287
+- -- 249
+* -- 1270
+:= -- 2596
+add.period$ -- 136
+call.type$ -- 38
+change.case$ -- 187
+chr.to.int$ -- 38
+cite$ -- 79
+duplicate$ -- 833
+empty$ -- 1445
+format.name$ -- 308
+if$ -- 3584
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 40
-newline$ -- 208
-num.names$ -- 148
-pop$ -- 378
+missing$ -- 42
+newline$ -- 213
+num.names$ -- 152
+pop$ -- 390
 preamble$ -- 1
-purify$ -- 154
+purify$ -- 157
 quote$ -- 0
-skip$ -- 608
+skip$ -- 622
 stack$ -- 0
-substring$ -- 632
-swap$ -- 97
+substring$ -- 634
+swap$ -- 98
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 377
+type$ -- 383
 warning$ -- 3
-while$ -- 165
+while$ -- 168
 width$ -- 0
-write$ -- 521
+write$ -- 533
 (There were 3 warnings)

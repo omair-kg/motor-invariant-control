@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  31 MAY 2011 17:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  6 JUN 2011 15:42
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -410,6 +410,9 @@ LaTeX Warning: Label `fig:motion-transition' multiply defined.
 
 ) (./BipedWalk/bwalk.aux
 
+LaTeX Warning: Label `fig:passivekneewalker' multiply defined.
+
+
 LaTeX Warning: Label `fig:fwalkingphase' multiply defined.
 
 
@@ -438,10 +441,23 @@ LaTeX Warning: Label `fig:diffterrainphase' multiply defined.
 LaTeX Warning: Label `fig:stancepostures' multiply defined.
 
 
+LaTeX Warning: Label `fig:stancefall' multiply defined.
+
+
+LaTeX Warning: Label `fig:stancefall' multiply defined.
+
+
 LaTeX Warning: Label `fig:fastconverg' multiply defined.
 
-) (./HiDof/hidof.aux) (./Conclusions/conclusions.aux)
-(./Appendix1/appendix1.aux))
+) (./HiDof/hidof.aux
+
+LaTeX Warning: Label `fig:compassgait' multiply defined.
+
+) (./Conclusions/conclusions.aux
+
+LaTeX Warning: Label `fig:fishplot' multiply defined.
+
+) (./Appendix1/appendix1.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
@@ -505,19 +521,19 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 \FN@pp@footnotehinttrue 
 
 
-] [4])
+] [4] [5])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [5] (./thesis.lof [6
+ [6] (./thesis.lof [7
 
-] [7])
+] [8] [9])
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- (./thesis.nls [8] [9
+ (./thesis.nls [10] [11
 
-]) [10]
+]) [12]
 \openout2 = `Introduction/introduction.aux'.
 
 
@@ -917,8 +933,11 @@ Chapter 6.
 
 
 ]
+File: BipedWalk/BipedWalkFigs/EPS/spahittalPlae.eps Graphic file (type eps)
+ <BipedWalk/BipedWalkFigs/EPS/spahittalPlae.eps>
 File: BipedWalk/BipedWalkFigs/EPS/PWI.eps Graphic file (type eps)
- <BipedWalk/BipedWalkFigs/EPS/PWI.eps> [67] [68]
+
+<BipedWalk/BipedWalkFigs/EPS/PWI.eps> [67] [68]
 File: BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps Graphic file (type eps)
 
 <BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps>
@@ -949,7 +968,7 @@ File: BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps Graphic file (type eps)
 <BipedWalk/BipedWalkFigs/EPS/walk_cycle_index.eps> [71] [72] [73]
 
 LaTeX Warning: Reference `fig_differentmh' on page 74 undefined on input line 2
-86.
+92.
 
 File: BipedWalk/BipedWalkFigs/EPS/MassDistributionEffectsOnLimitCircle.eps Grap
 hic file (type eps)
@@ -984,12 +1003,11 @@ s)
 <BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>
 
 LaTeX Warning: Reference `fig:diffstepsize' on page 76 undefined on input line 
-398.
+404.
 
-[76]
 File: BipedWalk/BipedWalkFigs/EPS/DifferentStepSizeWalking.eps Graphic file (ty
 pe eps)
- <BipedWalk/BipedWalkFigs/EPS/DifferentStepSizeWalking.eps>
+<BipedWalk/BipedWalkFigs/EPS/DifferentStepSizeWalking.eps> [76] [77]
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
@@ -1001,7 +1019,7 @@ s)
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [77] [78]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [78]
 File: BipedWalk/BipedWalkFigs/EPS/DifferentLegMassLimitCircle.eps Graphic file 
 (type eps)
 
@@ -1017,11 +1035,11 @@ s)
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [79]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [79] [80]
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [80]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>
 File: BipedWalk/BipedWalkFigs/EPS/LieGroupAction.eps Graphic file (type eps)
 
 <BipedWalk/BipedWalkFigs/EPS/LieGroupAction.eps>
@@ -1038,11 +1056,7 @@ File: BipedWalk/BipedWalkFigs/EPS/walk_terrain.eps Graphic file (type eps)
 <BipedWalk/BipedWalkFigs/EPS/walk_terrain.eps>
 File: BipedWalk/BipedWalkFigs/EPS/walk_terrain2.eps Graphic file (type eps)
 
-<BipedWalk/BipedWalkFigs/EPS/walk_terrain2.eps>
-File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
-s)
-
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps> [81] [82]
+<BipedWalk/BipedWalkFigs/EPS/walk_terrain2.eps> [81] [82] [83] [84]
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
@@ -1050,16 +1064,16 @@ s)
 File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
 s)
 
-<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>) [83] [84] [85]
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>
+File: BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps Graphic file (type ep
+s)
+
+<BipedWalk/BipedWalkFigs/EPS/walking_with_neural.eps>) [85]
 \openout2 = `WalkStance/stance.aux'.
 
 
 (./WalkStance/stance.tex
 Chapter 7.
-
-LaTeX Warning: Reference `bipedalstance' on page 86 undefined on input line 14.
-
-
 File: WalkStance/WalkStanceFigs/EPS/stancefigure.eps Graphic file (type eps)
 <WalkStance/WalkStanceFigs/EPS/stancefigure.eps>
 
@@ -1083,7 +1097,7 @@ File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
 
-LaTeX Warning: Reference `energyscaling' on page 90 undefined on input line 166
+LaTeX Warning: Reference `energyscaling' on page 90 undefined on input line 167
 .
 
 File: WalkStance/WalkStanceFigs/EPS/EnergyControlled.eps Graphic file (type eps
@@ -1092,61 +1106,107 @@ File: WalkStance/WalkStanceFigs/EPS/EnergyControlled.eps Graphic file (type eps
 File: WalkStance/WalkStanceFigs/EPS/FastCoverge.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/FastCoverge.eps>
+File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
+File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
+
+<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
 File: WalkStance/WalkStanceFigs/EPS/walk_to_stand.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/walk_to_stand.eps> [91] [92]
 File: WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps Graphic file (type eps)
 
 
-<WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps> [93]
+<WalkStance/WalkStanceFigs/EPS/walk_to_balance.eps> [93] [94]
 File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
 
 <WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps>
 File: WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps Graphic file (type eps)
 
-<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps> [94]
+<WalkStance/WalkStanceFigs/EPS/PlaceHolder.eps> [95]
 File: WalkStance/WalkStanceFigs/EPS/stancefigure.eps Graphic file (type eps)
 
-<WalkStance/WalkStanceFigs/EPS/stancefigure.eps> [95]) [96]
+<WalkStance/WalkStanceFigs/EPS/stancefigure.eps> [96]) [97]
 \openout2 = `HiDof/hidof.aux'.
 
  (./HiDof/hidof.tex
 Chapter 8.
-[97
+[98
 
 
 
-] [98] [99] [100]) [101]
+]
+File: HiDof/HiDofFigs/EPS/rimlesswheel.eps Graphic file (type eps)
+ <HiDof/HiDofFigs/EPS/rimlesswheel.eps>
+File: HiDof/HiDofFigs/EPS/compassgait.eps Graphic file (type eps)
+
+<HiDof/HiDofFigs/EPS/compassgait.eps>
+File: HiDof/HiDofFigs/EPS/rollfoot.eps Graphic file (type eps)
+ <HiDof/HiDofFigs/EPS/rollfoot.eps>
+[99] [100] [101]
+File: HiDof/HiDofFigs/EPS/Torus.eps Graphic file (type eps)
+ <HiDof/HiDofFigs/EPS/Torus.eps>
+File: HiDof/HiDofFigs/EPS/Sidesway.eps Graphic file (type eps)
+
+<HiDof/HiDofFigs/EPS/Sidesway.eps> [102] [103]
+File: HiDof/HiDofFigs/EPS/multilink.eps Graphic file (type eps)
+
+<HiDof/HiDofFigs/EPS/multilink.eps> [104] [105]
+File: HiDof/HiDofFigs/EPS/fish_plot.eps Graphic file (type eps)
+
+<HiDof/HiDofFigs/EPS/fish_plot.eps>
+File: HiDof/HiDofFigs/EPS/fish_swimming.eps Graphic file (type eps)
+ <HiDof/HiDofFigs/EPS/fish_swimming.eps>
+[106] [107]) [108]
 \openout2 = `Conclusions/conclusions.aux'.
 
  (./Conclusions/conclusions.tex
 Chapter 9.
-[102
+[109
 
 
 
-] [103] [104]) [105]
+] [110] [111]
+File: Conclusions/ConclusionsFigs/EPS/Mori_Uncanny_Valley.eps Graphic file (typ
+e eps)
+ <Conclusions/ConclusionsFigs/EPS/Mori_Uncanny_Valley.eps>)
+[112] [113]
 \openout2 = `Appendix1/appendix1.aux'.
 
- (./Appendix1/appendix1.tex) [106
+ (./Appendix1/appendix1.tex [114
 
 
 
 
-] (./thesis.bbl
-(./thesis.brf)
+]
+Overfull \hbox (79.02841pt too wide) detected at line 93
+\OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 (\OM
+L/cmm/m/it/12 m[]l[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]b[]\OT1/cmr/m/n/12 )
+\OML/cmm/m/it/12 Lcos\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^@
+ \OML/cmm/m/it/12 q[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 m[
+]b[]cos\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it
+/12 q[]\OT1/cmr/m/n/12 ) + (\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 + \OML/cmm/m/i
+t/12 m[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/1
+2 L[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]a[] \OT1/cmr/m/n/12 + \OML/cmm/m/it
+/12 m[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 l[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12
+ a[]\OT1/cmr/m/n/12 )[]
+ []
+
+[115] [116] [117]) [118] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [107
+ [119
 
 
-] [108] [109]) [110] (./thesis.aux (./todolist.aux)
-(./Abstract/abstract.aux) (./Introduction/introduction.aux)
-(./Background/background.aux) (./GlobalInvariant/gInvariant.aux)
-(./LocalInvariant/localInvariant.aux) (./CombineFramework/cframework.aux)
-(./BipedWalk/bwalk.aux) (./WalkStance/stance.aux) (./HiDof/hidof.aux)
-(./Conclusions/conclusions.aux) (./Appendix1/appendix1.aux))
+] [120] [121])
+[122] (./thesis.aux (./todolist.aux) (./Abstract/abstract.aux)
+(./Introduction/introduction.aux) (./Background/background.aux)
+(./GlobalInvariant/gInvariant.aux) (./LocalInvariant/localInvariant.aux)
+(./CombineFramework/cframework.aux) (./BipedWalk/bwalk.aux)
+(./WalkStance/stance.aux) (./HiDof/hidof.aux) (./Conclusions/conclusions.aux)
+(./Appendix1/appendix1.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1155,12 +1215,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7141 strings out of 495062
- 104315 string characters out of 1182644
- 183699 words of memory out of 3000000
- 10005 multiletter control sequences out of 15000+50000
+ 7181 strings out of 495062
+ 105169 string characters out of 1182644
+ 184484 words of memory out of 3000000
+ 10033 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,50p,697b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (121 pages, 426872 bytes).
+Output written on thesis.dvi (135 pages, 463560 bytes).

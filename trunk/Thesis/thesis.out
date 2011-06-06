@@ -76,5 +76,9 @@
 \BOOKMARK [2][]{subsection.9.2.4}{9.2.4 System Transform and Muscle Actuation}{section.9.2}
 \BOOKMARK [2][]{subsection.9.2.5}{9.2.5 Perception Dynamics}{section.9.2}
 \BOOKMARK [2][]{subsection.9.2.6}{9.2.6 Rethink abouth the uncanny valley}{section.9.2}
-\BOOKMARK [0][]{appendix*.39}{Appdx A}{}
+\BOOKMARK [0][]{appendix*.39}{Appdx A:Dynamic Equation for Passive Walking}{}
+\BOOKMARK [1][]{section..1}{.1 Knee Free Phase}{appendix*.39}
+\BOOKMARK [1][]{section..2}{.2 Knee Strike}{appendix*.39}
+\BOOKMARK [1][]{section..3}{.3 Knee Lock Phase}{appendix*.39}
+\BOOKMARK [1][]{section..4}{.4 Heel Strike Phase}{appendix*.39}
 \BOOKMARK [0][]{section*.41}{References}{}

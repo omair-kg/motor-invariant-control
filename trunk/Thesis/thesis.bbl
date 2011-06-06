@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -201,6 +201,11 @@ M.H. Raibert and J.K. Hodgins.
 \newblock {Animation of dynamic legged locomotion}.
 \newblock \emph{ACM SIGGRAPH Computer Graphics}, 25\penalty0 (4):\penalty0
   349--358, 1991.
+
+\bibitem[Raibert et~al.(1986)]{Raibert1986}
+M.H. Raibert et~al.
+\newblock \emph{{Legged robots that balance}}.
+\newblock MIT press Cambridge, MA, 1986.
 
 \bibitem[Smale(1970)]{Smale1970}
 S.~Smale.
