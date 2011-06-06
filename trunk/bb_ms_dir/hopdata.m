@@ -10,7 +10,11 @@ leg=L-pi+min(pi)
 
 hip=leg+endPos;
 
-HipLegDraw(hip,endPos,L)
+%HipLegDraw(hip,endPos,L)
+
+[sk,ch,fl]=bvhReadFile('BVHTemplate.bvh');
+framech=[0,hip,0,0,0,0]
+%bvhWriteFile([bvhFilePath,'.bvh'],sk,framech,fl);
 
 
 
