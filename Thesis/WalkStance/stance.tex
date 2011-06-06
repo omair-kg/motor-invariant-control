@@ -11,7 +11,7 @@
 
 \section{Motion Primitives}
 For Bipedal Walking, when the heel strike happens, it the passive walker don't get enough velocity, it will stop walk and rest at the heel strike pos.
-This is posture is stable, then we got another motion primitive: the stance, as show in figure ~\ref{bipedalstance}
+This is posture is stable, then we got another motion primitive: the stance, as show in figure ~\ref{fig:bipedalstance}
 
 
 
@@ -132,7 +132,7 @@ Limit Circle is useful for it can make stance start to vibrate at a constant spe
 \subsection{Local Invariant Control}
 All the three group controller can be used,but basically only two control method are useful.
 \subsubsection*{Time Scaling}
-The first is time scalling $G_ts$
+The first is time scalling $\gts$
 as show in figure
 \begin{figure}[!htbp]
   \begin{center}
@@ -146,6 +146,7 @@ as show in figure
     \label{fig:stanceTimeScaling}
 \end{center}
 \end{figure}
+The Time Scaling will enlarge the basin of attraction to include high speed state.
 
 The falling motio is show in the figure ~\ref{fig:stancefall}
 \begin{figure}[!htbp]
@@ -177,7 +178,7 @@ as show in Figure~\ref{energyscaling}
 \end{center}
 \end{figure}
 
-
+this will help the characters shrink the vibration amplitute.
 but it will also shrink the size of basin of attraction.
 
 
@@ -200,10 +201,40 @@ as shown in figure ~\ref{fig:fastconverg}
 \end{figure}
 
 
+For Comparation, we have three stance motion perturbated.
+the left one is without any control and the characters fail.
+the second one speed action is applied, characters maintain its stance motion, but vibrate.
+the third is  both speed action and energy action are applied, the character maintain the stance and also vibrate with shrinking amplitude.
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{PlaceHolder}
+    \else
+      \includegraphics[width=0.7\textwidth]{PlaceHolder}
+    \fi
+    \caption{Place Holder1}
+    \label{fig:stancefall}
+\end{center}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \leavevmode
+    \ifpdf
+      \includegraphics[height=6in]{PlaceHolder}
+    \else
+      \includegraphics[width=0.7\textwidth]{PlaceHolder}
+    \fi
+    \caption{Place Holder1}
+    \label{fig:stancefall}
+\end{center}
+\end{figure}
+
+
+
 \section{Walking and Stance Transition}
-
-
-
 we phase plot we show the limit circle of two motion primitives.
 
 \begin{figure}[!htbp]
@@ -333,7 +364,7 @@ then to maintain the stability walking, speed action needed to included for star
 
 So the the speedaction of stancing and walking must meet some relationship as
 \[
-S_sS_w=c
+\frac{S_s}{S_w}=c
 \]
 
 The pheonemon is common for our daily experience, here we give it a methematical meaning.

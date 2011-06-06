@@ -1,6 +1,227 @@
-\chapter{Appdx A}
+\chapter{Appdx A:Dynamic Equation for Passive Walking}
 
-and here I put a bit of postamble ...
+\section{Knee Free Phase}
+
+\[
+M(q)\ddot{q}+C(q,\dot{q})\dot{q}+N=\tau\]
+
+
+\[
+M(q)=\left[\begin{array}{ccc}
+M_{11} & M_{12} & M_{13}\\
+M_{12} & M_{22} & M_{23}\\
+M_{13} & M_{23} & M_{33}\end{array}\right]
+\]
+
+\[
+M_{11}=m_{s}^{st}a_{1}^{2}+m_{t}^{st}(l_{s}+a_{2})^{2}+(m_{h}+m_{t}^{sw}+m_{s}^{sw})L^{2}\]
+
+
+\[
+M_{12}=-(m_{t}^{sw}b_{2}+m_{s}^{sw}l_{t})Lcos(q_{2}-q_{1})\]
+
+
+\[
+M_{13}=-m_{s}^{sw}b_{1}cos(q_{3}-q_{1})\]
+
+
+\[
+M_{22}=m_{t}^{sw}b_{2}^{2}+m_{s}^{sw}l_{t}^{2}\]
+\[
+M_{23}=m_{s}^{sw}l_{t}b_{1}cos(q_{3}-q_{2})\]
+
+
+\[
+M_{33}=m_{s}^{sw}b_{1}^{2}\]
+
+
+\[
+C(q,\dot{q})=\left[\begin{array}{ccc}
+0 & C_{12}\dot{q_{2}} & C_{13}\dot{q}_{3}\\
+-C_{12}\dot{q}_{1} & 0 & C_{23}\dot{q}_{3}\\
+-C_{13}\dot{q_{1}} & -C_{23}\dot{q}_{2} & 0\end{array}\right]\]
+
+
+\[
+C_{12}=-(m_{t}^{sw}b_{2}+m_{s}^{sw}l_{t})Lsin(q_{1}-q_{2})\]
+
+
+\[
+C_{13}=-m_{s}^{sw}b_{1}Lsin(q_{1}-q_{3})\]
+
+
+\[
+C_{23}=m_{s}^{sw}l_{t}b_{1}sin(q_{3}-q_{2})\]
+
+
+
+\[
+N=\left[\begin{array}{c}
+-(m_{s}^{st}a_{1}+m_{t}^{st}(l_{s}+a_{2})+(m_{h}+m_{s}^{sw}+m_{t}^{sw})L)g\mathbf{\mathrm{sin}}(q_{1})\\
+(m_{t}^{sw}b_{2}+m_{s}^{sw}l_{t})gsin(q_{2})\\
+m_{s}^{sw}b_{1}gsin(q_{3})\end{array}\right]\]
+
+
+\section{Knee Strike}
+
+\[
+Q^{+}\left[\begin{array}{c}
+\dot{q}_{1}\\
+\dot{q}_{2}\end{array}\right]^{+}=Q^{-}\left[\begin{array}{c}
+\dot{q}_{1}\\
+\dot{q}_{2}\\
+\dot{q}_{3}\end{array}\right]^{-}\]
+
+
+\[
+q_{3}^{+}=q_{2}^{+}\]
+
+
+\[
+Q^{-}=\left[\begin{array}{ccc}
+Q_{11}^{-} & Q_{12}^{-} & Q_{13}^{-}\\
+Q_{21}^{-} & Q_{22}^{-} & Q_{23}^{-}\end{array}\right]\]
+
+
+\[
+Q^{+}=\left[\begin{array}{cc}
+Q_{11}^{+} & Q_{12}^{+}\\
+Q_{21}^{+} & Q_{22}^{+}\end{array}\right]\]
+
+
+\[
+Q_{11}^{-}=-(m_{s}^{sw}l_{t}+m_{t}^{sw}b_{2})Lcos(q_{1}-q_{2})-m_{s}^{sw}b_{1}cos(q_{1}-q_{3})+(m_{t}^{sw}+m_{s}^{sw}+m_{h})L^{2}+m_{s}^{st}a_{1}^{2}+m_{t}^{st}(l_{s}+a_{2})^{2}\]
+
+
+\[
+Q_{12}^{-}=-(m_{s}^{sw}l_{s}+m_{t}^{sw})Lcos(q_{1}-q_{2})+m_{s}^{sw}b_{1}l_{t}cos(q_{2}-q_{3})+m_{t}^{sw}b_{2}^{2}+m_{s}^{sw}l_{t}^{2}\]
+
+
+\[
+Q_{13}^{-}=-m_{s}^{sw}b_{1}Lcos(q_{1}-q_{3})+m_{s}^{sw}b_{1}l_{t}cos(q_{2}-q_{3})+m_{s}^{sw}b_{1}b_{2}\]
+
+
+\[
+Q_{21}^{-}=-(m_{s}^{sw}l_{t}+m_{t}^{sw}b_{2})Lcos(q_{1}-q_{2})-m_{s}^{sw}b_{1}Lcos(q_{1}-q_{3})\]
+
+
+\[
+Q_{22}^{-}=m_{s}^{sw}b_{1}l_{t}cos(q_{2}-q_{3})+m_{s}^{sw}l_{t}^{2}+m_{t}^{sw}b_{2}^{2}\]
+\[
+Q_{23}^{-}=m_{s}^{sw}b_{1}l_{t}cos(q_{2}-q_{3})+m_{s}^{sw}b_{1}^{2}\]
+
+
+\[
+Q_{11}^{+}=Q_{21}^{+}+m_{t}^{st}(l_{s}+a_{2})^{2}+(m_{h}+m_{t}^{sw}+m_{s}^{sw})L^{2}+m_{s}^{st}a_{1}^{2}\]
+
+
+\[
+Q_{12}^{+}=Q_{21}^{+}+m_{s}^{sw}(l_{t}+b_{1})^{2}+m_{t}^{sw}b_{2}^{2}\]
+
+
+\[
+Q_{21}^{+}=-(m_{s}^{sw}(b_{1}+l_{t})+m_{t}^{sw}b_{2})Lcos(q_{1}-q_{2})\]
+
+
+\[
+Q_{22}^{+}=m_{s}^{sw}(b_{1}+l_{t})^{2}+m_{t}^{sw}b_{2}^{2}\]
+
+
+
+\section{Knee Lock Phase}
+
+
+\[
+M(q)\ddot{q}+C(q,\dot{q})\dot{q}+N=\tau\]
+
+
+\[M(q)=\left[\begin{array}{cc}
+M_{11} & M_{12}\\
+M_{12} & M_{22}\end{array}\right]
+\]
+
+\[
+M_{11}=m_{s}^{st}a_{1}^{2}+m_{t}^{st}(l_{s}+a_{2})^{2}+(m_{h}+m_{t}^{sw}+m_{s}^{sw})L^{2}\]
+
+
+\[
+M_{12}=-(m_{t}^{sw}b_{2}+m_{s}(l_{t}+b_{1}))Lcos(q_{2}-q_{1})\]
+
+
+\[
+C(q,\dot{q})=\left[\begin{array}{cc}
+0 & C_{12}\dot{q}_{2}\\
+-C_{12}\dot{q}_{1} & 0\end{array}\right]
+\]
+
+\[
+C_{12}=(m_{t}^{sw}b_{2}+m_{s}(l_{t}+b_{1}))Lsin(q_{1}-q_{2})
+\]
+
+\[
+N=\left[\begin{array}{c}
+-(m_{s}^{st}a_{1}+m_{t}^{st}(l_{s}+a_{2})+(m_{h}+m_{s}^{sw}+m_{t}^{sw})L)g\mathbf{\mathrm{sin}}(q_{1})\\
+(m_{t}^{sw}b_{2}+m_{s}^{sw}(l_{t}+b_{1}))gsin(q_{2})\end{array}\right]
+\]
+
+\section{Heel Strike Phase}
+
+\[
+Q^{+}\dot{q}^{+}=Q^{-}\dot{q}^{-}\]
+
+
+
+\[
+q^{+}=\left[\begin{array}{cc}
+0 & 1\\
+1 & 0\\
+1 & 0\end{array}\right]q^{-}\]
+
+
+
+
+\[
+\dot{q}_{3}^{+}=\dot{q}_{2}^{+}\]
+
+
+\[
+Q^{-}=\left[\begin{array}{cc}
+Q_{11}^{-} & Q_{22}^{-}\\
+Q_{21}^{-} & 0\end{array}\right]\]
+
+
+\[
+Q_{11}^{-}=Q_{21}^{-}+(m_{h}L+m_{t}^{st}(a_{2}+l_{s})+m_{s}^{st}a_{1}+m_{t}^{sw}(a_{2}+l_{s})+m_{s}a_{1})Lcos(q_{1}-q_{2})\]
+
+
+\[
+Q_{12}^{-}=-m_{s}^{sw}a_{1}(l_{t}+b_{1})-m_{t}^{sw}b_{2}(l_{s}+a_{2})\]
+
+
+\[
+Q_{21}^{-}=-m_{s}^{st}a_{1}(l_{t}+b_{1})-m_{t}^{st}b_{2}(l_{s}+a_{2})\]
+
+
+
+\[
+Q_{11}^{+}=Q_{21}^{+}+(m_{s}^{st}+m_{t}^{st}+m_{h})L^{2}+m_{s}^{sw}a_{1}^{2}+m_{t}^{sw}(a_{2}+l_{s})^{2}\]
+
+
+\[
+Q_{12}^{+}=Q_{21}^{+}+(m_{s}^{st}+m_{t}^{st}+m_{h})L^{2}+m_{s}^{sw}a_{1}^{2}+m_{t}^{sw}(a_{2}+l_{s})^{2}\]
+
+
+\[
+Q_{21}^{+}=-(m_{s}^{st}(b_{1}+l_{t})+m_{t}^{st}b_{2})Lcos(q_{1}-q_{2})\]
+
+
+\[
+Q_{22}^{+}=m_{s}^{st}(l_{t}+b_{1})^{2}+m_{t}^{st}b_{2}^{2}\]
+
+
+
+
+
 
 % ------------------------------------------------------------------------
 

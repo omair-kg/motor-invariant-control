@@ -12,7 +12,7 @@ In this chapter, we will discuss in details about how to adaptive motion primitv
 How motion primitives connected will be discussed in the next chapter.
 
 
-The motion primitives we use is bipdeal walking.
+The motion primitive we use is bipdeal walking.
 bipedal walking is a topic of great application value for both the graphic and robotic engineering.
 Currently, it is special ability robtos can't compete with human.
 
@@ -30,6 +30,17 @@ We generate adaptive and natural looking gait in a computational efficient way.
 
 
 For bipedal walking, the main motion happens in the spagittal plane.
+as shown in figure
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{spahittalPlae}
+    \caption{SpahittaPlane}
+    \label{fig:passivekneewalker}
+\end{center}
+\end{figure}
+
+
+
 Sidesway and row motion are relative small and usually treated as secondary motion or totally neglected.
 In this chapter, we mainly focus on the two dimension motion, which captured most of key characterstics of motion, and maintain the completeness of our theory.
 For motion of more dofs, are discussed in Chapter 8, the effects of more dofs will introduce perturbation to our model, they will not change the basic motion characteris and adaptation tendency.
@@ -38,12 +49,7 @@ Thus we wil delay the discussion of fullbody in later chapter.
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{PWI}
-    \else
       \includegraphics[width=0.7\textwidth]{PWI}
-    \fi
     \caption{A Passive Walking Model with Knee}
     \label{fig:passivekneewalker}
 \end{center}
@@ -514,14 +520,14 @@ Slope Change is incoporate through offset transformation.
 
 %N=N*g.
 \[
-\ulocal=N\mathrm{cos}(\theta)-1)
+\ulocal=N(\mathrm{cos}(\alpha)-1)
 \]
 \HiItem{Speed Change}
 Speed Action will ajust the walking speed, but maintain the walking gait.
 the the new walking speed is $s$.
 we have
 \[  
-\ulocal=N(s^2-1)
+\ulocal=N(\alpha^2-1)
 \]
 \end{itemize}
 

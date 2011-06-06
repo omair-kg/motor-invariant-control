@@ -1,7 +1,7 @@
 \select@language {english}
 \contentsline {chapter}{Contents}{iii}{section*.2}
-\contentsline {chapter}{List of Figures}{vi}{section*.4}
-\contentsline {chapter}{Nomenclature}{x}{chapter*.5}
+\contentsline {chapter}{List of Figures}{vii}{section*.4}
+\contentsline {chapter}{Nomenclature}{xii}{chapter*.5}
 \contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Rethink about Motor Control}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}A Different Motor Control Idea}{3}{section.1.2}
@@ -50,32 +50,36 @@
 \contentsline {section}{\numberline {6.1}Motion Primitives}{67}{section.6.1}
 \contentsline {section}{\numberline {6.2}Global Motor Control And Adaptive Gaits}{71}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Entrainment}{71}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}System Gait Adaptation}{71}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Transform Gait Adaptation}{80}{section.6.3}
+\contentsline {subsection}{\numberline {6.2.2}System Gait Adaptation}{74}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Transform Gait Adaptation}{81}{section.6.3}
 \contentsline {chapter}{\numberline {7}MOTION PRIMITIVE TRANSITION:WALK AND STANCE}{86}{chapter.7}
 \contentsline {section}{\numberline {7.1}Motion Primitives}{86}{section.7.1}
 \contentsline {section}{\numberline {7.2}Stance Control}{89}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}Entraintment}{89}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}Local Invariant Control}{90}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Walking and Stance Transition}{91}{section.7.3}
+\contentsline {section}{\numberline {7.3}Walking and Stance Transition}{93}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Walk to Stance}{93}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Stance to Walk}{94}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Speed Action Connection}{96}{subsection.7.3.3}
-\contentsline {chapter}{\numberline {8}TOWARDS HIGH DIMENSION}{97}{chapter.8}
-\contentsline {section}{\numberline {8.1}Introduction}{97}{section.8.1}
-\contentsline {section}{\numberline {8.2}neglectable}{98}{section.8.2}
-\contentsline {section}{\numberline {8.3}Symmetry Reduction}{99}{section.8.3}
-\contentsline {section}{\numberline {8.4}Coupled Network}{99}{section.8.4}
-\contentsline {section}{\numberline {8.5}Boid and Adhoc}{100}{section.8.5}
-\contentsline {section}{\numberline {8.6}From Low Dimention To High Dimension}{101}{section.8.6}
-\contentsline {chapter}{\numberline {9}Conclusion And Future Work}{102}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusion}{102}{section.9.1}
-\contentsline {section}{\numberline {9.2}Futher Work}{102}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Local Frame Based Method}{102}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Integrable System}{103}{subsection.9.2.2}
-\contentsline {subsection}{\numberline {9.2.3}Symmetry of PDE}{103}{subsection.9.2.3}
-\contentsline {subsection}{\numberline {9.2.4}System Transform and Muscle Actuation}{103}{subsection.9.2.4}
-\contentsline {subsection}{\numberline {9.2.5}Perception Dynamics}{104}{subsection.9.2.5}
-\contentsline {subsection}{\numberline {9.2.6}Rethink abouth the uncanny valley}{105}{subsection.9.2.6}
-\contentsline {chapter}{Appdx A}{106}{appendix*.39}
-\contentsline {chapter}{References}{107}{section*.41}
+\contentsline {subsection}{\numberline {7.3.2}Stance to Walk}{96}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Speed Action Connection}{97}{subsection.7.3.3}
+\contentsline {chapter}{\numberline {8}TOWARDS HIGH DIMENSION}{98}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction}{98}{section.8.1}
+\contentsline {section}{\numberline {8.2}neglectable}{99}{section.8.2}
+\contentsline {section}{\numberline {8.3}Symmetry Reduction}{102}{section.8.3}
+\contentsline {section}{\numberline {8.4}Coupled Network}{104}{section.8.4}
+\contentsline {section}{\numberline {8.5}Boid and Adhoc}{106}{section.8.5}
+\contentsline {section}{\numberline {8.6}From Low Dimention To High Dimension}{108}{section.8.6}
+\contentsline {chapter}{\numberline {9}Conclusion And Future Work}{109}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusion}{109}{section.9.1}
+\contentsline {section}{\numberline {9.2}Futher Work}{109}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Local Frame Based Method}{109}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Integrable System}{110}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Symmetry of PDE}{110}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}System Transform and Muscle Actuation}{110}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}Perception Dynamics}{111}{subsection.9.2.5}
+\contentsline {subsection}{\numberline {9.2.6}Rethink abouth the uncanny valley}{112}{subsection.9.2.6}
+\contentsline {chapter}{Appdx A:Dynamic Equation for Passive Walking}{114}{appendix*.39}
+\contentsline {section}{\numberline {.1}Knee Free Phase}{114}{section..1}
+\contentsline {section}{\numberline {.2}Knee Strike}{115}{section..2}
+\contentsline {section}{\numberline {.3}Knee Lock Phase}{116}{section..3}
+\contentsline {section}{\numberline {.4}Heel Strike Phase}{117}{section..4}
+\contentsline {chapter}{References}{119}{section*.41}

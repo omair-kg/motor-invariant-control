@@ -47,40 +47,41 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Offset Transiton}}{63}{figure.5.8}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Comined Method}}{64}{figure.5.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A Passive Walking Model with Knee}}{68}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{69}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces The four phases in Walking}}{69}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Place Holder}}{72}{figure.6.4}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces SpahittaPlane}}{67}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces A Passive Walking Model with Knee}}{68}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{69}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces The four phases in Walking}}{70}{figure.6.4}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Place Holder}}{72}{figure.6.5}
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Place Holder}}{72}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Without Neural Oscilator On Plain}}{73}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces With Neural Oscilator on Plain}}{73}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{73}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{74}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Place Holder}}{75}{figure.6.11}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Place Holder}}{72}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Without Neural Oscilator On Plain}}{73}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces With Neural Oscilator on Plain}}{73}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Limit Circle And Different Phase in Passive Walking}}{73}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{74}{figure.6.11}
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Place Holder}}{75}{figure.6.12}
 \contentsline {figure}{\numberline {6.13}{\ignorespaces Place Holder}}{75}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{76}{figure.6.14}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Place Holder1}}{76}{figure.6.15}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Place Holder2}}{77}{figure.6.16}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Place Holder3}}{77}{figure.6.17}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces different step size walking}}{77}{figure.6.18}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Place Holder1}}{78}{figure.6.19}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Place Holder2}}{78}{figure.6.20}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Place Holder3}}{78}{figure.6.21}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Different Leg Mass Stable Gaits}}{79}{figure.6.22}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Place Holder1}}{79}{figure.6.23}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Place Holder2}}{80}{figure.6.24}
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Place Holder3}}{80}{figure.6.25}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Place Holder}}{80}{figure.6.26}
-\contentsline {figure}{\numberline {6.27}{\ignorespaces Different Leg Mass Stable Gaits}}{81}{figure.6.27}
-\contentsline {figure}{\numberline {6.28}{\ignorespaces Varying Terrain}}{82}{figure.6.28}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Place Holder}}{75}{figure.6.14}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Different Gait Resulting From the Different Mass Ratio}}{76}{figure.6.15}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Place Holder1}}{77}{figure.6.16}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Place Holder2}}{77}{figure.6.17}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Place Holder3}}{77}{figure.6.18}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces different step size walking}}{78}{figure.6.19}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Place Holder1}}{78}{figure.6.20}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Place Holder2}}{78}{figure.6.21}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Place Holder3}}{79}{figure.6.22}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Different Leg Mass Stable Gaits}}{79}{figure.6.23}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Place Holder1}}{80}{figure.6.24}
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Place Holder2}}{80}{figure.6.25}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Place Holder3}}{80}{figure.6.26}
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Place Holder}}{81}{figure.6.27}
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Different Leg Mass Stable Gaits}}{82}{figure.6.28}
 \contentsline {figure}{\numberline {6.29}{\ignorespaces Varying Terrain}}{82}{figure.6.29}
 \contentsline {figure}{\numberline {6.30}{\ignorespaces Varying Terrain}}{83}{figure.6.30}
-\contentsline {figure}{\numberline {6.31}{\ignorespaces Varying Terrain}}{84}{figure.6.31}
-\contentsline {figure}{\numberline {6.32}{\ignorespaces Place Holder1}}{84}{figure.6.32}
-\contentsline {figure}{\numberline {6.33}{\ignorespaces Place Holder2}}{84}{figure.6.33}
-\contentsline {figure}{\numberline {6.34}{\ignorespaces Place Holder3}}{85}{figure.6.34}
+\contentsline {figure}{\numberline {6.31}{\ignorespaces Varying Terrain}}{83}{figure.6.31}
+\contentsline {figure}{\numberline {6.32}{\ignorespaces Varying Terrain}}{84}{figure.6.32}
+\contentsline {figure}{\numberline {6.33}{\ignorespaces Place Holder1}}{85}{figure.6.33}
+\contentsline {figure}{\numberline {6.34}{\ignorespaces Place Holder2}}{85}{figure.6.34}
+\contentsline {figure}{\numberline {6.35}{\ignorespaces Place Holder3}}{85}{figure.6.35}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces The Stance Motion Primitives}}{87}{figure.7.1}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces The Stance Motion Posture}}{87}{figure.7.2}
@@ -89,11 +90,22 @@
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Place Holder}}{90}{figure.7.5}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Energy Scaling}}{91}{figure.7.6}
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Fast Converge}}{92}{figure.7.7}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Fast Converge}}{92}{figure.7.8}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Walk to Balance}}{93}{figure.7.9}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Place Holder}}{94}{figure.7.10}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Place Holder}}{94}{figure.7.11}
-\contentsline {figure}{\numberline {7.12}{\ignorespaces The Place Holder}}{95}{figure.7.12}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Place Holder1}}{92}{figure.7.8}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Place Holder1}}{92}{figure.7.9}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Fast Converge}}{93}{figure.7.10}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Walk to Balance}}{94}{figure.7.11}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Place Holder}}{95}{figure.7.12}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Place Holder}}{95}{figure.7.13}
+\contentsline {figure}{\numberline {7.14}{\ignorespaces The Place Holder}}{96}{figure.7.14}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Rimless Wheel}}{100}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Compass Gait}}{100}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Compass Gait}}{101}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Approximate with Torus with a Circle}}{102}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Sideway}}{103}{figure.8.5}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces brances mechanical structure}}{105}{figure.8.6}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces CPG for Fish}}{107}{figure.8.7}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Swimming Motion by our method}}{107}{figure.8.8}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Uncanny Valley}}{113}{figure.9.1}
 \addvspace {10\p@ }
