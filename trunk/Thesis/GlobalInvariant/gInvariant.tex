@@ -1,4 +1,4 @@
-\chapter{GLOBAL MOTOR INVARIANT}
+﻿\chapter{GLOBAL MOTOR INVARIANT}
 \label{chap:gi}
 \section{Introduction}
 
@@ -7,24 +7,24 @@
 \nomenclature[a3]{$\state$}{State Variable}
 \nomenclature[a4]{$u$}{Control Input}
 
-\nomenclature[b1]{$Q$}{Configureation Space or Configuration Manifold}
-\nomenclature[b2]{$TQ$}{Tangenet Bundle of $Q$}
+\nomenclature[b1]{$Q$}{Configuration Space or Configuration Manifold}
+\nomenclature[b2]{$TQ$}{Tangent Bundle of $Q$}
 \nomenclature[b3]{$M$}{State Space Manifold}
-\nomenclature[b4]{$TM$}{Tangent Boundle Manifold}
+\nomenclature[b4]{$TM$}{Tangent Bundle Manifold}
 
 
 
 \nomenclature[c1]{$A$}{Attractor}
-\nomenclature[c2]{$B(A)$}{Basin of Attration of $A$}
+\nomenclature[c2]{$B(A)$}{Basin of Attraction of $A$}
 \nomenclature[c3]{$\simeq$}{Topology Conjungacy}
 
 
 
-\nomenclature[d1]{$S$}{Neural Oscilator}
-\nomenclature[d2]{$\uin$}{Input Signal to the Neural Oscilator}
-\nomenclature[d3]{$\uout$}{Output of the Neural Oscilator}
-\nomenclature[d4]{$\hin$}{Input Coefficient of the Neural Oscilator}
-\nomenclature[d5]{$\hout$}{Output Coefficent of the Neural Oscilator}
+\nomenclature[d1]{$S$}{Neural Oscillator}
+\nomenclature[d2]{$\uin$}{Input Signal to the Neural Oscillator}
+\nomenclature[d3]{$\uout$}{Output of the Neural Oscillator}
+\nomenclature[d4]{$\hin$}{Input Coefficient of the Neural Oscillator}
+\nomenclature[d5]{$\hout$}{Output Coefficient of the Neural Oscillator}
 
 
 
@@ -59,15 +59,15 @@ The biological ideas can be provide a clear mathematical meaning.
 \section{Basic Concepts of Qualitative Dynamics}
 This section develops the mathematical conceptualization of Global Motor Invariant.
 Some mathematical background is needed in this discussion.
-Throughout this paper, we take the geometrical viewport of mechanical system.
+Throughout this paper, we take the geometrical point of view for mechanical system.
 For analyzing qualitative properties, we introduce the ideas from differential topology.
 This idea can be traced back to Poincare\citep{Poincar'e1899,Poincar'e1885} and recently developed by the Smale School\citep{Smale1970}.
-It is impossible to put the a whole discipline in one chapter.
+It is impossible to put the whole discipline in one chapter.
 Please refer to other books and lectures such as \citep{abraham1978foundations}for introduction in details.
 
 
 Dynamic motions are modelled as differential equations,
-In the geometrical viewport, differential equation describes a differentiable manifold.
+In the geometrical point of view, differential equation describes a differentiable manifold.
 Qualitative Properties can be obtained by analyzing the topological structure of the differentiable manifold.
 Global Motor Invariant is defined by the topology structure.
 
@@ -80,7 +80,7 @@ Global Motor Invariant is defined by the topology structure.
 The dynamic of a mechanical system is determined by its configuration  $q$ and generalized speed $\qd$. 
 we represent the state of a system as a vector $\state=[q,\qd] \in M$,  $M$ is the state space, or state manifold.
 The motion is a trajectory $t \mapsto q(t)$ in the configuration space parameterized by time~$t$.
-For a dynamic system, $q(t)$ usually is derived from the state trajectory $\state(t)$, which is described by differential equaiton. 
+For a dynamic system, $q(t)$ usually is derived from the state trajectory $\state(t)$, which is described by differential equation. 
 
 
 For every point $x \in M$, 
@@ -99,7 +99,7 @@ If $u=0$,  no control effort is applied.
 Such systems are \textbf{autonomous systems}. 
 
 By solving the \textbf{intergral curve}to equation~\ref{eq:ode}, 
-\textbf{flow} $\Phi(\state)$ of $\mathbf{V}$ is the \textbf{intergral curve} through $\state$. 
+\textbf{flow} $\Phi(\state)$ of $\mathbf{V}$ is the \textbf{integral curve} through $\state$. 
 all the flows form the \textbf{phase portrait}, which illustrates all the possible motions of the dynamic system.
 We usually visualize the differential manifold by \textbf{phase plot}.
 
@@ -162,8 +162,8 @@ this can be seen as the dimension of $W_{s}$($W_{u}$) is $0$.
 
 
 
-In theory, only observe the attractor of the dynamic system can be observed, motion task should be only rely on the attractor.
-Two types of attrator are of great interest in motor control:(1) fixed point, as show inf Figure~\ref{fig:StablePosture},(2)Limit Cycle,as shown in Figure ~\ref{fig:limit_circle}
+In theory, only observe the attractor of the dynamic system can be observed, motion task should only rely on the attractor.
+Two types of attractors are of great interest in motor control:(1) fixed point, as show inf Figure~\ref{fig:StablePosture},(2)Limit Cycle,as shown in Figure ~\ref{fig:limit_circle}
 
 \begin{figure}
 \begin{center}
@@ -187,7 +187,7 @@ as shown in figure~\ref{fig:manyboa}
 \begin{center}
 \includegraphics[height=0.4\textheight]{basinOfAttraction}
 \end{center}
-\caption{Celluar Structure of Phase Space}
+\caption{Cellular Structure of Phase Space}
 \label{fig:manyboa}
 \end{figure}
 
@@ -198,7 +198,7 @@ For EPH, the equilibrium point is the attractor.
 For Impendence Control, impedance control is control the shape of basin of attraction.
 
 \subsection{Analogous System And Topology Conjugacy}
-many dynamic system are have different dynamic equation, but they share the same topology.
+many dynamic systems have different dynamic equation, but they share the same topology.
 an example is the mass-spring system and the duffine system, described by equation ~\ref{eq:fuffin}
 \begin{equation}
 \label{eq:duffin}
@@ -223,8 +223,8 @@ and the phase plot of the two system are show in figure~\ref{fig:msphaseplot},\r
 \end{figure}
 
 
-one phase plot, the two system are similar, and we cand '' deform '' one into another.
-in mathematical term, there is an equilalence relationship  for the two system. the \textbf{topological conjugacy}.
+one phase plot, the two systems are similar, and we can '' deform '' one into another.
+in mathematical term, there is an equivalence relationship  for the two systems. the \textbf{topological conjugacy}.
 
 Let $X$ and $Y$ be topological spaces, and let $f\colon X\to X$ and $g\colon Y\to Y$
 be continuous functions. We say that $f$ is
@@ -245,7 +245,7 @@ if two system are topological conjugate, they are analogous systems
 Global Motor Primitive is defined by the attractor type and its basin of attraction in the topology space.
 
 
-Motion adaptation because of different reasons and in different situations.
+Motions adapt because of different reasons and in different situations.
 Such two kinds of perturbation are treated separately and result in differentiation strategy or control.
 
 \begin{itemize}
@@ -284,7 +284,7 @@ as show in figure~\ref{fig:dampmass}
 \begin{center}
 \includegraphics[height=0.4\textheight]{spring_damping}
 \end{center}
-\caption{damping perturbation onmass spring system}
+\caption{damping perturbation on mass spring system}
 \label{fig:dampmass}
 \end{figure}
 
@@ -302,20 +302,20 @@ can’t respond quickly enough, the better solution is to select a more structur
 
 Structural Stability and Qualitative Idea provides a better explanation for some motion phenomena than quantitative theory like optimization and feedback shooting.
 Qualitative Control Theory may help us understand the evolution of locomotion and neural Control.
-Animals shift from the sea to the land. From quantitative computing viewport, the natural dynamics of the body and fluid environment are hard to predict or compute precisely. From the qualitative viewport, fluid is continuous
+Animals shift from the sea to the land. From quantitative computing point of view, the natural dynamics of the body and fluid environment are hard to predict or compute precisely. From the qualitative viewpor point of view, fluid is continuous
 and uniform, the topology structure is very simple and stable, thus with little neural control fish can maintain its posture. On the other side, for human walking, although the rigid like
 Environment can be calculated precisely, the topology structure is much more complex. 
-Onthe phase plane, there exist many equilibrium points, the topology structure is more complex and unstable. 
+On the phase plane, there exist many equilibrium points, the topology structure is more complex and unstable. 
 The control system has to be more complex to control the more complex qualitative properties.
 
 Qualitative theory can also help to explain another fact of biological motion system. 
 Animals that live in similar environment and moves in a similar manner usually have similar body structure, in spite of their different position on evolution chain. 
-This is because animals moving in a similar is based on the same motion primitive, similarity in body structure promise the topologial conjugacy.
+This is because animals moving in a similar manner base on the same motion primitive, similarity in body structure promise the topological conjugacy.
 
 This idea may help us to understand the body and environment effect in morphological computation theory. 
 For specific environment, body evolves to provide us with a structural stable dynamic system, thus save lots of control effort for neural control.
 
-We can also know motion primitives are not only defined by the body, it also defined by the environment, for motion in a specific environment, the topology should be fixed, thus the number of motion primitives is quite limited.
+We can also know motion primitives are not only defined by the body, it also defined by the environment, for motion in a specific environment, the topology should be fixed, and thus the number of motion primitives is quite limited.
 
 
 \section{Global Motor Invariant Control}
@@ -324,8 +324,8 @@ In nature, an animal's body and environment can be extremely complex.
 It leads to high dimensional manifolds with complicated topological structure, which provides many motion primitives for our use.
 For CMS application, one question we want to ask is the so many motion primitives can be controlled with a simple method.
 
-We propose that even there are many type of motion primitives, the type of attractor is limited. Basically there are only two types of attrator, limit circle and fix point.
-Even the dimension of dynamic system maybe large, the dimension of the attrator is known. 
+We propose that even there are many type of motion primitives, the type of attractor is limited. Basically there are only two types of attractors, limit circle and fix point.
+Even the dimension of dynamic system maybe large, the dimension of the attractors is known. 
 For fix point, its attractor is of dimension zero.
 For limit circle, it is of dimension one.
 Thus we can only focus on the type of attractor.
@@ -379,7 +379,7 @@ y_{o}&=&=[s_{1}]^{+}-[s_{2}]^{+}=y_{1}-y{2}
 \end{eqnarray}
 
 $c$,$\beta$,$\gamma$ are parameters of the oscillator,in our research are kept constant.
-$\tau$ constrolls the oscilation frequency.
+$\tau$ controls the oscillation frequency.
 
 
 
@@ -409,8 +409,8 @@ where the oscillation of Matuoka oscillator synchronise with the input signal.
 \label{fig:entraint-oscilation}
 \end{figure}
 
-But because of the nonlinear properties, its behavior is not completely understood. 
-Matsuta\citep{Matsuoka1987} explains the adaptive properties from the location of the roots of  characteristic equation. 
+But because of the nonlinear properties, its behaviour is not completely understood. 
+Matsuta\citep{Matsuoka1987} explains the adaptive properties from the location of the roots of characteristic equation. 
 Wilimas\citep{Williamson1998} explains the properties in frequency domain.
 
 
@@ -464,7 +464,7 @@ Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
  
 The large area of basin of attraction means the final behaviour is totally determined by parameters. 
 Initial condition will have no effects on the oscillator final output. 
-Thus we treat matsuta oscilator as in a simple one input, one out put system, controlled by three parameter and input signal. 
+Thus we treat matsuta oscillator as in a simple one input, one out put system, controlled by three parameter and input signal. 
 we usually reformed equation ~\ref{eq:matsuta} in the simplified form
 \begin{equation}
 \label{eq:simplematsuta}
@@ -482,13 +482,13 @@ When an impulse perturbation happens, it will recover in one period time.
 
 \section{Example:Maintain Bouncing Height}
 
-Bouncing ball is system ball bouncing by moving a pedal, a system with simple dynamic but difficult to control with optimizaiton or pd. 
-While this example capture the complexity of human interatction with the environment and object. 
+Bouncing ball is system ball bouncing by moving a pedal, a system with simple dynamic but difficult to control with optimization or Pd. 
+While this example capture the complexity of human interaction with the environment and object. 
 And can be the basic model for many motion tasks.
 
 We show in this example how neural oscillator can turn the bouncing ball system into motion primitive.
 \subsection*{Dynamics}
-Hybrid dynamics, in incoperate two phase, 
+Hybrid dynamics, in incorporate two phase, 
  
 
 \begin{align}
@@ -521,8 +521,8 @@ Basically, the ball will continue bouncing with smaller height,as show in Figure
 \subsection*{Emergence of Limit Cycle}
 couple with neural oscillator boucing we get an limit circle
 The input of neural oscillator is the velocity $\uin=\dot{q}_{ball}$, the output of neural oscillator  drive the pedal position $q_{pedal}=\uout$.
-An limit circle emerge as the result of entrainment.
-As show in figure drop from different position, all the ball will bouncing a about the same height of 5,as show in Figure~\ref{fig:bb_attractive_circle}
+A limit cycle emerges as the result of entrainment.
+As show in figure drop from different position, all the ball will bouncing  about the same height of 5,as show in Figure~\ref{fig:bb_attractive_circle}
 
 \begin{figure}[h]
 \begin{center}
@@ -541,3 +541,4 @@ As show in figure drop from different position, all the ball will bouncing a abo
 \caption{Attractive Limited Circle}
 \label{fig:bb_attractive_circle}
 \end{figure}
+
