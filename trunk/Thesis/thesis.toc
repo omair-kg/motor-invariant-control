@@ -65,21 +65,21 @@
 \contentsline {section}{\numberline {8.1}Introduction}{98}{section.8.1}
 \contentsline {section}{\numberline {8.2}neglectable}{99}{section.8.2}
 \contentsline {section}{\numberline {8.3}Symmetry Reduction}{102}{section.8.3}
-\contentsline {section}{\numberline {8.4}Coupled Network}{104}{section.8.4}
-\contentsline {section}{\numberline {8.5}Boid and Adhoc}{106}{section.8.5}
-\contentsline {section}{\numberline {8.6}From Low Dimention To High Dimension}{108}{section.8.6}
-\contentsline {chapter}{\numberline {9}Conclusion And Future Work}{109}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusion}{109}{section.9.1}
-\contentsline {section}{\numberline {9.2}Futher Work}{109}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Local Frame Based Method}{109}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Integrable System}{110}{subsection.9.2.2}
-\contentsline {subsection}{\numberline {9.2.3}Symmetry of PDE}{110}{subsection.9.2.3}
-\contentsline {subsection}{\numberline {9.2.4}System Transform and Muscle Actuation}{110}{subsection.9.2.4}
-\contentsline {subsection}{\numberline {9.2.5}Perception Dynamics}{111}{subsection.9.2.5}
-\contentsline {subsection}{\numberline {9.2.6}Rethink abouth the uncanny valley}{112}{subsection.9.2.6}
-\contentsline {chapter}{Appdx A:Dynamic Equation for Passive Walking}{114}{appendix*.39}
-\contentsline {section}{\numberline {.1}Knee Free Phase}{114}{section..1}
-\contentsline {section}{\numberline {.2}Knee Strike}{115}{section..2}
-\contentsline {section}{\numberline {.3}Knee Lock Phase}{116}{section..3}
-\contentsline {section}{\numberline {.4}Heel Strike Phase}{117}{section..4}
-\contentsline {chapter}{References}{119}{section*.41}
+\contentsline {section}{\numberline {8.4}Mechanical Coupling}{104}{section.8.4}
+\contentsline {section}{\numberline {8.5}Boid and Adhoc}{109}{section.8.5}
+\contentsline {section}{\numberline {8.6}From Low Dimention To High Dimension}{110}{section.8.6}
+\contentsline {chapter}{\numberline {9}CONCLUSION AND FUTHER WORK}{112}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusion}{112}{section.9.1}
+\contentsline {section}{\numberline {9.2}Futher Work}{112}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Local Frame Based Method}{112}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Integrable System}{113}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Symmetry of PDE}{113}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}System Transform and Muscle Actuation}{113}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}Perception Dynamics}{114}{subsection.9.2.5}
+\contentsline {subsection}{\numberline {9.2.6}Rethink abouth the uncanny valley}{115}{subsection.9.2.6}
+\contentsline {chapter}{Appdx A:Dynamic Equation for Passive Walking}{117}{appendix*.39}
+\contentsline {section}{\numberline {.1}Knee Free Phase}{117}{section..1}
+\contentsline {section}{\numberline {.2}Knee Strike}{118}{section..2}
+\contentsline {section}{\numberline {.3}Knee Lock Phase}{119}{section..3}
+\contentsline {section}{\numberline {.4}Heel Strike Phase}{120}{section..4}
+\contentsline {chapter}{References}{122}{section*.41}

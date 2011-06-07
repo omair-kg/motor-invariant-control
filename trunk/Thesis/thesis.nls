@@ -2,40 +2,52 @@
 
  \nomgroup{A}
 
-  \item [{$\hin$}]\begingroup Input Coefficient of the Neural Oscilator\nomeqref {3.0}
-		\nompageref{24}
-  \item [{$\hout$}]\begingroup Output Coefficent of the Neural Oscilator\nomeqref {3.0}
+  \item [{$q$}]\begingroup Generalized Coordinates\nomeqref {3.0}
 		\nompageref{24}
   \item [{$\qd$}]\begingroup Gneralized Velocity\nomeqref {3.0}
 		\nompageref{24}
+  \item [{$\state$}]\begingroup State Variable\nomeqref {3.0}
+		\nompageref{24}
+  \item [{$u$}]\begingroup Control Input\nomeqref {3.0}\nompageref{24}
+
+ \nomgroup{B}
+
+  \item [{$Q$}]\begingroup Configureation Space or Configuration Manifold\nomeqref {3.0}
+		\nompageref{24}
+  \item [{$TQ$}]\begingroup Tangenet Bundle of $Q$\nomeqref {3.0}
+		\nompageref{24}
+  \item [{$M$}]\begingroup State Space Manifold\nomeqref {3.0}
+		\nompageref{24}
+  \item [{$TM$}]\begingroup Tangent Boundle Manifold\nomeqref {3.0}
+		\nompageref{24}
+
+ \nomgroup{C}
+
+  \item [{$A$}]\begingroup Attractor\nomeqref {3.0}\nompageref{24}
+  \item [{$B(A)$}]\begingroup Basin of Attration of $A$\nomeqref {3.0}
+		\nompageref{24}
   \item [{$\simeq$}]\begingroup Topology Conjungacy\nomeqref {3.0}
 		\nompageref{24}
-  \item [{$\state$}]\begingroup State Variable\nomeqref {3.0}
+
+ \nomgroup{D}
+
+  \item [{$S$}]\begingroup Neural Oscilator\nomeqref {3.0}
 		\nompageref{24}
   \item [{$\uin$}]\begingroup Input Signal to the Neural Oscilator\nomeqref {3.0}
 		\nompageref{24}
   \item [{$\uout$}]\begingroup Output of the Neural Oscilator\nomeqref {3.0}
 		\nompageref{24}
-  \item [{$A$}]\begingroup Attractor\nomeqref {3.0}\nompageref{24}
-  \item [{$B(A)$}]\begingroup Basin of Attration of $A$\nomeqref {3.0}
+  \item [{$\hin$}]\begingroup Input Coefficient of the Neural Oscilator\nomeqref {3.0}
 		\nompageref{24}
+  \item [{$\hout$}]\begingroup Output Coefficent of the Neural Oscilator\nomeqref {3.0}
+		\nompageref{24}
+
+ \nomgroup{F}
+
   \item [{$G$}]\begingroup A Lie Group\nomeqref {4.0}\nompageref{42}
   \item [{$g_a$}]\begingroup an elemetn in Lie Group $G$ with parameter $a$\nomeqref {4.0}
 		\nompageref{42}
   \item [{$I(x)$}]\begingroup Invariant Function of $x$\nomeqref {4.0}
 		\nompageref{42}
-  \item [{$M$}]\begingroup State Space Manifold\nomeqref {3.0}
-		\nompageref{24}
-  \item [{$Q$}]\begingroup Configureation Space or Configuration Manifold\nomeqref {3.0}
-		\nompageref{24}
-  \item [{$q$}]\begingroup Generalized Coordinates\nomeqref {3.0}
-		\nompageref{24}
-  \item [{$S$}]\begingroup Neural Oscilator\nomeqref {3.0}
-		\nompageref{24}
-  \item [{$TM$}]\begingroup Tangent Boundle Manifold\nomeqref {3.0}
-		\nompageref{24}
-  \item [{$TQ$}]\begingroup Tangenet Bundle of $Q$\nomeqref {3.0}
-		\nompageref{24}
-  \item [{$u$}]\begingroup Control Input\nomeqref {3.0}\nompageref{24}
 
 \end{thenomenclature}
