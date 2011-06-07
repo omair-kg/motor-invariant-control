@@ -1,4 +1,4 @@
-%%% Thesis Introduction --------------------------------------------------
+﻿%%% Thesis Introduction --------------------------------------------------
 \chapter{INTRODUCTION}
 \label{chap:intro}
 \ifpdf
@@ -82,11 +82,11 @@ When design a motion synthesis framework, the key is the several decision making
 \HiItem {Memory or Computation}
 The first question is how we achieve our motor ability. Some argue that it depends on our motion memory. Given the uncountable variations of motion, it seems impossible for us to remember possible motion. Some argues motion is based on computation or our reasoning power; it will put heavy burden on our neural system and we need think hard to walk.
 	
-\HiItem{ Feedback or Feedforward}
+\HiItem{ Feedback or Feed forward}
 The second is which control strategy plays more important role in motor control, feedback or feed forward. Artificial control theory is feedback based, if so, human must have a power sensing system which is accurate and fast, and move in a “careful and nervous manner”. 
 A different control idea is feed forward based control, if we can predict something, we can take some measures to prevent motion failure, and we can extend our arms when walking or change the shoes if tomorrow will snow.
 \note{analogous system}
-Feedforward will make the task “easier”, it free human of the sensing requirement in accuracy and speed, which our human are not good, it depends on the prediction and experience, which our human beings are fond of since the old day.
+Feed forward will make the task “easier”, it free human of the sensing requirement in accuracy and speed, which our human are not good, it depends on the prediction and experience, which our human beings are fond of since the old day.
 	
 \HiItem{Disadvantage or Advantage}
 Maybe the most important problem is our attitude of the body structure. The body structure is the product of natural selection in millions of years. A complex system is not necessarily difficult to use. Seen in this way, the body structure should be a heritage rather than a burden.  We prefer to think the body structure as an over powerful tool beyond our current comprehension. 
@@ -107,7 +107,7 @@ When we modify the motion primitives, some valuable properties of motion primiti
 
 The inspiration of our idea comes from related biological research, which covers biomechanics and neural science.
 
-\section{llustrate principle ideas through simple examples}
+\section{Simple Examples}
 
 Although some obscure knowledge is needed to for the mathematical model, the principle is illustrative through some daily example. 
 Here provides two examples about our idea of the “easy” motion and how can we “tweak” them.
@@ -154,7 +154,7 @@ if $T_{F}=0$, external control force is applied, the system is an \textbf{autono
 
 
 \subsubsection*{Equilibrium Posture}
-Ship will only rest at postures when external torques are zero.
+Ship will only rest at postures when external torqueses are zero.
 There are only two postures that the external torque is zero as show in Figure ~\ref{fig:ShipEqulibrium}
 \begin{figure}[!htbp]
   \begin{center}
@@ -219,14 +219,14 @@ We find out that all the curves will move away from the repelling posture to the
     \else
       \includegraphics[width=0.7\textwidth]{ShipGlobalFlow}
     \fi
-    \caption{Several Possible Moiton of Ship}
+    \caption{Several Possible Motion of Ship}
     \label{fig:globalflow}
   \end{center}
 \end{figure}
 
 Thus we come to the conclusion, the ship can automatically control maintain its left equilibrium posture. 
 Ship can keep its upside up as long as the centre of buoyancy force is above the centre of gravity.
-Maintaining posture of the ship is very”easy”.
+Maintaining posture of the ship is very ”easy”.
 
 
 \subsubsection*{Different Ships} 
@@ -356,7 +356,7 @@ And the transformation from one motion to another motion is called \textbf{trans
 \section{Overview of the Thesis}
 Global Motor Invariant contains the qualitative properties while Local Motor Invariant contains quantitative properties. 
 For our motion synthesis method, the design idea is to keep the both motor invariants. 
-Motion Adaptation is achieved through System Adaption(change system parameters) and Transform Adaptation.
+Motion Adaptation is achieved through System adaptation(change system parameters) and Transform Adaptation.
 In application, this method easy to compute and result realistic motion adaptation.
 
 
@@ -403,3 +403,4 @@ In Chapter 9, we will discuss about some future work. After a retrospective disc
 %%% mode: latex
 %%% TeX-master: "../thesis"
 %%% End: 
+
