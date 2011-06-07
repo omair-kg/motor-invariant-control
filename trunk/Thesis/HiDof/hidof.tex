@@ -9,17 +9,17 @@
 \subsection*{Passivity}
 High DOF is key challenging in motion synthesis.
 In our research, we partly solved the problem.
-For our walking model, when it walk down the slop, all the dof is uncontrolled.
+For our walking model, when it walks down the slop, all the dof is uncontrolled.
 how many dof the walker have doesn't matter.
-Even controlled with neural oscilator, only one dof is controlled, 
-Even when transformation controller is added, all the dof are controlled, but the matter will not result in underminiestic problem.
-For our model, even the dof is not os huge, we have solved extra dof problem completely.
+Even controlled with neural oscillator, only one dof is controlled, 
+Even when transformation controller is added, all the dof are controlled, but the matter will not result in nondeterministic problem.
+For our model, even the dof is not so huge, we have solved extra dof problem completely.
 
 the question arise for model of high degree system, the question is whether the method we developed is applicable for large dof characters.
 
 
 for our walking and stance example, the question is how the torso should be added, the foot, the side sway and yaw motion, and for system like fish and snake and worm,
-they have infinate number dof 
+they have infinite number dof 
 
 our idea is for different model, 
 we should take different measures, 
@@ -28,18 +28,18 @@ we should take different measures,
 \HiItem{Neglectable}
 for some dof can be neglected for they will have little effects on the qualitative property, 
 we can simulate them a different mechanical model, our motion control method don't have to be changed.
-because the qualtative property and symmetry is kept.
+because the qualitative property and symmetry is kept.
 \HiItem{Symmetry Reduction}
-For some DOF,like rotation or pos, the extra dof will have not effects on the dof or the effects can be transformed the dynamic system into transformed version of the orignial system,such Dofs can be reduced.
+For some DOF,like rotation or pos, the extra dof will have not effects on the dof or the effects can be transformed the dynamic system into transformed version of the original system, such Dofs can be reduced.
 \HiItem{Mechanical Coupling}
-For some high dof system, we can treat them like a coupled mechanical oscillaor, the can only focus on one oscilator.
+For some high dof system, we can treat them like a coupled mechanical oscillator, the can only focus on one oscillator.
 \HiItem{mimic}
 all the three method above are based the effects of dof are not equal, for system that all the dofs are the some, such method will not work.
-For dof with similar effects, we can propose a different method, the system is divided into several equal component,we only caculate one component, other mimic the strategy of one.
+For dof with similar effects, we can propose a different method, the system is divided into several equal component, we only calculate one component, other mimic the strategy of one.
 \end{itemize} 
 
 \section{neglectable}
-Although bioliogical mechanical structure is of high degree of freedom, many dof will not have effects on the topology or symmetrical properties.
+Although biological mechanical structure is of high degree of freedom, many dof will not have effects on the topology or symmetrical properties.
 For the walking example,marcke raiber\citet{Raibert1986} point out walking is the same as a ball rolling down a slope while running is ball bounding down a slope.
 
 
@@ -79,7 +79,7 @@ we can have system from low dof to high dof as the following picture.
 \end{figure}
 
 
-compare with our knee walker, all the four models are different but they share the same topology structure and the following three the limit circle shape are very similar.
+compare with our knee walker, all the four models are different but they share the same topology structure and the following three the limit circle shape is very similar.
 Thus we can say, the include or knee will not affect the qualitative properties.
 
 
@@ -88,11 +88,11 @@ And all the four system, can apply the same kind of symmetry group.
 
 This idea may be understand through the perturbation or averaging theory.
 
-In therory all the manifolds share the shape of torus.
+In theory all the manifolds share the shape of torus.
 
 if the motion is relatively small,
 
-the dynamics can be approximate as a low dimentional cycle.
+the dynamics can be approximate as a low dimensional cycle.
 
 as show in Figure.
 
@@ -105,14 +105,14 @@ as show in Figure.
 \end{figure}
 
 
-Folowing this idea, although not implemeted in this research, more dofs like foot may also possible.
-But that's just an extra level of complexity, without modifying the prinicples. 
+Following this idea, although not implemented in this research, more dofs like foot may also possible.
+But that's just an extra level of complexity, without modifying the principles. 
 \section{Symmetry Reduction}
-Some dof will result in a different motion, but such kind of motion will have not qulatitavie effects.
+Some dof will result in a different motion, but such kind of motion will have not qualitative effects.
 An example is the side sway motion.
 
-the side and front plane is how in picuture.
-The side sway effects can be seen can be decoupled for spaghettal function.
+the side and front plane is show in picture.
+The side sway effects can be seen can be decoupled for spaghetti function.
 
 
 For different rotation, will not affect the dynamics on the sphatetal plane.
@@ -132,7 +132,7 @@ which is the same as speed action.
 
 
 we can project the sideway effects on the sphettal plane. the force is $N'=cos(\alpha)N$
-this will the same as appling Speedacition.
+this will the same as applying speed action.
 With lie group operator such dof can be totally ignored.
 
 
@@ -142,7 +142,7 @@ the limit circle becomes more a bit noisy, but qualitative properties are mainta
 \section{Mechanical Coupling}
 Some mechanical system can be treated as connecting many different simple components together.
 the different parts of motion formed mechanical entrainment.
-if a mechaical system is model like
+if a mechanical system is model like
 \[
 \dot{\state}=F(\state)
 \]
@@ -160,10 +160,10 @@ and  the original dynamic equation can be formulated as
 \end{align}
 
 if $C_{1,2} \ll F_{1,2}$, then the dynamic will be dominated by $F_{1,2}$ and $C_{1,2}$ can be treated as perturbation.
-\subsection*{Branches Mecahnical Structure}
+\subsection*{Branches Mechanical Structure}
 In fact any mechanical system can be treated in this way,
 a proper method should separate different components when the coupling is weak.
-the weak couple joint can be found through the mechnaical strucutre.
+the weak couple joint can be found through the mechanical structure.
 
 when have mechanical structure in figure
 \begin{figure}[!htbp]
@@ -174,7 +174,7 @@ when have mechanical structure in figure
 \end{center}
 \end{figure}
 
-orignal dynamic system shoud be of 5 DOF and develop the full dynamci system should be of 5 by 5 matrix.
+original dynamic system should be of 5 DOF and develop the full dynamic system should be of 5 by 5 matrix.
 in the following form
 
 
@@ -227,7 +227,7 @@ C=\left[\begin{array}{ccccc}
 
 
 while for the braches structure in Figure \ref{fig:branches structure}.
-there the efficient between different brances will be zero.
+there the efficient between different branches will be zero.
 
 where
 \[
@@ -257,7 +257,7 @@ C=\left[\begin{array}{ccccc}
 
 
 They happens when they the mechanical have a branch structure.
-when mechanical have a branch strucutre,
+when mechanical have a branch structure,
 the dynamic equation will be in the following manner.
 where
 \[
@@ -285,8 +285,8 @@ C=
 c_{33} & c_{c32}\\
 c_{c32} & c_{22}\end{array}\right]
 \]
-based on where the mechanical branches, we can seperate the dynamic equation into two parts,
-and simulate them idependently and form the mechanical entrainment network.
+based on where the mechanical branches, we can separate the dynamic equation into two parts,
+and simulate them independently and form the mechanical entrainment network.
 
 
 \[
@@ -327,7 +327,7 @@ m_{15}\end{array}\right]\ddot{q}_{1}-\left[\begin{array}{c}
 -c_{15}\end{array}\right]\dot{q}_{1}^{2}
 \]
 
-according the mechanical structure, this is equivalent to simulte two part of the mechanical structure independently and perturbation are as coupling effects.
+according the mechanical structure, this is equivalent to simulate two part of the mechanical structure independently and perturbation are as coupling effects.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{multilinkCoupled}
@@ -344,9 +344,9 @@ according the mechanical structure, this is equivalent to simulte two part of th
 
 
 \subsection*{Torsol And Arm}
-using this mechanical coupling method, we can incoroporate the arm and torso motion is our dynamic system.
+using this mechanical coupling method, we can incorporate the arm and torso motion is our dynamic system.
 for the torso, the angle is $q_{tor}$,with mass $m_{tor}$ and the distance from the hip is $l_{tor}$
-then we can add the torso motion to the knee walker,then the walking motion of the lower body becomes
+then we can add the torso motion to the knee walker, then the walking motion of the lower body becomes
 \begin{equation}
 \label{eq:walkcouplewithtorso}
 M\ddot{q}+C\dot{q}+N=u-\left[\begin{array}{c}
@@ -358,8 +358,8 @@ m_{tor}l_{tor}Lsin(q_{1}-q_{tor})\dot{q}_{tor}^{2}\\
 0\end{array}\right]
 \end{equation}
 
-by analayize the equation, if the torsque posture keept still, it will have no effects on the lower body walking.
-In reallife walking, the upper body usually keep straight upward, the coupling input from the upper body is very small.
+by analyzing the equation, if the torque posture kept still, it will have no effects on the lower body walking.
+In real life walking, the upper body usually keep straight upward, the coupling input from the upper body is very small.
 
 
 
@@ -367,16 +367,16 @@ the torso motion is an inverted pendulum plus some perturbation from the lower b
 \[
 m_{tor}l_{tor}^{2}\ddot{q}_{tor}=gm_{tor}l_{tor}sin(q_{tor})-(m_{tor}l_{tor}Lcos(q_{1}-q_{tor})\ddot{q}_{1}-m_{tor}l_{tor}Lsin(q_{1}-q_{tor})\dot{q}_{1}^{2})
 \]
-by analysizing the torso motion equation,torso motion is unstable in nature, there must be some control applied to maintain its posture.
+by analyzing the torso motion equation, torso motion is unstable in nature, there must be some control applied to maintain its posture.
 
 We are not clear what the kind of controller is applied for maintain the torso posture.
-Simple PD controller will works well, but it does not necessary generating believable motion.
-An upper body motion is close related to moton purpose and not determined by natural dynamic properties.
+Simple PD controller will work well, but it does not necessary generating believable motion.
+An upper body motion is close related to motion purpose and not determined by natural dynamic properties.
 
-For application purpose, maybe it is unneccessry to find a controller for upper body motion.
-We can use procesure or other "IK" method to generate upper body motion, and add the dynamic effects to the lower body walking motion.
+For application purpose, maybe it is unnecessary to find a controller for upper body motion.
+We can use procedure or other "IK" method to generate upper body motion, and add the dynamic effects to the lower body walking motion.
 
-The motion of arm can be incoporated by following the same principles, it is just another level of complexity.
+The motion of arm can be incorporated by following the same principles, it is just another level of complexity.
 
 
 \section{Boid and Adhoc}
@@ -390,20 +390,20 @@ such idea have two kinds of application.
 
 
 The first idea is applying this method for the boid system.
-Original boid system are ruled based, but method don't promise stability.
-While we useing group theory for simulation boid system, if all the agent using the same neural oscilator, they will converge to the same limit circle,
-thus garanty the final motion of the group are in an uniform manner, the different in the agent of modeled by lie group symmetry, different symmetry applied to different agent will result in
+Original boid system is ruled based, but method don't promise stability.
+While we using group theory for simulation bold system, if all the agent using the same neural oscillator, they will converge to the same limit circle,
+thus guaranty the final motion of the group are in an uniform manner, the different in the agent of modelled by lie group symmetry, different symmetry applied to different agent will result in
 difference.
 on import symmetry is time offset, which will result in the same motion but of different phases.
 
 
-In the following example, we have 8 ajent,
-the form are controlled by the cPG with the same parameters but of different initiial condition,
+In the following example, we have 8 joint,
+the form are controlled by the CPG with the same parameters but of different initial condition,
 this will result an motion of different phase .
 
 
-we expend this boid example to model the fish swining.
-The fish is made up 8 links, and each dof is controllerd by a neural oscillator.
+we expend this boid example to model the fish swimming.
+The fish is made up 8 links, and each dof is controlled by a neural oscillator.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -424,7 +424,7 @@ The fish is made up 8 links, and each dof is controllerd by a neural oscillator.
 
 
 
-the same symmetry is applied to the 8 neural socilator, then it will modify the system in an unified manner.
+the same symmetry is applied to the 8 neural oscillator, then it will modify the system in an unified manner.
 
 as show in picture
 
@@ -432,16 +432,17 @@ as show in picture
 
 \section{From Low Dimention To High Dimension}
 
-For computer animation, even we can get high dimentional results, maybe it does not meet the animators needs.
-simulation result in motion can be treat as a reference, rather than put into result in deformaiton.
+For computer animation, even we can get high dimensional results, maybe it does not meet the animators needs.
+simulation result in motion can be treat as a reference, rather than put into result in deformation.
 
-we can discribe the motion procecures, and using mechanical simulation a low dof to drive the high dimensional motion.
-in the following exmaple,
+we can describe the motion procedures, and using mechanical simulation a low dof to drive the high dimensional motion.
+in the following example,
 we describe the jumping motion in an procedure method,
 and bouncing ball is used to drive the motion.
 
 
 also we can using the low dimension data as a key word to search motion capture data.
-which will give us more realisti motion results.
+which will give us more realistic motion results.
+
 
 
