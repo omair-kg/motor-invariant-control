@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  6 JUN 2011 15:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.12)  7 JUN 2011 13:59
 entering extended mode
  %&-line parsing enabled.
 **thesis
@@ -757,7 +757,7 @@ e (type eps)
 
 <GlobalInvariant/GlobalInvariantFigs/EPS/basinOfAttraction.eps> [26]
 
-LaTeX Warning: Reference `eq:fuffin' on page 27 undefined on input line 194.
+LaTeX Warning: Reference `eq:fuffin' on page 27 undefined on input line 202.
 
 [27]
 File: GlobalInvariant/GlobalInvariantFigs/EPS/massspring.eps Graphic file (type
@@ -1152,29 +1152,32 @@ File: HiDof/HiDofFigs/EPS/Sidesway.eps Graphic file (type eps)
 <HiDof/HiDofFigs/EPS/Sidesway.eps> [102] [103]
 File: HiDof/HiDofFigs/EPS/multilink.eps Graphic file (type eps)
 
-<HiDof/HiDofFigs/EPS/multilink.eps> [104] [105]
+<HiDof/HiDofFigs/EPS/multilink.eps> [104] [105] [106]
+File: HiDof/HiDofFigs/EPS/multilinkCoupled.eps Graphic file (type eps)
+
+<HiDof/HiDofFigs/EPS/multilinkCoupled.eps> [107] [108] [109]
 File: HiDof/HiDofFigs/EPS/fish_plot.eps Graphic file (type eps)
 
 <HiDof/HiDofFigs/EPS/fish_plot.eps>
 File: HiDof/HiDofFigs/EPS/fish_swimming.eps Graphic file (type eps)
  <HiDof/HiDofFigs/EPS/fish_swimming.eps>
-[106] [107]) [108]
+[110]) [111]
 \openout2 = `Conclusions/conclusions.aux'.
 
  (./Conclusions/conclusions.tex
 Chapter 9.
-[109
+[112
 
 
 
-] [110] [111]
+] [113] [114]
 File: Conclusions/ConclusionsFigs/EPS/Mori_Uncanny_Valley.eps Graphic file (typ
 e eps)
  <Conclusions/ConclusionsFigs/EPS/Mori_Uncanny_Valley.eps>)
-[112] [113]
+[115] [116]
 \openout2 = `Appendix1/appendix1.aux'.
 
- (./Appendix1/appendix1.tex [114
+ (./Appendix1/appendix1.tex [117
 
 
 
@@ -1193,15 +1196,15 @@ t/12 m[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/1
  a[]\OT1/cmr/m/n/12 )[]
  []
 
-[115] [116] [117]) [118] (./thesis.bbl (./thesis.brf)
+[118] [119] [120]) [121] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write7
 \openout7 = `thesis.brf'.
 
- [119
+ [122
 
 
-] [120] [121])
-[122] (./thesis.aux (./todolist.aux) (./Abstract/abstract.aux)
+] [123] [124])
+[125] (./thesis.aux (./todolist.aux) (./Abstract/abstract.aux)
 (./Introduction/introduction.aux) (./Background/background.aux)
 (./GlobalInvariant/gInvariant.aux) (./LocalInvariant/localInvariant.aux)
 (./CombineFramework/cframework.aux) (./BipedWalk/bwalk.aux)
@@ -1215,12 +1218,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7181 strings out of 495062
- 105169 string characters out of 1182644
- 184484 words of memory out of 3000000
- 10033 multiletter control sequences out of 15000+50000
+ 7185 strings out of 495062
+ 105269 string characters out of 1182644
+ 189583 words of memory out of 3000000
+ 10036 multiletter control sequences out of 15000+50000
  11724 words of font info for 43 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  45i,12n,50p,697b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.dvi (135 pages, 463560 bytes).
+Output written on thesis.dvi (138 pages, 478216 bytes).
