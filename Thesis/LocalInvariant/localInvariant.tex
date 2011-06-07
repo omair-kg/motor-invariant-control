@@ -2,7 +2,7 @@
 \label{chap:li}
 
 \nomenclature[f1]{$G$}{A Lie Group}
-\nomenclature[f2]{$g_a$}{an elemetn in Lie Group $G$ with parameter $a$}
+\nomenclature[f2]{$g_a$}{an element in Lie Group $G$ with parameter $a$}
 \nomenclature[f3]{$I(x)$}{Invariant Function of $x$}
 \ifpdf
     \graphicspath{{LocalInvariant/LocalInvariantFigs/PNG/}{LocalInvariant/LocalInvariantFigs/PDF/}{LocalInvariant/LocalInvariantFigs/}}
@@ -24,7 +24,7 @@ The method we propose is based the lie group theory,please refer to book\citep{o
 for more details.
 
 \subsection{Group and Symmetry}
-For the geometrical viewpoint, ''Symmetry''  means when you transform an shape, the transform one and original one are exactly the same.
+For the geometrical viewpoint, ''Symmetry''  means when you transform a shape, the transform one and original one are exactly the same.
 For the square examples, rotation it by 90 degree will make it exactly the same with the original one.
 
 
@@ -54,7 +54,7 @@ the operation).
 \,$g_a*g_h=g_h*g_a=e$. \,(Existence of inverses).
 \end{itemize}
 
-for the shape geoemtry example example $g_1$ is rotate 90 degree clockwise. then $e$ is no rotation.
+for the shape geometry example $g_1$ is rotate 90 degree clockwise. then $e$ is no rotation.
 we also know $g_2=g_1*g_1$ is rotate 90 degree clockwise twice.$g_2$ also preserve the shape.
 
 
@@ -64,7 +64,7 @@ If symmetry is met, we have $I(x)=I(\hat{x})$.
 We can say $I(x)$ is an invariant function of group $G$.
 
 We have to note that not only the one shape unchanged by $G$.
-In fact ,many shape is invariant, 
+In fact ,many shapes is invariant, 
 In fact, we can pick up and two shape and combination is also an invariant shape. 
 and form a space, the invariant space $I(x)$.
 
@@ -88,7 +88,7 @@ and form a space, the invariant space $I(x)$.
 
 \subsection{Lie Group and Symmetry of Dynamic System}
 The rotate group is discrete.
-if the shape is circle, than the rotation is continues, the continues group is Lie Group.
+if the shape is circle, than the rotation is continuous, the continuous group is Lie Group.
 
 Lie Group is continues group originates from study of differential equation.
 For Physically-based animation,
@@ -96,12 +96,12 @@ Motion is usually described by the differential equation (1)
 \begin{equation}
 	\dot{\state}=F(\state)
 \end{equation}
-Lie Group $G$ will perserve the differential equation,for $g_a \in G$ 
+Lie Group $G$ will preserve the differential equation, for $g_a \in G$ 
 \[
 Tg_a(\dot{\hat{\state}})=F(g_a(\state)
 \]
 where $Tg_a$ is the corresponding lift action that transform the velocity $\dot{\state}$.
-for example, if the $g_a$ is translate transformation, velocity will not be translate, then $Tg_a$ is identy.
+for example, if the $g_a$ is translate transformation, velocity will not be translate, then $Tg_a$ is identity.
 
 
 
@@ -177,21 +177,21 @@ $I(\state)$ corresponding to the Conservative Law like energy or angular momentu
 
 \section{Controlled Symmetry}
 For motion synthesis, usually the desired motion is ma
-For example for motio stability, we want the current state is within the basin of attraction.
+For example for motion stability, we want the current state is within the basin of attraction.
 If we want to control the final motion style, we want the state is on the limit cycle.
 
-For motion sysnthesis, the problem is given the system, let the original system have the desired symmetry.
+For motion synthesis, the problem is given the system, let the original system have the desired symmetry.
 
- and original motion m is  known, but the corresponding group action $g_a$ is not satisfied by differential equation.
-For such situation, control input u  is added, which modify the original equation to allow the designed $G$, this is called Controlled Symmetry.
+ and original motion $m$ is known, but the corresponding group action $g_a$ is not satisfied by differential equation.
+For such situation, control input $u$  is added, which modify the original equation to allow the designed $G$, this is called Controlled Symmetry.
 
-Most dynamic motion can be modelled as an Lagrange System. 
+Most dynamic motion can be modelled as a Lagrange System. 
 \[
 L=K(\dot(q)-V(q).
 \]
 And the desired action $G$ must keep the $L$ invariant. 
 
-The original m is defined by the eural langrage equation
+The original m is defined by the neural langrage equation
 \begin{equation}
 \frac{d}{dt} \frac{\partial L}{\partial \qd} - \frac{\partial L}{\partial q} = 0
 \label{eq:uncontrolled_euler_lagrange}
@@ -204,8 +204,8 @@ The modified system is
 
 
 (5) and (6) are the equivalent equation, by comparing  equation (5) and (6), we can get $u$
-Some Specific example of Symmetry and Control.
-In the following discussion, suppose all the group element $g$ are paramerizate by the parameter $\alpha$.
+Some Specific examples of Symmetry and Control.
+In the following discussion, suppose all the group element $g$ are parameterized by the parameter $\alpha$.
 
 \subsection*{ Offset Action}
 we move the posture of the system 
@@ -222,7 +222,7 @@ then the offset transformation is
 \ulocal(q) = \frac{\partial}{\partial q} \left(V(\goff(q)) - V(q)\right).
 \end{equation}
 
-if we formulate the controlled mass spring system in the followign way~\ref{eq:controlmass}
+if we formulate the controlled mass spring system in the following way~\ref{eq:controlmass}
 \begin{equation}
 \label{eq:controlmass}
 \ddot{q}+q=\ulocal
@@ -245,7 +245,7 @@ on phase space, if $q$ is the horizontal axis, and $\dot{q}$ is the vertical axi
 \subsection*{Time Scalling}
 
 %g_st(q,dot{q})=(q,st*dot{q})
-if we scale the time paramter
+if we scale the time parameter
 \[
 t \mapsto \frac{t}{\alpha}
 \]
@@ -277,18 +277,18 @@ for the mass spring system in
 on phase space, this has the effect strength the phase plot in the vertical direction
 
 \subsection*{Energy Scaling}
-For some system moving the the conservtive field.
+For some system moving the the conservative field.
 The energy is preserved and different motion present different level of energy.
-For such system, we have the the energy $E(\state)=K+V$, where $K$ is the kinematic energy,
-$V$ is the potential enegy.
+For such system, we have the energy $E(\state)=K+V$, where $K$ is the kinematics energy,
+$V$ is the potential energy.
 \[
 E(\hat{\state})=\alpha^2 E(x)
 \]
-if the the mass of system is constant.
+if the mass of system is constant.
 \[
 \gen(\state)=(f(\alpha) q,\alpha \dot{q}).
 \]
-where $f(\alpha)$ is a funtion of $\alpha$, which depends on the shape of potential field.
+where $f(\alpha)$ is a function of $\alpha$, which depends on the shape of potential field.
 $\ulocal$ can be developed by applying the pos scaling and time scaling in a combined manner.
 
 
@@ -332,11 +332,11 @@ On phase plot, this has the effect rotate on the limit circle about an angle.
 
 
 
-\section{Example:Bouncing Ball dropt frome Different Height}
+\section{Example:Bouncing Ball dropt from Different Height}
 Even it is a hybrid system,
 The bouncing ball system has a energy scaling symmetry.
 
-the ennegy function 
+the energy function 
 \[
 E=g_{ravity}h+\frac{1}{2}m\qd^2
 \]
@@ -350,7 +350,7 @@ then the energy scaling action is
 \gen(\state)=[\alpha^2 q, \alpha \qd]
 \]
 
-given the motion of droping at 5 are shown in Figure~\ref{bouncing5}.
+given the motion of a ball dropt at 5 are shown in Figure~\ref{bouncing5}.
 
 
 \begin{figure}[!htbp]
@@ -369,4 +369,5 @@ if $\alpha=\sqrt{2}$, we get the bouncing motion drop at height 10, as show in f
     \label{fig:bouncing10}
 \end{center}
 \end{figure}
+
 
