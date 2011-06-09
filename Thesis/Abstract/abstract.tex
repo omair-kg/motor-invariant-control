@@ -6,22 +6,27 @@
 \begin{abstracts}        %this creates the heading for the abstract page
 
 Generating natural-looking motions for virtual characters is a challenging research topic.
-It becomes even harder when generating adaptive motions interacting with the environment. 
-Current methods are tedious, cost long computational time and fail to capture natural looking features.
+It is even harder to synthesize adaptive motions interacting with the environment. 
+Current methods are tedious to use, cost long computational time and fail to capture natural looking features.
 
-This report proposes an efficient method of generating natural-looking motion based upon a new motor control theory.
-The principal idea is motor repertoire is made up of a limited number of elements. Motor control basically connect the basic motion primitives together just like connecting alphabets into sentences.
-
-we propose principle of motor control is not feedback based, they should by model as topology conjugacy.
-During motion adaptation, neural system tweaks the basic mechanical system to form an analogous dynamic system that meets constraints and purpose.
-
-When animals adapt their motion, some properties are maintained, which are called motor invariant.
-Motion Primitives are identified by the qualitative properties, for which we use the mathematical tools of differential topology.
-Tweaking of the motion primitives is model as Symmetry Preserved Transformation, for which we use lie group theory.
+In this thesis, we propose an efficient method of generating natural-looking motion based upon recent advances in biology research.
+The principal idea is motor repertoire is made up of a limited number of elements called motion primitives. 
+Motor control basically connect the basic motion primitives together just like connecting alphabets into sentences.
 
 
+Motion primitives serve as templates, and neural system tweaks basic templates to generate motion satisfy constraints of environment or motion purpose.
+In this process, some properties of motion primitives are maintained, which are called motor invariants.
 
-Following our idea, we generate adaptive natural looking motion with very little computational costs.
+%we propose principle of motor control is not feedback based, they should by model as topology conjugacy,mechanical system to form an analogous dynamic system that meets constraints and purpose.
+
+We introduce new mathematical tools for identify and tweak motion primitives.
+Motor invariants are identified by ideas of equivalence and symmetry.
+Motion Primitives are identified by the qualitative properties, which is captured by the differential topology.
+Motion adaptation are modelled as topological conjugacy,the tweakings maintain the topology and result in analogous systems
+Neural Ocillator and Symmetry Preserving transformations provide computational efficient methods for such purpose.
+
+Based on the new theory, we generate adaptive motions in real-time while maintaining the natural looking figures.
+
 \end{abstracts}
 %\end{abstractlongs}
 
