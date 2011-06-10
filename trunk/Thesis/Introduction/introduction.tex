@@ -134,7 +134,7 @@ It is the versatality and adaptativity that made this paradigms problemistic.
 Unlimited memory for data is needed and searching in ever increasing database becomes more and more challenging.
 
 The foundation idea of our research is different.
-We support the idea that motions are ``easy '' and don't need big effort to control.
+We support the idea that motions are ``easy'' and don't need big effort to control.
 It is the body and environment play the crucial role in motion, they form the basic templates for many motion tasks.
 Neural System only tweaks the basic templates for specific purpose.
 
@@ -167,7 +167,7 @@ In our research, we limit the control input and explore the natural dynamics to 
 \end{itemize}
 
 
-\section{Examples For Motor Invariant Theory}
+\section{Motor Invariant Theory}
 %In this thesis, we propose different idea towards motor control and motion synthesis.
 %In this research, we propose a different motion synthesis method based on a different motor control theory.
 %
@@ -179,93 +179,95 @@ In our research, we limit the control input and explore the natural dynamics to 
 %When we modify the motion primitives, some valuable properties of motion primitives are kept unchanged, and the maintained properties are called motor invariants.
 %
 %The inspiration of our idea comes from related biological research, which covers biomechanics and neural science.
-
-New mathematical tools are introduced to develope control techniques for our motor control.
-Key problems include how to identify and modeling the tweaking of basic motion templates.
-
-
-
+To make our ideas workable, new mathematical tools are introduced to develope control techniques.
+At the center of the new theory is the mathematical modelling of the motion templates and the ``tweaking'' exerted by the neural system.
+The insightful discovery is that when motion adapts, some properties are maintained, thus called motor invariants.
+Based on this idea, we established a theory of motor control, the motor invariant theory.
 
 
-Although some obscure knowledge is needed to for the mathematical model, the principle is illustrative through some daily example. 
-Here provides two examples about our idea of the ``easy'' motion and how can we “tweak” them.
+Qualitatively, the property of ``easiness'' should be maintained.
+Structural Stability arise as an abstraction of the intuitive idea of ``easiness'' of motor control.
+Motion adaptations are modelled as topological conjugations. 
 
-The world is complex, the first question is how much information we need for accomplish a motor task. 
-Our discovery that some motion task is so easy that e we need no control effort and blindness to some information doesn’t matter.
-This idea is illustrate by the ship floating example
-
-\subsection{Ship Floating}
+For the quantitative properties, we explore the idea of ``Symmetry''.
+Lie Groups are introduced to modeling the ``tweaking'' actions that maintain the local quantative properties.
 
 
-\subsubsection*{Dynamics}
-The first example is the ship floating. 
-In real life, usually the height of the ship is much larger than the width. 
-When wave comes, also comes the question how the ship maintains its posture.
-To our surprise, we find maintain posture is “easy”.
+More complex tasks are executed by combining simple tasks together,just like we connecting alphabets into meaningful sentence.
+The basic motion tasks are called motion primitives, of which the number is limited.
+For an animal, the repetorie of motion primitives is determined by the body and environment.
 
+
+Although new mathematical tools seems abstruse at first glimpse.
+The ideas behind are simple and illustrative, and can be explained well by daily phenomenon
+
+
+
+\subsection{Floating Ships}
+We use the floating ships as an example to show the relation between ``easiness'' of motor control and how the topological conjugacy comes into the theory of motion.
+In real life, ships floating on the wavery water, some of which the height is much larger than width,as shown in Figure~\ref{fig:ShipFloating}.
+
+The interesting question how the ship maintain its posture.
+Through analyzing the qualitative dynamic properties, we conclude that maintaining posture is a trival task.
+And our conclusion applies to different ships for their dynamics are topological equivalent.
 
 
 \begin{figure}[!htbp]
   \begin{center}
     \includegraphics{ShipExample}
-    \caption{Floating Ship Example}
+    \caption{The Floating Ship Example}
     \label{fig:ShipFloating}
   \end{center}
 \end{figure}
 
-
-
-The side sway motion as shown in Figure ~\ref{fig:ShipFloating} is described by the dynamic ~\ref{eq:shipflow}
+\subsubsection*{Dynamics}
+The sway motion shown in Figure ~\ref{fig:ShipFloating} is described by Equation~\ref{eq:shipflow}
 \begin{equation}
-I_{netia}\ddot{q}+d\dot{\theta}=T_{G}+T_{B}+T_{F}=(Gl_{g}-Bl_{b})sin(\theta)+T_{F}
 \label{eq:shipflow}
+I_{e}\ddot{q}+d\dot{q}=T_{G}+T_{B}+T_{F}=(Gl_{g}-Bl_{b})sin(q)+T_{F}
 \end{equation}
-$q$ is the swaying angle,
+
+$q$ is the swaying angle.
 $I_{netia}$ is the inertia,  
 $d$ is the damping coefficient,
-$T_{G}$ is the torque of gravity, and $T_{B}$ is the Torque of buoyancy.
+$T_{G}$ is the torque of gravity, and $T_{B}$ is the torque of buoyancy.
 $T_{F}$ is the external control torque.
-if $T_{F}=0$, external control force is applied, the system is an \textbf{autonomous system}.
+
+when $T_{F}=0$, no control effort is applied, the floating ship becomes an \emph{autonomous system} and is governed by natural dynamics.
 
 
 
 
 
 \subsubsection*{Equilibrium Posture}
-Ship will only rest at postures when external torqueses are zero.
-There are only two postures that the external torque is zero as show in Figure ~\ref{fig:ShipEqulibrium}
+Ship will only rest at postures when $T_{G}+T_{B}+T_{F}=0$.
+Only two postures qualified are called \emph{Equlibrium} Postures, show in Figure ~\ref{fig:ShipEqulibrium}
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
       \includegraphics{ShipEquilibrium}
-    \caption{Two Equilibrium Posture}
+    \caption{Two Equilibrium Postures}
     \label{fig:ShipEqulibrium}
   \end{center}
 \end{figure}
 
 
 
-The two postures are qualitative different.
-The left posture is attractive, if small perturbation moves the ship away from the left equilibrium posture, then it will return to equilibrium posture.
+The two postures are qualitative different. 
+Such differences are illustrated with the \emph{phase plot}.
+On phase plot, horizontal axis represents the sway angle $q$; the vertical  axis  the angle velocity $\qd$. 
+The movement of the ship are shown as a curve.
 
-The right posture is repelling.
-If a small perturbation moves the state of the ship away from the equilibrium posture, it will move away from the posture.
+The left posture is \emph{attractive} or \emph{stable}.
+If a small perturbation moves the ship away from the left posture, it will return to the equilibrium posture automatically as shown in Figure~\ref{fig:StablePosture}.
 
-The differences of the two postures can be illustrated with the \textbf{phase plot}.
-On phase plot, x axis is the angle, y axis is the angle velocity. 
-Then the movement of the ship can be presented by a curve.
-Figure~\ref{fig:StablePosture}  shows motion about the left equilibrium posture, they will automatically move to the left equilibrium posture.
-Figure~\ref{fig:unStablePosture} shows the ship motion about the right equilibrium posture.
+The right posture is \emph{repelling} or \emph{unstable}.
+If a small perturbation moves the state of the ship away from the equilibrium posture, it will move away from the posture, as shown in Figure~\ref{fig:unStablePosture}.
+
  
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{stablePosition}
-    \else
       \includegraphics{stablePosition}
-    \fi
-    \caption{StablePosture}
+    \caption{Stable Posture.Start from a position nearby, the ship will automatically move toward the attractive posture}
     \label{fig:StablePosture}
   \end{center}
 \end{figure}
@@ -273,85 +275,72 @@ Figure~\ref{fig:unStablePosture} shows the ship motion about the right equilibri
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{unstablePosition}
-    \else
       \includegraphics{unstablePosition}
-    \fi
-    \caption{Unstable Posture}
+    \caption{Unstable Posture. Start from a position nearby, the ship will move automatically away from the repelling posture}
     \label{fig:unStablePosture}
   \end{center}
 \end{figure}
 
 
-\subsubsection*{''Easiness''}
-If we plot all the possible motion of the ship, we get the \textbf{phase portrait} of the ship. 
-We find out that all the curves will move away from the repelling posture to the attractive posture.
- Several curves are show in figure ~\ref{fig:globalflow}
-\begin{figure}[!htbp]
-  \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{ShipGlobalFlow}
-    \else
-      \includegraphics[width=0.7\textwidth]{ShipGlobalFlow}
-    \fi
-    \caption{Several Possible Motion of Ship}
-    \label{fig:globalflow}
-  \end{center}
-\end{figure}
-
-Thus we come to the conclusion, the ship can automatically control maintain its left equilibrium posture. 
-Ship can keep its upside up as long as the centre of buoyancy force is above the centre of gravity.
-Maintaining posture of the ship is very ”easy”.
-
-
-\subsubsection*{Different Ships} 
-Something interesting in our analysis is the conclusion is independent of the detail information about the size, weight and design of the ship. 
-It is obvious different ship will maintain its posture with different motions. 
-Or put in a different phrase, ship will adapt its motion during maintain posture when we change the ship  parameters.
-
-As long as the centre of buoyancy is above the centre of gravity, maintaining posture is “easy”.
-One phase plot, all the ships share some properties: one repealing point, one attractive point and all motion curves moves away the repelling point to the attractive point. As how in Figure~\ref{fig:topologyStructure}
+\subsubsection*{``Easiness''}
+All the possible motion curves form the \emph{phase portrait} of floating system system. 
+The discovery is that all the curves will move away from the repelling posture to the attractive posture.
+This means the floating ship can maintain the left posture automatically without any control.
+Several curves are show in Figure ~\ref{fig:globalflow}
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{topologyStructure}
-    \else
-      \includegraphics{topologyStructure}
-    \fi
-    \caption{The Topology Structure}
-    \label{fig:topologyStructure}
+   \includegraphics[width=0.7\textwidth]{ShipGlobalFlow}
+   \caption{Global Properties of the Motion Curves: All the curves move aways from the repelling posture(Red) towards the attractive one(Blue)}
+   \label{fig:globalflow}
   \end{center}
 \end{figure}
 
+Thus  the conclusion is  maintaining the left posture is trival. 
+Structure Desing (the center of bouyancy is above the center of gravity) provides the ship with excelent balancing ablity.
 
+
+\subsubsection*{Generalization of the Ship Example} 
+The conclusion is independent of the design detail of the size, weight of the ship. 
+Same way will result in different sway motions for different ships.
+As long as the qualitative properties (the centre of buoyancy is above the centre of gravity) is maintained, balancing is ``easy''.
+For a different perspective,   we conclude ship will adapt it balancing motion when design parameters are changed.
+
+
+In the geometrical perspective, the phase portraits of all the ships share some properties:
+\begin{itemize}
+\item one repealing point 
+\item one attractive point 
+\item all motion curves move away the repelling point to the attractive point. 
+\end{itemize}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics{topologyStructure}
+   \caption{all the ship share the same topological structure.}
+   \label{fig:topologyStructure}
+  \end{center}
+\end{figure}
+
+The common properties of different ships are represented by Figure~\ref{fig:topologyStructure}.
 Such properties are “topological property”.
-As long as the topology is maintained, for different kinds of ship,maintaining posture is “easy”.
+As long as the topological structure is preserved, maintaining posture is ``easy''.
 
-The dynamic system of two ships are presented by two equation $x=F_1(x)$ and $x_=F_2(x)$,
-if they share the same topology, we can say they are topological equivalant,represent by the symbol $F_1 \simeq F_2$
-this kind of relationship is \textbf{topology conjugacy}
-and $F_1$ , $F_2$ are called analogous system.
-
+For dynamic systems of two ships are described by two equation $\dot{\state}=F_1(\state)$ and $\dot{\state}=F_2(\state)$.
+Sharing the same topology means they are topological equivalennt $F_1 \simeq F_2$, or more specifically \emph{topology conjugacy}.
+$F_1$ and $F_2$ are called \emph{analogous systems}.
 
 
-\subsubsection*{Global Motor Invariant and System Adaptation}
-In our motion synthesis framework, the topology is called \textbf{global invariant}, and they encapsulate the qualitative properties of a dynamic system.
-
-For “easy” task, no control is need.
-Following this idea, to find the “easy” motion task, we should investigate the topology of the phase portrait.
-
-Another important idea is motion will adapt when we change the parameters of the dynamic system,which is called \textbf{System Adaptation}
+In our motion synthesis framework, the topology is one motor inviarant. the \emph{global motor invariant}.
+Global motor invariant encapsulates the qualitative properties of a dynamic motion.
+Motion adaptations that come from the parameters of the dynamic system are called \emph{System Adaptation}
 
 
-\subsection{The Mass-Spring Vibration}
-Human can finish motion tasks require high accuracy.
-The question is how neural systems solve the complex dynamic problem instantly with high accuracy.
-The biological motor control is very complex; it involves chemical, neural, electrical and mechanical process. 
+\subsection{The Mass Spring System}
+Human can finish motion tasks that require high accuracy.
+Neural systems solve the complex dynamic problem instantly with high accuracy.
+%The biological motor control is very complex; it involves chemical, neural, electrical and mechanical process. 
 
 An alternative idea is we don’t find the solution by solving the dynamics; we only need to know how to transform one solution into another.
 This idea is illustrative in the following mass spring example
