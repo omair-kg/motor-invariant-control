@@ -1,39 +1,16 @@
 %input macros (i.e. write your own macros file called MacroFile1.tex)
 %\include{Macros/MacroFile1}
 
- \documentclass[oneside,12pt]{Classes/CUEDthesisPSnPDF}
-
- 
-
-
-\ifpdf
-    \pdfinfo { /Title  (Adaptive Motion Synthesis and Motor Invariant Theory)
-               /Creator (TeX)
-               /Producer (pdfTeX)
-               /Author (Fangde Liu fliu@bmth.ac.uk)
-               /CreationDate (D:20110101000000)  %format D:YYYYMMDDhhmmss
-               /ModDate (D:20030815213532)
-               /Subject (Writing a PhD thesis in LaTeX)
-               /Keywords (PhD, Thesis)}
-    \pdfcatalog { /PageMode (/UseOutlines)
-                  /OpenAction (fitbh)  }
-\fi
-
+\documentclass[oneside,12pt]{Classes/CUEDthesisPSnPDF}
 \title{Adaptive Motion Synthesis and Motor Invariant Theory}
 
-\ifpdf
-  \author{\href{mailto:fliu@bmth.ac.uk}{Fangde Liu}}
-  \collegeordept{\href{http://www.bournemouth.ac.uk}{Media School}}
-  \university{\href{http://www.bournemouth.ac.uk}{Bournemouth University}}
-% insert below the file name that contains the crest in-place of 'UnivShield'
-  %\crest{\includegraphics[width=30mm]{UnivShield}}
-\else
+
   \author{Fangde Liu}
   \collegeordept{NCCA,Media School}
   \university{Bournemouth University}
 % insert below the file name that contains the crest in-place of 'UnivShield'
   %\crest{\includegraphics[bb = 0 0 292 336, width=30mm]{UnivShield}}
-\fi
+
 %
 % insert below the file name that contains the crest in-place of 'UnivShield'
 % \crest{\IncludeGraphicsW{UnivShield}{40mm}{14 14 73 81}}
@@ -74,9 +51,10 @@
 \newcommand{\HiItem}[1]{\item \textbf{#1}}
 \newcommand{\note}[1]{\textcolor{red}{Note:#1}}
 
-
 \newcommand{\cms}{\textbf{CMS}}
 \newcommand{\dof}{\textbf{DOF}}
+\newcommand{\cpg}{\textbf{CPG}}
+
 \newtheorem*{mythe}{Theorem}
 
 
@@ -98,7 +76,7 @@
 
 % Using the watermark package which is in StyleFiles/
 % and to remove DRAFT COPY ONLY appearing on the top of all pages comment out below line
-%\watermark{DRAFT COPY ONLY}
+\watermark{DRAFT COPY ONLY}
 
 
 \maketitle
