@@ -6,6 +6,7 @@
 \nomenclature[a2]{$\qd$}{Gneralized Velocity}
 \nomenclature[a3]{$\state$}{State Variable}
 \nomenclature[a4]{$u$}{Control Input}
+\nomenclature[a5]{$\mathrm{g}$}{Gravity}
 
 \nomenclature[b1]{$Q$}{Configuration Space or Configuration Manifold}
 \nomenclature[b2]{$TQ$}{Tangent Bundle of $Q$}
@@ -14,8 +15,8 @@
 
 
 
-\nomenclature[c1]{$A$}{Attractor}
-\nomenclature[c2]{$B(A)$}{Basin of Attraction of $A$}
+\nomenclature[c1]{$\mathcal{A}$}{Attractor}
+\nomenclature[c2]{$\mathcal{B}(\mathcal{A})$}{Basin of Attraction of $\mathcal{A}$}
 \nomenclature[c3]{$\simeq$}{Topology Conjungacy}
 
 
@@ -160,10 +161,10 @@ Two types of attractors are of great interest in motor control:
 \end{enumerate}
 \begin{figure}
 \begin{center}
-\label{fig:limit_circle}
 \includegraphics[height=0.4\textheight]{phase_plot}
 \caption{Limit Cycle}
 \end{center}
+\label{fig:limit_circle}
 \end{figure}
 
 
@@ -366,7 +367,7 @@ In biological research, it is a still under hot debate which type attractor serv
 Current idea is that Limit Cycle is necessary, based on limit cycle, fix point can be achieved by
 \begin{enumerate} 
 \item terminate a cycle. 
-\item approximate by a limit circle with small amplitude.
+\item approximated by a limit cycle with small amplitude.
 \item Bifurcation. 
 \end{enumerate}
 
@@ -387,73 +388,58 @@ For neural system, precise computation is difficult,  building oscillator with n
 Only two neurons are needed with mutual inhibitive property.
 One extensively studied oscillation model is developed by \citet{neurooscillation}. 
 The mathematical presentation is as follows:
-\begin{eqnarray}
-\tau_{1} \dot{s_{1}}&=&c-s_{1}-\beta l_{1}-\gamma [s_{2}]^{+}-\sum_{j}h_{j}[w_{j}]^{+}\\
-\tau_{2} \dot{l_{1}}&=&[s_{1}]^{+}-l_{1}\\
-\tau_{1} \dot{s_{2}}&=&c-s_{2}-\beta l_{2}-\gamma [s_{1}]^{-}-\sum_{j}h_{j}[w_{j}]^{-}\\
-\tau_{2} \dot{l_{2}}&=&[s_{2}]^{+}-l_{2}\\
-y_{i}&=&\mbox{max}(s_{i},0)\\
-y_{o}&=&=[s_{1}]^{+}-[s_{2}]^{+}=y_{1}-y{2}
-\label{eq:matsuta}
-\end{eqnarray}
-
-$c$,$\beta$,$\gamma$ are parameters of the oscillator,in our research are kept constant.
-$\tau$ controls the oscillation frequency.
+\begin{align}
+\tau_{1} \dot{s}_{1}&=c_1-s_{1}-c_2 l_{1}-c_3 [s_{2}]^{+}-\sum_{j}h_{ij}[w_{j}]^{+} \nonumber\\
+\tau_{2} \dot{l}_{1}&=[s_{1}]^{+}-l_{1} \nonumber\\
+\tau_{1} \dot{s}_{2}&=c_1-s_{2}-c_2 l_{2}-c_3 [s_{1}]^{-}-\sum_{j}h_{ij}[w_{j}]^{-} \nonumber\\
+\tau_{2} \dot{l}_{2}&=[s_{2}]^{+}-l_{2}\label{eq:matsuta}
+\end{align}
+where $[t]^{+}=\max(0,t)$, $[t]^{-}=\min(0,t)$.
+$c_1$,$c_2$,$c_3$ are parameters of the oscillator,in our research are kept constant$[c_1,c_2,c_3]=[1,2,2]$.
+Values of $\tau_{1,2}$ controls the oscillation frequency, and their ratio controls the shape of wave.
+In this research $\frac{\tau_{1}}{\tau_{2}}=0.5$
 
 
+\begin{equation}
+%y_{i}&=&\mbox{max}(s_{i},0)\\
+\uout=\hout[s_{1}]^{+}-[s_{2}]^{+}
+\end{equation}
 
 
 
 
 
-Matuoka oscillator is an autonomous oscillator; 
-it can begin to oscillator without any control effort.
+
+
+Matuoka oscillator is an autonomous oscillator, which can start to oscillate without any control effort.
 Figure ~\ref{fig:natural-oscilation} shows the natural oscillator output.
 \begin{figure}[h]
-\includegraphics[height=0.4\textheight]{oscillation.eps}
+\begin{center}
+\includegraphics[height=0.4\textheight]{oscillation}
 \caption{Natural Oscillation}
 \label{fig:natural-oscilation}
+\end{center}
 \end{figure}
 
 
 
 
 
-It is also adaptive; entrainment behaviour can happen between one Matuoka oscillator and different oscillators. 
-Figure \ref{fig:entraint-oscilation} shows the entrain oscillation,
-where the oscillation of Matuoka oscillator synchronise with the input signal.
+It is also adaptive; entrainment behaviour emerge between Matuoka oscillator and different oscillators. 
+Figure~\ref{fig:entraint-oscilation} shows the entrainment oscillation,where  Matuoka oscillator synchronise with the input signal.
 \begin{figure}[h]
-\includegraphics[height=0.4\textheight]{entraint_oscilation.eps}
+\begin{center}
+\includegraphics[height=0.4\textheight]{entraint_oscilation}
 \caption{Entrainment Oscillation}
 \label{fig:entraint-oscilation}
-\end{figure}
-
-But because of the nonlinear properties, its behaviour is not completely understood. 
-Matsuta\citep{Matsuoka1987} explains the adaptive properties from the location of the roots of characteristic equation. 
-Wilimas\citep{Williamson1998} explains the properties in frequency domain.
-
-
-
-In our research, we find some important properties of neural oscillator by empirical.
-
-\begin{figure}
-\begin{center}
-\includegraphics[height=0.5\textheight]{neuraloscilation1.eps}
 \end{center}
-\caption{The states of neural oscillator over Time}
-\label{fig:oscilation}
 \end{figure}
 
-\begin{figure}
-\begin{center}
-\includegraphics[height=0.5\textheight]{neural1phase.eps}
-\end{center}
-\caption{The phase portrait of Neural Oscillators}
-\label{fig:oscilationphase}
-\end{figure}
-
-From our simulation, we investigate the topological structure.
-Basically, neural oscillator shows three important properties:
+Because of the nonlinear properties, behaviour of Matsuoka Oscilator is not completely understood. 
+Matsuta\citep{Matsuoka1987} analyze the adaptive properties by investigating the location of the roots of characteristic equation. 
+Wilimas\citep{Williamson1998} analyze the properties in frequency domain.
+This research investigates the qualitative property by analyzing the topology of  empirical results.
+The Matsuoka Oscillator shows three important properties:
 \begin{itemize}
 \item{Simple Topological Structure.}
 The topology structure of neural oscillator is simple, 
@@ -464,10 +450,15 @@ All the simulations we carried out converged to the same limited circle.
 In most of the case, the flow will converge to the limit circle within one period time.
 \end{itemize}
 
+
+
+
+
+
 Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
 \begin{figure}
 \begin{center}
-\includegraphics[height=0.4\textheight]{neural_attraction.eps}
+\includegraphics[height=0.4\textheight]{neural_attraction}
 \end{center}
 \caption{Neural output with different initial position}
 \label{fig:time_timeAttraction}
@@ -475,21 +466,22 @@ Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
 
 \begin{figure}
 \begin{center}
-\includegraphics[height=0.4\textheight]{neural_attraction_phase.eps}
+\includegraphics[height=0.4\textheight]{neural_attraction_phase}
 \end{center}
 \caption{Phase plot of oscillation with different initial condition}
 \label{fig:phase_attraction}
 \end{figure}
  
-The large area of basin of attraction means the final behaviour is totally determined by parameters. 
-Initial condition will have no effects on the oscillator final output. 
-Thus we treat matsuta oscillator as in a simple one input, one out put system, controlled by three parameter and input signal. 
-we usually reformed equation ~\ref{eq:matsuta} in the simplified form
+The large area of basin of attraction means the final behaviour is totally determined by system parameters. 
+Initial condition will have no effects on the stable oscillation behaviour. 
+Matsuta oscillator can be treated as single input, single output system.
+The output signal is controlled by three system parameters and input signal. 
+Equation ~\ref{eq:matsuta} can be reformed in the form of Equation~\ref{eq:simplematsuta}.
 \begin{equation}
 \label{eq:simplematsuta}
 \uout=S_{[\hin,\hout,\tau]}(\uin)
 \end{equation}
-where $\uin=\sum_{j}h_{j}[w_{j}]=hw$,$\uout=\hout y_{o}$
+where $\uin=\sum_{j}h_{j}[w_{j}]=hw$.
 
 
 
@@ -499,23 +491,40 @@ The converging speed can be seen as quick recovery ability.
 When an impulse perturbation happens, it will recover in one period time.
 
 
-\section{Example:Maintain Bouncing Height}
+\section{Example:Maintain Ball Bouncing Height}
 
-Bouncing ball is system ball bouncing by moving a pedal, a system with simple dynamic but difficult to control with optimization or Pd. 
-While this example capture the complexity of human interaction with the environment and object. 
-And can be the basic model for many motion tasks.
-
-We show in this example how neural oscillator can turn the bouncing ball system into motion primitive.
-\subsection*{Dynamics}
-Hybrid dynamics, in incorporate two phase, 
+The Bouncing Ball system is shown in Figure~\ref{fig:bball}, where a ball is bouncing on a moving paddle.
+The dynamics of this system is simple, but difficult to control with optimization or \pd methods.
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.4\textheight]{paddleball}
+\end{center}
+\caption{The Bouncing Ball System}
+\label{fig:bball}
+\end{figure}
  
+The bouncing ball system captures the complex discontinuous dynamics when human iteract with the environment and object. 
+It can be the basic model for many motion tasks like jumping, running and ball playing.
+This example demostrates how limit cycle are generate through neural  oscillator entrainment.
+ 
+\subsection*{Dynamics}
+The dynamics of the bouncing ball system is hybrid, it involves two phases.
+\begin{itemize}
+\HiItem{The Flying Phase}
+When the ball is flying, it is only affected by the gravity.
+\HiItem{The Strike Phase}
+When the ball hit the paddle, the speed of the ball is changed instantly.
+\end{itemize}
+The natural dynamics of bouncing ball system are described by  Equation~\ref{eq:bbeq},and are shown by Figure~\ref{fig:bborg}. 
+The ball will  bounce with ever smaller height. 
 
 \begin{align}
-\ddot{q}&=-g&\mathrm{if}\,\,q &> 0\,\,\mathrm{(free\,\,flying)} \nonumber\\
-\dot{q}^{+}_{\mathrm{ball}} - \dot{q}^{+}_{\mathrm{paddle}} &=  \epsilon(\dot{q}^{-}_{\mathrm{ball}} - \dot{q}^{-}_{\mathrm{paddle}})&\mathrm{if}\,\,q &\leq 0\,\,\mathrm{(paddle\,\,strike)}\nonumber
+\label{eq:bbeq}
+\ddot{q}_{ball}&=-g&\mathrm{if}\,\,q_{ball} &> q_{paddle}\,\,\mathrm{(free\,\,flying)} \nonumber\\
+\dot{q}^{+}_{\mathrm{ball}} - \dot{q}^{+}_{\mathrm{paddle}} &=  \epsilon(\dot{q}^{-}_{\mathrm{ball}} - \dot{q}^{-}_{\mathrm{paddle}})&\mathrm{if}\,\,q_{ball} &\leq {q_{paddle}}\,\,\mathrm{(paddle\,\,strike)}\nonumber
 \end{align}
 
-Basically, the ball will continue bouncing with smaller height,as show in Figure~\ref{fig:bborg}.
+
 
 \begin{figure}[h]
 \begin{center}
@@ -538,14 +547,16 @@ Basically, the ball will continue bouncing with smaller height,as show in Figure
 
 
 \subsection*{Emergence of Limit Cycle}
-couple with neural oscillator boucing we get an limit circle
-The input of neural oscillator is the velocity $\uin=\dot{q}_{ball}$, the output of neural oscillator  drive the pedal position $q_{pedal}=\uout$.
-A limit cycle emerges as the result of entrainment.
-As show in figure drop from different position, all the ball will bouncing  about the same height of 5,as show in Figure~\ref{fig:bb_attractive_circle}
+The autonomous system of bouncing ball has only one fixed point attractor and its basin of attraction covers the whole phase space.
+The bouncing ball shows the near periodic behaviour, thus can be seen as bifurcation of some periodic ones.
+Neural Oscillator can be applied to maintain the original periodic motion, and limit cycle emerges from entrainment.
+The input of neural oscillator is the velocity $\uin=\qd_{ball}$, the output drives the paddle position $q_{paddle}=\uout$.
+Dropped from different position, all the ball will bouncing  about the same height of $5 unit$,as show in Figure~\ref{fig:bb_attractive_circle}
+The bouncing height can be maintained.
 
 \begin{figure}[h]
 \begin{center}
-	\subfigure[state plot]
+	\subfigure[State Plot]
 	{
 	\includegraphics[width=0.45\textwidth]{bb_ms_os_attraction_phase}
 	\label{fig:bb_attractive_entraint}

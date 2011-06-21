@@ -3,44 +3,42 @@
 
 \nomenclature[f1]{$G$}{A Lie Group}
 \nomenclature[f2]{$g_a$}{an element in Lie Group $G$ with parameter $a$}
-\nomenclature[f3]{$I(x)$}{Invariant Function of $x$}
-\ifpdf
-    \graphicspath{{LocalInvariant/LocalInvariantFigs/PNG/}{LocalInvariant/LocalInvariantFigs/PDF/}{LocalInvariant/LocalInvariantFigs/}}
-\else
-    \graphicspath{{LocalInvariant/LocalInvariantFigs/EPS/}{LocalInvariant/LocalInvariantFigs/}}
-\fi
-
-\section{Introduction}
-Global Motor Invariant Control keeps the qualitative properties of motion primitives.
-For animal motion is also of high accuracy.
-In this chapter we focus on the control on the quantitative properties of motion.
-In our research, we try to limit the computational cost.
+\nomenclature[f3]{$\mathcal{I}(x)$}{Invariant Function of $x$}
+\graphicspath{{LocalInvariant/LocalInvariantFigs/EPS/}{LocalInvariant/LocalInvariantFigs/}}
 
 
-The discovery is that motion of natural system will change in a uniform way.
-The method we proposed exploring the symmetry properties of dynamics system.
-The symmetry property of a dynamic system is called local motor invariant.
-The method we propose is based the lie group theory,please refer to book\citep{olver1986applications}
-for more details.
+\section{Qunatative Properties of Motion}
+Global Motor Invariant Control maintains motion stablity.
+To make motions realistic, some natural looking features should also be preserved.
+Some features of motions such as smoothness or energy efficient are quantative.
+\cms research should provide a framework perserving feature.
+Another question missiong is animals can finish motion tasks require high accuracy.
+
+These are the motivations for the development of \emph{Local Motor Invariant}.
+Local Motor Invariants are quantative properties of motions, the idea of invariant perserving are abstracted as the ``Symmery'' and Group theory.
+Features are modelled as symmetrical functions, while feature preserving actions form a group.
+From dynamic perspective, motions are solutions to dynamic equations.
+The actions transform one motion to another close related to the Lie Group Theory for differential equations\citep{olver1986applications}.
+
+The introduction of Lie Group not only provides a powerful mathematical tools for modelling the symmetry property, but also provides an idea to simplify the solving the dynamics.
 
 \subsection{Group and Symmetry}
-For the geometrical viewpoint, ''Symmetry''  means when you transform a shape, the transform one and original one are exactly the same.
-For the square examples, rotation it by 90 degree will make it exactly the same with the original one.
-
-
-
+For the more traditional geometrical perspective, ''Symmetry''  means a geometry is the same after transformation.
+For the example of a square,  $90$ degree clockwise rotation will make it the same, as shown in Figure~\ref{fig:symsquare}.
 \begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.7\textwidth]{Symmetry}
-    \caption{Symmetry}
-    \label{fig:symmetry}
-\end{center}
+  	\begin{center}
+   	\includegraphics[width=0.7\textwidth]{Symmetry}
+	\end{center}
+	\caption{Symmetry of The Square}
+    \label{fig:symsquare}
 \end{figure}
 
+The actions that preserve the shape have some properties.
+For example, if the $90$ degree clockwise rotation preserve the shape, then rotate twice will also preserve the symmetry, that's equal to asy $180$ degree clockwise roatation also preserve the symmetry.
 
-All the action that can preserve the symmetry is defined as the set as group $G$.
+All the action that can preserve the symmetry form a group $G$.
 A group has the following properties.
-\begin{itemize}
+\begin{enumerate}
 \item For any $g_a,g_b$ in $G$, \,$g_a*g_b$\, belongs to $G$. (The operation
 ``$*$'' is closed).
 
@@ -52,31 +50,26 @@ the operation).
 
 \item For any \,$g_a\in G$\, there exists an element $g_h$ such that
 \,$g_a*g_h=g_h*g_a=e$. \,(Existence of inverses).
-\end{itemize}
+\end{enumerate}
 
-for the shape geometry example $g_1$ is rotate 90 degree clockwise. then $e$ is no rotation.
-we also know $g_2=g_1*g_1$ is rotate 90 degree clockwise twice.$g_2$ also preserve the shape.
+To check such properties with the shape example, $g_1$ is  $90$ degree clockwise rotation. then $e$ is no rotation.
+$g_2=g_1*g_1$ is rotate $90$ degree clockwise twice.$g_2$ is a element of the group $G$, then $g_2$ preserve symmetry.
 
 
-In algebra sense, ''Symmetry'' means invariant, a shape can implicitly defined by an function $I(x)=0$;
+From algebra perspective, ``Symmetry'' means the value of function is invariant after transform the varaibles.
+For a function $\mathcal{I}(x)$,
 The group transformation is define by $\hat{x}=g_a(x)$
-If symmetry is met, we have $I(x)=I(\hat{x})$.
-We can say $I(x)$ is an invariant function of group $G$.
+By symmetry, we mean $\mathcal{I}(x)=\mathcal{I}(\hat{x})$.
+$\mathcal{I}(x)$ is an invariant function of group $G$.
 
-We have to note that not only the one shape unchanged by $G$.
-In fact ,many shapes is invariant, 
-In fact, we can pick up and two shape and combination is also an invariant shape. 
-and form a space, the invariant space $I(x)$.
+Note that  the shape invariant by actions in $G$ is not unique.
+Many shapes are invariant, and the combination of two invariant shapes also form an invariant shape. 
+The invariant shapes form a space, the invariant space $\mathcal{I}(x)$.
 
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{SymmetrySpace}
-    \else
-      \includegraphics[width=0.7\textwidth]{SymmetrySpace}
-    \fi
+    \includegraphics[width=0.7\textwidth]{SymmetrySpace}
     \caption{Symmetry Space}
     \label{fig:symmetry Space}
 \end{center}
