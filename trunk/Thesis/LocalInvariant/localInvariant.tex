@@ -3,7 +3,7 @@
 
 \nomenclature[f1]{$G$}{A Lie Group}
 \nomenclature[f2]{$g_a$}{an element in Lie Group $G$ with parameter $a$}
-\nomenclature[f3]{$\mathcal{I}(x)$}{Invariant Function of $x$}
+\nomenclature[f3]{$\iv(x)$}{Invariant Function of $x$}
 \graphicspath{{LocalInvariant/LocalInvariantFigs/EPS/}{LocalInvariant/LocalInvariantFigs/}}
 
 
@@ -52,19 +52,19 @@ the operation).
 \,$g_a*g_h=g_h*g_a=e$. \,(Existence of inverses).
 \end{enumerate}
 
-To check such properties with the shape example, $g_1$ is  $90$ degree clockwise rotation. then $e$ is no rotation.
+For the square example, $g_1$ is  $90$ degree clockwise rotation. then $e$ is no rotation.
 $g_2=g_1*g_1$ is rotate $90$ degree clockwise twice.$g_2$ is a element of the group $G$, then $g_2$ preserve symmetry.
 
 
-From algebra perspective, ``Symmetry'' means the value of function is invariant after transform the varaibles.
-For a function $\mathcal{I}(x)$,
+From algebra perspective, ``Symmetry'' means the value of function is invariant after varaible transformation.
+For a function $\iv (x)$,
 The group transformation is define by $\hat{x}=g_a(x)$
-By symmetry, we mean $\mathcal{I}(x)=\mathcal{I}(\hat{x})$.
-$\mathcal{I}(x)$ is an invariant function of group $G$.
+By symmetry, we mean $\iv (x)=\iv (\hat{x})$.
+$\iv(x)$ is an invariant function of group $G$.
 
 Note that  the shape invariant by actions in $G$ is not unique.
 Many shapes are invariant, and the combination of two invariant shapes also form an invariant shape. 
-The invariant shapes form a space, the invariant space $\mathcal{I}(x)$.
+The invariant shapes form a space, the invariant space $\iv (x)$.
 
 
 \begin{figure}[!htbp]
@@ -81,11 +81,12 @@ The invariant shapes form a space, the invariant space $\mathcal{I}(x)$.
 
 \subsection{Lie Group and Symmetry of Dynamic System}
 The rotate group is discrete.
-if the shape is circle, than the rotation is continuous, the continuous group is Lie Group.
+For the circle, the rotation is continuous.
+The continuous group is a Lie Group.
 
-Lie Group is continues group originates from study of differential equation.
+Lie Group originates from study of differential equation.
 For Physically-based animation,
-Motion is usually described by the differential equation (1)
+Motion is usually described by
 \begin{equation}
 	\dot{\state}=F(\state)
 \end{equation}
@@ -94,6 +95,7 @@ Lie Group $G$ will preserve the differential equation, for $g_a \in G$
 Tg_a(\dot{\hat{\state}})=F(g_a(\state)
 \]
 where $Tg_a$ is the corresponding lift action that transform the velocity $\dot{\state}$.
+
 for example, if the $g_a$ is translate transformation, velocity will not be translate, then $Tg_a$ is identity.
 
 
