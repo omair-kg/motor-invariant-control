@@ -3,7 +3,8 @@
 
 \nomenclature[f1]{$G$}{A Lie Group}
 \nomenclature[f2]{$g_a$}{an element in Lie Group $G$ with parameter $a$}
-\nomenclature[f3]{$\iv(x)$}{Invariant Function of $x$}
+\nomenclature[f3]{$I(x)$}{Invariant Function of $x$}
+\nomenclature[f4]{$\ep$}{The parameter of a lie group element}
 \graphicspath{{LocalInvariant/LocalInvariantFigs/EPS/}{LocalInvariant/LocalInvariantFigs/}}
 
 
@@ -39,39 +40,35 @@ For example, if the $90$ degree clockwise rotation preserve the shape, then rota
 All the action that can preserve the symmetry form a group $G$.
 A group has the following properties.
 \begin{enumerate}
-\item For any $g_a,g_b$ in $G$, \,$g_a*g_b$\, belongs to $G$. (The operation
-``$*$'' is closed).
+\item For any $g_a,g_b$ in $G$, \,$g_a*g_b$\, belongs to $G$. (The operation ``$*$'' is closed).
 
-\item For any \,$g_a,g_b,g_c\in G$, \,$(g_a*g_b)*g_c=g_a*(g_b*g_c)$. \,(Associativity of
-the operation).
+\item For any \,$g_a,g_b,g_c\in G$, \,$(g_a*g_b)*g_c=g_a*(g_b*g_c)$. \,(Associativity of the operation).
 
-\item There is an element $e\in G$ such that \,$g_a*e=e*g_a=g_a$\, for any
-\,$g_a\in G$. (Existence of identity element).
+\item There is an element $e\in G$ such that \,$g_a*e=e*g_a=g_a$\, for any \,$g_a\in G$. (Existence of identity element).
 
-\item For any \,$g_a\in G$\, there exists an element $g_h$ such that
-\,$g_a*g_h=g_h*g_a=e$. \,(Existence of inverses).
+\item For any \,$g_a\in G$\, there exists an element $g_h$ such that \,$g_a*g_h=g_h*g_a=e$. \,(Existence of inverses).
 \end{enumerate}
 
 For the square example, $g_1$ is  $90$ degree clockwise rotation. then $e$ is no rotation.
 $g_2=g_1*g_1$ is rotate $90$ degree clockwise twice.$g_2$ is a element of the group $G$, then $g_2$ preserve symmetry.
 
 
-From algebra perspective, ``Symmetry'' means the value of function is invariant after varaible transformation.
-For a function $\iv (x)$,
-The group transformation is define by $\hat{x}=g_a(x)$
-By symmetry, we mean $\iv (x)=\iv (\hat{x})$.
-$\iv(x)$ is an invariant function of group $G$.
+From algebraic perspective, ``Symmetry'' means the value of function is invariant after varaible transformation.
+For a function $I(x)$,
+The group transformation is define by $\tilde{x}=g_a(x)$
+By symmetry, we mean $I(x)=I(\tilde{x})$.
+$I(x)$ is an invariant function of group $G$.
 
-Note that  the shape invariant by actions in $G$ is not unique.
-Many shapes are invariant, and the combination of two invariant shapes also form an invariant shape. 
-The invariant shapes form a space, the invariant space $\iv (x)$.
+Note that  shapes invariant by actions in $G$ is not unique.
+Many shapes are invariant, and the combination of two invariant shapes also form an invariant shape, as shown in Figure~\ref{fig:SymmetrySpace}. 
+For a group ~$G$,The invariant shapes form a space, the invariant space $I^G$.
 
 
 \begin{figure}[!htbp]
   \begin{center}
     \includegraphics[width=0.7\textwidth]{SymmetrySpace}
-    \caption{Symmetry Space}
-    \label{fig:symmetry Space}
+    \caption{Two invariant Shapes, Combination is also invariant}
+    \label{fig:SymmetrySpace}
 \end{center}
 \end{figure}
 
@@ -79,98 +76,135 @@ The invariant shapes form a space, the invariant space $\iv (x)$.
 
 
 
-\subsection{Lie Group and Symmetry of Dynamic System}
-The rotate group is discrete.
-For the circle, the rotation is continuous.
-The continuous group is a Lie Group.
-
-Lie Group originates from study of differential equation.
+\subsection{Lie Group and Differential Equation}
 For Physically-based animation,
-Motion is usually described by
-\begin{equation}
-	\dot{\state}=F(\state)
-\end{equation}
-Lie Group $G$ will preserve the differential equation, for $g_a \in G$ 
-\[
-Tg_a(\dot{\hat{\state}})=F(g_a(\state)
-\]
-where $Tg_a$ is the corresponding lift action that transform the velocity $\dot{\state}$.
-
-for example, if the $g_a$ is translate transformation, velocity will not be translate, then $Tg_a$ is identity.
-
-
-
-
-
+Motions are usually described by differential equations.
 Physically possible motion is the solution of the equation.
-An important property from one solution $\state(t)$.
-with a group action $g_a$, we can get another solution $g_a(\state(t))$
- 	
-for the mass spring system ~\ref{eq:stateform}
-we apply the group action 
+A symmetry group of a differential equation can transform solutions to other solutions.
+This property helps to reduce the computational burden needed by dynamic \cms.
+Lie Group Theory is introduced for this purpose.
+
+
+
+
+Simply put, Lie Group is continuous group, which is also a manifold.
+By the property of manifold, we can assign coordinate system and parameterize the group elements.
+For example,the symmetry rotation group of square is discrete,while symmetry group of circle is continuous.
+this continuous group can be parameterize by the the rotation angle.
+In our discussion, for each group element $g$, $\ep$ is the parameter.
+
+A Lie Group originates from study of differential equations.
+From the algebraic perspective, the symmetrical group will keep the differential equation invariant.
+
+for a differential equation in Equation~\ref{eq:difforg}.
+\begin{equation}
+\label{eq:difforg}
+\dot{\state}=F(\state)
+\end{equation}
+Invariant function $I$ can be defined as:
 \[
-\hat{\state}=g_a(\state)=[\alpha q, \alpha \qd ]
+I(t,\state,\dot{\state})=F(\state)-\dot{\state}
+\]
+Solutions satisfy $I(t,\state,\dot{\state})=0$.
+For the symmetry group with transformation as 
+\[
+(t,\state,\dot{\state}) \mapsto (\tilde{t},\tilde{\state},\tilde{\dot{\state}})
+\]
+We have
+\[
+I(t,\state,\dot{\state})=I(\tilde{t},\tilde{\state},\dot{\tilde{\state}}=0)
+\]
+
+Keep differential equations in the original form, we define the group action 
+\[
+g(\state)=\tilde{\state}
+\]
+and the \emph{lift action} 
+\[
+Tg(\dot{\state})=\dot{\tilde{\state}}
+\]
+
+$Tg$ can be worked out by checking the derivatives.
+For the translation $g_{\ep}$ 
+\[
+(x,y)\mapsto (x+\ep,y+\ep)
+\]
+$Tg_{\ep}$ is
+\[
+(\dot{x},\dot{y}) \mapsto (\dot{x},\dot{y})
+\]
+$Tg$ is the identity element $e$.
+
+
+Then $g$ transform Equation~\ref{eq:difforg} into Equation~\ref{eq:trdiff}
+\begin{equation}
+\label{eq:trdiff}
+Tg(\dot{\state})=F(g(\state))
+\end{equation}
+if $g$ is symmetrical, Equation~\ref{eq:difforg} and Equation~\ref{eq:trdiff} are equivalent
+
+
+
+
+
+
+
+ 	
+For the mass spring system Equation~\ref{eq:stateform}, we apply the group action 
+\[
+\tilde{\state}=g_{\ep}(\state)=[\ep q, \ep \qd ]
 \]
 then the lift action is
 \[
-\dot{\hat{\state}}=Tg_a(\state)=[\alpha \qd, \alpha \ddot{q}]
+\tilde{\state}=Tg_{\ep}(\state)=[\ep \qd, \ep \ddot{q}]
 \]
 
 
 
-by substitution $\state \mapsto \hat{\state}$, the original system become
+by substitution $\state \mapsto \tilde{\state}$, the original system become
 \[ 
-\dot{\hat{\state}}=
+\dot{\tilde{\state}}=
 \left[ 
 \begin{array}{cc}
 0 &1\\
 -1 &0 
 \end{array}
-\right]\hat{\state}
+\right]\tilde{\state}
 \]
 which is 
 \begin{equation}
 \label{eq:tranmas} 
-\alpha \dot{\state}=
+\ep \dot{\state}=
 \left[ 
 \begin{array}{cc}
 0 &1\\
 -1 &0 
 \end{array}
-\right]\alpha \state
+\right]\ep \state
 \end{equation}
 
-equation ~\ref{eq:tranmas} is equivalent to  ~\ref{eq:stateform}
-thus if $\state(t)$ is a solution, we get another solution $\hat{\state}(t)$.
+Equation ~\ref{eq:tranmas} is equivalent to  Equation~\ref{eq:stateform}.
+If $\state(t)$ is a solution, so is $\tilde{\state}(t)$.
 
-such transformation form a group.
-we define 
+To verify the group property. define $*$ as:
 \[
-g_{\alpha}*g_{\beta}(\state)=[\alpha \beta q, \alpha \beta \qd]
+g_{\ep_1}*g_{\ep_2}(\state)=[\ep_1 \ep_2 q, \ep_1 \ep_2 \qd]
 \]
-which also satisfy the differential equation.
 
-and 
+The inverse is:
 \[
-g_{\alpha}^{-1}=g_{\frac{1}{\alpha}}
+g_{\ep}^{-1}=g_{\frac{1}{\ep}} \;\ep \in R^+
 \]
-when $\alpha \in R^+$, the group is continues,
-thus it is an example of Lie Group.
+
+\begin{mydef}
+For a group $G$, the invairant function of state $I(\state))$ is called \emph{local motion invariant} of $G$. 
+\end{mydef}
+
+From mechanical perspective,  $I(\state)$ has important physical meaning. 
+According  \textbf{Noether's Theorem}, each $I(\state)$ corresponds to a conservative law. 
 
 
-
-
-
-This provide us an idea about motion synthesis.
-Given an original motion $q(t)$, and the corresponding group $G$, a new motion is generated by transformation.
-For every group G, we can find an function $I(x)$ unchanged by the group action G, 
-
-$I(\state)$ are called local motion invariant. 
-For mechanical system,  $I(x)$ has important physically meaning. 
-$I(\state)$ corresponding to the Conservative Law like energy or angular momentum.
-
-
-\section{Controlled Symmetry}
+\section{Control Symmetry}
 For motion synthesis, usually the desired motion is ma
 For example for motion stability, we want the current state is within the basin of attraction.
 If we want to control the final motion style, we want the state is on the limit cycle.
