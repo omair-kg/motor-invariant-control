@@ -51,7 +51,7 @@ We agree on the word ``walk'' also because it is an inborn ability encoded in ou
 ``Walk'' is the word for one motion primitive.
 
 
-Motion Primitives are ''easy'' motion tasks. 
+Motion Primitives are ``easy'' motion tasks. 
 For the intutive idea for  ``easiness'', a clear mathematical defination is needed.
 This chapter developed the mathematical conceptualization of Global Motor Invariant.
 New mathematical tools are introduced.
@@ -82,7 +82,7 @@ For a dynamic system, $q(t)$ usually is derived from the state trajectory $\stat
 
 For every point $\state \in M$, 
 $F$ and $u$ determines a derivative vector $\dot{\state}$ in the \emph{Tangent Space}~$T_{\state}M$. 
-Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}$,describe by the differential equaiton~ \ref{eq:ode}.
+Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}$,describe by the differential equaiton~ Equation~\ref{eq:ode}.
 which is described by the differential equation
 
 \begin{equation}
@@ -98,7 +98,7 @@ $F$ is determined by the system's natural property.
 If $u=0$,  no control effort is applied.
 Such systems are \emph{autonomous systems}. 
 
-Solutions to equation~\ref{eq:ode} is the \emph{intergral curve}. 
+Solutions to Equation~\ref{eq:ode} is the \emph{intergral curve}. 
 \emph{Flow} $\Phi(\state)$ of $\mathbf{V}$ is the \emph{integral curve} through~$\state$. 
 All the flows form the \emph{phase portrait}, which illustrates all the possible motions of the dynamic system.
 Differential manifolds are usually visualized by \emph{phase plot}.
@@ -156,15 +156,16 @@ For a flow $\phi_u$ passes through a point $\state_u$ on unstable manifold $W_{u
 In theory, only the attractors of the dynamic systems can be observed.
 Two types of attractors are of great interest in motor control:
 \begin{enumerate}
- \item fixed point, as show inf Figure~\ref{fig:StablePosture}.
- \item Limit Cycle,as shown in Figure ~\ref{fig:limit_circle}
+ \item Fixed Point, as show inf Figure~\ref{fig:StablePosture}.
+ \item Limit Cycle,as shown in Figure~\ref{fig:ecycle}.
 \end{enumerate}
+
 \begin{figure}
-\begin{center}
-\includegraphics[height=0.4\textheight]{phase_plot}
-\caption{Limit Cycle}
-\end{center}
-\label{fig:limit_circle}
+	\begin{center}
+	\includegraphics[height=0.4\textheight]{phase_plot}
+	\caption{Limit Cycle}
+	\end{center}
+	\label{fig:ecycle}
 \end{figure}
 
 
@@ -173,8 +174,8 @@ Two types of attractors are of great interest in motor control:
 
 For nonlinear dynamic systems, there may exist many attractors.
 The phase plane will be divide into different regions,result in a cellular structure.
-Within each region, all the flows will converge to one attractor ~$A$.
-For the attractor, the region is  the \emph{basin of attraction} ~$B(A)$.
+Within each region, all the flows will converge to one attractor ~$\mathcal{A}$.
+For the attractor, the region is  the \emph{basin of attraction} ~$\mathcal{B}(\mathcal{A})$.
 
 Figure~\ref{fig:manyboa} showns the landscape of plaseportaits of a dynamic system.
 \begin{figure}
@@ -198,8 +199,8 @@ For example, the duffine system described by Equation ~\ref{eq:duffin} is differ
 \end{equation}
 
 But the two system share the topology. 
-Phase plot of the two system are show in Figure~\ref{fig:msphaseplot},\ref{fig:duffin}
-Flows of the two systems are similar, and we can '' deform '' one into another.
+Phase plot of the two system are show in Figure~\ref{fig:msphaseplot},\ref{fig:duffin}.
+Flows of the two systems are similar, and we can ``deform '' one into another.
 This equivalence relationship is called \emph{topological conjugacy}.
 
 \begin{figure}
@@ -221,7 +222,7 @@ This equivalence relationship is called \emph{topological conjugacy}.
 
 
 \begin{mydef}
-Let $M$ and $M^{'}$ be topological spaces, and let $F\colon M\to M$ and $F^{'}\colon M^{'}\to M^{'}$
+Let $M$ and $M'$ be topological spaces, and let $F\colon M\to M$ and $F^{'}\colon M^{'}\to M^{'}$
 be continuous functions. We say that $F$ is
 \emph{topologically semiconjugate} to $F^{'}$, if there exists a continuous
 surjection $T\colon M\to M^{'}$ such that $FT=TF^{'}$. If $T$ is a homeomorphism,
@@ -256,7 +257,7 @@ Perturbations that only affect the state $\state$ are \emph{State Perturbation}.
 State Perturbations change the current state, the underlying dynamic system is unchanged.
 
 
-If the perturbated state $\state^{'}$ is still in the basin of attraction, the flow will converge to the attractor. 
+If the perturbated state $\state'$ is still in the basin of attraction, the flow will converge to the attractor. 
 Different perturbations will result different flows and different motion, the the final motion result will remain the same.
 Such kind of motion adaptation is \emph{Responsive Motion}.
 For the walking example, state perturbations can be modelled , while the character and environment is not changed.
@@ -402,7 +403,7 @@ In this research $\frac{\tau_{1}}{\tau_{2}}=0.5$
 
 \begin{equation}
 %y_{i}&=&\mbox{max}(s_{i},0)\\
-\uout=\hout[s_{1}]^{+}-[s_{2}]^{+}
+\uout=\hout([s_{1}]^{+}-[s_{2}]^{+})
 \end{equation}
 
 
@@ -551,7 +552,7 @@ The autonomous system of bouncing ball has only one fixed point attractor and it
 The bouncing ball shows the near periodic behaviour, thus can be seen as bifurcation of some periodic ones.
 Neural Oscillator can be applied to maintain the original periodic motion, and limit cycle emerges from entrainment.
 The input of neural oscillator is the velocity $\uin=\qd_{ball}$, the output drives the paddle position $q_{paddle}=\uout$.
-Dropped from different position, all the ball will bouncing  about the same height of $5 unit$,as show in Figure~\ref{fig:bb_attractive_circle}
+Dropped from different position, all the ball will bouncing  about the same height of $5 unit$,as show in Figure~\ref{fig:bb_attractive_circle}.
 The bouncing height can be maintained.
 
 \begin{figure}[h]
