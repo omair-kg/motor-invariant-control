@@ -96,7 +96,7 @@ In our discussion, for each group element $g$, $\ep$ is the parameter.
 A Lie Group originates from study of differential equations.
 From the algebraic perspective, the symmetrical group will keep the differential equation invariant.
 
-for a differential equation in Equation~\ref{eq:difforg}.
+For a differential equation in Equation~\ref{eq:difforg}.
 \begin{equation}
 \label{eq:difforg}
 \dot{\state}=F(\state)
@@ -108,7 +108,7 @@ I(t,\state,\dot{\state})=F(\state)-\dot{\state}
 Solutions satisfy $I(t,\state,\dot{\state})=0$.
 For the symmetry group with transformation as 
 \[
-(t,\state,\dot{\state}) \mapsto (\tilde{t},\tilde{\state},\tilde{\dot{\state}})
+(t,\state,\dot{\state}) \mapsto (\tilde{t},\tilde{\state},\dot{\tilde{\state}})
 \]
 We have
 \[
@@ -205,6 +205,7 @@ According  \textbf{Noether's Theorem}, each $I(\state)$ corresponds to a conserv
 
 
 \section{Control Symmetry}
+\label{sec:control_symmetry}
 Motions Adaptation might not only explore symmetry groups of natural dynamics.
 In reallife, animals will execute control effort for adapt motions; alsoFor a dynamic system, working out the symmetry group might be an nontrivial task.
 In \cms, it is possible the desired quantative properties is not an invariant of the natural dynamics.
@@ -213,7 +214,7 @@ Based on biological research foundings\citep{flash2007affine}, some simple group
 The control effort are applied to ensure the symmetry.
 
 
-Usually the natural dynamics are presented as by Euler-Lagrange Equation~\ref{eq:uncontrolled_euler_lagrange}\citep{Goldstein2002a}.
+Usually the natural dynamics are presented as by Euler-Lagrange Equation~\ref{eq:uncontrolled_euler_lagrange}\citep{Goldstein2002}.
 \begin{equation}
 \frac{d}{dt} \frac{\partial L}{\partial \qd} - \frac{\partial L}{\partial q} = 0
 \label{eq:uncontrolled_euler_lagrange}

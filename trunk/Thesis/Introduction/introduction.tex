@@ -233,12 +233,12 @@ When $\tau_{u}=0$,  the floating ship  becomes an \emph{autonomous system} gover
 To make it consistent with discussions in following chapters, Equation~\ref{eq:shipflow} is reformulated.
 Define the \emph{state} variable $\state=[q,\qd]$, new form is
 \[
-\dot{\state}=F_{I_e,d}(\state)+Bu
+\dot{\state}=F_{J,d}(\state)+Du
 \]
 
 wheren 
-$F$ is a function of $\state$, the subscripts$I_e$ and $d$ are \emph{system parameters}.
-$B$ is a matrix,which describe how the control effort is applied.
+$F$ is a function of $\state$, the subscripts~$J$ and~$d$ are \emph{system parameters}.
+$D$ is a matrix,which describe how the control effort is applied.
 $u$ is \emph{control input}, for this example is $\tau_{u}$
 
 
@@ -389,7 +389,7 @@ and corresponding phase plot of two flows is Figure~\ref{fig:massSpringPhasePlot
 It is highly unlikely animals can solve Equation~\ref{eq:mass-spring}.
 
 the mass spring system has some ``symmetrical properties''.
-Different flows share the same circle ''Shape''.
+Different flows share the same circle ``Shape''.
 New flows(green) can be find by scaling the original(red) flow.
 
 From mechanical viewport, this is because the flows of mass spring are energy perserving.
@@ -399,7 +399,7 @@ E=\frac{1}{2}(m\qd^2+kq^2)
 \]
 when $m=1,k=1$, $E=constant$ means $q^2+\qd^2=constant$, which is the implicit function of a circle.
 
-Given flow that pass through  $\state$ .
+Given flows that pass through  $\state$.
 For the state $\state^{'}$, by checking the energy, the scale transformation from red to green can be workout,then we know the future motion after $\state^{'}$.
 
 
@@ -434,11 +434,11 @@ Compared with traditional dynamics \cms methods,\emph{System Adaptation} and \em
 \HiItem {Better usability}.
 Adaptation motion is more easy. 
 Artists  adjust  parameters according their purpose, other motion properties are automatically perserved.
-\HiItem {computationally efficient} 
+\HiItem {Computationally Efficient} 
 This motion synthesis approach runs in real-time.
-\HiItem {motion transition}
+\HiItem {Motion Transition}
 Dynamic motion transiton are developed with the solid theory foundation.
-\HiItem {no reference motion}
+\HiItem {No Reference Motion}
 This dynamic method requires no motion data.
 
 \end{enumerate}

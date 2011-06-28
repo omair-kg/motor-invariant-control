@@ -3,11 +3,9 @@
 
 \documentclass[oneside,12pt]{Classes/CUEDthesisPSnPDF}
 \title{Adaptive Motion Synthesis and Motor Invariant Theory}
-
-
-  \author{Fangde Liu}
-  \collegeordept{NCCA,Media School}
-  \university{Bournemouth University}
+\author{Fangde Liu}
+\collegeordept{NCCA,Media School}
+\university{Bournemouth University}
 % insert below the file name that contains the crest in-place of 'UnivShield'
   %\crest{\includegraphics[bb = 0 0 292 336, width=30mm]{UnivShield}}
 
@@ -26,8 +24,9 @@
 % Put all the style files you want in the directory StyleFiles and usepackage like this:
 \usepackage{StyleFiles/watermark}
 \usepackage{amsmath}
-\usepackage{subfigure}
 \usepackage{amsthm}
+\usepackage{subfigure}
+
 % Comment out the next line to get single spacing
 \onehalfspacing
 
@@ -53,14 +52,15 @@
 \newcommand{\note}[1]{\textcolor{red}{Note:#1}}
 %\newcommand{\iv}{\mathbf{I}}
 \newcommand{\ep}{\varepsilon}
-\newcommand{\cms}{{\textbf{CMS}}}
+\newcommand{\cms}{\textbf{CMS}~}
 \newcommand{\dof}{\textbf{DOF}}
-\newcommand{\cpg}{\textbf{CPG}}
-\newcommand{\pd}{\textbf{PD}}
-\newcommand{\lc}{\textbf{LC}}
-\newcommand{\eph}{\textbf{EPH}}
-\newcommand{\umh}{\textbf{UMH}}
+\newcommand{\cpg}{\textbf{CPG}~}
+\newcommand{\pd}{\textbf{PD}~}
+\newcommand{\lc}{\textbf{LC}~}
+\newcommand{\eph}{\textbf{EPH}~}
+\newcommand{\umh}{\textbf{UMH}~}
 \newtheorem*{mythe}{Theorem}
+\newtheorem*{myprop}{Proposition}
 \newtheorem*{mydef}{Defination}
 
 
@@ -107,18 +107,18 @@
 \include{GlobalInvariant/gInvariant}
 \include{LocalInvariant/localInvariant}
 \include{CombineFramework/cframework}
-\include{BipedWalk/bwalk}
-\include{WalkStance/stance}
-\include{HiDof/hidof}
+%\include{BipedWalk/bwalk}
+%\include{WalkStance/stance}
+%\include{HiDof/hidof}
 
 %\include{Chapter1/chapter1}
 %\include{Chapter2/chapter2}
 %\include{Chapter3/chapter3}
-\include{Conclusions/conclusions}
+%\include{Conclusions/conclusions}
 
 \backmatter % book mode only
 \appendix
-\include{Appendix1/appendix1}
+%\include{Appendix1/appendix1}
 %\include{Appendix2/appendix2}
 
 \bibliographystyle{plainnat}
