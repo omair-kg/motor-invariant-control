@@ -1,39 +1,35 @@
 \chapter{MOTION PRIMITIVE TWEAKING:BIPEDAL WALKING}
 \label{chap:walk}
-
-\ifpdf
-    \graphicspath{{BipedWalk/BipedWalkFigs/PNG/}{BipedWalk/BipedWalkFigs/PDF/}{BipedWalk/BipedWalkFigs/}}
-\else
-    \graphicspath{{BipedWalk/BipedWalkFigs/EPS/}{BipedWalk/BipedWalkFigs/}}
-\fi
-
-In previous chapters, bouncing ball and mass spring are only used for illustrate the theory, but have little value for graphic application and motor control research.
-In this chapter, we will discuss in details about how to adaptive motion primitive for different environment and met user's needs.
-How motion primitives connected will be discussed in the next chapter.
+\graphicspath{{BipedWalk/BipedWalkFigs/EPS/}{BipedWalk/BipedWalkFigs/}}
 
 
-The motion primitive we use is bipedal walking.
-Bipedal walking is a topic of great application value for both the graphic and robotic engineering.
-Currently, it is special ability robots can't compete with human.
+The examples of bouncing ball and mass spring systems only illustrate the theory, but have little application value.
+This chapter discusses in details about how to adapt a motion primitive for  environmental and application specific constraints.
+Combination and transitions of motion primitives are discussed in the next chapter.
 
-In the past a few decades, almost all the control method have been tried on the bipedal walking model, but still we don't achieve the human bipedal walking ability.
-At the beginning, researchers believe bipedal walking in nature is unstable, and developed lots of control method based on trajectory following.
-A great turning point is the discovery of passive dynamic walking machine, it shows walking can happens without any control effort.
-This idea lead us to believe that walking is an inborn ability, and most problem are solved our body mechanical structure.
 
-In our research, we took the passive walking gait as motion primitive, we use global and local motor invariant controller to boot stability and adaptation.
-By this method, we get rid of solving complex computational burden.
-We generate adaptive and natural looking gait in a computational efficient way.
+The motion primitive understudy in this chapter is \emph{bipedal walking}, which is a topic of great application value for both the graphic and robotic engineering.
+In the past decades, many methods have been applied to the bipedal walking, but still we have not achieved  human bipedal walking ability yet.
+The early belief is that bipedal walking in nature is unstable, and many control methods are developed based on trajectory following.
+The turning point is the discovery of passive dynamic walking machine, which shows under specific conditions, walking needs not control effort.
+This idea lead us to believe that walking is an inborn ability, and most problems are solved by the mechanical structure.
+
+In motor invariant theory, bipedal walking is  a motion primitive.
+The passive walking gait is treated as the template.
+Neural Oscillator and Symmetry Control are applied to tweaking the template while maintaining the global and local motor invariants.
+This method generate adaptive gaits and stable gaits in realtime.
+
+
 
 
 \section{Motion Primitives}
 
 
-For bipedal walking, the main motion happens in the spagittal plane.
+For bipedal walking, yaw and roll motion are relative small and usually treated as secondary motion or totally neglected,  main motion happens in the \emph{sagittal plane}, as shown in Figure~\ref{fig:passivekneewalker}
 as shown in figure
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{spahittalPlae}
+    \includegraphics[width=0.7\textwidth]{spahittalPlae}
     \caption{SpahittaPlane}
     \label{fig:passivekneewalker}
 \end{center}
@@ -41,88 +37,63 @@ as shown in figure
 
 
 
-Sideway and row motion are relative small and usually treated as secondary motion or totally neglected.
-In this chapter, we mainly focus on the two dimension motion, which captured most of key characteristics of motion, and maintain the completeness of our theory.
-For motion of more doffs, are discussed in Chapter 8, the effects of more doffs will introduce perturbation to our model, they will not change the basic motion characteristics and adaptation tendency.
-But they will make the ''symmetry'' not so perfect, and may cause confusion.
-Thus we wil delay the discussion of fullbody in later chapter.
+
+This chapter focuses on the motions in sagittal plane,  \dof s in coronal plane are discussed in Chapter~\ref{chap:highdor}.
+More \dof s will introduce perturbations to our model, but will not change the basic motion characteristics and adaptation tendency.
+They will make the ``symmetry'' not so perfect and may cause confusions in explaining the idea. thus the discussion is delayed.
+
+
+The passive walking machine is shown in Figure~\ref{fig:passivekneewalker}.
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{PWI}
+    \includegraphics[width=0.7\textwidth]{PWI}
     \caption{A Passive Walking Model with Knee}
     \label{fig:passivekneewalker}
-\end{center}
+  \end{center}
 \end{figure}
 
 
-Figure~\ref{fig:passivekneewalker} shows the two dimensional walking model.
+
 \subsection*{Dynamics}
-With some special initial condition, the passive walker can walk down the slope with a stable gait.
-On the phase plot, we will have a limit circle Figure ~\ref{fig:fourphaselimitcycle}.
-Like bouncing ball, this system is also a hybrid system,the motion include four phases\citep{Chen2007}.
+
+Like the bouncing ball system, this system is hybrid\citep{ames2006categorical}, includes continuous and discrete dynamics[].
+Passive walking with knees include four phases\citep{Chen2007}.
 \begin{itemize}
 \HiItem{Free Swing Phase}
-During this phase, the support leg (the blue one) is kept straight and there is no knee bending with the supporting leg.
-The Swing Leg is bended, the thigh and shank.
+The support leg (the blue one) is kept straight,during this phase the knee of the swing leg is bended, the thigh and shank swings freely.
 \HiItem{Knee Strike Phase}
-The Knee Joints has a limit, we suppose when the knee angle reach the limit,a collision happens,after that the swing leg is kept straight.
+The knee joint of the swing leg has a limit.When the knee angle reach the limit,a collision happens.
+After the collision, the swing leg is kept straight.
 \HiItem{Knee Lock Swing Phase}
-During this phase, both the swing and support leg are kept straight.
+During this swing phase, both the swing and support leg are kept straight.
 \HiItem{Heel Strike Phase}
-When Heel Collide with the ground, heel strike happens and switch the support and swaying leg.
+When the heel of the swing leg hits the ground, a collision happens and after that the swing and support legs are switched.
 \end{itemize}
 
-\begin{figure}[!htbp]
-  \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walk_cycle_index}
-    \else
-      \includegraphics[width=0.7\textwidth]{walk_cycle_index}
-    \fi
-    \caption{Limit Circle And Different Phase in Passive Walking}
-    \label{fig:fourphaselimitcycle}
-\end{center}
-\end{figure}
 
-
-\begin{figure}[!htbp]
-  \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{Fourphase}
-    \else
-      \includegraphics[width=0.7\textwidth]{Fourphase}
-    \fi
-    \caption{The four phases in Walking}
-    \label{fig:fwalkingphase}
-\end{center}
-\end{figure}
-
-\subsubsection*{Dynamic Equation}
-
-The passive walking is modelled as rigid body dynamics.
+The passive walker is modelled based on rigid body dynamics.
+Dyanmic equations are developed based on Lagrange Mechanics~\citep{Goldstein2002}.
 for details of calculating the dynamic equation, please reference\citep{Chen2007}
-The Passive Walking equation is developed based on Lagrange Mechanics.
+
 
 
 \begin{itemize}
-\HiItem{flying phase}
-the equation is in the form of 
+\HiItem{Flying Phases}
+For both the free and locked knee swing phases are described by the continuous dynamics.
+Both equations are in the form of Equation~\ref{eq:flyequation}.
 \begin{equation}
 \label{eq:flyequation}
 M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = 0
 \end{equation}
 $q=[q_1,q_2,q_3]$,$\qd=[\dot{q_1},\dot{q_2},\dot{q_3}]$
-where $M$ is the initial mass matrix, $C$ and $N$ are the centrifugal force matrix and gravity respectively. The knee lock and contact state applies the instantaneous function
-for knee free a  $M$ and $C$ are 3 by 3 Matrix, $N$ is 3 by 1 matrix.
-for knee lock phase, $M$ and $C$ are 2 by 2 Matrix, $N$ is 2 by 1 Matrix.
-
-
-Equation ~\ref{eq:flyequation} can also in the state form, we have $\state=[q,\qd]$.
+where $M$ is the initial mass matrix, $C$ and $N$ are the centrifugal force matrix and gravity respectively. 
+For Free Swing Phase,  $M$ and $C$ are $3$ by $3$ Matrix, $N$ is $3$ by $1$ vector.
+for Knee Lock Phase, $M$ and $C$ are $2$ by $2$ Matrix, $N$ is $2$ by $1$ vector.
+Put into the standard form, define $\state=[q,\qd]$, Equation~\ref{eq:flyequation} are transformed into Equation~\ref{eq:stateformpw}
 Then the function is in the form.
 \begin{equation}
+\label{eq:stateformpw}
 \dot{\state}=
 -\left[ 
 \begin{array}{cc}
@@ -145,17 +116,62 @@ Then the function is in the form.
 \end{equation}
 
 \HiItem{The Strike Phases}
-When Heel Strike or Knee Strike Happens.
-collision equations are developed by momentum perserving laws.
-for the two phase, equations are off the same form.
+The knee strike and heel strike phases are modelled based on discrete dynamics.
+collision equations are developed based on momentum perserving principle.
+both collision equations are in the form of Equation~\ref{eq:collidequ}.
 \begin{equation}
-Q^{+}\dot{\mathbf{q}}^{+} = Q^{-}\dot{\mathbf{q}}^{-}
+\label{eq:collidequ}
+J^{+}\dot{\mathbf{q}}^{+} = J^{-}\dot{\mathbf{q}}^{-}
 \end{equation}
-where $Q$ is the mass matrix used to compute the angular momentum inetia, before and after a heel strike or knee lock
-For Knees Strike,$Q^-$ is 3 by 2 Matrix, $Q^+$ is 2 by 2 Matrix;
-For Heel Strike, both $Q^{+,-}$ are 2 by 2 Matrix.
+
+where $J$ is the matrix of angular momentum inetia, the subscripts~$+,-$ represent after and before collision.
+For Knees Strike,$J^-$ is a 3 by 2 Matrix, $Q^+$ is 2 by 2 Matrix;
+For Heel Strike, both $J^{+,-}$ are 2 by 2 Matrix.
 \end{itemize}
 For the components of each matrix, please refer to the appendix.
+
+
+
+
+
+
+
+With special initial conditions, the passive walker can walk down the slope with a stable gait.
+On the phase plot,  a limit cycle emergy. 
+Figure ~\ref{fig:phasesmaker} shows the phase plot of one thigh for a stable walking cycle.
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{walk_cycle_index}
+    \caption{Four Phases Markered on a Walking Cycle}
+    \label{fig:phasesmaker}
+\end{center}
+\end{figure}
+
+
+
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{PassiveWalkingLimitCycle}
+    \caption{Limit Circle And Different Phase in Passive Walking}
+    \label{fig:PassiveWalkingLimitCycle}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{Fourphase}
+    \caption{The four phases in Walking}
+    \label{fig:fwalkingphase}
+\end{center}
+\end{figure}
+
+
+
+
 
 
 
