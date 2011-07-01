@@ -125,7 +125,7 @@ J^{+}\dot{\mathbf{q}}^{+} = J^{-}\dot{\mathbf{q}}^{-}
 \end{equation}
 
 where $J$ is the matrix of angular momentum inetia, the subscripts~$+,-$ represent after and before collision.
-For Knees Strike,$J^-$ is a 3 by 2 Matrix, $Q^+$ is 2 by 2 Matrix;
+For Knees Strike,$J^-$ is a 3 by 2 Matrix, $J^+$ is 2 by 2 Matrix;
 For Heel Strike, both $J^{+,-}$ are 2 by 2 Matrix.
 \end{itemize}
 For the components of each matrix, please refer to the appendix.
@@ -139,27 +139,15 @@ For the components of each matrix, please refer to the appendix.
 With special initial conditions, the passive walker can walk down the slope with a stable gait.
 On the phase plot,  a limit cycle emergy. 
 Figure ~\ref{fig:phasesmaker} shows the phase plot of one thigh for a stable walking cycle.
+Four phases are marked, and Figure~\ref{fig:fwalkingphase} shows the the gait of four phases.
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walk_cycle_index}
+    \includegraphics[width=0.7\textwidth]{walk_cycle_index}
     \caption{Four Phases Markered on a Walking Cycle}
     \label{fig:phasesmaker}
 \end{center}
 \end{figure}
-
-
-
-
-
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.7\textwidth]{PassiveWalkingLimitCycle}
-    \caption{Limit Circle And Different Phase in Passive Walking}
-    \label{fig:PassiveWalkingLimitCycle}
-\end{center}
-\end{figure}
-
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -179,15 +167,16 @@ Figure ~\ref{fig:phasesmaker} shows the phase plot of one thigh for a stable wal
 \section{Global Motor Control and Adaptive Gaits}
 
 \subsection{Entrainment}
+Neural oscillator Control  are applied to maintain the stability of limit cycle.
 
-When Coupling Neural Oscillator with the Passive Walker,
-The output of neural oscillator drive the hip angel (angle between the two thighs)
-as shown in equation
+The output of neural oscillator worked as torque applied at hip angel (angle between the two thighs).
+The dynamics are shown in Equation~\ref{eq:neuralwalk}
 \begin{equation}
+\label{eq:neuralwalk}
 M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = D\uout
 \end{equation}
-for the knee lock phase $D=[1,1]^T$.
-for knee free phase, $D=[1,-1,0]^T$(acting on the difference between the two thighs, not effect the knee)
+For the knee lock phase $D=[1,-1]^T$.
+For the knee free phase, $D=[1,-1,0]^T$(acting on the difference between the two thighs, not effect the knee)
 
 the input signal is the hip angle,
 we have 
@@ -195,98 +184,161 @@ we have
 	\uin=\hin(q_1-q_2)
 \]
 
-when the drive force is small, the entrainment system show a similar limit circle with original passive one,
-thus result in a similar gait.
-limit circle and gait are show in figure and figure 
+when the drive force is small, the limit cycle of entrainment system is similar to the passive one original passive one.
+Both limit cycles are shown in Figure~\ref{fig:entrainmentgait} and Figure~\ref{fig:passivegait}.
+Walking gatis are shown in Figure
+
+
+
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walk_cycle_index}
-    \else
-      \includegraphics[width=0.7\textwidth]{walk_cycle_index}
-    \fi
-    \caption{Place Holder}
-    \label{fig:Passive And Entraintment Walking Comparation}
+    \includegraphics[width=0.7\textwidth]{PassiveWalkingLimitCycle}
+    \caption{Limit Circle And Different Phase in Passive Walking}
+    \label{fig:passivegaitlimitcycle}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+
+      \includegraphics[width=0.7\textwidth]{NeuralWalkingLimitCycle}
+    \caption{The gait with neural controller}
+    \label{fig:entrainmentgaitlimitcyle}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walking_with_neural}
-    \else
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \fi
-    \caption{Place Holder}
+     \includegraphics[width=0.7\textwidth]{PassiveGait}
+    \caption{The Passive Walking Gait}
     \label{fig:passivegait}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walking_with_neural}
-    \else
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \fi
-    \caption{Place Holder}
+     \includegraphics[width=0.7\textwidth]{neuralWalk}
+    \caption{Passive Walking with Neural Control}
     \label{fig:entrainmentgait}
 \end{center}
 \end{figure}
 
 
 
-Entrainment Boost the staliby of the passive dynamic walker, 
-the original walker can't walk on plain, when after several steps, the step size will become smaller and finally will rest or fall over.
-after coupling with neural oscillator, the passive walker can walk on a plane with constant step size.
-To main the energy efficient proper of natural motion, we make the limit the $\hout$ to a small number, thus the step size is very small.
+Neural oscillator  boosts structrual stability of walking. 
+The passive walking can not be maintained on plane, structure perturbation from slope angle violate the topology, limit cycle does not exist any more.
+The stepsize descrease every step, after several steps, and the walker will stop or fall over,as shown in Figure~\ref{fig:passivegaitplane}
+After coupling with neural oscillator, the  walker maintain the gait with a small stepsize,as shonw in Figure~\ref{fig:neuralwalkinggait}.
+To maintain the energy efficient property of natural motion, $\uout$ is limited to small, thus maintain a small stepsize,as shown in Figure~\ref{fig:entrainmentLimitCycleOnPlane}.
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walking_without_neural}
-    \else
-      \includegraphics[width=0.7\textwidth]{walking_without_neural}
-    \fi
-    \caption{Without Neural Oscillator On Plain}
-    \label{fig:fwalkingphase}
+    \includegraphics[width=0.7\textwidth]{PassiveOnPlane}
+    \caption{Passive On Plain}
+    \label{fig:passivegaitplane}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walking_with_neural}
-    \else
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \fi
-    \caption{With Neural Oscillator on Plain}
-    \label{fig:fourphaselimitcycle}
+     \includegraphics[width=0.7\textwidth]{NeuralWalkingPlane}
+    \caption{Entraint Gait On Plane}
+    \label{fig:neuralwalkinggait}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walk_cycle_index}
-    \else
-      \includegraphics[width=0.7\textwidth]{walk_cycle_index}
-    \fi
-    \caption{Limit Circle And Different Phase in Passive Walking}
-    \label{fig:fourphaselimitcycle}
+      \includegraphics[width=0.7\textwidth]{NeuralPlaneCycle}
+    \caption{Limit Cycle of entrainment gait on plane}
+    \label{fig:entrainmentLimitCycleOnPlane}
 \end{center}
 \end{figure}
 
 
-Also we can include the state perturbation by push the walker a little when it is walking.
-it return to the stable walking cycle, this means the basin of attraction has been enlarged.
+
+For Figure~\ref{fig:entrainmentLimitCycleOnPlane}, the initial postion is far from the limit cycle, this shows that the basin of attraction has been enlarged.
+State perturbation applied to generate pushed or pulled walking gaits as shown in Figure~\ref{fig:PushGait} and Figure~\ref{fig:PullGait}.
+And Figure~\ref{fig:PushGaitPlot} and Figure~\ref{PullGaitPhasePlot}.
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{PushGait}
+    \caption{The Push Perturbated Gait}
+    \label{fig:PushGait}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{PullGait}
+    \caption{The Pull Perturbated Gait}
+    \label{fig:PullGait}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{PushWalkingPhasePlot}
+    \caption{The Pushed Gait Phase Plot}
+    \label{fig:PushGaitPlot}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{PullWalkingPhasePlot}
+    \caption{The Pulled Gait Phase Plot}
+    \label{fig:PullGaitPhasePlot}
+\end{center}
+\end{figure}
+
+
+Also the change the initial stepsize, the walker will adjust it automatically.
+Figure~\ref{fig:bigStepIni} and Figure~\ref{fig:smallStepini} show the gaits.
+Figure~\ref{fig:bigstepiniGaitPlot} and Figure~\ref{fig:smallstepiniPhasePlot} show the phase plot.
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{BigStep}
+    \caption{Big Initial Step Size}
+    \label{fig:bigStepIni}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{smallStep}
+    \caption{Small Initial Step Size}
+    \label{fig:smallStepini}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{BigStepPhasePlot}
+    \caption{Big Initial Step Initial Phase Plot}
+    \label{fig:bigstepiniGaitPlot}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{SmallStepPhasePlot}
+    \caption{The Small Initial Step Gait Phase Plot}
+    \label{fig:smallstepiniPhasePlot}
+\end{center}
+\end{figure}
+
+
 
 
 
@@ -308,12 +360,7 @@ We change the mass of the hip $m_h$, different $m_h$ will generate different gai
 different Limit Cycles are show in Figure ~\ref{fig_differentmh}
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{MassDistributionEffectsOnLimitCircle}
-    \else
       \includegraphics[width=0.7\textwidth]{MassDistributionEffectsOnLimitCircle}
-    \fi
     \caption{Different Gait Resulting From the Different Mass Ratio}
     \label{fig:differentmh}
 \end{center}
