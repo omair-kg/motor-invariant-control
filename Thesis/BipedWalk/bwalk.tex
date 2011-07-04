@@ -202,7 +202,6 @@ Walking gatis are shown in Figure~\ref{fig:entrainmentgait} and Figure~\ref{fig:
 
 \begin{figure}[!htbp]
   \begin{center}
-
       \includegraphics[width=0.7\textwidth]{NeuralWalkingLimitCycle}
     \caption{The gait with neural controller}
     \label{fig:entrainmentgaitlimitcyle}
@@ -225,7 +224,7 @@ Walking gatis are shown in Figure~\ref{fig:entrainmentgait} and Figure~\ref{fig:
 \end{center}
 \end{figure}
 
-
+\subsection{Stabilility}
 
 Neural oscillator  boosts structrual stability of walking. 
 The passive walking can not be maintained on plane, structure perturbation from slope angle violate the topology, limit cycle does not exist any more.
@@ -345,67 +344,70 @@ Figure~\ref{fig:bigstepiniGaitPlot} and Figure~\ref{fig:smallstepiniPhasePlot} s
 
 
 \subsection{System Gait Adaptation}
-The passive dynamic system has many parameters, changing such parameters will generate different gait through system adaptation.
-we can formulate the original system as
+The passive walker has many parameters, like mass and leg length, different parameters will result in a different dynamics sytem.
+But all these dynamic systems  share the same topology and generate different limit cycle and gaits.
+Some meaningful gaits are shown.
+
+If all the parameters are scaled in uniform, the gait will remain the same, only the velocity will be changed,
+To demonstrate different gaits, ratio parameters are modified. The total mass and total leg length of all examples are kept the same.
+Ratio Parameters are 
+\begin{itemize}
+\HiItem{Mass Distribution Ratio}
+\HiItem{Leg Length Distribution Ratio}
+\HiItem{Right Left Unbalanced Ratio}
+\end{itemize}
+
+
+\subsubsection*{Mass Distribution Ratio}
+When the total mass is kept,
+Mass Distribution Ratio is defined as the hip mass over leg mass. 
+The mass ratios of shank and thigh are kept.
+thus we define the ratio as
 \[
-\dot{\state}=F_a(\state)
+\alpha_m=\frac{m_h}{m_s}
 \]
-where $a$ is the system parameters.
-we adjust the several parameters, neural oscillator maintain the limit cycle, but different parameters will generate different gait.
-Some meaningful gait are shown.
-Because uniform ally change the parameter will not effect the gaits, only will effect the period, so we most of the parameters we change is the ratio.
-We will maintain the leg length $L$ and mass sum.
-\subsubsection*{Mass Distribution Change}
-We change the mass of the hip $m_h$, different $m_h$ will generate different gaits, while bigger $m_h$ will result motion that are similar to burdened gait.
-different Limit Cycles are show in Figure ~\ref{fig_differentmh}
+where $m_h$ is the mass of the hip and $m_t$ is mass of the thigh.
+Different $\alpha_m$ will result in different gait, bigger $\alpha_m$ result gait to that burdened.
+Different limit cycles are shown in Figure ~\ref{fig:differentmh}.
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{MassDistributionEffectsOnLimitCircle}
+     \includegraphics[width=0.7\textwidth]{MassDistributionEffectsOnLimitCircle}
     \caption{Different Gait Resulting From the Different Mass Ratio}
     \label{fig:differentmh}
 \end{center}
 \end{figure}
 
-From the phase plot, we find some interesting tendency,
-when the hip is heavier, it will walk with bigger step but a slow speed($\qd$ is lower),and also character tend to fall backward.
-which the body is become litter, character will walk with quickly($\qd$ is bigger) and it tends to lean forward.
+For bigger $\alpha_m$, the walker will walk with bigger step but a slow speed($\qd$ is lower).
+Also the character tend to fall backward.
+For smaller $\alpha_m$, character will walk with quickly($\qd$ is bigger) and it tends to lean forward.
+This may imply about the upper body motion.
+Usually, when we carry something heavier, we  tend to bend upperbody forward.
 
-This may give us some information about the upper body motion.
-Usually, when we carry something heavier, we  tend to bend the body upper forward to prevent following backward.
-
-different gaits are show in the following pictures.
+Different gaits are shown in Figure~\ref{fig:massh1},Figure~\ref{fig:massh2},Figure~\ref{fig:massh3}
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder}
+      \includegraphics[width=0.7\textwidth]{mhms3}
+    \caption{gait with $\alpha_m=0.3$}
     \label{fig:massh1}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder}
+      \includegraphics[width=0.7\textwidth]{mhms50}
+    \caption{Gait of $\alpha_m=5$}
     \label{fig:massh2}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder}
+      \includegraphics[width=0.7\textwidth]{mhms140}
+    \caption{Gait of $\alpha_m=14$}
     \label{fig:massh3}
 \end{center}
 \end{figure}
 
-%Mh/Mt=0.3
-
-%Mh/Mt=2
-
-%Mh/Mt=3
-
-	
-%Mh/mt=10
 
 
 \subsubsection*{Leg Length Distribution Change}
@@ -415,12 +417,7 @@ as shown in figure~\ref{fig:differentlr}
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{LegLengthDistributionEffectsOnLimitCircle}
-    \else
       \includegraphics[width=0.7\textwidth]{LegLengthDistributionEffectsOnLimitCircle}
-    \fi
     \caption{Different Gait Resulting From the Different Mass Ratio}
     \label{fig:differentlr}
 \end{center}
@@ -469,12 +466,7 @@ Basically, the bigger the slope, the bigger the step size the higher the speed, 
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{DifferentStepSizeWalking}
-    \else
       \includegraphics[width=0.7\textwidth]{DifferentStepSizeWalking}
-    \fi
     \caption{different step size walking}
     \label{fig:differentlr}
 \end{center}
@@ -515,12 +507,7 @@ Bigger difference will result in a gait looks like cripple.
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{DifferentLegMassLimitCircle}
-    \else
       \includegraphics[width=0.7\textwidth]{DifferentLegMassLimitCircle}
-    \fi
     \caption{Different Leg Mass Stable Gaits}
     \label{fig:differentlr}
 \end{center}
