@@ -349,13 +349,9 @@ But all these dynamic systems  share the same topology and generate different li
 Some meaningful gaits are shown.
 
 If all the parameters are scaled in uniform, the gait will remain the same, only the velocity will be changed,
-To demonstrate different gaits, ratio parameters are modified. The total mass and total leg length of all examples are kept the same.
-Ratio Parameters are 
-\begin{itemize}
-\HiItem{Mass Distribution Ratio}
-\HiItem{Leg Length Distribution Ratio}
-\HiItem{Right Left Unbalanced Ratio}
-\end{itemize}
+To demonstrate different gaits, ratio parameters are modified. 
+The total mass and total leg length of all examples are kept the same.
+
 
 
 \subsubsection*{Mass Distribution Ratio}
@@ -410,10 +406,11 @@ Different gaits are shown in Figure~\ref{fig:massh1},Figure~\ref{fig:massh2},Fig
 
 
 
-\subsubsection*{Leg Length Distribution Change}
-we keep the leg length unchanged, but alter the ration of shank and thigh.
-We generate gait with different leg length ratio.
-as shown in figure~\ref{fig:differentlr}
+\subsubsection*{Leg Length Distribution Ratio}
+The leg length is kept unchanged, but we alter the the ration parameter $\alpha_l=\frac{l_t}{l_s}$.
+By chaning $\alpha_l$ motion for different characters are generated.
+This demostrated the motion retargeting resullts.
+
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -423,34 +420,37 @@ as shown in figure~\ref{fig:differentlr}
 \end{center}
 \end{figure}
 
-for the limit cycle in figure~\ref{fig:differentlr}, we find something interesting.
+The limit cycle in Figure~\ref{fig:differentlr} imply something important about leg length in walking.
 Basically, the support leg motion is almost the same, while different leg length ration will result in different sway angle
-Basically the longer the shank, thigh has to sway quickly and with bigger amplitude.
-There are also bigger impulses during the strike phase. For both the knee and heel strike, larger impulse is generated.
-while step size is kept.
-This maybe true that girls walking with tall heel will easily get knees and heel injured and also will generate larger step sound.
+The step size is kept.
+The longer the shank, thigh has to sway quickly and with bigger amplitude.
+There are also bigger impulses during the strike phase. 
+For both the knee and heel strike, larger impulse is generated.
+This result may shows the effects of high heel shoes for walking.
+Figure~\ref{fig:lr1},Figure~\ref{fig:lr2},Figure~\ref{fig:lr3} show the different gaits.
+
 
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder1}
+      \includegraphics[width=0.7\textwidth]{LTLS5}
+    \caption{gait of $\alpha_l=0.5$}
     \label{fig:lr1}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder2}
+      \includegraphics[width=0.7\textwidth]{LTLS7}
+    \caption{gait of $\alpha_l=0.7$}
     \label{fig:lr2}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder3}
+      \includegraphics[width=0.7\textwidth]{LTLS13}
+    \caption{gait of $\alpha_l=1.3$}
     \label{fig:lr3}
 \end{center}
 \end{figure}
@@ -458,41 +458,44 @@ This maybe true that girls walking with tall heel will easily get knees and heel
 
 
 
-\subsubsection*{SlopChange}
-Also we can change different down slope.
-For different slope, entrainment maintained the limit cycle, but limit cycle changed its shape.
-different stable limit circles are show in figure ~\ref{fig:diffstepsize}
-Basically, the bigger the slope, the bigger the step size the higher the speed, and produce a gait similar to energy scaling.
+\subsubsection*{Different Slopes}
+Also we can change the angle of downslope.
+For different slopes, entrainment maintains the limit cycle, but limit cycle changed its shape.
+Different stable limit cycles are show in Figure ~\ref{fig:diffslopes}
+Basically, the bigger the slope, the bigger the step size, the higher the speed.
+Slope changing has similar effects to energy scaling.
+Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} shown different gaits on different slopes.
+
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{DifferentStepSizeWalking}
+      \includegraphics[width=0.7\textwidth]{DifferentSlope}
     \caption{different step size walking}
-    \label{fig:differentlr}
+    \label{fig:diffslopes}
 \end{center}
 \end{figure}
 
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder1}
+      \includegraphics[width=0.7\textwidth]{Slope30}
+    \caption{Gait On Slope 1} 
     \label{fig:ss1}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder2}
+      \includegraphics[width=0.7\textwidth]{Slope60}
+    \caption{Gait On Slope 2}
     \label{fig:ss2}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder3}
+      \includegraphics[width=0.7\textwidth]{Slope-20}
+    \caption{Gait On Slope 3}
     \label{fig:ss3}
 \end{center}
 \end{figure}
@@ -500,10 +503,10 @@ Basically, the bigger the slope, the bigger the step size the higher the speed, 
 
 
 
-\subsubsection*{Different Leg Mass}
-we also change the leg mass of the two leggs, make them not equal.
-This will result two legs sway differently and the limit circle of original system is doubled.
-Bigger difference will result in a gait looks like cripple.
+\subsubsection*{Unbalanced Mass Ratio}
+Also define the \emph{Unbalanced Mass Ration} $\alpha_b=\frac{\text{Left Leg Mass}}{\text{Right Leg Mass}}$.
+When $\alpha_b$ is increased, two legs sway differently and the limit circle is splited.
+Bigger $\alpha_b$  will result in cripple like gait, as shown in Figure~\ref{fig:lm2}
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -514,39 +517,18 @@ Bigger difference will result in a gait looks like cripple.
 \end{figure}
 
 
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder1}
-    \label{fig:lm1}
-\end{center}
-\end{figure}
+
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder2}
+      \includegraphics[width=0.7\textwidth]{MLMR130}
+    \caption{Gait of $\alpha_b=1.3$}
     \label{fig:lm2}
 \end{center}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder3}
-    \label{fig:lm3}
-\end{center}
-\end{figure}
 
-
-%lmass/rmass=1
-
-%lmass/rmass=0.75
-
-
-the period is double and the step is not symmetrical any more. So the two legs move in a slight different manner, but still, it keeps walking.
-
-\section{Transform Gait Adaptation}
+\section{Local Motor Invariant Control}
 Local Invariant Controller will not generate different gait style, but it will transform the gait at different speed and at different terrain.
 One important limitation we find of limit cycle is it can not walk up slope.
 This is because when walking upslope, it is symmetrical to walk down the slope in another direction, if the limit cycle is stable enough, after a few steps, it will walk backwards and walk down slope.
