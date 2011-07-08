@@ -458,6 +458,33 @@ Figure~\ref{fig:lr1},Figure~\ref{fig:lr2},Figure~\ref{fig:lr3} show the differen
 
 
 
+
+\subsubsection*{Unbalanced Mass Ratio}
+Also define the \emph{Unbalanced Mass Ration} $\alpha_b=\frac{\text{Left Leg Mass}}{\text{Right Leg Mass}}$.
+When $\alpha_b$ is increased, two legs sway differently and the limit circle is splited.
+Bigger $\alpha_b$  will result in cripple like gait, as shown in Figure~\ref{fig:lm2}
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{DifferentLegMassLimitCircle}
+    \caption{Different Leg Mass Stable Gaits}
+    \label{fig:differentlr}
+\end{center}
+\end{figure}
+
+
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{MLMR130}
+    \caption{Gait of $\alpha_b=1.3$}
+    \label{fig:lm2}
+\end{center}
+\end{figure}
+
+
+
 \subsubsection*{Different Slopes}
 Also we can change the angle of downslope.
 For different slopes, entrainment maintains the limit cycle, but limit cycle changed its shape.
@@ -503,175 +530,218 @@ Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} shown different g
 
 
 
-\subsubsection*{Unbalanced Mass Ratio}
-Also define the \emph{Unbalanced Mass Ration} $\alpha_b=\frac{\text{Left Leg Mass}}{\text{Right Leg Mass}}$.
-When $\alpha_b$ is increased, two legs sway differently and the limit circle is splited.
-Bigger $\alpha_b$  will result in cripple like gait, as shown in Figure~\ref{fig:lm2}
-
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.7\textwidth]{DifferentLegMassLimitCircle}
-    \caption{Different Leg Mass Stable Gaits}
-    \label{fig:differentlr}
-\end{center}
-\end{figure}
-
-
-
-
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.7\textwidth]{MLMR130}
-    \caption{Gait of $\alpha_b=1.3$}
-    \label{fig:lm2}
-\end{center}
-\end{figure}
 
 
 \section{Local Motor Invariant Control}
-Local Invariant Controller will not generate different gait style, but it will transform the gait at different speed and at different terrain.
-One important limitation we find of limit cycle is it can not walk up slope.
-This is because when walking upslope, it is symmetrical to walk down the slope in another direction, if the limit cycle is stable enough, after a few steps, it will walk backwards and walk down slope.
+Neural Oscillator boost the stability, sometimes stability becomes an limitation in motion.
+For the walking example, if the basin of attraction covers the whole space, then the passive walker can't walk upslope.
+If put the walker walk upslope, after a few steps, the passive walker will begin to walk backward downslope,as shown in Figure~\ref{fig:fig:withoutlocalcontroller}.
+Also it is not convient to adjust the speed of walking.
 
+Local Motor Invariant provides a mechanism to adapt motion according to the environment and application specific purpose.
+Equation~\ref{eq:localcontrolwalking} describe walking with local control.
 
-the failure of walking up slope is show in figure
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder}
-    \label{fig:withoutlocalcontroller}
+     \includegraphics[width=0.7\textwidth]{NeuralUpslope}
+    \caption{Failure of walking upslope}
+    \label{fig:localcontrolwalking}
 \end{center}
 \end{figure}
 
-we apply two types of local motor invariant.
+\begin{equation}
+\label{eq:localcontrolwalking}
+M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = \ulocal
+\end{equation}
+
+\subsubsection{Group Actions}
+Lie group actions are developed for two types of symmetry.
 \begin{itemize}
 
-\HiItem{Slope Change}.
-Slope Change is incorporate through offset transformation.
-
-%N=N*g.
+\HiItem{Offset Action}.
+Offset Action moves the phase plot horizontally, this will make the passive walking on terrain of different slope.
+For the bipedal walking, the offset action is:
 \[
-\ulocal=N(\mathrm{cos}(\alpha)-1)
+\ulocal=N(q)-N(q+\ep)
 \]
-\HiItem{Speed Change}
-Speed Action will ajust the walking speed, but maintain the walking gait.
-the the new walking speed is $s$.
-we have
+\HiItem{Speed Action}
+Speed Action maintain the walking gait, but modify the walking speed.
+The local control is:
 \[  
-\ulocal=N(\alpha^2-1)
+\ulocal=(1-\ep^2)N
 \]
 \end{itemize}
 
-\begin{figure}[!htbp]
-  \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{LieGroupAction}
-    \else
-      \includegraphics[width=0.7\textwidth]{LieGroupAction}
-    \fi
-    \caption{Different Leg Mass Stable Gaits}
-    \label{fig:differentlr}
-\end{center}
-\end{figure}
+The original system doest not have energy scalling symmetry.
+Energy Scaling is approximate by a combined method discussed later.
 
+Figure~\ref{fig:walkliegroupphase} demostrate different phase plot after appling lie group actions.
 The red on is the original limit cycle.
 Green one are apply speed action
 Blue ones are applied  locol transform action
 
-Also it can help the passive walker walk upslope.
-as show in figure
+
+\begin{figure}[!htbp]
+  \begin{center}
+     \includegraphics[width=0.7\textwidth]{LieGroupAction}
+    \caption{Lie Group Actions on the Phase Plot}
+    \label{fig:walkliegroupphase}
+\end{center}
+\end{figure}
+
+
+Local Motor Invariant Control make it possible for the passive walker to walk upslope, as shown in Figure~\ref{fig:liegroupupslope}
 
 
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walking_local_control}
-    \else
-      \includegraphics[width=0.7\textwidth]{walking_local_control}
-    \fi
-    \caption{Varying Terrain}
-    \label{fig:diffterrain}
+      \includegraphics[width=0.7\textwidth]{LieUpslope}
+    \caption{Upslope Gait Generate by Lie Group Action}
+    \label{fig:liegroupupslope}
+\end{center}
+\end{figure}
+
+\section{Control Combination}
+Global Motor Invairant Control boost the walking stability, but sometimes can't the result motion can't meet application's needs.
+Local Motor Invariant Control can adapt the walking to application purpose, but it can't boost the stability.
+Combined the two controllers make it possbile to take advantage for the two methods.
+The combined method is shown by Equation~\ref{eq:combinedcontrolwalking}
+\begin{equation}
+\label{eq:combinedcontrolwalking}
+M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = D\uout+\ulocal
+\end{equation}
+
+
+Animator can generate different gaits through neural oscillator, then transform the different gaits by lie group actions.
+For animators, this method is efficient, natural looking and easy to use.
+There are unlimited combination of adaptive gaits and transform action.
+Some examples are shown in the following.
+
+
+\subsection{Stepsize Adjust}
+When the character walking down different slopes, steeper slope will result in a bigger stepsize as shown in Figure~\ref{DifferentSlope}, if Offset Lie Group actions is applyed, we can achieve different step gait on the constant slope.
+Figure~\ref{fig:differentstepsizeonplaine} shows the gaits of different stepsize on the plane.
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{DifferentStepSizeWalking}
+    \caption{Limit Cycles of gaits of different step size}
+    \label{fig:differentstepsizeonplaine}
 \end{center}
 \end{figure}
 
 
 
-
 \begin{figure}[!htbp]
   \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walk_terrain_anim}
-    \else
-      \includegraphics[width=0.7\textwidth]{walk_terrain_anim}
-    \fi
-    \caption{Varying Terrain}
-    \label{fig:diffterrain}
-\end{center}
-\end{figure}
-
-
-
-and on phase plot we see
-
-\begin{figure}[!htbp]
-  \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walk_terrain}
-    \else
-      \includegraphics[width=0.7\textwidth]{walk_terrain}
-    \fi
-    \caption{Varying Terrain}
-    \label{fig:diffterrainphase}
-\end{center}
-\end{figure}
-
-and another terrain.
-\begin{figure}[!htbp]
-  \begin{center}
-    \leavevmode
-    \ifpdf
-      \includegraphics[height=6in]{walk_terrain2}
-    \else
-      \includegraphics[width=0.7\textwidth]{walk_terrain2}
-    \fi
-    \caption{Varying Terrain}
-    \label{fig:diffterrainphase}
-\end{center}
-\end{figure}
-
-
-if the offset action is not enough, we find character can also walk up the slope, just with smaller step size.
-Because a smaller offset action is equalivant to walking on the same transform the gait and with the system adaptation of the walking down slop.
-In figure 5, we show we adjust the step size by changing the slope action when walking on plane.
-
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder1}
+      \includegraphics[width=0.7\textwidth]{stepsize1}
+    \caption{gait with stepsize 1}
     \label{fig:ssp1}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder2}
+      \includegraphics[width=0.7\textwidth]{stepsize2}
+    \caption{gait with stepsize 2}
     \label{fig:ssp2}
 \end{center}
 \end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{walking_with_neural}
-    \caption{Place Holder3}
+      \includegraphics[width=0.7\textwidth]{stepsize4}
+    \caption{gait with stepsize 4}
     \label{fig:ssp3}
 \end{center}
 \end{figure}
+
+
+
+
+
+
+
+\subsection{Varying Slopes}
+Neural Oscillator can maintain walking by varing slopes, but can't make character walking upslope.
+Lie Group action allow the character walking up a slope with a constant angle, but varying the slope will result walking failure.
+Combined the two methods, the passive walker can walk varying upslope.
+
+
+The control strategy it is straigt forward, lie group action is maintained on each plane, during slope transition, controller look ahead and set the lie group action for to walking on the slope for the next step.
+At transtion, the state will moved far away from the stable limit cycle, need a few steps to converge to the limit circle.
+This result gait adjustment, sometimes, character will take a few small steps and increase it to normal steps.
+
+
+Figure~\ref{fig:vp1} and Figure~\ref{fig:vp2} show the gaits on smooth slopes.
+The phase plot of gaits of Figure~\ref{fig:vp1} is shown in Figure~\ref{fig:vp2phas} 
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{vslope2}
+    \caption{Continous Varying Slope}
+    \label{fig:vp1}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{vslope3}
+    \caption{Continous Varying Slope}
+    \label{fig:vp2}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{vslope3phaseplot}
+    \caption{Continous Varying Slope}
+    \label{fig:vp2phas}
+\end{center}
+\end{figure}
+
+
+
+Figure~\ref{fig:nonsmoothterrain1}, Figure~\ref{fig:nonsmootterrain2} show gaits on none smooth terrain.
+And the phase plot is shown in Figure~\ref{fig:diffterrain1phase}.
+Another Terrain is shown in Figure~\ref{fig:diffterrain2}.
+
+
+
+
+
+
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{terrain2}
+    \caption{Nonsmooth Terrain }
+    \label{fig:nonsmoothterrain1}
+\end{center}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{terrain3}
+    \caption{Nonsmooth Terrain coloured}
+    \label{fig:nonsmootterrain2}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{Terrain3PhaseDifferentColor}
+    \caption{The Phase Plot of nonsmooth terrain}
+    \label{fig:diffterrain2}
+\end{center}
+\end{figure}
+
+
 
 
 
