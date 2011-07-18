@@ -2,40 +2,45 @@
 \label{chap:highdor}
 \graphicspath{{HiDof/HiDofFigs/EPS/}{HiDof/HiDofFigs/}}
 \section{Introduction}
-\subsection*{Passivity}
-High DOF is key challenging in motion synthesis.
-In our research, we partly solved the problem.
-For our walking model, when it walks down the slop, all the dof is uncontrolled.
-how many dof the walker have doesn't matter.
-Even controlled with neural oscillator, only one dof is controlled, 
-Even when transformation controller is added, all the dof are controlled, but the matter will not result in nondeterministic problem.
-For our model, even the dof is not so huge, we have solved extra dof problem completely.
-
-the question arise for model of high degree system, the question is whether the method we developed is applicable for large dof characters.
+A question arised that whether motor invariant theory is extensible for system with high degrees of freedom.
+For walk and stance, motions of the torso and arm need to be incoporated.
+Also for the snakes and fishes, synthesise motion for the veterbarea of the fllexible body is a big challenge.
+ 
 
 
-for our walking and stance example, the question is how the torso should be added, the foot, the side sway and yaw motion, and for system like fish and snake and worm,
-they have infinite number dof 
 
-our idea is for different model, 
-we should take different measures, 
+Redudant \dof is the key challenging in motion synthesis.
+In motor invariant theory, redundant \dof s don't increase the computational burnden expontentially.
+This is achieved through utilizing the passive effects in dynamics.
+
+For the passive walker, all the dofs are uncontrolled,increased \dof s will not increase controlelr burden.
+The computational burden of neural oscillator remains constant during increase of \dof s in dynamic model.
+The computational burden for controlled symmetry is trival and increased lineary with the number of \dof s, as long as the symbolic equations of dynamics is given.
+
+For motor invariant theory, the difficulties in high dimention comes from  the obtaining the symbolic dynamic equations.
+This chapter focus on methods that avoid the difficulties of developing high \dof symbolic equations.
+To this end, different strategies are different in different situations.
 \begin{itemize}
 
-\HiItem{Neglectable}
-for some dof can be neglected for they will have little effects on the qualitative property, 
-we can simulate them a different mechanical model, our motion control method don't have to be changed.
-because the qualitative property and symmetry is kept.
-\HiItem{Symmetry Reduction}
-For some DOF,like rotation or pos, the extra dof will have not effects on the dof or the effects can be transformed the dynamic system into transformed version of the original system, such Dofs can be reduced.
+\HiItem{Neglectable \dof }
+Some \dof s can be simply neglected.
+neglectable \dof s come from two reason:
+The motion of some \dof are is very limited or it has the same effect as lie group action, it thus will not affect the qualitative properties.
+Such \dofs can be totally neglected and low dimential dynamic equation are used for controllelr.
+
 \HiItem{Mechanical Coupling}
-For some high dof system, we can treat them like a coupled mechanical oscillator, the can only focus on one oscillator.
-\HiItem{mimic}
-all the three method above are based the effects of dof are not equal, for system that all the dofs are the some, such method will not work.
-For dof with similar effects, we can propose a different method, the system is divided into several equal component, we only calculate one component, other mimic the strategy of one.
+For some high \dof system can be seens as composed of many low dof conponents.
+Controllers are only designed on each component.
+\HiItem{Time Offset}
+For fish or snake, their veberate is made up of a huge number of similar joints.
+It is impossible to neglected some \dof s or decouple the dynamics into components.
+
+
 \end{itemize} 
 
-\section{neglectable}
+\section{Neglectable}
 Although biological mechanical structure is of high degree of freedom, many dof will not have effects on the topology or symmetrical properties.
+For controller design, the effects of such \dof s can be simply treated as
 For the walking example,marcke raiber\citet{Raibert1986} point out walking is the same as a ball rolling down a slope while running is ball bounding down a slope.
 
 
