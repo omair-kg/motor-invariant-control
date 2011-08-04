@@ -26,9 +26,11 @@ To this end, different strategies are different in different situations.
 Some \dof s can be simply neglected.
 neglectable \dof s come from two reason:
 The motion of some \dof are is very limited or it has the same effect as lie group action, it thus will not affect the qualitative properties.
-Such \dofs can be totally neglected and low dimential dynamic equation are used for controllelr.
+Such \dof s can be totally neglected and low dimential dynamic equation are used for controllelr.
 
 \HiItem{Mechanical Coupling}
+Instead of simulating and developing controllers for a complex mechanical system, we can decouple the complex system into many conponents by the divide and conquer strategy.
+
 For some high \dof system can be seens as composed of many low dof conponents.
 Controllers are only designed on each component.
 \HiItem{Time Offset}
@@ -38,29 +40,19 @@ It is impossible to neglected some \dof s or decouple the dynamics into componen
 
 \end{itemize} 
 
-\section{Neglectable}
-Although biological mechanical structure is of high degree of freedom, many dof will not have effects on the topology or symmetrical properties.
-For controller design, the effects of such \dof s can be simply treated as
-For the walking example,marcke raiber\citet{Raibert1986} point out walking is the same as a ball rolling down a slope while running is ball bounding down a slope.
+\section{Neglation and Reduction}
+\subsection{Neglatable}
+Although biological mechanical structure is of high degree of freedom, many \dof s will have not affect the topology or qualitative properties.
+
+For the walking example,\citet{Raibert1986} point out walking is the same as a ball rolling down a slope while running is ball bounding down a slope.
+In our research, control strategy are developed based on the compass gait model, as shown in Figure~\ref{fig:compassgait}.
+The degree of knees~\ref{fig:passivekneewalker} and foot~\ref{{fig:arcfoot}} will have little effects on the qualitative properties.
+Although the compass gait and arc foot model are different from the model of our simulation, the three model are all capable of passive walking and shows limit cycles of similar shapes, as shown in Figure~\ref{fig:compassgaitlimitcycle} and Figure~\ref{fig:arcfootlimitcycle}.
 
 
-we can have system from low dof to high dof as the following picture.
-\begin{itemize}
-\HiItem{Rimless Wheel}
-\HiItem{Compass Gait}
-\HiItem{Arch Foot}
-\HiItem{Our Model}
-\end{itemize}
-
-
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.7\textwidth]{rimlesswheel}
-    \caption{Rimless Wheel}
-    \label{fig:rimlesswheel}
-\end{center}
-\end{figure}
-
+This idea may be understand through the perturbation or averaging theory.
+For some degree of freedom, it the motion of \dof is relatively small, motion of such \dof can be totally negalected.
+From this persective, we can treat such \dof as structual perturbation, for the kneed example, the relativeliy small moton of knee is equalavent to perturbation of the leg length and the mass position.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -71,58 +63,101 @@ we can have system from low dof to high dof as the following picture.
 \end{figure}
 
 
+
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{rollfoot}
-    \caption{Compass Gait}
-    \label{fig:compassgait}
+    \caption{Arc Foot Walker}
+    \label{fig:arcfoot}
 \end{center}
 \end{figure}
 
-
-compare with our knee walker, all the four models are different but they share the same topology structure and the following three the limit circle shape is very similar.
-Thus we can say, the include or knee will not affect the qualitative properties.
-
-
-And all the four system, can apply the same kind of symmetry group.
-
-
-This idea may be understand through the perturbation or averaging theory.
-
-In theory all the manifolds share the shape of torus.
-
-if the motion is relatively small,
-
-the dynamics can be approximate as a low dimensional cycle.
-
-as show in Figure.
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{Torus}
-    \caption{Approximate with Torus with a Circle}
-    \label{fig:approximate}
+      \includegraphics[width=0.7\textwidth]{compasGaitLimitCycle}
+    \caption{the limit cycle of compass gait}
+    \label{fig:compassgaitlimitcycle}
+\end{center}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{arcfoot}
+    \caption{the Limit Cycle of arcfoot}
+    \label{fig:arcfootlimitcycle}
 \end{center}
 \end{figure}
 
 
-Following this idea, although not implemented in this research, more dofs like foot may also possible.
-But that's just an extra level of complexity, without modifying the principles. 
-\section{Symmetry Reduction}
-Some dof will result in a different motion, but such kind of motion will have not qualitative effects.
-An example is the side sway motion.
-
-the side and front plane is show in picture.
-The side sway effects can be seen can be decoupled for spaghetti function.
 
 
-For different rotation, will not affect the dynamics on the sphatetal plane.
-thus can be neglected.
 
-This method is we can project the gravity in the spagetta plane,
-then we see, the way function is just an uniform of minimizing the gravity,
-which is the same as speed action.
+Following this idea, we add foot to the original walker.
+When foot is added, we only have to modify the collition model of the heel strike.
+From experience, foot will boost the stability.
+Our hypothesis is that adding the foot will prolong the double stance time.
+We model the double foot stance has the effect of pushing the stance state toward the limit cycle.
+This is model by a liner model.
+\begin{equation}
+\dot{q}_st=(1-r)\dot{q}_st+r\dot{q}^{desir}_st
+\end{equation}
 
+
+
+The gait is shown in Figure~\ref{fig:ToeGait}
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{walkwithtoe}
+    \caption{Walking with Toe}
+    \label{fig:ToeGait}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%And all the four system, can apply the same kind of symmetry group.
+
+
+
+
+%as show in Figure.
+
+%\begin{figure}[!htbp]
+%  \begin{center}
+%      \includegraphics[width=0.7\textwidth]{Torus}
+%    \caption{Approximate with Torus with a Circle}
+%    \label{fig:approximate}
+%\end{center}
+%\end{figure}
+
+
+%Following this idea, although not implemented in this research, more dofs like foot may also possible.
+%But that's just an extra level of complexity, without modifying the principles. 
+\subsection{Symmetry Reduction}
+For some \dof s, their dynamics are not neglactable, but they will affect the dynamics in an unified manner.
+The effects of such \dof can be neglected when the system is controlled under controlled symmetry.
+
+This idea can help us to extend the 2D walker into 3D dimention.
+Rather than develop the full 3D dynamcis, the effects of the motion in Coronal Plane and transverse plane can be modelled as transformation of the dynamics on spaghittal plane.
+
+
+This can be analyzed by showing the sway angle in the coronal plane, as shown in Figure~\ref{fig:sidesway}.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{Sidesway}
@@ -131,14 +166,71 @@ which is the same as speed action.
 \end{center}
 \end{figure}
 
+When the walker have a sway angle $\alpha$, the gravity force on the sagittal phase are lowes thus the external force $N$ becomes $N'=cos(\alpha)N$
+This has the same effect as applying speed action which the parameter $\ep, where \ep^2-1=\cos(\alpha)$.
+The effects of sway can be simulated by adjust the speed action parameters$\ep$.
+For walker with speed action control capacity, the effects of this \dof can be totally reduced.
 
-we can project the sideway effects on the sphettal plane. the force is $N'=cos(\alpha)N$
-this will the same as applying speed action.
-With lie group operator such dof can be totally ignored.
+
+Also the dynamic model is free of the rotation on the transverse plane.
+If the ground is rotating around the tranverse plane at constant speed, then only the centrifigual force is generated perpendiculator to the sagittal plane, this force is easilly componsated by the friction on the foot.
+
+For the walker make a turning, the spahittal plane is rotate in an constant speed, this can be achievied by actuating the yaw joint of the suppoting leg, as shown in Figure~\ref{fig:turn}.
+The gait is shown in ~\ref{fig:walkturn}
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{turn}
+    \caption{Turn Actuation}
+    \label{fig:turn}
+\end{center}
+\end{figure}
 
 
-if we consider the difference in heel strike phase,
-the limit circle becomes more a bit noisy, but qualitative properties are maintained.
+
+\begin{figure}[!htbp]
+  \begin{center}
+  $
+     \begin{array}{ccccc}
+\includegraphics[width=1in]{turn/0001.eps}&
+\includegraphics[width=1in]{turn/0201.eps}&
+\includegraphics[width=1in]{turn/0301.eps}&
+\includegraphics[width=1in]{turn/0401.eps}&
+\includegraphics[width=1in]{turn/0501.eps}
+\\
+\includegraphics[width=1in]{turn/0601.eps}&
+\includegraphics[width=1in]{turn/0701.eps}&
+\includegraphics[width=1in]{turn/0801.eps}&
+\includegraphics[width=1in]{turn/0901.eps}&
+\includegraphics[width=1in]{turn/1001.eps}
+\\
+\includegraphics[width=1in]{turn/1101.eps}&
+\includegraphics[width=1in]{turn/1201.eps}&
+\includegraphics[width=1in]{turn/1301.eps}&
+\includegraphics[width=1in]{turn/1401.eps}&
+\includegraphics[width=1in]{turn/1501.eps}
+\\
+\includegraphics[width=1in]{turn/1601.eps}&
+\includegraphics[width=1in]{turn/1701.eps}&
+\includegraphics[width=1in]{turn/1801.eps}&
+\includegraphics[width=1in]{turn/1901.eps}&
+\includegraphics[width=1in]{turn/2001.eps}
+\\
+\includegraphics[width=1in]{turn/2101.eps}&
+\includegraphics[width=1in]{turn/2201.eps}&
+\includegraphics[width=1in]{turn/2301.eps}&
+\includegraphics[width=1in]{turn/2401.eps}&
+\includegraphics[width=1in]{turn/2501.eps}
+
+\end{array}$
+    \caption{Walk And Turn}
+    \label{fig:walkturn}
+\end{center}
+\end{figure}
+
+
+
+
 
 \section{Mechanical Coupling}
 Some mechanical system can be treated as connecting many different simple components together.
@@ -148,7 +240,7 @@ if a mechanical system is model like
 \dot{\state}=F(\state)
 \]
 the state is $\state=[q_1,q_2,\qd_1,\qd_2]$
-we can reform the the state in the manner
+we can reform the the dynamic equation in the manner
 $\state=[\state_1,\state_2]$
 where
 $\state_1=[q_1,\qd_1]$
@@ -161,8 +253,10 @@ and  the original dynamic equation can be formulated as
 \end{align}
 
 if $C_{1,2} \ll F_{1,2}$, then the dynamic will be dominated by $F_{1,2}$ and $C_{1,2}$ can be treated as perturbation.
+Controller can be designed according to $F_{1,2}$
+
 \subsection*{Branches Mechanical Structure}
-In fact any mechanical system can be treated in this way,
+In fact any mechanical system can be reformulated as entrainment netwok,
 a proper method should separate different components when the coupling is weak.
 the weak couple joint can be found through the mechanical structure.
 
@@ -228,7 +322,7 @@ C=\left[\begin{array}{ccccc}
 
 
 while for the braches structure in Figure \ref{fig:branches structure}.
-there the efficient between different branches will be zero.
+there the efficient between different branches $4,5$ and $2,3$ will be zero.
 
 where
 \[
@@ -328,7 +422,7 @@ m_{15}\end{array}\right]\ddot{q}_{1}-\left[\begin{array}{c}
 -c_{15}\end{array}\right]\dot{q}_{1}^{2}
 \]
 
-according the mechanical structure, this is equivalent to simulate two part of the mechanical structure independently and perturbation are as coupling effects.
+according the mechanical structure, this is equivalent to simulate two part of the mechanical structure independently and perturbation are treated as coupling effects.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{multilinkCoupled}
@@ -344,7 +438,7 @@ according the mechanical structure, this is equivalent to simulate two part of t
 
 
 
-\subsection*{Torsol And Arm}
+\subsection{Torsol And Arm}
 using this mechanical coupling method, we can incorporate the arm and torso motion is our dynamic system.
 for the torso, the angle is $q_{tor}$,with mass $m_{tor}$ and the distance from the hip is $l_{tor}$
 then we can add the torso motion to the knee walker, then the walking motion of the lower body becomes
@@ -371,36 +465,49 @@ m_{tor}l_{tor}^{2}\ddot{q}_{tor}=gm_{tor}l_{tor}sin(q_{tor})-(m_{tor}l_{tor}Lcos
 by analyzing the torso motion equation, torso motion is unstable in nature, there must be some control applied to maintain its posture.
 
 We are not clear what the kind of controller is applied for maintain the torso posture.
+The control method adopted by this research is by shaping the potential energy.
+Although inverted pendulum is not stable, pendumlum is stable.
+Torque is applied to make the torso work like pendulum.
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.5\textwidth]{torsoAndLeg}
+    \caption{The Mechanical Entrainment of Leg And Torso}
+    \label{fig:torsolegentrainment}
+\end{center}
+\end{figure}
+
+
+
 Simple PD controller will work well, but it does not necessary generating believable motion.
-An upper body motion is close related to motion purpose and not determined by natural dynamic properties.
-
-For application purpose, maybe it is unnecessary to find a controller for upper body motion.
-We can use procedure or other "IK" method to generate upper body motion, and add the dynamic effects to the lower body walking motion.
-
+An upper body motion is close related to motion purpose and not determined by natural dynamic properties.For application purpose, maybe it is unnecessary to find a controller for upper body motion.
+We can use procedure or other ``IK'' method to generate upper body motion, and add the dynamic effects to the lower body walking motion.
 The motion of arm can be incorporated by following the same principles, it is just another level of complexity.
 
 
-\section{Boid and Adhoc}
+\section{Time Shift}
 
 For some sepere and fish, the mechanical system is in chain and involves lots of similar joints.
 such system dof can't be neglected or reduced through symmetry and through mechanical coupling.
 
-our propose idea is an adhoc method, we simulate just one dof, other dof following the solution.
-since the dynamics is similar, similar strategy will result in similar solution.
-such idea have two kinds of application.
+For these kind of mechanical structures, an adhoc method is proposed.
+The hypothesis is for each joint, since the dynamics is similar.
+Thus the same control strategy is applied for every joint.
+joint are differentiate by the group action.
+This method potentially have two application.
 
 
 The first idea is applying this method for the boid system.
 Original boid system is ruled based, but method don't promise stability.
 While we using group theory for simulation bold system, if all the agent using the same neural oscillator, they will converge to the same limit circle,
-thus guaranty the final motion of the group are in an uniform manner, the different in the agent of modelled by lie group symmetry, different symmetry applied to different agent will result in
-difference.
-on import symmetry is time offset, which will result in the same motion but of different phases.
+The uniformity of final motion of agent is grantified.
+The different in the agent of modelled by lie group symmetry, different group action is applied to different agents, behavior will change accordingly.
+For such application, a important group action is the Time Shift.
 
 
-In the following example, we have 8 joint,
-the form are controlled by the CPG with the same parameters but of different initial condition,
-this will result an motion of different phase .
+
+The fish example in Figure~\ref{fig:fishplot} has $8$ joint,  which are controlled by the \cpg s with the same parameters but  different initial condition.
+They will result in the same limit cycle but maintain the phase difference.
 
 
 we expend this boid example to model the fish swimming.
@@ -409,10 +516,30 @@ The fish is made up 8 links, and each dof is controlled by a neural oscillator.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.5\textwidth]{fish_plot}
-    \caption{cPG for Fish}
+    \caption{CPG for Fish}
     \label{fig:fishplot}
 \end{center}
 \end{figure}
+
+
+
+
+Simplified dynamic model are use.
+each joint is modelled as a spring system.
+\begin{equation}
+\label{eq:fishdynamics}
+\ddot{q}=Kq
+\end{equation}
+
+The swimming speed is proposinal to the square of the viborating velocity.
+All the group action can be used.
+Offset Action will result the fish turnning,
+Speed Action will make the fish swim more fast.
+Energy Action will modify the swimming intensity.
+
+
+Figure~\ref{fig:fishswimming} and Figure~\ref{fig:fishswimline} shows the swimming gaits in a line.
+Figure~\ref{fig:fishswimturn} shwo the the turning gait.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -424,26 +551,28 @@ The fish is made up 8 links, and each dof is controlled by a neural oscillator.
 
 
 
-
-the same symmetry is applied to the 8 neural oscillator, then it will modify the system in an unified manner.
-
-as show in picture
-
-
-
-\section{From Low Dimention To High Dimension}
-
-For computer animation, even we can get high dimensional results, maybe it does not meet the animators needs.
-simulation result in motion can be treat as a reference, rather than put into result in deformation.
-
-we can describe the motion procedures, and using mechanical simulation a low dof to drive the high dimensional motion.
-in the following example,
-we describe the jumping motion in an procedure method,
-and bouncing ball is used to drive the motion.
+\begin{figure}[!htbp]
+\begin{center}
+      \includegraphics[width=\textwidth]{SwimLine}
+    \caption{Fish Swim}
+    \label{fig:fishswimline}
+\end{center}
+\end{figure}
 
 
-also we can using the low dimension data as a key word to search motion capture data.
-which will give us more realistic motion results.
+\begin{figure}[!htbp]
+\begin{center}
+      \includegraphics[width=\textwidth]{SwimTurn}
+    \caption{Fish Swim Turn}
+    \label{fig:fishswimturn}
+\end{center}
+\end{figure}
+
+
+
+
+
+
 
 
 
