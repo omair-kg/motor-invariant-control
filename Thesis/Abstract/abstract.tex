@@ -5,29 +5,29 @@
 %\begin{abstractslong}    %uncommenting this line, gives a different abstract heading
 \begin{abstracts}        %this creates the heading for the abstract page
 
-Generating natural-looking motions for virtual characters is a challenging research topic, made even harder when adapting synthesized motion to interac with the environment. 
+Generating natural-looking motions for virtual characters is a challenging research topic, made even harder when adapting synthesized motions to interact with the environment. 
 Current methods are tedious to use, computational expensive and fail to capture natural looking features.
-These difficulties suggested artificial control techniques are inferior to the natural counterparts.
+These difficulties seem to suggest that artificial control techniques are inferior to the natural counterparts.
 
-Recent advances in biology research points to an alterantive theory:
-The motion repertoire consists of a limited number of elements called motion primitives. 
-Complex motions are synthesized by connecting motion primitives together just like connecting alphabets into sentences.
-
-
-Motion primitives serve as templates from which motion is constructed.
-Neural system tweaks these templates to generate motion which satisfies  environmental constraints or motion purpose.
-In this process, some properties of motion primitives are maintained, which are called motor invariants.
+Recent advances in biology research point to an alternative idea:
+The motion repertoire consists of a limited number of elements: the motion primitives. 
+Complex motions are synthesized by connecting motion primitives together, just like connecting alphabets into sentences.
+These elements serve as templates, which are tweaked by the neural system to satisfy  environmental constraints or motion purpose.
 
 %we propose principle of motor control is not feedback based, they should by model as topology conjugacy,mechanical system to form an analogous dynamic system that meets constraints and purpose.
 
-In this thesis I propose an efficient method of generating natural-looking motion based on these principles. 
-I introduce new mathematical tools for identifying and tweaking motion primitives to adapt to environmental conditions.
-Motor invariants are identified by using the mathematical concepts of equivalence and symmetry.
-Motion Primitives are identified by the qualitative properties, captured by the differential topology.
-I propose that motion adaption is modelled as topological conjugacy: a transformation which maintains the topology and result in an analogous system.
-To this end, the neural Ocillator and Symmetry Preserving transformations are proposed as computational efficient methods for this purpose.
+Based on the idea of motion primitive,   this thesis propose a new method to generate natural-looking motion.
+The insight is that the formation motion primitives has a deep dynamic reason: synthesized motions should be stable. 
+When the neural system construct motions from the primitives, many  valuable properties such as stability and efficiency are preserved, which are called \emph{motor invariants}.
 
-Even without reference motion data, this approach produces natural looking motion in real-time and may provide insights into biological motion perception and control.
+
+New mathematical tools are introduced to character animation research.
+Invariant Theory ,especially mathematical concepts of equivalence and symmetry, lay the theriotic foundation.
+Invariant qualitative properties of motion primitives are identified by their  differential topology.
+Adaptation is mathematically modelled as topological conjugacy: a transformation action which maintains the topology and results in an analogous system.
+
+The \emph{Neural Ocillator} and \emph{Symmetry Preserving Transformations} are proposed to motion synthesis for their computational efficiency.
+Even without reference motion data, this approach produces natural looking motion in real-time, and might  provide insights into biological motion  control and perception .
 
 \end{abstracts}
 %\end{abstractlongs}
