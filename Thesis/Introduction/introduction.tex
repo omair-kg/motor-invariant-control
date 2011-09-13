@@ -12,14 +12,16 @@
 Character Motion Synthesis (\cms) research aims at generating motion for virtual characters.
 It is a topic of significant value in theory and application. 
 Besides major applications in the media industry, where both computer games and animation films depend heavily upon character motions for storytelling, 
-current applications also include  areas like user interface design, psychology, sports and medicine.
+current research also find its applications in user interface design, psychology, sports and medicine.
 
 The challenge of \cms  is not to make characters move, but  to make them lifelike. 
 Underneath this challenge is human's marvellous ability of motion perception. 
 In real life, motions are very similar; 
 while from the varieties in motion details, humans can infer mental states, health conditions or the surrounding environment.
 %\note{uncanny valley}
-A famous psychological phenomenon is the ``uncanny valley''.
+Human motion perception has some very peculiar property.
+Some awkward artefacts are spotted instantly even they are physically feasible, while many physical impossible motions are accepted as realistic and entertaining. 
+Another famous psychological phenomenon is the ``uncanny valley''.
 For characters with realistic human-like appearance, slightly artefacts in motions may result a strong emotional revulsion.
 
 
@@ -30,23 +32,24 @@ Making it worse, reusing motion animation is also difficult and prone to artefac
 High level animation tools are badly needed. 
 
 %\note{Do An introduction for physicall based animaiton?}
+
+
 Real life motions highly interact with the environment.
 Physics based method  is most important research endeavour at current.
 Besides  the addition of the dynamic interactive responses, it is  expected  the elimination of  artefacts that violating physics  will make motions more natural looking.
-However, this paradigm faces many difficulties, mainly computational cost and modelling difficulty.
+However, this paradigm faces many difficulties, dynamics of biological system are much more complex than artificial system,  attempts to dynamic simulation biological system face inhibitive  computational cost and modelling difficulty.
 In fact, such problems has been identified by biological researchers earlier.
 
 
-Motion closely relates to perception.
-Environment perception is foundation of motor control.
-Phenomena such as  ``uncanny valley '' pose  important questions for perception. 
-Some awkward artefacts are spotted instantly even they are physically feasible, while many physical impossible motions are accepted as realistic and entertaining. 
 
 
 
+
+
+Motor Control and Motion Perception are close related.
 Difficulties in \cms reflects the inferiority of artificial control method.
 The peculiarity of motion perception and control suggests  biological systems may adopt a different principle.
-This thesis is founded on new paradigms in biological research.
+This thesis is founded on new ideas from biological research.
 
  
 
@@ -68,9 +71,9 @@ An artificial ship can be approximated by a simple rigid body; while a fish has 
 
 
 In principle, the extra {\dof}s admit more variations for adapting the environment. 
-But for the control system, too many extra {\dof}s is a disaster for the computational burden. 
+But for the control system, too many extra {\dof}s is a disaster because of the computational burden. 
 For a human to take one step,  the neural system controls more than $600$ muscles .
-With nowadays computer, solving the dynamics directly will require inhibitive computational time.
+With nowadays computer, solving the dynamics directly will require inhibitive long time.
 
  
 \HiItem {Versatility}
@@ -78,7 +81,7 @@ Most artificial machines are designed with a single purpose,while animals are ca
 Many biological functions which often neglected by \cms research, such as the feeding, breeding, language and vision, depend on motor control. 
 Besides walking, swimming and many other styles of locomotion , we utilize many tools, such as cars, skate, bicycle and tennis.
 
-Follow tradition control ideas, it seems unlimited resources are allocated for unlimited number motion controllers, while biological research shows motor control cost very little mental resources.
+Follow traditional control methods, it seems unlimited resources need to be  allocated for motor control, while biological research shows motor control cost very little mental resources.
 
 \HiItem{Performance}
 Although the problem of biological motor control is more complex , the resulting performance surpasses artificial machines in many aspects.
@@ -122,55 +125,28 @@ The energy consumed by human walking is only $5\%$ of that for the world famous 
 %\end{itemize}
 
 \section{Motor Invariant Theory}
-Biological Motor Control achieved a delicate balance of robustness, controllability and energy efficiency.
+\subsection{Utilize Natural Dynamics}
+Biological Motor Control has achieved a delicate balance of robustness, controllability and energy efficiency.
 The real-time performance may further suggest that the biological method  is simple and requires little computational load.
-These are the dreaming properties for \cms research and  explanation from biological research forms the gene of the thesis.
-
-
-\subsection{Different Biological Idea}
-\begin{itemize}
-\HiItem {Role of Control and Computational Burden}
-Many procedural \cms methods separate ``motion'' and ``force''  planning.
-A motion trajectory is planned first and then force are planned to drive the character to follow the motion curve.
-Two many redundant {\dof}s that spoil this approach  with inhibitive computational cost.
-
-As an alternative, some researchers have proposed the memory based model for motor control and developed data-driven methods.
-But such methods lacks the versatility and adaptivity.
-Unlimited memory is needed for motion data  and searching in the ever increasing database becomes more and more challenging.
+These are the dreaming properties for \cms research and  their explanation  forms the gene of the thesis.
 
 
 
-In real life, when force is determined, motion trajectory is determined.
-Many biological researchers have suggested that there is no motion-force separation in planning,
-some researchers even  propose that the forces are not directly calculated.
-A suggestion is  the neural system plays only a limit function in motor control.
-It is the body and environment that play the crucial role, their dynamic interactions form some  patterns or templates for motion.
-The neural system only tweaks the basic templates for specific purpose.
-
-
-
- 
- 
-	
-\HiItem{Feedback or Feed-forward}
-Most artificial control methods follow the principle of feedback.
-Control are applied to track the target and counteract perturbations.
-This method is also called ``shooting'' or ``tracking''.
-
-
-Many  biological researchers believe that motor control is feed-forward based and relies on experience.
-If perturbations can be predicted, measures are taken beforehand to prevent ``failure''.
-The prediction nature also suggest motion trajectory can not be controlled in precision.
- 
-
-
-\HiItem{Natural Dynamics} 
-In the feedback framework, natural dynamics effects are treated as perturbations and are cancellated by the control input.
-
-From the biological perspective, the mechanical structures are product natural selection which evolve with the environment for millions of years. 
+Interactions of the body and environment pose  complex dynamic problems for motor control.
+For most \cms research, such natural dynamics are treated as noises or perturbations to preplanned motion command, and the  effects  of natural dynamics are cancelled by control effort.
+But from the evolution perspective, the mechanical structures are product of natural selection which has evolved with the environment for millions of years. 
 They are advantages rather than handicap. 
-Some researchers believe biological motor control limit the control input and explore the natural dynamics.
-\end{itemize}
+Without considering the stability, energy efficiency and real-time reaction can be easily achieved if the motion is total governed by natural dynamics and requires no control effort.
+A new idea is motor control is based on the natural dynamics.
+Neural system plays a minor role in planning, it just utilize the natural dynamic properties.
+
+Motor Invariant Theory (\moit) is a proposed idea of how to utilize the natural dynamics in a systematic manner.
+
+
+
+
+
+
 
 
 \subsection{Motor Invariant Theory}
@@ -197,7 +173,8 @@ This idea is named as \emph{Motor Invariant Theory(\moit)}.
 From dynamic perspective, such properties are stable.
 
 \moit incorporates the motion primitive conjecture. 
-Motion Primitives are the template dynamic systems that are stable.
+Not all the motions of natural dynamics are stable, only the stable ones are utilized and treated as the templates.
+Thus Motion Primitives are the template dynamic systems that are stable.
 The remaining question is how to utilize the templates synthesized new motions.
 
 The \moit propose that when facing a new situation, human don't solve motor control from ground up,
