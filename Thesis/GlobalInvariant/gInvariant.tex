@@ -1,9 +1,9 @@
 \chapter{GLOBAL MOTOR INVARIANT}
 \label{chap:gi}
-\section{Introduction}
+
 
 \nomenclature[a1]{$q$}{Generalized Coordinates}
-\nomenclature[a2]{$\qd$}{Gneralized Velocity}
+\nomenclature[a2]{$\qd$}{Generalized Velocity}
 \nomenclature[a3]{$\state$}{State Variable}
 \nomenclature[a4]{$u$}{Control Input}
 \nomenclature[a5]{$\mathrm{g}$}{Gravity}
@@ -44,46 +44,70 @@
 \graphicspath{{GlobalInvariant/GlobalInvariantFigs/EPS/}{GlobalInvariant/GlobalInvariantFigs/}}
 
 
-Motions vary greatly, different people will walk with different gaits. 
-A question \cms research neglected is why the word ``walk'' applies to different gaits.
-From the perspective of motor invariant theory, the word ``Walk'' capture the qualitative properties of a category of motions.
-We agree on the word ``walk'' also because it is an inborn ability encoded in our body.
-``Walk'' is the word for one motion primitive.
+Motions are similar but vary greatly, for example, different people will walk with different gaits. 
+A interesting question  is how the word ``walk'' refers to different gaits.
+Motor Invariant Theory(\moit) proposes an answer:  despite differences in gaits, we agree on the word ``walk''  because in essence, we all walk in the same manner.
+Intuitively, the gaits are periodic, energy efficient and stable.
+The variations comes from the differences in body, environment or purpose, but from dynamic perspective, qualitatively, all the gaits dynamics share the same structure, or the qualitative properties of walking are invariant.
+In \moit, the qualitative invariant properties are \emph{Global Motor Invariant}.
 
 
-Motion Primitives are ``easy'' motion tasks. 
-For the intutive idea for  ``easiness'', a clear mathematical defination is needed.
-This chapter developed the mathematical conceptualization of Global Motor Invariant.
-New mathematical tools are introduced.
-Throughout this thesis,  geometrical perspective is adopted for discussion of the dynamic systems.
-Qualitative properties are analyzed with the tool of differential topology.
+For biological perspective, we believe the walking ability is inborn and encoded in the body structure.
+What ``Walk'' means is one motion primitive.
+In \moit, motion primitive are identified by the global motor invariant.
+Section~\ref{sec:GMIandMA} provides justification for the claim above in details.
+
+
+In theory, it is difficult to define gait similarity mathematically.
+Topology is introduce to for a clear definition of global invariant.
+Such definition has important dynamic meaning, topologically equivalent means dynamic systems are qualitative the same.
+Basic ideas of topology and qualitative dynamics are summarized at first in Section \ref{sec:qualiDy}
+
+Entrainment are the biological based method to maintain global motor invariant, theory and experiment at discussed at the end of the chapter in Sections~\ref{sec:cpgcontrol} and Section~\ref{sec:qualyexample}
+
+
+
+
+
+
+
+\section{Introduction to Qualitative Dynamics}
+\label{sec:qualiDy}
+Motion Primitives are ``trivial'' motion tasks.
+Evolution equips animals with the body structure that animals can finish such tasks mainly by exploring the natural dynamics without too much control effort.
+For dynamic perspective, the delicate design of body structure permit several patterns when interact with the living environment.  
+Such patterns exists across detail variations in body structure (the tall and short characters) and environment (rough or plain ground).
+Thus are robust or \emph{structural stable} in the dynamic term.
+In \moit, identification of motion primitives and adaptation are based on the structural stability.
+This section serve as a short introduction to concept idea and prepare mathematics.
+
+
+Qualitative dynamic properties are analysed with the tool of differential topology.
 This idea can be traced back to Poincare\citep{Poincar'e1899,Poincar'e1885} and recently developed by the Smale School\citep{Smale1970}.
-It is impossible to include the whole discipline.
-Please refer to book \citep{abraham1978foundations}for introduction in details.
+There is no enough space to include the whole subject, please refer to book \citep{abraham1978foundations}for introduction in details.
+Throughout this thesis,  geometrical perspective is adopted for it is more intuitive.
+Some primary knowledge of topology and manifold is preferred and please refer to other dedicate sources for more accurate explanation. To make the thesis self-content, intuitive speaking,   \emph{topology} is the mathematical study of the properties that are preserved through deformations, twistings, and stretchings of objects. Tearing, however, is not allowed. A circle is topologically equivalent to an ellipse (into which it can be deformed by stretching) and a sphere is equivalent to an ellipsoid. And \emph{a manifold} is a topological space that on a small enough scale resembles the Euclidean space of a specific dimension.  A line and a circle are one-dimensional manifolds, a plane and sphere  are two-dimensional manifolds, and so on into high-dimensional space.
 
 
-Dynamic motions are modelled as differential equations.
-From the geometrical perspective, a differential equation describes a differentiable manifold.
-Qualitative properties can be obtained by analyzing the topological structure of the differentiable manifold.
+A dynamic system, usually described as a differential equation, from the geometrical perspective, describes a differentiable manifold.
+Qualitative properties can be obtained by analysing the topological  property of geometry.
 \emph{Global Motor Invariants} are identified by the topology structure.
 
 
-\section{Basic Concepts}
 
 
 
 \subsection{Dynamic Systems and Differentiable Manifold}
-Motions of a mechanical system is determined by its configuration  $q$ in posture space $Q$ and generalized speed $\qd$ in the tangent space $T_{q}Q$. 
+Motions of a mechanical system is determined by its configuration  $q$ in configuration space $Q$ and generalized speed $\qd$ in the tangent space $T_{q}Q$. 
 Define the state value $\state=[q,\qd] \in M$,  $M$ is the state space, or state manifold.
-A motion is a trajectory $t \mapsto q(t)$ in the configuration space parameterized by time~$t$.
-For a dynamic system, $q(t)$ usually is derived from the state trajectory $\state(t)$, which is described by differential equation. 
+A motion is a trajectory $t \mapsto q(t)$ in the configuration space parametrized by time~$t$.
+For a dynamic system, $q(t)$ usually is derived from the state trajectory $\state(t)$, which is described by a differential equation. 
 
 
 
 For every point $\state \in M$, 
 $F$ and $u$ determines a derivative vector $\dot{\state}$ in the \emph{Tangent Space}~$T_{\state}M$. 
-Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}$,describe by the differential equaiton~ Equation~\ref{eq:ode}.
-which is described by the differential equation
+Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}$, described by a differential equation~ (Equation~\ref{eq:ode}.
 
 \begin{equation}
 \label{eq:ode}
@@ -98,7 +122,7 @@ $F$ is determined by the system's natural property.
 If $u=0$,  no control effort is applied.
 Such systems are \emph{autonomous systems}. 
 
-Solutions to Equation~\ref{eq:ode} is the \emph{intergral curve}. 
+Solutions to Equation~\ref{eq:ode} is the \emph{integral curve}. 
 \emph{Flow} $\Phi(\state)$ of $\mathbf{V}$ is the \emph{integral curve} through~$\state$. 
 All the flows form the \emph{phase portrait}, which illustrates all the possible motions of the dynamic system.
 Differential manifolds are usually visualized by \emph{phase plot}.
@@ -121,8 +145,7 @@ For the mass-spring system, define state variable~$\state=[q,\qd]$, Equation~\re
 
 \subsection{Basin of Attraction}
 Intersections of follows are \emph{equilibria}.
-Basically there are three types of equilibria.
-At each \textbf{equilbria}, the local space can be divided into three subspace: 
+At each \textbf{equilibria}, the local space can be divided into subspaces: 
 \emph{centre manifold}, \emph{stable manifold}, and \emph{unstable manifold}.
 \begin{description} 
 \item[centre manifold]
@@ -144,8 +167,8 @@ For a flow $\phi_u$ passes through a point $\state_u$ on unstable manifold $W_{u
 \end{description}
 
 
-\textbf{Attractors} are the equilbrias where the whole local space is stable, the dimension of unstable manifold is zero.
-\textbf{Repellors} are the equilibrias where the whole local space is unstable,the dimension of stable manifold is zero.
+\textbf{Attractors} are the equilibriums where the whole local space is stable, the dimension of unstable manifold is zero.
+\textbf{Repellors} are the equilibria where the whole local space is unstable,the dimension of stable manifold is zero.
 
 
 
@@ -163,8 +186,8 @@ Two types of attractors are of great interest in motor control:
 \begin{figure}
 	\begin{center}
 	\includegraphics[height=0.4\textheight]{phase_plot}
-	\caption{Limit Cycle}
 	\end{center}
+	\caption{Limit Cycle}
 	\label{fig:ecycle}
 \end{figure}
 
@@ -172,12 +195,12 @@ Two types of attractors are of great interest in motor control:
 
 
 
-For nonlinear dynamic systems, there may exist many attractors.
+For non-linear dynamic systems, there may exist many attractors.
 The phase plane will be divide into different regions,result in a cellular structure.
 Within each region, all the flows will converge to one attractor ~$\mathcal{A}$.
-For the attractor, the region is  the \emph{basin of attraction} ~$\mathcal{B}(\mathcal{A})$.
+The corresponding region is  the \emph{basin of attraction} ~$\mathcal{B}(\mathcal{A})$.
 
-Figure~\ref{fig:manyboa} showns the landscape of plaseportaits of a dynamic system.
+Figure~\ref{fig:manyboa} shown the landscape of phase portraits of a dynamic system.
 \begin{figure}
 \begin{center}
 \includegraphics[height=0.4\textheight]{basinOfAttraction}
@@ -190,7 +213,7 @@ Figure~\ref{fig:manyboa} showns the landscape of plaseportaits of a dynamic syst
 
 
 \subsection{Topology Conjugacy}
-The topological structure of a dynamic system can be described by the type of equlibrias and their connectivity.
+The topological structure of a dynamic system can be described by the type of equilibria and their connectivity.
 Many dynamic systems have different dynamics but share the topology structure.
 For example, the duffine system described by Equation ~\ref{eq:duffin} is different from the mass-spring system.
 \begin{equation}
@@ -222,12 +245,12 @@ This equivalence relationship is called \emph{topological conjugacy}.
 
 
 \begin{mydef}
-Let $M$ and $M'$ be topological spaces, and let $F\colon M\to M$ and $F^{'}\colon M^{'}\to M^{'}$
+Let $M$ and $M'$ be topological spaces, and let $F\colon M\to M$ and $F'\colon M'\to M'$
 be continuous functions. We say that $F$ is
-\emph{topologically semiconjugate} to $F^{'}$, if there exists a continuous
-surjection $T\colon M\to M^{'}$ such that $FT=TF^{'}$. If $T$ is a homeomorphism,
-then we say that $F$ and $F^{'}$ are \emph{topologically conjugate}, and we call
-$T$ a \emph{topological conjugation} between $F$ and $F^{'}$.
+\emph{topologically semi-conjugate} to $F'$, if there exists a continuous
+surjection $S\colon M\to M'$ such that $FS=SF'$. If $S$ is a homomorphism,
+then we say that $F$ and $F'$ are \emph{topologically conjugate}, and we call
+$S$ a \emph{topological conjugation} between $F$ and $F'$.
 if two system are topological conjugate, they are \emph{analogous systems}
 \end{mydef}
 
@@ -235,32 +258,35 @@ if two system are topological conjugate, they are \emph{analogous systems}
 
 
 \section{Global Motor Invariant and Motion Adaptation}
-
-For \cms application, ``easy'' motion tasks rely on attractors.
-The qualitative property of a primitive is captured by the attractor and its basin of attraction.
-If the attractor is fixed point, then he motion will be terminated.
+\label{sec:GMIandMA}
+In \moit,  motion properties is determined by the attractors and basin of attractions of dynamics.
+The `` trivial motion task'' of primitive rely on attractors.
+If the attractor is fixed point, then the motion will be terminated.
 if the attractor is limit cycle, then the motion will be periodic.
-Larger basin of attraction means motion is more stable and narrow basin of attractions means the stability is fragile.
+
+Larger basin of attraction means motion is more stable and narrow basin of attractions means the fragile stability.
 
 \begin{mydef}
 \emph{Global Motor Invariant} is the tuple of attractor and its basin of attraction
 \end{mydef}
 
 
-In different situation, motions adapt because of different reasons.
-Different perturbations generate different adaptations and requires different control strategy.
+Motions vary because of different perturbations.
+In \moit, perturbations are classified into category and coped with different control strategies.
 
 \begin{itemize}
 \HiItem{State perturbation}
 
-Perturbations that only affect the state $\state$ are \emph{State Perturbation}.
-State Perturbations change the current state, the underlying dynamic system is unchanged.
+Perturbations that only affect the state $\state$ are \emph{State Perturbations}.
+State Perturbations change the current state, but not the underlying dynamic system.
 
 
-If the perturbated state $\state'$ is still in the basin of attraction, the flow will converge to the attractor. 
-Different perturbations will result different flows and different motion, the the final motion result will remain the same.
-Such kind of motion adaptation is \emph{Responsive Motion}.
-For the walking example, state perturbations can be modelled , while the character and environment is not changed.
+If the perturbed state $\state'$ remains in the basin of attraction, the perturbed flow will converge to the same attractor. 
+For the walking example, state perturbations can model the push and recover motion.
+
+Different perturbations will result different flows and motions, the the final motion result will remain the same.
+Such kind of motion adaptation is \emph{Responsive adaptation}.
+
 
 To make the character more responsive without motion failure,
 Motion controller should enlarge the basin of attraction.
@@ -271,17 +297,17 @@ Motion controller should enlarge the basin of attraction.
 
 
 \HiItem{Structure Perturbation}
-Structure Perturbations will affect the dynamic system.
-Structure Perturbations happen commonly in our daily life, when a man put a heavy box on his shoulder, it will result a change in the dynamic system.
+Structure Perturbations affect the dynamic system.
+For biological systems,  such kinds of perturbations are very common, when a man put a heavy box on his shoulder or injured, the dynamic will change, thus are structural Perturbation.
 
 
-
-Structural Perturbations will change the shape of phase portrait; some will result in an analogous system.
-Structural Perturbations will alter the  attractors, motion will change, this kind of motion adaptation is called \emph{system adaptation}.
-For \cms, `` motion retargeting'' belongs to system adaptation.
+For some dynamic system,
+Structural Perturbations may only deform the phase portrait and result in an analogous system.
+Along with the phase portrait deformation, motion will vary but qualitative remain the same, this kind of motion adaptation is called \emph{system adaptation}.
+For \cms, `` motion retargeting'' is a phenomenon of system adaptation.
 
 Topological structure can not always maintained.
-Some perturbations will result \emph{bifurcation} when the topology of the underlying dynamic system is changed.
+Some perturbations will result \emph{bifurcation} that the topology of the underlying dynamic system is changed.
 As an  example is the damping perturbations on the mass spring system.
 As show in Figure~\ref{fig:dampmass}
 
@@ -299,48 +325,51 @@ Control effort are taken to prevent bifurcation.
 \end{itemize}
 
 
-\subsection{Biological Explanations}
-Motor Invariant Theory is an unification of many biological ideas.
-For the  UMH, basin of attraction can be a model for the uncontrolled manifold. Motion variations comes from State Perturbation.
-For \eph, attractor is a generalization of fix point.
+\subsection{the biological meaning of Structural Stability}
+\moit is a framework that unified many biological ideas.
+For the  \umh,  the basin of attraction of an motion primitive can serve as the uncontrolled manifold of \umh.
+State Perturbation are not controlled and motion is freely influence.
+For \eph, attractor of motion primitive is a generalization of fix point.
 Impedance control adjust the basin of attraction.
 
 
-Structural Stability is neglected in \cms research.
-It is reasonable for natural animals to rely on structural stability. 
-In natural environment, perturbation and uncertainty are everywhere. 
-Traditional ideas of feedback and generalization can't cope with all types of perturbations.
-The alternaltive idea in motor invariant theory is we can neglected such perturbations, as long as the system is structural stable, no control effort is needed.
-This idea will help \cms much of the computational burden.
-And different adaptations are generated automatically through different perturbations.
+Structural Stability is new in \cms research, but there is a good reason for motor control to rely on it. 
+In natural environment, perturbations and uncertainty are everywhere. 
+Because of the sensing and computation limitations,  feedback idea  can't cope with all types of perturbations.
+The alternative idea in motor invariant theory is  such perturbations can be neglected.
+If the motion primitive is structural stable, even without control effort, motion will not change qualitatively.
+Such an idea can reduce much of the computational burden and provide a framework for more types motion adaptation.
 
 
 For some phenomena, structural stability and qualitative perspective provides a better explanation than optimization and feedback control.
-\begin{itemize}
-\item
-Qualitative Control Theory may help us understand the evolution of locomotion and neural Control.
-Animals shift from the sea to the land. 
-From quantitative perspective, the natural dynamics of the body and fluid environment are hard to predict or compute precisely. 
-While from the qualitative perspective, fluid is continuous and uniform, the topological structure is simple and stable.
-Thus with little neural control fish can maintain its posture. 
-On the other side, for human walking, although the rigid body dynamic can be calculated precisely, but topological structure is much more complex. 
-On the phase plane, there exist many equlibrias, the topology structure is more complex and unstable. 
-More control system is needed mainly because of more complex qualitative dynamics.
 
-\item
-Qualitative theory can also help to explain another fact of biological motion system. 
-Animals move through similar environment in a similar manner usually developed similar body structure, in spite of their different position on evolution chain for whales and fish example.
-This is because animals moving in a similar manner base on the same motion primitive, similarity in body structure promise the topological conjugacy.
-This idea may help us to understand the morphological computation. 
-For one motion primitive, body evolves to provide us with a structural stable dynamic system.
-This also implies motion primitives is determined by both body and environment.
-\end{itemize}
+Qualitative Control Theory may help to explain the  puzzle behind the  evolution of swimming and walking.
+From quantitative perspective, the swimming dynamics are more difficult and walking should be easier.
+While from the qualitative perspective, fluid is continuous and uniform, the dynamics is of simple topological structure is simple and stability is more easy to control.
+Thus with little neural control fish can maintain its posture. 
+On the other side, for human walking, although the rigid body dynamic are quantitative more easy, but topological structure of walking dynamics is much more complex. 
+On the phase plane, there exist many equilibria and the basin of attraction of walking primitive has limited area,
+thus the  stability of walking is fragile and needs more complex measures to enhance.
+
+\moit also implies the similarity of the motion style for fish and wales
+In spite of their different position on evolution chain, animals move through similar environment in a similar manner usually developed similar body structure.
+The similarity in body structure promise the topological conjugacy and motions are based on the qualitative equivalent dynamics.
+Also it reminded us motion primitive is close related to the environment, it is meaningless to talk about walking when put the character in deep water, even with the same control strategy, body and environment can not form the dynamics with desired topological structure.
+
+
+
+Further \moit suggest the direction of evolution.
+For one motion primitive, body may evolve to make the primitive more structural stable.
+
+
+
 
 
 
 \section{Global Motor Invariant Control}
+\label{sec:cpgcontrol}
 
-In nature, body and environment can be extremely complex. 
+In nature, the natural dynamics can be extremely complex. 
 The corresponding manifolds has complex topological structure, which provides many motion primitives.
 For \cms application, the question is whether different motion primitives can be controlled with a simple and unified method.
 The idea is that even there are many types of motion primitives, the number of attractor type is limited. 
@@ -352,6 +381,8 @@ Basically there are only two types of attractors
 \end{itemize}
 
 Control Strategy are designed based on the type of attractor.
+For the fix point attractors, traditional \pd controllers are efficient.
+While for the limit cycle attractors, the idea of entrainment is proposed.
 
 
 \subsection{\cpg and Entrainment}
@@ -363,7 +394,7 @@ This effect also known as resonant will enhance the oscillating behaviour.
 
 
 
-In previous section, two types of attractors are discussed: Fixed Point and Limited Cycle. 
+Mainly two types of attractors are observed : Fixed Point and Limited Cycle. 
 In biological research, it is a still under hot debate which type attractor serve as the foundations for motor control\citep{Degallier2010}.
 Current idea is that Limit Cycle is necessary, based on limit cycle, fix point can be achieved by
 \begin{enumerate} 
@@ -373,18 +404,18 @@ Current idea is that Limit Cycle is necessary, based on limit cycle, fix point c
 \end{enumerate}
 
 
-In Motor Invariant Theory, currently only the limit cyle are considered, mainly for two reasons: 
+In \moit, at current only the limit cycle is considered, mainly for two reasons: 
 \begin{itemize}
 \HiItem {periodic behaviour is  common} 
 Besides the periodic motions such as swimming and running, other biological activity like heart beating, wake and sleep  are periodic.
 A periodic system has the potential to integrate with other biological simulation.
 
-\HiItem{Similar Animation} 
-For animations, periodic motions look similar to terminated motion when the amplitude is small. 
-For \cms research, both types of motion trajectories can be synthesized with one system.
+\HiItem{similar results} 
+For animations, periodic motions look similar to terminated motion when the amplitude of limit cycle is small. 
+Thus if the oscillation amplitude can be controlled, both types of motion trajectories can be synthesized with one system.
 \end{itemize}
 
-\subsection{Neural Oscillator Stability}
+\subsection{Neural Oscillator and its Stability}
 For neural system, precise computation is difficult,  building oscillator with neurons is easy. 
 Only two neurons are needed with mutual inhibitive property.
 One extensively studied oscillation model is developed by \citet{neurooscillation}. 
@@ -493,7 +524,7 @@ When an impulse perturbation happens, it will recover in one period time.
 
 
 \section{Example:Maintain Ball Bouncing Height}
-
+\label{sec:qualyexample}
 The Bouncing Ball system is shown in Figure~\ref{fig:bball}, where a ball is bouncing on a moving paddle.
 The dynamics of this system is simple, but difficult to control with optimization or \pd methods.
 \begin{figure}
