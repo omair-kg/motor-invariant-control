@@ -107,7 +107,7 @@ For a dynamic system, $q(t)$ usually is derived from the state trajectory $\stat
 
 For every point $\state \in M$, 
 $F$ and $u$ determines a derivative vector $\dot{\state}$ in the \emph{Tangent Space}~$T_{\state}M$. 
-Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}$, described by a differential equation~ (Equation~\ref{eq:ode}.
+Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}$, described by Equation~\ref{eq:ode}.
 
 \begin{equation}
 \label{eq:ode}
@@ -116,16 +116,17 @@ Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}
 
 
 
-where $u$ is the control effort. 
-$\alpha$ is the system parameters
+where $u$ is the control effort, 
+$\alpha$ is the system parameters,
 $F$ is determined by the system's natural property.
 If $u=0$,  no control effort is applied.
 Such systems are \emph{autonomous systems}. 
 
 Solutions to Equation~\ref{eq:ode} is the \emph{integral curve}. 
 \emph{Flow} $\Phi(\state)$ of $\mathbf{V}$ is the \emph{integral curve} through~$\state$. 
+Flows are usually visualized by \emph{phase plot}.
 All the flows form the \emph{phase portrait}, which illustrates all the possible motions of the dynamic system.
-Differential manifolds are usually visualized by \emph{phase plot}.
+
 
 \textbf{Example}
 
@@ -144,7 +145,7 @@ For the mass-spring system, define state variable~$\state=[q,\qd]$, Equation~\re
 
 
 \subsection{Basin of Attraction}
-Intersections of follows are \emph{equilibria}.
+Intersections of flows are \emph{equilibria}.
 At each \textbf{equilibria}, the local space can be divided into subspaces: 
 \emph{centre manifold}, \emph{stable manifold}, and \emph{unstable manifold}.
 \begin{description} 
@@ -167,8 +168,8 @@ For a flow $\phi_u$ passes through a point $\state_u$ on unstable manifold $W_{u
 \end{description}
 
 
-\textbf{Attractors} are the equilibriums where the whole local space is stable, the dimension of unstable manifold is zero.
-\textbf{Repellors} are the equilibria where the whole local space is unstable,the dimension of stable manifold is zero.
+\textbf{Attractors} are the equilibria where the whole local space is stable, or the dimension of unstable manifold is zero.
+\textbf{Repellors} are the equilibria where the whole local space is unstable, or the dimension of stable manifold is zero.
 
 
 
@@ -176,11 +177,12 @@ For a flow $\phi_u$ passes through a point $\state_u$ on unstable manifold $W_{u
 
 
 
-In theory, only the attractors of the dynamic systems can be observed.
-Two types of attractors are of great interest in motor control:
+In theory, only the attractors of the dynamic systems  observed are of great interest in motor control:
 \begin{enumerate}
- \item Fixed Point, as show inf Figure~\ref{fig:StablePosture}.
- \item Limit Cycle,as shown in Figure~\ref{fig:ecycle}.
+ \item Fixed Point or equilibrium point, a phase plot  is show inf Figure~\ref{fig:StablePosture}.
+ \item Limit Cycle,a phase plot is shown in Figure~\ref{fig:ecycle}.
+ A limit-cycle  is a closed trajectory in phase space having the property that other trajectory spirals into it as time approaches infinity.
+Stable limit-cycles imply self sustained oscillations. Any small perturbation from the closed trajectory would cause the system to return to the limit-cycle, making the system stick to the limit-cycle.
 \end{enumerate}
 
 \begin{figure}
@@ -196,11 +198,10 @@ Two types of attractors are of great interest in motor control:
 
 
 For non-linear dynamic systems, there may exist many attractors.
-The phase plane will be divide into different regions,result in a cellular structure.
-Within each region, all the flows will converge to one attractor ~$\mathcal{A}$.
-The corresponding region is  the \emph{basin of attraction} ~$\mathcal{B}(\mathcal{A})$.
-
-Figure~\ref{fig:manyboa} shown the landscape of phase portraits of a dynamic system.
+The phase plane is divided into different regions,result in a cellular structure.
+Within each region, all the flows converge to one attractor ~$\mathcal{A}$,
+and corresponding region is  the \emph{basin of attraction} ~$\mathcal{B}(\mathcal{A})$.
+Figure~\ref{fig:manyboa} shows the landscape of phase portrait of a dynamic system, in which the basins of attraction are coloured differently.
 \begin{figure}
 \begin{center}
 \includegraphics[height=0.4\textheight]{basinOfAttraction}
@@ -213,18 +214,18 @@ Figure~\ref{fig:manyboa} shown the landscape of phase portraits of a dynamic sys
 
 
 \subsection{Topology Conjugacy}
-The topological structure of a dynamic system can be described by the type of equilibria and their connectivity.
-Many dynamic systems have different dynamics but share the topology structure.
-For example, the duffine system described by Equation ~\ref{eq:duffin} is different from the mass-spring system.
+The topological structure of a dynamic system can be described by the type of equilibria and the connectivity of their basins of attraction.
+Many dynamic systems share the topology structure.
+For example, the Duffin system described by Equation ~\ref{eq:duffin} is different from the mass-spring system.
 \begin{equation}
 \label{eq:duffin}
 \ddot{q}+q+q^{3}=0
 \end{equation}
 
 But the two system share the topology. 
-Phase plot of the two system are show in Figure~\ref{fig:msphaseplot},\ref{fig:duffin}.
+Phase plots of the two system are show in Figure~\ref{fig:msphaseplot},\ref{fig:duffin}.
 Flows of the two systems are similar, and we can ``deform '' one into another.
-This equivalence relationship is called \emph{topological conjugacy}.
+This equivalence relationship is  \emph{topological conjugacy}.
 
 \begin{figure}
 \begin{center}
@@ -238,7 +239,7 @@ This equivalence relationship is called \emph{topological conjugacy}.
 \begin{center}
 \includegraphics[height=0.4\textheight]{duffin}
 \end{center}
-\caption{Duffin Phase Plot}
+\caption{Duffin System}
 \label{fig:duffin}
 \end{figure}
 
@@ -247,9 +248,8 @@ This equivalence relationship is called \emph{topological conjugacy}.
 \begin{mydef}
 Let $M$ and $M'$ be topological spaces, and let $F\colon M\to M$ and $F'\colon M'\to M'$
 be continuous functions. We say that $F$ is
-\emph{topologically semi-conjugate} to $F'$, if there exists a continuous
-surjection $S\colon M\to M'$ such that $FS=SF'$. If $S$ is a homomorphism,
-then we say that $F$ and $F'$ are \emph{topologically conjugate}, and we call
+\emph{topologically conjugate} to $F'$, if there exists a continuous
+one-one continuous and invertible mapping $h \colon M\to M'$ such that $h(F(M))=F'(h(M))$.
 $S$ a \emph{topological conjugation} between $F$ and $F'$.
 if two system are topological conjugate, they are \emph{analogous systems}
 \end{mydef}
@@ -259,12 +259,15 @@ if two system are topological conjugate, they are \emph{analogous systems}
 
 \section{Global Motor Invariant and Motion Adaptation}
 \label{sec:GMIandMA}
-In \moit,  motion properties is determined by the attractors and basin of attractions of dynamics.
-The `` trivial motion task'' of primitive rely on attractors.
+Qualitative  dynamic properties is determined by the attractors and its basin of attraction.
+\moit establish the relationship between motion primitives and dynamic theory.
+In \moit, each attractor and its basin of attraction defines a motion primitive.
+ `` triviality'' of primitive tasks rely on the attraction.
 If the attractor is fixed point, then the motion will be terminated.
 if the attractor is limit cycle, then the motion will be periodic.
+Larger basin of attraction means motion is more stable, while narrow basin of attractions means the fragile stability.
 
-Larger basin of attraction means motion is more stable and narrow basin of attractions means the fragile stability.
+Qualitative property are the \emph{Global Motor Invariant}
 
 \begin{mydef}
 \emph{Global Motor Invariant} is the tuple of attractor and its basin of attraction
@@ -272,7 +275,7 @@ Larger basin of attraction means motion is more stable and narrow basin of attra
 
 
 Motions vary because of different perturbations.
-In \moit, perturbations are classified into category and coped with different control strategies.
+In \moit, perturbations are classified in two categories and coped with different control strategies.
 
 \begin{itemize}
 \HiItem{State perturbation}
@@ -283,8 +286,6 @@ State Perturbations change the current state, but not the underlying dynamic sys
 
 If the perturbed state $\state'$ remains in the basin of attraction, the perturbed flow will converge to the same attractor. 
 For the walking example, state perturbations can model the push and recover motion.
-
-Different perturbations will result different flows and motions, the the final motion result will remain the same.
 Such kind of motion adaptation is \emph{Responsive adaptation}.
 
 
@@ -298,18 +299,18 @@ Motion controller should enlarge the basin of attraction.
 
 \HiItem{Structure Perturbation}
 Structure Perturbations affect the dynamic system.
-For biological systems,  such kinds of perturbations are very common, when a man put a heavy box on his shoulder or injured, the dynamic will change, thus are structural Perturbation.
+For biological systems,  such perturbations are very common, when a man put a heavy box on his shoulder or injured, the walking dynamic will change, thus are structural perturbations.
 
 
 For some dynamic system,
-Structural Perturbations may only deform the phase portrait and result in an analogous system.
-Along with the phase portrait deformation, motion will vary but qualitative remain the same, this kind of motion adaptation is called \emph{system adaptation}.
-For \cms, `` motion retargeting'' is a phenomenon of system adaptation.
+structural perturbations only deform the phase portrait and result in an analogous system.
+This will result in motion variation but qualitative invariant, this kind of motion adaptation is called \emph{system adaptation}.
+For \cms, `` motion retargeting'' can be seen as an example of system adaptation.
 
-Topological structure can not always maintained.
-Some perturbations will result \emph{bifurcation} that the topology of the underlying dynamic system is changed.
-As an  example is the damping perturbations on the mass spring system.
-As show in Figure~\ref{fig:dampmass}
+In some cases, topological structure may not be maintained.
+Some perturbations will result in \emph{bifurcation} that violates the topology of the underlying dynamic system.
+As an  example is the damping perturbations on the mass spring system will change the dynamics qualitatively.
+As show in Figure~\ref{fig:dampmass}, damping changed the periodic flows into fixed point attracted.
 
 \begin{figure}
 \begin{center}
@@ -320,41 +321,43 @@ As show in Figure~\ref{fig:dampmass}
 \end{figure}
 
 The ability of a dynamic system maintaining its topology structure is \emph{structural stability}.
-To make characters more adaptive to environment and body change, motor controller should boost the structural stability of the motion.
-Control effort are taken to prevent bifurcation.
+To make motions adaptive to environment and body changes, controller should boost the structural stability of the motion and prevent bifurcation.
 \end{itemize}
 
-
-\subsection{the biological meaning of Structural Stability}
 \moit is a framework that unified many biological ideas.
 For the  \umh,  the basin of attraction of an motion primitive can serve as the uncontrolled manifold of \umh.
 State Perturbation are not controlled and motion is freely influence.
-For \eph, attractor of motion primitive is a generalization of fix point.
+For \eph, attractor of motion primitive is a generalization of Equilibrium.
 Impedance control adjust the basin of attraction.
 
 
-Structural Stability is new in \cms research, but there is a good reason for motor control to rely on it. 
+
+
+
+\subsection{the Biological Meaning of Structural Stability}
+For \cms research, Structural Stability is a new idea , but there are good reasons behind it. 
 In natural environment, perturbations and uncertainty are everywhere. 
 Because of the sensing and computation limitations,  feedback idea  can't cope with all types of perturbations.
-The alternative idea in motor invariant theory is  such perturbations can be neglected.
-If the motion primitive is structural stable, even without control effort, motion will not change qualitatively.
-Such an idea can reduce much of the computational burden and provide a framework for more types motion adaptation.
+In \moit, the alternative idea is such perturbations can be neglected.
+If the motion primitive is structural stable, even without control effort, motion and the underlying dynamics will not change qualitatively.
+Such an idea can reduce much of the computational burden and provide a framework for motion adaptation.
 
 
-For some phenomena, structural stability and qualitative perspective provides a better explanation than optimization and feedback control.
+For biological research questions, the structural stability idea and the qualitative perspective provides better explanations than optimization and feedback theory,
 
-Qualitative Control Theory may help to explain the  puzzle behind the  evolution of swimming and walking.
+The first is the control difficulty and  evolution of swimming and walking.
 From quantitative perspective, the swimming dynamics are more difficult and walking should be easier.
-While from the qualitative perspective, fluid is continuous and uniform, the dynamics is of simple topological structure is simple and stability is more easy to control.
+But for biological system, swimming seems easier for primitive life form exists in water.
+Qualitative perspective implies an answer, fluid is continuous and uniform, the dynamics is of simple topological structure and stability is more easy to control.
 Thus with little neural control fish can maintain its posture. 
-On the other side, for human walking, although the rigid body dynamic are quantitative more easy, but topological structure of walking dynamics is much more complex. 
+On the other side, for walking, although the rigid body dynamic are quantitative more easy, but topological structure of walking dynamics is much more complex. 
 On the phase plane, there exist many equilibria and the basin of attraction of walking primitive has limited area,
 thus the  stability of walking is fragile and needs more complex measures to enhance.
 
-\moit also implies the similarity of the motion style for fish and wales
+\moit also implies the similarity of the motion style for fish and whales
 In spite of their different position on evolution chain, animals move through similar environment in a similar manner usually developed similar body structure.
-The similarity in body structure promise the topological conjugacy and motions are based on the qualitative equivalent dynamics.
-Also it reminded us motion primitive is close related to the environment, it is meaningless to talk about walking when put the character in deep water, even with the same control strategy, body and environment can not form the dynamics with desired topological structure.
+The similarity in body structure promise the topological conjugacy and motions dynamics are qualitative equivalent.
+Also it reminded us motion primitive is close related to the environment, it is meaningless to talk about walking when the character floating on water, even with the same control strategy, body and environment can not form the dynamics with desired topological structure.
 
 
 
@@ -369,36 +372,22 @@ For one motion primitive, body may evolve to make the primitive more structural 
 \section{Global Motor Invariant Control}
 \label{sec:cpgcontrol}
 
-In nature, the natural dynamics can be extremely complex. 
+In real-life,  natural dynamics can be extremely complex. 
 The corresponding manifolds has complex topological structure, which provides many motion primitives.
-For \cms application, the question is whether different motion primitives can be controlled with a simple and unified method.
-The idea is that even there are many types of motion primitives, the number of attractor type is limited. 
+For \cms application, the question arises that whether different motion primitives can be controlled with a simple and unified method.
+The idea is that even there are many motion primitives, the attractor type count is limited. 
 Also even the dimension of dynamic system is large, the dimension of the attractors is not. 
-Basically there are only two types of attractors
 \begin{itemize}
 \item Fix point is of zero dimension. 
 \item Limit cycle is of one dimension.
 \end{itemize}
 
-Control Strategy are designed based on the type of attractor.
-For the fix point attractors, traditional \pd controllers are efficient.
-While for the limit cycle attractors, the idea of entrainment is proposed.
 
 
-\subsection{\cpg and Entrainment}
-Biology Research suggested that the motor is mainly controlled by the Central Pattern Generator, which is a small autonomous network that generating rhythmic signals.
-The idea of control motion by rhythmic signals can be modelled as entrainment \citep{Gonz'alez-Miranda2004}.
-When coupling two oscillation system together, entrainment happens when two system oscillate in synchronize. 
-This effect also known as resonant will enhance the oscillating behaviour. 
-
-
-
-
-Mainly two types of attractors are observed : Fixed Point and Limited Cycle. 
-In biological research, it is a still under hot debate which type attractor serve as the foundations for motor control\citep{Degallier2010}.
-Current idea is that Limit Cycle is necessary, based on limit cycle, fix point can be achieved by
+It is a still under hot debate which type attractor serve as the foundations for motor control\citep{Degallier2010}.
+Current idea is that limit cycle is necessary, based on limit cycle, fix point can be achieved by
 \begin{enumerate} 
-\item terminate a cycle. 
+\item terminate a limit cycle. 
 \item approximated by a limit cycle with small amplitude.
 \item Bifurcation. 
 \end{enumerate}
@@ -406,50 +395,61 @@ Current idea is that Limit Cycle is necessary, based on limit cycle, fix point c
 
 In \moit, at current only the limit cycle is considered, mainly for two reasons: 
 \begin{itemize}
-\HiItem {periodic behaviour is  common} 
+\HiItem {periodic behaviour is common} 
 Besides the periodic motions such as swimming and running, other biological activity like heart beating, wake and sleep  are periodic.
-A periodic system has the potential to integrate with other biological simulation.
+A periodic system has the potential to simulate more types of motion and integrate with other biological simulation.
 
 \HiItem{similar results} 
 For animations, periodic motions look similar to terminated motion when the amplitude of limit cycle is small. 
-Thus if the oscillation amplitude can be controlled, both types of motion trajectories can be synthesized with one system.
+If the oscillation amplitude can be controlled, both types of motion trajectories can be synthesized within one framework.
 \end{itemize}
 
+Control strategies are designed based on the type of attractor.
+For the fix point attractors, traditional \pd controllers are simple and efficient.
+For the limit cycle attractors,  entrainment is proposed.
+
+
 \subsection{Neural Oscillator and its Stability}
-For neural system, precise computation is difficult,  building oscillator with neurons is easy. 
+
+
+\subsection{\cpg and Entrainment}
+Biology research suggested that motions are mainly controlled by the organ called \emph{Central Pattern Generator}, a small autonomous network that generates rhythmic signals.
+From dynamic perspective, this idea of control motion by rhythmic signals can be modelled as entrainment \citep{Gonz'alez-Miranda2004}.
+When coupling two oscillation system together, entrainment happens when two systems oscillate in synchronize. 
+This effect also known as resonant which will enhance the oscillating behaviour. 
+
+
+For neural system, precise computation is difficult,  building oscillation network is trivial. 
 Only two neurons are needed with mutual inhibitive property.
-One extensively studied oscillation model is developed by \citet{neurooscillation}. 
-The mathematical presentation is as follows:
+One extensively studied oscillation model is developed by \citet{neurooscillation}, as Equation~\ref{eq:matsuta}.
+
 \begin{align}
 \tau_{1} \dot{s}_{1}&=c_1-s_{1}-c_2 l_{1}-c_3 [s_{2}]^{+}-\sum_{j}h_{ij}[w_{j}]^{+} \nonumber\\
 \tau_{2} \dot{l}_{1}&=[s_{1}]^{+}-l_{1} \nonumber\\
 \tau_{1} \dot{s}_{2}&=c_1-s_{2}-c_2 l_{2}-c_3 [s_{1}]^{-}-\sum_{j}h_{ij}[w_{j}]^{-} \nonumber\\
-\tau_{2} \dot{l}_{2}&=[s_{2}]^{+}-l_{2}\label{eq:matsuta}
+\tau_{2} \dot{l}_{2}&=[s_{2}]^{+}-l_{2}
+\label{eq:matsuta}
 \end{align}
-where $[t]^{+}=\max(0,t)$, $[t]^{-}=\min(0,t)$.
+where $[t]^{+}=\max(0,t)$, $[t]^{-}=\min(0,t)$ .
+$s_{1,2}$ and $l_{1,2}$ are state variables.
 $c_1$,$c_2$,$c_3$ are parameters of the oscillator,in our research are kept constant$[c_1,c_2,c_3]=[1,2,2]$.
 Values of $\tau_{1,2}$ controls the oscillation frequency, and their ratio controls the shape of wave.
-In this research $\frac{\tau_{1}}{\tau_{2}}=0.5$
-
-
+In this research $\frac{\tau_{1}}{\tau_{2}}=0.5$.
+The output signal $\uout$ is defined as Equation~\ref{eq:neuraloutput}:
 \begin{equation}
 %y_{i}&=&\mbox{max}(s_{i},0)\\
 \uout=\hout([s_{1}]^{+}-[s_{2}]^{+})
+\label{eq:neuraloutput}
 \end{equation}
+where $\hout$ is the amplifying coefficient.
 
-
-
-
-
-
-
-Matuoka oscillator is an autonomous oscillator, which can start to oscillate without any control effort.
-Figure ~\ref{fig:natural-oscilation} shows the natural oscillator output.
+Matsuoka oscillator is an autonomous oscillator, which can start to oscillate without any control effort.
+Figure ~\ref{fig:natural-oscillation} shows the natural oscillator output.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[height=0.4\textheight]{oscillation}
 \caption{Natural Oscillation}
-\label{fig:natural-oscilation}
+\label{fig:natural-oscillation}
 \end{center}
 \end{figure}
 
@@ -457,21 +457,23 @@ Figure ~\ref{fig:natural-oscilation} shows the natural oscillator output.
 
 
 
-It is also adaptive; entrainment behaviour emerge between Matuoka oscillator and different oscillators. 
-Figure~\ref{fig:entraint-oscilation} shows the entrainment oscillation,where  Matuoka oscillator synchronise with the input signal.
+Matsuoka is adaptive; entrainment can happen when it is coupled with different oscillators. 
+Figure~\ref{fig:entraint-oscillation} shows the entrainment oscillation,where  Matsuoka oscillator synchronises with the input signal.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[height=0.4\textheight]{entraint_oscilation}
 \caption{Entrainment Oscillation}
-\label{fig:entraint-oscilation}
+\label{fig:entraint-oscillation}
 \end{center}
 \end{figure}
 
-Because of the nonlinear properties, behaviour of Matsuoka Oscilator is not completely understood. 
-Matsuta\citep{Matsuoka1987} analyze the adaptive properties by investigating the location of the roots of characteristic equation. 
-Wilimas\citep{Williamson1998} analyze the properties in frequency domain.
-This research investigates the qualitative property by analyzing the topology of  empirical results.
-The Matsuoka Oscillator shows three important properties:
+Because of the non-linear properties, its behaviour is not completely understood. 
+\citet{Matsuoka1987} analyses the adaptive properties by investigating the location of the roots of characteristic equation. 
+\citet{Williamson1998} analysed the properties in frequency domain.
+\citet{futakataentrainment} provide a rigid analyse of energy efficiency and stability for some specific examples.
+This research investigates the qualitative property by  empirical methods.
+
+After examining many simulation results, the Matsuoka Oscillator shows three important properties:
 \begin{itemize}
 \item{Simple Topological Structure.}
 The topology structure of neural oscillator is simple, 
@@ -481,10 +483,6 @@ All the simulations we carried out converged to the same limited circle.
 \item{Fast Converging Speed.}
 In most of the case, the flow will converge to the limit circle within one period time.
 \end{itemize}
-
-
-
-
 
 
 Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
@@ -506,27 +504,23 @@ Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
  
 The large area of basin of attraction means the final behaviour is totally determined by system parameters. 
 Initial condition will have no effects on the stable oscillation behaviour. 
-Matsuta oscillator can be treated as single input, single output system.
+Matsuota oscillator can be treated as single input, single output system.
 The output signal is controlled by three system parameters and input signal. 
 Equation ~\ref{eq:matsuta} can be reformed in the form of Equation~\ref{eq:simplematsuta}.
 \begin{equation}
-\label{eq:simplematsuta}
 \uout=S_{[\hin,\hout,\tau]}(\uin)
+\label{eq:simplematsuta}
 \end{equation}
-where $\uin=\sum_{j}h_{j}[w_{j}]=hw$.
+where $\uin=\sum_{j}h_{j}[w_{j}]$, is the weighted sum of all the input signal.
 
-
-
-
-
-The converging speed can be seen as quick recovery ability.
+The converging speed can be seen as quick recovery ability, which is very valuable for motor control.
 When an impulse perturbation happens, it will recover in one period time.
 
 
 \section{Example:Maintain Ball Bouncing Height}
 \label{sec:qualyexample}
 The Bouncing Ball system is shown in Figure~\ref{fig:bball}, where a ball is bouncing on a moving paddle.
-The dynamics of this system is simple, but difficult to control with optimization or \pd methods.
+This system is of simple dynamics, but difficult to control with optimization or \pd methods.
 \begin{figure}
 \begin{center}
 \includegraphics[height=0.4\textheight]{paddleball}
@@ -535,26 +529,33 @@ The dynamics of this system is simple, but difficult to control with optimizatio
 \label{fig:bball}
 \end{figure}
  
-The bouncing ball system captures the complex discontinuous dynamics when human iteract with the environment and object. 
-It can be the basic model for many motion tasks like jumping, running and ball playing.
-This example demostrates how limit cycle are generate through neural  oscillator entrainment.
+The bouncing ball system captures the complex discontinuous dynamics of body and environment interaction. 
+It can be treated the template model for many motion tasks like jumping, running and ball playing.
+This example demonstrates how limit cycle arises through entrainment.
  
 \subsection*{Dynamics}
-The dynamics of the bouncing ball system is hybrid, it involves two phases.
+The bouncing ball system is of hybrid dynamic, which involves two phases.
 \begin{itemize}
-\HiItem{The Flying Phase}
+\HiItem{The Continuous Flying Phase}
 When the ball is flying, it is only affected by the gravity.
-\HiItem{The Strike Phase}
-When the ball hit the paddle, the speed of the ball is changed instantly.
+\HiItem{The Discontinuous Strike Phase}
+When the ball hits the paddle, the speed of the ball is changed instantly.
 \end{itemize}
-The natural dynamics of bouncing ball system are described by  Equation~\ref{eq:bbeq},and are shown by Figure~\ref{fig:bborg}. 
-The ball will  bounce with ever smaller height. 
-
+The natural dynamics of bouncing ball system are described by  Equation~\ref{eq:bbeq}.
 \begin{align}
+\ddot{q}_{ball}&=-\gv &\mathrm{if}\,\,q_{ball} &> q_{paddle}\,\,\mathrm{(free\,\,flying)} \nonumber\\
+\dot{q}^{+}_{\mathrm{ball}} - \dot{q}^{+}_{\mathrm{paddle}} &=  \epsilon(\dot{q}^{-}_{\mathrm{ball}} - \dot{q}^{-}_{\mathrm{paddle}})&\mathrm{if}\,\,q_{ball} &\leq {q_{paddle}}\,\,\mathrm{(paddle\,\,strike)}
 \label{eq:bbeq}
-\ddot{q}_{ball}&=-g&\mathrm{if}\,\,q_{ball} &> q_{paddle}\,\,\mathrm{(free\,\,flying)} \nonumber\\
-\dot{q}^{+}_{\mathrm{ball}} - \dot{q}^{+}_{\mathrm{paddle}} &=  \epsilon(\dot{q}^{-}_{\mathrm{ball}} - \dot{q}^{-}_{\mathrm{paddle}})&\mathrm{if}\,\,q_{ball} &\leq {q_{paddle}}\,\,\mathrm{(paddle\,\,strike)}\nonumber
 \end{align}
+where $\ddot{q}_{ball}$ is the acceleration,
+$\gv$ is the gravity,
+$q_{ball},q_{paddle}$ are the positions of the ball and paddle,
+$\dot{q}^{+}_{ball,paddle}$ are the speed after paddle strike and $\dot{q}^{-}_{ball,paddle}$ are the speed before strike,
+$\epsilon$ is collision coefficient $-1 < \epsilon <0$.
+
+Figure~\ref{fig:bborg} shows  plots of the system. 
+The ball will bounce with ever smaller height. 
+
 
 
 
@@ -579,12 +580,11 @@ The ball will  bounce with ever smaller height.
 
 
 \subsection*{Emergence of Limit Cycle}
-The autonomous system of bouncing ball has only one fixed point attractor and its basin of attraction covers the whole phase space.
-The bouncing ball shows the near periodic behaviour, thus can be seen as bifurcation of some periodic ones.
-Neural Oscillator can be applied to maintain the original periodic motion, and limit cycle emerges from entrainment.
+The  bouncing ball system has only one fixed point attractor and its basin of attraction covers the whole phase space.
+But its behaviour is near periodic, alternatively, it can be seen as bifurcation of a limit cycle.
+Neural Oscillator can be applied to recover the limit cycle through entrainment.
 The input of neural oscillator is the velocity $\uin=\qd_{ball}$, the output drives the paddle position $q_{paddle}=\uout$.
-Dropped from different position, all the ball will bouncing  about the same height of $5 unit$,as show in Figure~\ref{fig:bb_attractive_circle}.
-The bouncing height can be maintained.
+Dropped from different position, after several bounces, the ball will maintain its bouncing at the height of $5 unit$,as shown in Figure~\ref{fig:bb_attractive_circle}.
 
 \begin{figure}[h]
 \begin{center}
