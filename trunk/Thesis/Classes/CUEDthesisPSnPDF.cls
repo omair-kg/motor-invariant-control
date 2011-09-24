@@ -189,7 +189,7 @@
 % The name of your University
 \def\university#1{\gdef\@university{#1}}
 % Defining the crest
-%\def\crest#1{\gdef\@crest{#1}}
+\def\crest#1{\gdef\@crest{#1}}
 
 % These macros define an environment for front matter that is always 
 % single column even in a double-column document.
@@ -208,9 +208,7 @@
 %  \null\vfill
   \begin{center}
     { \Huge {\bfseries {\@title}} \par}
-{\large \vspace*{35mm} 
-%{{\@crest} \par} 
-	\vspace*{25mm}}
+%{\large \vspace*{35mm} {{\@crest} \par} \vspace*{25mm}}
     {{\Large \@author} \par}
 {\large \vspace*{1ex}
     {{\@collegeordept} \par}
