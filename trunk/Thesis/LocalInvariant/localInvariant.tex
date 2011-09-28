@@ -252,51 +252,61 @@ According  \textbf{Noether's Theorem}, each $I(\state)$ corresponds to a conserv
 
 \section{Lie Group and Controlled Lagrange}
 \label{sec:liecontrol}
-Motions Adaptation might not only explore symmetry groups of natural dynamics.
-In real-life, animals will execute control effort for adapt motions; also For a dynamic system, working out the symmetry group might be an non-trivial task.
-In \cms, it is possible the desired quantitative properties is not an invariant of the natural dynamics.
-For this end, \emph{Control Symmetry} is proposed.
-Based on biological research foundlings\citep{flash2007affine}, some simple group are assigned as the symmetry group of the motor dynamics system first.
-The control effort are applied to ensure the symmetry.
+It is not enough for animals  only to  explore symmetry groups of natural dynamics for motion adaptation.
+For a dynamic system, the symmetry group is quite restricted and  working out the symmetry group might be a non-trivial task.
+In real-life, animal usually exert control effort during motion adaptations.
+
+\moit theory propose the idea that control effort can make an non symmetrical group become symmetrical, and introduce the \emph{Control Lagrange} method.
+Based on biological research\citep{flash2007affine}, some simple group are selected the symmetry group for motor control,
+control efforts are applied to ensure the symmetry.
 
 
-Usually the natural dynamics are presented as by Euler-Lagrange Equation~\ref{eq:uncontrolled_euler_lagrange}\citep{Goldstein2002}.
+Usually a dynamic system are presented as by Euler-Lagrange Equation~\ref{eq:uncontrolled_euler_lagrange}\citep{Goldstein2002}.
 \begin{equation}
 \frac{d}{dt} \frac{\partial L}{\partial \qd} - \frac{\partial L}{\partial q} = 0
 \label{eq:uncontrolled_euler_lagrange}
 \end{equation}
 
-Where $L=K-V$, $L$ is the Lagrange, $K$ is the kinetic energy, $V$ is the potential energy,$q$ is the generalized coordinates, and $\qd$ is the generalized velocity.
+Where $L=K-V$, $L$ is the Lagrange, $K$ is the kinetic energy, $V$ is the potential energy, $q$ is the generalized coordinates, and $\qd$ is the generalized velocity.
 
-From the symmetry perspective,transformed equation of $g$ is Equation~\ref{eq:liegroup_euler_lagrange}, for the control perspective, the controlled dynamics is Equation~\ref{eq:controlled_euler_lagrange}. If symmetry is persevered, the two equation should be equivalent, then symmetry control input $\ulocal$ can be calculated.
+By applying the group transformation $g$, both the generalized coordinates and generalized velocity will be changed:
+\[
+g(\state)=\tilde{\state}=[\tilde{q}, \dot{\tilde{q}}]
+\]
+The Euler-Lagrange equation for the transformed dynamic system is Equation~\ref{eq:liegroup_euler_lagrange}.
+If control is applied, the Euler-Lagrange equation of the controlled dynamics is Equation~\ref{eq:controlled_euler_lagrange}. 
+If symmetry is persevered, the two equation should be equivalent.
+then symmetry control input $\ulocal$ can be calculated by comparing the two equations.
 \begin{align}
 \frac{d}{dt} \frac{\partial L}{\partial \dot{\tilde{q}}} - \frac{\partial L}{\partial \tilde{q} }&=0,\label{eq:liegroup_euler_lagrange}\\
 \frac{d}{dt} \frac{\partial L}{\partial \qd} - \frac{\partial L}{\partial q}&=\ulocal. \label{eq:controlled_euler_lagrange}
 \end{align}
 
+When the two equations are the equivalent, their Lagrange $L$, Kinetic Energy $K$ and potential energy $V$, should be the same or of the same scale factor.
+Thus in theory, two strategies exist and will result in two different $\ulocal$:
+We can calibrate the kinetic by scaling and apply control effort to compensate the difference in potential energy, or calibrate potential energy and compensate the kinetic energy.
+\moit adopt the potential shaping strategy, for it is computational efficient and suitable for muscle like biological actuators.
+Further restrict the group to homogeneous group or affine group promise a close form formulation.
+Several groups and their potential shaping control effort are as below:
 
 
-
-
-The group we assigned are homogeneous or affine group, this mainly because two reasons:
-\begin{itemize}
-\HiItem{Biological Reason} Homogeneous and affine group close related to the vision system, which serve the foundation of navigation and perception.
-\HiItem{Application Reason} Both the group elements and transformed equations are easy to compute, this will make planning and control  computational efficient.
-\end{itemize}
-
-Several groups are shown in below:
 
 \subsection*{ Offset Action}
-The offset action will modify the coordinate by a constant, speed and time will be unchanged.
+Offset actions  modify the generalized coordinate $q$ by a constant, while speed and time remain unchanged.
+Given the offset parameter $\ep$, the mapping will be in the following form:
 \[
 (t,q,\qd) \mapsto (t,q+\ep,\qd)
 \]
-The state transformation and lift action are
+
+The corresponding state transformation and lift action are
 \begin{align}
 \goff(\state) &= [q+\ep,\qd] \\
 T\goff(\dot{\state})&=\dot{\state}=[\qd,\qdd]
 \end{align}
-on phase space, if $q$ is the horizontal axis, and $\dot{q}$ is the vertical axis, offset the effect of moving the phase plot horizontally~\ref{fig:goff}.
+
+
+On phase space,  $q$ is usually represented the horizontal axis, and $\dot{q}$ is represented by the vertical axis.
+From the geometrical perspective, offset actions will move the phase portrait horizontally~\ref{fig:goff}.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -307,18 +317,17 @@ on phase space, if $q$ is the horizontal axis, and $\dot{q}$ is the vertical axi
 \end{figure}
 
 Substituted the transformed $q$ and $\qd$ into Equation~\ref{eq:liegroup_euler_lagrange} and Equation~\ref{eq:controlled_euler_lagrange}.
-The symmetry control input
+The control input is can be worked out in the following close form formula:
 \begin{equation}
 \ulocal(q) = \frac{\partial}{\partial q} \left(V(q)-V(\tilde{q}) \right).
 \end{equation}
 
-For example, the transformed equation and control equation are as follows.
+As an example, for the mass spring system of Equation~\ref{eq:mass-spring},the transformed equation  and control equation are as follows.
 \begin{align}
 \ddot{\tilde{q}}+\tilde{q}-\ep&=0 \nonumber \\
 \ddot{q}+q&=\ulocal \nonumber
 \end{align}
-
-The local control input is
+By comparing the two equations, we work out that:
 \[
 \ulocal(q)=\ep
 \]
@@ -329,34 +338,21 @@ The local control input is
 \subsection*{Time Scaling}
 
 %g_st(q,dot{q})=(q,st*dot{q})
-Time scaling will scale down the time variable, coordinates are kept. speed are scale up.
+Time scaling actions divide by the time variable by a factor $\ep$, the generalized coordinates are kept unchanged, the generalized speed will be multiplied by $ep$.
+For the action of parameter $\ep$, the action mapping is: 
+
 
 \[
 (t,q,\qd) \mapsto (\frac{t}{\ep},q,\ep \qd)
 \]
 
-The correspond state transformation and lift action are
+The corresponding state transformation and lift action are
 \begin{align}
 \gts(\state)&=[q,\ep \qd] \nonumber \\
 T\gts(\dot{\state})&=[\ep \qd,\ep^2 \ddot{q}]\nonumber
 \end{align}
 
-Then the local control is 
-\begin{equation}
-\ulocal(q) = (1-\ep^2) \frac{\partial V(q)}{\partial q}.
-\end{equation}
-
-For example, for the mass spring system,transformed and controlled equations are
-
-\begin{align}
-\frac{\ddot{\tilde{q}}}{\ep^2}+q&=0 \nonumber \\
-\ddot{q}+q&=\ulocal \nonumber
-\end{align}
-The local control input is:
-\[
-\ulocal=(1-\ep^2)q
-\]
-
+From geometrical perspective, time scaling will stretch the phase portrait vertically,as shown in Figure~\ref{fig:gts}
 \begin{figure}[!htbp]
   \begin{center}
     \includegraphics[width=0.7\textwidth]{g_ts}
@@ -365,28 +361,50 @@ The local control input is:
 \end{center}
 \end{figure}
 
+The control input can be worked out in the same manner as offset actions.
+The control input is of the following closed form formula.
+\begin{equation}
+\ulocal(q) = (1-\ep^2) \frac{\partial V(q)}{\partial q}.
+\end{equation}
+
+Again, the mass spring system of Equation \ref{eq:mass-spring} is selected as an example, transformed and controlled equations are
+
+\begin{align}
+\frac{\ddot{\tilde{q}}}{\ep^2}+\tilde{q}&=0 \nonumber \\
+\ddot{q}+q&=\ulocal \nonumber
+\end{align}
+The local control input is:
+\[
+\ulocal=(1-\ep^2)q
+\]
+
+
+
 
 \subsection*{Energy Scaling}
-For some system moving the the conservative field.
-The energy is preserved and different motion present different level of energy.
-For such system, we have the energy $E(\state)=K+V$, where $K$ is the kinetic energy,
-$V$ is the potential energy.
+For dynamic system of the conservative field,
+the energy is preserved in motion and different motions are characterized by their energy.
+For such system, motion can be adapted by modifying the energy of the dynamic system.
+
+Energy Scaling action is introduced to adapt motion by scaling the energy.
+the transformation has the following property:
 \[
-E(\tilde{\state})=\ep^2 E(x)
+E(\tilde{\state})=\ep^2 E(\state)
 \]
-To generalize uniformly
+ where$E$ is the energy, defined as $E(\state)=K+V$,  $K$ is the kinetic energy,
+$V$ is the potential energy.
+
+Further suppose that both the potential and kinetic energy are transformed uniformly.
 \begin{align}
 K(\tilde{\state})=\ep^2 K(\state) \nonumber\\
 V(\tilde{\state})=\ep^2 V(\state) \nonumber
 \end{align}
-
-
-If the mass of system is constant, energy scaling can be achieved by linear transformation.
+When mass inertia matrix is constant, energy scaling transformation is linear as follows:
 \[
 (t,q,\qd ) \mapsto ( \frac{f(\ep)}{\ep}t ,f(\ep)q,\ep\qd)
 \]
-$f(\ep)$ is a function of $\ep$, which is determined by the conservative force.
-On phase plot, this has the effect enlarge the phase portrait,as show in Figure~\ref{fig:gen}.
+$f(\ep)$ is a function of $\ep$, which is determined by the conservative field.
+Geometrically, energy scaling action enlarge the phase portrait,as shown in Figure~\ref{fig:gen}.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{g_en}
@@ -395,16 +413,28 @@ On phase plot, this has the effect enlarge the phase portrait,as show in Figure~
 \end{center}
 \end{figure}
 
-The state transformation and lift action
+The corresponding  state transformation and lift action are:
 \begin{align}
 \gen(\state)&=(f(\ep) q,\ep \dot{q}) \nonumber\\
 T\gen(\dot{\state})&=(\ep \dot{q},\frac{\ep^2}{f(\ep)}\qdd)
 \end{align}
-$\ulocal$ can be developed by applying the pos scaling and time scaling in a combined manner.
+
+$\ulocal$ can by worked out in the same manner as actions above.
+Rather than write down the close form formula, the thesis prefers an alternative process.
+Energy Scaling can be seen as a composed action of two actions: scaling the generalized coordinates and scaling the time variable.
+Separate formula can be developed for two actions independently.
+This principles generates modular code structure.
 
 
 
-For the mass spring system , $E=\frac{1}{2}(q^2+\qd^2)$,$f(\ep)=\ep$, and because the energy scaling is kept by the original system, we have
+
+The mass spring system of Equation\ref{eq:mass-spring} is selected again as an example.
+ For the mass spring system, Energy is defined as~$E=\frac{1}{2}(q^2+\qd^2)$.
+ If the energy is scaled up by $\ep^2$,  potential energy are scaled up by $\ep^2$.
+ Because $V= \frac{1}{2}q^2$, and $\ep^2 V=\frac{1}{2}(f(\ep)q)^2$, thus $f(\ep)=\ep$.
+ 
+ 
+The control input can be worked out in the same manner as above actions, but usually, when object moved in the conservative field, energy scaling is an symmetry group of original dynamic system, thus no control effort is needed.
 \[
 \ulocal=0
 \]
@@ -412,14 +442,14 @@ For the mass spring system , $E=\frac{1}{2}(q^2+\qd^2)$,$f(\ep)=\ep$, and becaus
 
 
 \subsection*{Time Offset}
-we can also offset the time $t$
+
+Time offset actions modify the time  variable $t$ by the parameter~$\ep$, the map is as follows
 \[
 (t,q,\qd) \mapsto (t+\ep,q,\qd)
 \]
 
-For dynamic system, Time offset symmetry is preserved by any system.
-For system with limit cycle, Time offset has a special effects like phase modification.
-On phase plot, this has the effect rotate on the limit circle about an angle, as shown in Figure~\ref{fig:gtoff}.
+
+For a system oscillating with limit cycle, time offset action will modify the phase, as shown in Figure~\ref{fig:gtoff}.
 \begin{figure}
   \begin{center}
       \includegraphics[width=0.7\textwidth]{g_toff}
@@ -428,20 +458,37 @@ On phase plot, this has the effect rotate on the limit circle about an angle, as
 \end{center}
 \end{figure}
 
+For dynamic system, time offset is symmetrical for all dynamic system.
+At first look, no control effort is needed.
+In practise, time offset is achieved by applying time scaling twice, after applying time scaling $\ep$ for sometime,and then apply the inverse action(time scaling of $\frac{1}{\ep}$) for sometime.
+
+
+\subsection{Action Selection}
+There are many actions available for motion adaptation.
+In certain situations, there are many different ways to satisfy the motion constraints, then the problem of which action to apply arise.
+Different group will result in different motion style, Chapter~\ref{chap:walk} support this idea with lots of examples.
+In practise, this is left for the animator to decide.
+Usually, the symmetry of natural dynamic is preferred, for such actions are energy efficient.
 
 
 
 
-\section{Example:Bouncing Ball dropped from Different Height}
+
+
+
+\section{Example: Symmetry of The Bouncing Ball System}
 \label{sec:symball}
-Even it is a hybrid system,
-The bouncing ball system has a energy scaling symmetry.
+Symmetry is a common property among many dynamic system, even for hybrid systems like the bouncing ball system of Equation~\ref{eq:bbeq}.
+It is shown in this section that by utilizing the symmetry group, complex motions can be predicted in an computational efficient way.
 
-the energy function 
+The bouncing ball system of~\ref{eq:bbeq} has a energy scaling symmetry.
+
+The energy function of the bouncing ball system is  
 \[
 E=\mathrm{g}q+\frac{1}{2}m\qd^2
 \]
-then
+If the energy is scaled up by $\ep^2$,  potential energy are scaled up by $\ep^2$.
+ Because $V= \frac{1}{2}\mathrm{g}q$, and $\ep^2 V=\frac{1}{2}f(\ep)q$, thus:
 \[
 f(\ep)=\ep^2
 \]
@@ -449,6 +496,8 @@ the energy scaling transformation is
 \[
 \gen(\state)=[\ep^2 q, \ep \qd]
 \]
+
+For the bouncing ball system, the energy of a system can be characterized by the initial dropping height.
 
 Given the motion of a ball dropt at $5$,shown in Figure~\ref{fig:bouncing5},set $\ep=\sqrt{2}$, through transformation, motion dropped from $10$ are shown in Figure~\ref{fig:bouncing10}
 \begin{figure}[!htbp]
