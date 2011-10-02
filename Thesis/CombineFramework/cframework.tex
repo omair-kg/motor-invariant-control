@@ -8,18 +8,29 @@ And group Transformation provides a mechanism to modify motion with precision.
 
 
 Questions rise when these ideas are being applied  to \cms.
-The first question comes from idea combination.
+The first question comes from combining the controller of neural oscillator and symmetry controller.
+We must ensure that the combination will violate neither the symmetry nor the topology,
+This question is discussed in details in Section~\ref{sec:combin}.
 
-The ideas of Global Motor Invariant and Local Motor Invariant are dicussed separately in Chapter~\ref{chap:gi} and Chapter~\ref{chap:li}.
-This chapter focuses on put these ideas into \cms application.
-Two problems arised from combinations in application
-\begin{itemize}
-	\item Combine global and local motor invariant controller together.
-	\item Combine different motion primitives together.
-\end{itemize}
+
+Section~\ref{sec:procframe} provides more details information of the pipeline, or the procedure of applying this idea in \cms applications
+
+%Previous chapters only focus on how to maintain motion primitives, a further question is how motion primitives are connected, for example, how a character transit from walking to running. 
+%Section~\ref{sec:manyprimitive} shows how the method for maintaining motion primitive are used for motion primitive transition.
+%
+%
+%
+%
+%The ideas of Global Motor Invariant and Local Motor Invariant are discussed separately in Chapter~\ref{chap:gi} and Chapter~\ref{chap:li}.
+%This chapter focuses on put these ideas into \cms application.
+%Two problems arised from combinations in application
+%\begin{itemize}
+%	\item Combine global and local motor invariant controller together.
+%	\item Combine different motion primitives together.
+%\end{itemize}
 
 \section{Combined Motor Invariant Control}
-
+\label{sec:combin}
 \subsection{ Combine Motor Invariant Control}
 
 Neural Oscillator will maintain the Global Motor Invariant and Controlled Symmetry will maintain the Local Motor Invariant.
@@ -224,6 +235,7 @@ By this method, arbitrary bouncing height can be controlled.
 \end{figure}
 
 \section{Combine Motion Primitives}
+\label{sec:manyprimitive}
 
 \subsection{Dynamic Motion Graph}
 The topological structure of the natural mechanical syste form a graph structure:
@@ -327,6 +339,7 @@ When Controlled Symmetry is applied, both motion primitives are transformed, the
 \end{figure}
 
 \section{Motion Synthesis Framework}
+\label{sec:procframe}
 While this procedure may appear mathematically complex, applying this method for motion synthesis is straightforward. 
 You will need:
 \begin{enumerate}
