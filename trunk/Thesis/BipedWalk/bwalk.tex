@@ -446,12 +446,16 @@ The entrainment of \cpg greatly enlarge the basin of attraction, when the parame
 
 
 \subsection{Walking Retargeting}
-The passive walker has many parameters, like mass and leg length, different parameters will result in a different dynamics sytem.
+Transfer the gait of one character to another is an challenging job.
+\moit theory provides an method for physics based motion re-targeting.
+\cpg will maintain the topology of the dynamics, when the dynamic parameters is changed, the analogous system will result in an varied motion.
+
+The passive walker has many parameters, like mass and leg length, different parameters will result in a different dynamics system.
 But all these dynamic systems  share the same topology and generate different limit cycle and gaits.
 Some meaningful gaits are shown.
 
-If all the parameters are scaled in uniform, the gait will remain the same, only the velocity will be changed,
-To demonstrate different gaits, ratio parameters are modified. 
+If all the parameters are scaled in uniform, the gait will remain the same, only the velocity will be changed.
+To demonstrate different gaits, the ratio or relative parameters are modified. 
 The total mass and total leg length of all examples are kept the same.
 
 
@@ -459,12 +463,12 @@ The total mass and total leg length of all examples are kept the same.
 \subsubsection*{Mass Distribution Ratio}
 When the total mass is kept,
 Mass Distribution Ratio is defined as the hip mass over leg mass. 
-The mass ratios of shank and thigh are kept.
-thus we define the ratio as
 \[
 \alpha_m=\frac{m_h}{m_s}
 \]
 where $m_h$ is the mass of the hip and $m_t$ is mass of the thigh.
+The mass ratios of shank and thigh are kept.
+
 Different $\alpha_m$ will result in different gait, bigger $\alpha_m$ result gait to that burdened.
 Different limit cycles are shown in Figure ~\ref{fig:differentmh}.
 \begin{figure}[!htbp]
@@ -511,7 +515,7 @@ Different gaits are shown in Figure~\ref{fig:massh1},Figure~\ref{fig:massh2},Fig
 \subsubsection*{Leg Length Distribution Ratio}
 The leg length is kept unchanged, but we alter the the ration parameter $\alpha_l=\frac{l_t}{l_s}$.
 By changing $\alpha_l$ motion for different characters are generated.
-This demonstrated the motion re targeting results.
+This demonstrated the motion re-targeting results.
 
 
 \begin{figure}[!htbp]
@@ -523,16 +527,14 @@ This demonstrated the motion re targeting results.
 \end{figure}
 
 The limit cycle in Figure~\ref{fig:differentlr} imply something important about leg length in walking.
-Basically, the support leg motion is almost the same, while different leg length ration will result in different sway angle
+Basically, the support leg motion is almost the same, while different leg length ration will result in different sway angle.
 The step size is kept.
 The longer the shank, thigh has to sway quickly and with bigger amplitude.
 There are also bigger impulses during the strike phase. 
 For both the knee and heel strike, larger impulse is generated.
 This result may shows the effects of high heel shoes for walking.
+
 Figure~\ref{fig:lr1},Figure~\ref{fig:lr2},Figure~\ref{fig:lr3} show the different gaits.
-
-
-
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{LTLS5}
@@ -562,9 +564,11 @@ Figure~\ref{fig:lr1},Figure~\ref{fig:lr2},Figure~\ref{fig:lr3} show the differen
 
 
 \subsubsection*{Unbalanced Mass Ratio}
-Also define the \emph{Unbalanced Mass Ration} $\alpha_b=\frac{\text{Left Leg Mass}}{\text{Right Leg Mass}}$.
-When $\alpha_b$ is increased, two legs sway differently and the limit circle is splited.
-Bigger $\alpha_b$  will result in cripple like gait, as shown in Figure~\ref{fig:lm2}
+Also define the \emph{Unbalanced Mass Ration} 
+\[
+\alpha_b=\frac{\text{Left Leg Mass}}{\text{Right Leg Mass}}
+\].
+
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -584,16 +588,22 @@ Bigger $\alpha_b$  will result in cripple like gait, as shown in Figure~\ref{fig
     \label{fig:lm2}
 \end{center}
 \end{figure}
+As shown in Figure~\ref{fig:differentlr},when $\alpha_b$ is increased, two legs sway differently and the limit circle is splitted.
+Bigger $\alpha_b$  will result in cripple like gait, as shown in Figure~\ref{fig:lm2}
 
 
 
 \subsubsection*{Different Slopes}
-Also we can change the angle of down slope.
+Usually, changing the slope may not seen as motion retargeting.
+But in \moit, changing slope means changing the parameter of the dynamic equation, thus can be analysed in the same manner as changing body parameters.
+
+
+Figure ~\ref{fig:diffslopes} shows the limit cycle of walking on different slopes.
 For different slopes, entrainment maintains the limit cycle, but limit cycle changed its shape.
 Different stable limit cycles are show in Figure ~\ref{fig:diffslopes}
 Basically, the bigger the slope, the bigger the step size, the higher the speed.
 Slope changing has similar effects to energy scaling.
-Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} shown different gaits on different slopes.
+
 
 
 \begin{figure}[!htbp]
@@ -604,7 +614,7 @@ Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} shown different g
 \end{center}
 \end{figure}
 
-
+Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} show different gaits.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{Slope30}
@@ -635,13 +645,12 @@ Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} shown different g
 
 
 \section{Local Motor Invariant Control}
-Neural Oscillator boost the stability, sometimes stability becomes an limitation in motion.
+Neural Oscillator boosts the stability, sometimes stability becomes an limitation in motion.
 For the walking example, if the basin of attraction covers the whole space, then the passive walker can't walk up slope.
-If put the walker walk up slope, after a few steps, the passive walker will begin to walk backward down slope,as shown in Figure~\ref{fig:fig:withoutlocalcontroller}.
+If put the walker walk up slope, after a few steps, the passive walker will begin to walk backward down slope,as shown in Figure~\ref{fig:localcontrolwalking}.
 Also it is not convenient to adjust the speed of walking.
 
-Local Motor Invariant provides a mechanism to adapt motion according to the environment and application specific purpose.
-Equation~\ref{eq:localcontrolwalking} describe walking with local control.
+
 
 
 \begin{figure}[!htbp]
@@ -662,12 +671,23 @@ Equation~\ref{eq:localcontrolwalking} describe walking with local control.
 \end{center}
 \end{figure}
 
+Local Motor Invariant provides a mechanism to adapt motion according to the environment and application specific purpose. 
+For the bipedal walking, Group actions provides a mechanism to adjust the walking slope and walking speed in precision.
+
+
+
+
+\subsubsection{Group Actions}
+
+Equation~\ref{eq:localcontrolwalking} describe walking with local control.
 \begin{equation}
 \label{eq:localcontrolwalking}
 M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = \ulocal
 \end{equation}
 
-\subsubsection{Group Actions}
+
+
+
 Lie group actions are developed for two types of symmetry.
 \begin{itemize}
 
@@ -703,38 +723,40 @@ Blue ones are applied local transform action
 \end{figure}
 
 
-Local Motor Invariant Control make it possible for the passive walker to walk up slope, as shown in Figure~\ref{fig:liegroupupslope}
-
-
+By applying the offset action,   the passive walker to walk up slope, as shown in Figure~\ref{fig:liegroupupslope}
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{LieUpslope}
-    \caption{Upslope Gait Generate by Lie Group Action}
+    \caption{Up slope Gait Generate by Lie Group offset Action}
     \label{fig:liegroupupslope}
 \end{center}
 \end{figure}
 
-\section{Control Combination}
-Global Motor Invariant Control boost the walking stability, but sometimes can't the result motion can't meet application's needs.
+\section{Application of Combined Method}
+Global Motor Invariant Control boost the walking stability, but sometimes  the result motion does not meet application's needs.
 Local Motor Invariant Control can adapt the walking to application purpose, but it can't boost the stability.
 Combined the two controllers make it possible to take advantage for the two methods.
+
 The combined method is shown by Equation~\ref{eq:combinedcontrolwalking}
 \begin{equation}
 \label{eq:combinedcontrolwalking}
 M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = D\uout+\ulocal
 \end{equation}
 
-
-Animator can generate different gaits through neural oscillator, then transform the different gaits by lie group actions.
+In applications, animator can generate different gaits through  adjusting neural oscillator and the body parameters, then transform the different gaits by lie group actions.
 For animators, this method is efficient, natural looking and easy to use.
-There are unlimited combination of adaptive gaits and transform action.
-Some examples are shown in the following.
+
+Such combination will unlimited variations of gaits, in the following, we shown how some gaits variation can be achieved in this manner. 
+
+\subsection{Step Size Adjust}
+The first examples shows how a character can adjust his step size realistically.
 
 
-\subsection{Step size Adjust}
-When the character walking down different slopes, steeper slope will result in a bigger step size as shown in Figure~\ref{DifferentSlope}, if Offset Lie Group actions is applied, we can achieve different step gait on the constant slope.
-Figure~\ref{fig:differentstepsizeonplaine} shows the gaits of different step size on the plane.
 
+When the character walking down different slopes, steeper slope will result in a bigger step size as shown in Figure~\ref{fig:diffslopes}. 
+if Offset Lie Group actions is applied, then we can transform the gait of different slope on the plane, we can achieve different step gait on the plain.
+
+Figure~\ref{fig:differentstepsizeonplaine} shows limit cycles of the different step size gaits on the plane.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{DifferentStepSizeWalking}
@@ -744,7 +766,7 @@ Figure~\ref{fig:differentstepsizeonplaine} shows the gaits of different step siz
 \end{figure}
 
 
-
+And the different gaits are shown in Figure~\ref{fig:ssp1},Figure~\ref{fig:ssp2},Figure~\ref{fig:ssp3}.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{stepsize1}
@@ -818,16 +840,7 @@ The phase plot of gaits of Figure~\ref{fig:vp1} is shown in Figure~\ref{fig:vp2p
 
 
 Figure~\ref{fig:nonsmoothterrain1}, Figure~\ref{fig:nonsmootterrain2} show gaits on none smooth terrain.
-And the phase plot is shown in Figure~\ref{fig:diffterrain1phase}.
-Another Terrain is shown in Figure~\ref{fig:diffterrain2}.
-
-
-
-
-
-
-
-
+Figure~\ref{fig:diffterrain2} shows the phase plot, where different color shows the different slope.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{terrain2}
