@@ -2,63 +2,54 @@
 \label{chap:highdor}
 \graphicspath{{HiDof/HiDofFigs/EPS/}{HiDof/HiDofFigs/}}
 \section{Introduction}
-A question arised that whether motor invariant theory is extensible for system with high degrees of freedom.
-For walk and stance, motions of the torso and arm need to be incoporated.
-Also for the snakes and fishes, synthesise motion for the veterbarea of the fllexible body is a big challenge.
- 
+In the previous chapters, motions are dynamically synthesized for characters with simplified dynamics.
+A question arose that whether the  motor invariant theory(\moit) is applicable for characters with higher degrees of freedom.
+For walk and stance examples, high degree system will incorporate the motions of the torso and arm.
+Also for the snakes and fishes, synthesise motion for the flexible vertebrate may also be a challenge.
+\moit provides a different perspective, and some of the challenge can be solved in a very different manner.
 
 
 
-Redudant \dof is the key challenging in motion synthesis.
-In motor invariant theory, redundant \dof s don't increase the computational burnden expontentially.
-This is achieved through utilizing the passive effects in dynamics.
+Redundant {\dof} is the key challenge in motion synthesis.
+From the theoretical perspective of \moit, redundant {\dof s don't increase the computational burden exponentially.
+\moit explores the natural dynamics of the body and the redundant {\dof} can move passively.
+For the passive walker, all the \dof s are uncontrolled, increased {\dof} s will not increase controller burden.
+The computational burden of neural oscillator remains constant during increase of {\dof} s in dynamic model.
+The computational burden for controlled symmetry is trivial and increased linearly with the number of {\dof} s, as long as the symbolic equations of dynamics is given.
 
-For the passive walker, all the dofs are uncontrolled,increased \dof s will not increase controlelr burden.
-The computational burden of neural oscillator remains constant during increase of \dof s in dynamic model.
-The computational burden for controlled symmetry is trival and increased lineary with the number of \dof s, as long as the symbolic equations of dynamics is given.
+With high dimensional system,  the difficulties in applying \moit  come from  obtaining the symbolic equations.
+This chapter focuses on techniques that avoid the developing high \dof symbolic equations.
+Different strategies are developed for different situations.
 
-For motor invariant theory, the difficulties in high dimention comes from  the obtaining the symbolic dynamic equations.
-This chapter focus on methods that avoid the difficulties of developing high \dof symbolic equations.
-To this end, different strategies are different in different situations.
 \begin{itemize}
+\HiItem{Negligible {\dof}s}
+For characters of high {\dof}s, some {\dof}s can be simply neglected.
+\moit is based on two concepts, the qualitative property and symmetry actions.
+Some \dof s are neglected because either of the two reasons:
+For some {\dof}s, for motion primitive, their motion is minor and has little effects on the system dynamic property, for such {\dof}s, controller system can be designed according to the simple model. 
+The high dimensional model can be used for simulation, but will not affect the burden of control calculation.
 
-\HiItem{Neglectable \dof }
-Some \dof s can be simply neglected.
-neglectable \dof s come from two reason:
-The motion of some \dof are is very limited or it has the same effect as lie group action, it thus will not affect the qualitative properties.
-Such \dof s can be totally neglected and low dimential dynamic equation are used for controllelr.
+For some other {\dof}s, their effects are equivalent to some group transform action, if group action controller is developed, effects of such {\dof}s can also be neglected.
 
 \HiItem{Mechanical Coupling}
-Instead of simulating and developing controllers for a complex mechanical system, we can decouple the complex system into many conponents by the divide and conquer strategy.
+In certain occasions, the divide and conquer strategy works.
+Instead of simulating and developing controllers for a complex mechanical system, The complex system is divided into many  low {\dof}s components, controllers are developed for each of them.
 
-For some high \dof system can be seens as composed of many low dof conponents.
-Controllers are only designed on each component.
 \HiItem{Time Offset}
-For fish or snake, their veberate is made up of a huge number of similar joints.
-It is impossible to neglected some \dof s or decouple the dynamics into components.
-
-
+In some cases, the motions of some {\dof}s are similar or mimic each other, the dynamics can be simplified as controlling just one {\dof}, and synthesis other {\dof} by mimic.
 \end{itemize} 
 
-\section{Neglation and Reduction}
-\subsection{Neglatable}
+\section{Negligible {\dof}s and Reduction}
+\subsection{Negligible \dof}
 Although biological mechanical structure is of high degree of freedom, many \dof s will have not affect the topology or qualitative properties.
-
-For the walking example,\citet{Raibert1986} point out walking is the same as a ball rolling down a slope while running is ball bounding down a slope.
+For the walking example, \citet{Raibert1986} pointed out that walking is the same as a ball rolling down a slope while running is the same as ball bounding down a slope.
 In our research, control strategy are developed based on the compass gait model, as shown in Figure~\ref{fig:compassgait}.
 The degree of knees~\ref{fig:passivekneewalker} and foot~\ref{{fig:arcfoot}} will have little effects on the qualitative properties.
-Although the compass gait and arc foot model are different from the model of our simulation, the three model are all capable of passive walking and shows limit cycles of similar shapes, as shown in Figure~\ref{fig:compassgaitlimitcycle} and Figure~\ref{fig:arcfootlimitcycle}.
-
-
-This idea may be understand through the perturbation or averaging theory.
-For some degree of freedom, it the motion of \dof is relatively small, motion of such \dof can be totally negalected.
-From this persective, we can treat such \dof as structual perturbation, for the kneed example, the relativeliy small moton of knee is equalavent to perturbation of the leg length and the mass position.
-
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{compassgait}
     \caption{Compass Gait}
-    \label{fig:compassgait}
+    \label{fig:}
 \end{center}
 \end{figure}
 
@@ -73,6 +64,11 @@ From this persective, we can treat such \dof as structual perturbation, for the 
 \end{figure}
 
 
+
+
+
+
+Although the compass gait and arc foot model are different from  our walker with knee, the three model are all capable of passive walking and shows limit cycles of similar shapes, as shown in Figure~\ref{fig:compassgaitlimitcycle} and Figure~\ref{fig:arcfootlimitcycle}.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{compasGaitLimitCycle}
@@ -88,6 +84,16 @@ From this persective, we can treat such \dof as structual perturbation, for the 
     \label{fig:arcfootlimitcycle}
 \end{center}
 \end{figure}
+
+
+This idea may be understand through the perturbation or averaging theory\citep{khalil2002nonlinear}.
+For some degree of freedom, it the motion of \dof is relatively small, motion of such \dof can be totally negligible.
+From this persective, we can treat such \dof as structual perturbation, for the kneed example, the relativeliy small moton of knee is equalavent to perturbation of the leg length and the mass position.
+
+
+
+
+
 
 
 
