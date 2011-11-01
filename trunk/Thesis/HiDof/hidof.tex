@@ -86,33 +86,29 @@ Although the compass gait and arc foot model are different from  our walker with
 \end{figure}
 
 
-This idea may be understand through the perturbation or averaging theory\citep{khalil2002nonlinear}.
-For some degree of freedom, it the motion of \dof is relatively small, motion of such \dof can be totally negligible.
-From this persective, we can treat such \dof as structual perturbation, for the kneed example, the relativeliy small moton of knee is equalavent to perturbation of the leg length and the mass position.
+This idea may be understood through the perturbation or averaging theory\citep{khalil2002nonlinear}.
+Motions of some {\dof}s are relatively small, or have little effects on the topology.
+From an alternative perspective, such motions are treated as perturbations,  for the knee walking example, the relatively small motion of knee is equivalent to perturbation of the leg length and the mass position.
 
 
 
-
-
-
-
-
-
-
-Following this idea, we add foot to the original walker.
-When foot is added, we only have to modify the collition model of the heel strike.
+Following this idea, feet are added to the original walker.
+From experiment, the angle is almost rigid and the motion is relatively small.
 From experience, foot will boost the stability.
-Our hypothesis is that adding the foot will prolong the double stance time.
-We model the double foot stance has the effect of pushing the stance state toward the limit cycle.
-This is model by a liner model.
+Our hypothesis is that addition the feet prolongs the double stance time, thus effort are applied to push the state towards the limit cycle.
+
+This effects is modelled by the simplified liner model, as shown in Equation~\ref{eq:footheelstrike}.
 \begin{equation}
-\dot{q}_st=(1-r)\dot{q}_st+r\dot{q}^{desir}_st
+\label{eq:footheelstrike}
+\dot{q}_{st}=(1-r)\dot{q}_{st}+r\dot{q}^{desir}_{st}
 \end{equation}
+where the $\dot{q}_{st}$ is the state after the heel strike,
+$r$ is the linear ration, if foot action push the walker to normal perfectly, then $r=1$,
+$\dot{q}^{desir}_{st}$ is the desired state, or the state on the limit cycle.
 
 
-
-The gait is shown in Figure~\ref{fig:ToeGait}
-
+Adding feet will change the shape of limit cycle, only make the original limit cycle more stable.
+The gait is shown in Figure~\ref{fig:ToeGait}.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{walkwithtoe}
@@ -122,25 +118,7 @@ The gait is shown in Figure~\ref{fig:ToeGait}
 \end{figure}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 %And all the four system, can apply the same kind of symmetry group.
-
-
-
 
 %as show in Figure.
 
