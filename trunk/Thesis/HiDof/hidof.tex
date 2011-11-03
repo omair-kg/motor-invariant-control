@@ -452,22 +452,22 @@ Figure \ref{fig:mechcouple} shows how the mechanical structure is decoupled.
 
 
 \subsection{Torso And Arm}
-Using this mechanical coupling idea, the arm and torso motions are incorporate in our system.
-Three value is added for the torso, the angle is $q_{tor}$,  mass $m_{tor}$ and the distance from the hip is $l_{tor}$
-then we can add the torso motion to the knee walker, then the walking motion of the lower body becomes
+Using this mechanical coupling idea, the arm and torso motions are incorporated in our simulation.
+Three value is added for the torso, the angle is $q_{tor}$,  mass $m_{tor}$ and the distance from the hip is $l_{tor}$.
+With upper body, the equations for walking becomes
 \begin{equation}
 \label{eq:walkcouplewithtorso}
 M\ddot{q}+C\dot{q}+N=u-\left[\begin{array}{c}
 m_{tor}l_{tor}Lcos(q_{1}-q_{tor})\ddot{q}_{tor}\\
 0\\
 0\end{array}\right]-\left[\begin{array}{c}
-m_{tor}l_{tor}Lsin(q_{1}-q_{tor})\dot{q}_{tor}^{2}\\
+m_{tor}l_{tor}L\sin(q_{1}-q_{tor})\dot{q}_{tor}^{2}\\
 0\\
 0\end{array}\right]
 \end{equation}
 
-by analogizing the equation, if the torque posture kept still, it will have no effects on the lower body walking.
-In real life walking, the upper body usually keep straight upward, the coupling input from the upper body is very small.
+From the Equation~\ref{eq:walkcouplewithtorso}, if the torso is kept still, lower body walking will not be effected.
+In real life walking, the upper body usually keeps straight upward, the coupling input from the upper body is very small.
 
 
 
@@ -475,7 +475,7 @@ the torso motion is an inverted pendulum plus some perturbation from the lower b
 \[
 m_{tor}l_{tor}^{2}\ddot{q}_{tor}=gm_{tor}l_{tor}sin(q_{tor})-(m_{tor}l_{tor}Lcos(q_{1}-q_{tor})\ddot{q}_{1}-m_{tor}l_{tor}Lsin(q_{1}-q_{tor})\dot{q}_{1}^{2})
 \]
-by analyzing the torso motion equation, torso motion is unstable in nature, there must be some control applied to maintain its posture.
+by analysing the torso motion equation, torso motion is unstable in nature, there must be some control applied to maintain its posture.
 
 We are not clear what the kind of controller is applied for maintain the torso posture.
 The control method adopted by this research is by shaping the potential energy.
