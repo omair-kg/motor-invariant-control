@@ -126,7 +126,7 @@ The gait is shown in Figure~\ref{fig:ToeGait}.
 %  \begin{center}
 %      \includegraphics[width=0.7\textwidth]{Torus}
 %    \caption{Approximate with Torus with a Circle}
-%    \label{fig:approximate}
+%    \label{fig:approximate}  
 %\end{center}
 %\end{figure}
 
@@ -134,14 +134,21 @@ The gait is shown in Figure~\ref{fig:ToeGait}.
 %Following this idea, although not implemented in this research, more dofs like foot may also possible.
 %But that's just an extra level of complexity, without modifying the principles. 
 \subsection{Symmetry Reduction}
-For some \dof s, their dynamics are not neglactable, but they will affect the dynamics in an unified manner.
-The effects of such \dof can be neglected when the system is controlled under controlled symmetry.
+For a dynamic system of high dimension, in some cases, the {\dof}s can be divided in a a specific manner,
+a lower dimensional dynamic system which capture the key properties of motion, 
+and some extra {\dof}s that place the lower dimensional dynamics in higher dimensional space.
+The extra {\dof}s have the same effects of group actions, and the dynamics can be controlled with lower dimensional model.
 
-This idea can help us to extend the 2D walker into 3D dimention.
-Rather than develop the full 3D dynamcis, the effects of the motion in Coronal Plane and transverse plane can be modelled as transformation of the dynamics on spaghittal plane.
 
 
-This can be analyzed by showing the sway angle in the coronal plane, as shown in Figure~\ref{fig:sidesway}.
+This idea helps to extend the 2D walker into 3 dimensions.
+Rather than develop the full 3D dynamics, 3D walker are developed based on the 2D walker,
+Motions in Coronal Plane and Transverse Plane transforms of spaghetti plane dynamics.
+The motion in Coronal Plane and Transverse Plane can be simplified as rigid body simulation, which place the 2D walker at a correct position in 3D space.
+
+\subsubsection*{Lateral Motions}
+An illustrative examples shows the sway motions in the coronal plane.
+
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{Sidesway}
@@ -150,17 +157,36 @@ This can be analyzed by showing the sway angle in the coronal plane, as shown in
 \end{center}
 \end{figure}
 
-When the walker have a sway angle $\alpha$, the gravity force on the sagittal phase are lowes thus the external force $N$ becomes $N'=cos(\alpha)N$
-This has the same effect as applying speed action which the parameter $\ep, where \ep^2-1=\cos(\alpha)$.
-The effects of sway can be simulated by adjust the speed action parameters$\ep$.
-For walker with speed action control capacity, the effects of this \dof can be totally reduced.
+As shown in Figure~\ref{fig:sidesway}, the passive 2D walker walks on a terrain with a sway angle $\alpha$.
+the gravity force on the spaghetti plane is decreased.
+\[
+\gv'=\cos(\alpha)\gv)
+\]
+where $\gv'$ is the projected gravity force on the spaghetti plane.
+By substitute the projected gravity into the dynamic equations, we have
+\begin{equation}
+\label{eq:flyequation}
+M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N'(\mathbf{q}) = 0
+\end{equation}
+The external force $N$ becomes $N'=cos(\alpha)N$
+
+This has the same effect as applying speed action which the parameter $\ep$, where $\ep^2-1=\cos(\alpha)$.
+The effects of sway motion on the 2D dynamics can be simulated by adjust the speed action parameters$\ep$.
+For walker with speed action controller, the effects of this {\dof} can be totally compensated.
+
+For the sway motion on the Coronal Plane is not passive based, for research have point out the the Coronal Plane sway is unstable in nature\citep{kuo1999stabilization}.
+Great effort is execute at the angle and waist for maintain the posture.
+Such motions are close relate to the character's motion purpose and not mainly governed by the natural dynamics, thus are left to the animators.
+For procedure method, we can use \pd base method to make the walker sway about the center position.
 
 
-Also the dynamic model is free of the rotation on the transverse plane.
-If the ground is rotating around the tranverse plane at constant speed, then only the centrifigual force is generated perpendiculator to the sagittal plane, this force is easilly componsated by the friction on the foot.
+\subsubsection*{Turning Motion}
+Also the 2D dynamic model is free of the rotation on the transverse plane.
+If the ground is rotating around the transverse plane at constant speed, the dynamics on the spaghetti plane will remain the same.
+In three dimension, the difference is that the centrifugal force is generated perpendicular to the spaghetti plane, which is  compensated by the friction on the foot.
 
-For the walker make a turning, the spahittal plane is rotate in an constant speed, this can be achievied by actuating the yaw joint of the suppoting leg, as shown in Figure~\ref{fig:turn}.
-The gait is shown in ~\ref{fig:walkturn}
+For the walker,  make a turning means rotate the spaghetti plane, this can be achieved by actuating the  hip joint of the supporting leg, as shown in Figure~\ref{fig:turn}.
+
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -169,6 +195,12 @@ The gait is shown in ~\ref{fig:walkturn}
     \label{fig:turn}
 \end{center}
 \end{figure}
+
+
+The same as the lateral motion, turning is not achieved by exploring the natural dynamics, but determined by the animator's purpose, animator determines the turning degree, and turning speed.
+As a simplification, during the turning, the dynamic equations of 2D walker remain the same.
+
+
 
 
 
@@ -211,15 +243,19 @@ The gait is shown in ~\ref{fig:walkturn}
     \label{fig:walkturn}
 \end{center}
 \end{figure}
-
+Turning gaits are shown in ~\ref{fig:walkturn}
 
 
 
 
 \section{Mechanical Coupling}
-Some mechanical system can be treated as connecting many different simple components together.
-the different parts of motion formed mechanical entrainment.
-if a mechanical system is model like
+Many high {\dof}s system have the tree topology, which is composed of many branches.
+For such systems, the divide-and-conquer strategy can be applied to simplify the dynamic simulation difficulty.
+
+The mechanical system can be treated as connecting many different simple components together.
+Different components can be simulated independently, and the interactions between different parts form mechanical coupling.
+
+If a mechanical system is in the following form
 \[
 \dot{\state}=F(\state)
 \]
@@ -230,33 +266,31 @@ where
 $\state_1=[q_1,\qd_1]$
 $\state_2=[q_2,\qd_2]$
 
-and  the original dynamic equation can be formulated as
+and the original system can be seen as two system coupled together
 \begin{align}
 \dot{\state}_1&=F_1(\state_1)+C_1(\state_1,\state_2)\nonumber\\
 \dot{\state}_2&=F_2(\state_2)+C_2(\state_1,\state_2),\nonumber
 \end{align}
 
-if $C_{1,2} \ll F_{1,2}$, then the dynamic will be dominated by $F_{1,2}$ and $C_{1,2}$ can be treated as perturbation.
-Controller can be designed according to $F_{1,2}$
+if $C_{1,2} \ll F_{1,2}$, then the dynamic will be dominated by $F_{1,2}$ and $C_{1,2}$ can be treated as perturbations.
+Controllers are designed according to $F_{1,2}$.
 
 \subsection*{Branches Mechanical Structure}
-In fact any mechanical system can be reformulated as entrainment netwok,
-a proper method should separate different components when the coupling is weak.
-the weak couple joint can be found through the mechanical structure.
+In fact any mechanical system can be reformulated as entrainment network,
+a proper division should separate the system at the places where the coupling is weak.
+The weak coupling joints can be identified through the mechanical structure.
+Usually, the joints where the system branches is a proper choice.
 
-when have mechanical structure in figure
+If the mechanical system is of  the structure shown in Figure~\ref{fig:brancefigure}.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.5\textwidth]{multilink}
     \caption{brances mechanical structure}
-    \label{fig:branches structure}
+    \label{fig:brancefigure}
 \end{center}
 \end{figure}
 
-original dynamic system should be of 5 DOF and develop the full dynamic system should be of 5 by 5 matrix.
-in the following form
-
-
+The  5 {\dof}s dynamic system are in the following form
 \[
 M\left[\begin{array}{c}
 \ddot{q}_{1}\\
@@ -281,7 +315,8 @@ u_{4}\\
 u_{5}\end{array}\right]
 \]
 
-where
+where $q_{1,2,3,4,5}$ are the configuration coordinates of 5 links,
+and the mass matrix is
 \[
 M=\left[\begin{array}{ccccc}
 m_{11} & m_{12} & m_{13} & m_{14} & m_{15}\\
@@ -290,25 +325,22 @@ m_{13} & m_{23} & m_{33} & m_{34} & m_{35}\\
 m_{14} & m_{24} & m_{34} & m_{44} & m_{45}\\
 m_{15} & m_{25} & m_{35} & m_{45} & m_{55}\end{array}\right]
 \]
-
 and
 \[
 C=\left[\begin{array}{ccccc}
-0 & C_{12}\dot{q_{2}} & C_{13}\dot{q}_{3} & C_{14}\dot{q}_{4} & C_{15}\dot{q}_{5}\\
--C_{12}\dot{q_{1}} & 0 & C_{23}\dot{q}_{3} & C_{24}\dot{q}_{4} & C_{25}\dot{q}_{5}\\
--C_{13}\dot{q_{1}} & -C_{23}\dot{q}_{2} & 0 & C_{34}\dot{q}_{4} & C_{35}\dot{q}_{5}\\
--C_{14}\dot{q_{1}} & -C_{24}\dot{q}_{2} & -C_{34}\dot{q}_{3} & 0 & C_{45}\dot{q}_{5}\\
--C_{15}\dot{q_{1}} & -C_{25}\dot{q}_{2} & -C_{35}\dot{q}_{3} & -C_{45}\dot{q}_{4} & 0\end{array}\right]
+0 & c_{12}\dot{q_{2}} & c_{13}\dot{q}_{3} & c_{14}\dot{q}_{4} & c_{15}\dot{q}_{5}\\
+-c_{12}\dot{q_{1}} & 0 & c_{23}\dot{q}_{3} & c_{24}\dot{q}_{4} & c_{25}\dot{q}_{5}\\
+-c_{13}\dot{q_{1}} & -c_{23}\dot{q}_{2} & 0 & c_{34}\dot{q}_{4} & c_{35}\dot{q}_{5}\\
+-c_{14}\dot{q_{1}} & -c_{24}\dot{q}_{2} & -c_{34}\dot{q}_{3} & 0 & c_{45}\dot{q}_{5}\\
+-c_{15}\dot{q_{1}} & -c_{25}\dot{q}_{2} & -c_{35}\dot{q}_{3} & -c_{45}\dot{q}_{4} & 0\end{array}\right]
 \]
 
 
 
 
 
-while for the braches structure in Figure \ref{fig:branches structure}.
-there the efficient between different branches $4,5$ and $2,3$ will be zero.
-
-where
+For the branch structure in Figure \ref{fig:branches structure},
+the efficient of unconnected links will be zero, thus
 \[
 M=\left[\begin{array}{ccccc}
 m_{11} & m_{12} & m_{13} & m_{14} & m_{15}\\
@@ -321,11 +353,11 @@ m_{15} & 0 & 0 & m_{45} & m_{55}\end{array}\right]
 and
 \[
 C=\left[\begin{array}{ccccc}
-0 & C_{12}\dot{q_{2}} & C_{13}\dot{q}_{3} & C_{14}\dot{q}_{4} & C_{15}\dot{q}_{5}\\
--C_{12}\dot{q_{1}} & 0 & C_{23}\dot{q}_{3} & 0 & 0\\
--C_{13}\dot{q_{1}} & -C_{23}\dot{q}_{2} & 0 & 0 & 0\\
--C_{14}\dot{q_{1}} & 0 & 0 & 0 & C_{45}\dot{q}_{5}\\
--C_{15}\dot{q_{1}} & 0 & 0 & -C_{45}\dot{q}_{4} & 0\end{array}\right]
+0 & c_{12}\dot{q_{2}} & c_{13}\dot{q}_{3} & c_{14}\dot{q}_{4} & c_{15}\dot{q}_{5}\\
+-c_{12}\dot{q_{1}} & 0 & c_{23}\dot{q}_{3} & 0 & 0\\
+-c_{13}\dot{q_{1}} & -c_{23}\dot{q}_{2} & 0 & 0 & 0\\
+-c_{14}\dot{q_{1}} & 0 & 0 & 0 & c_{45}\dot{q}_{5}\\
+-c_{15}\dot{q_{1}} & 0 & 0 & -c_{45}\dot{q}_{4} & 0\end{array}\right]
 \]
 
 
@@ -335,9 +367,7 @@ C=\left[\begin{array}{ccccc}
 
 
 
-They happens when they the mechanical have a branch structure.
-when mechanical have a branch structure,
-the dynamic equation will be in the following manner.
+This matrix of dynamic equation be grouped in the following manner:
 where
 \[
 M=\left[\begin{array}{ccc|cc}
@@ -355,19 +385,17 @@ and
 \[
 C=
 \left[\begin{array}{ccc|cc}
-0 & C_{12}\dot{q_{2}} & C_{13}\dot{q}_{3} & C_{14}\dot{q}_{4} & C_{15}\dot{q}_{5}\\
--C_{12}\dot{q_{1}} & 0 & C_{23}\dot{q}_{3} & 0 & 0\\
--C_{13}\dot{q_{1}} & -C_{23}\dot{q}_{2} & 0 & 0 & 0\\ \hline
--C_{14}\dot{q_{1}} & 0 & 0 & 0 & C_{45}\dot{q}_{5}\\
--C_{15}\dot{q_{1}} & 0 & 0 & -C_{45}\dot{q}_{4} & 0\end{array}\right]
+0 & c_{12}\dot{q_{2}} & c_{13}\dot{q}_{3} & c_{14}\dot{q}_{4} & c_{15}\dot{q}_{5}\\
+-c_{12}\dot{q_{1}} & 0 & c_{23}\dot{q}_{3} & 0 & 0\\
+-c_{13}\dot{q_{1}} & -c_{23}\dot{q}_{2} & 0 & 0 & 0\\ \hline
+-c_{14}\dot{q_{1}} & 0 & 0 & 0 & c_{45}\dot{q}_{5}\\
+-c_{15}\dot{q_{1}} & 0 & 0 & -c_{45}\dot{q}_{4} & 0\end{array}\right]
 =\left[\begin{array}{cc}
-c_{33} & c_{c32}\\
-c_{c32} & c_{22}\end{array}\right]
+C_{33} & C_{c32}\\
+C_{c32} & C_{22}\end{array}\right]
 \]
-based on where the mechanical branches, we can separate the dynamic equation into two parts,
-and simulate them independently and form the mechanical entrainment network.
 
-
+The coupling network of two dynamic equations are
 \[
 M_{33}\left[\begin{array}{c}
 \ddot{q}_{1}\\
@@ -406,7 +434,8 @@ m_{15}\end{array}\right]\ddot{q}_{1}-\left[\begin{array}{c}
 -c_{15}\end{array}\right]\dot{q}_{1}^{2}
 \]
 
-according the mechanical structure, this is equivalent to simulate two part of the mechanical structure independently and perturbation are treated as coupling effects.
+From mechanical perspective, this is equivalent to simulate two branches of the mechanical structure independently and coupling are treated as perturbation effects.
+Figure \ref{fig:mechcouple} shows how the mechanical structure is decoupled.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{multilinkCoupled}
@@ -422,9 +451,9 @@ according the mechanical structure, this is equivalent to simulate two part of t
 
 
 
-\subsection{Torsol And Arm}
-using this mechanical coupling method, we can incorporate the arm and torso motion is our dynamic system.
-for the torso, the angle is $q_{tor}$,with mass $m_{tor}$ and the distance from the hip is $l_{tor}$
+\subsection{Torso And Arm}
+Using this mechanical coupling idea, the arm and torso motions are incorporate in our system.
+Three value is added for the torso, the angle is $q_{tor}$,  mass $m_{tor}$ and the distance from the hip is $l_{tor}$
 then we can add the torso motion to the knee walker, then the walking motion of the lower body becomes
 \begin{equation}
 \label{eq:walkcouplewithtorso}
@@ -437,7 +466,7 @@ m_{tor}l_{tor}Lsin(q_{1}-q_{tor})\dot{q}_{tor}^{2}\\
 0\end{array}\right]
 \end{equation}
 
-by analyzing the equation, if the torque posture kept still, it will have no effects on the lower body walking.
+by analogizing the equation, if the torque posture kept still, it will have no effects on the lower body walking.
 In real life walking, the upper body usually keep straight upward, the coupling input from the upper body is very small.
 
 
