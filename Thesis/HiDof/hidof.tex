@@ -471,17 +471,21 @@ In real life walking, the upper body usually keeps straight upward, the coupling
 
 
 
-the torso motion is an inverted pendulum plus some perturbation from the lower body.
-\[
+The dynamic of the torso can be modelled as an inverted pendulum perturbated by lower body dynamic, as follows.
+\begin{equation}
+\label{eq:torsodynamic}
 m_{tor}l_{tor}^{2}\ddot{q}_{tor}=gm_{tor}l_{tor}sin(q_{tor})-(m_{tor}l_{tor}Lcos(q_{1}-q_{tor})\ddot{q}_{1}-m_{tor}l_{tor}Lsin(q_{1}-q_{tor})\dot{q}_{1}^{2})
-\]
-by analysing the torso motion equation, torso motion is unstable in nature, there must be some control applied to maintain its posture.
+\end{equation}
 
-We are not clear what the kind of controller is applied for maintain the torso posture.
-The control method adopted by this research is by shaping the potential energy.
-Although inverted pendulum is not stable, pendumlum is stable.
-Torque is applied to make the torso work like pendulum.
+by analysing the Equation~\ref{eq:torsodynamic},  torso motion is unstable in nature,  control effort must exerted applied to maintain its posture.
+Such control task is trivial, simple \pd controller will work for maintaining stability, but the resulting swaying may not natural looking..
 
+The control method adopted by this research is based on the controlled Lagrange method.
+Although inverted pendulum is not stable, pendulum is stable.
+Through shaping the potential energy by control effort, we  rotate the inverted pendulum to make it a pendulum.
+
+When the stable pendulum coupled with the walking motion, stable entrainment happens, so the torso and walking motion coordinate naturally. 
+Figure ~\ref{fig:torsolegentrainment} shows the entrainment of the torso motion and walking, the body sway and walking synchronized.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.5\textwidth]{torsoAndLeg}
@@ -492,39 +496,38 @@ Torque is applied to make the torso work like pendulum.
 
 
 
-Simple PD controller will work well, but it does not necessary generating believable motion.
-An upper body motion is close related to motion purpose and not determined by natural dynamic properties.For application purpose, maybe it is unnecessary to find a controller for upper body motion.
-We can use procedure or other ``IK'' method to generate upper body motion, and add the dynamic effects to the lower body walking motion.
-The motion of arm can be incorporated by following the same principles, it is just another level of complexity.
+
+Note that in real-life, torso is close related to motion purpose and not governed by natural dynamic properties.
+For animation application purpose,  it is unnecessary to control the upper body dynamically.
+We can use procedure or other ``IK'' method to generate primary  motion of the upper body, walking dynamics perturbations are added for secondary motions.
+The motion of arms can be incorporated by following the same principles, it is just another level of complexity.
 
 
 \section{Time Shift}
 
-For some sepere and fish, the mechanical system is in chain and involves lots of similar joints.
-such system dof can't be neglected or reduced through symmetry and through mechanical coupling.
+For reptile and fish, the main challenge rest in synthesizing the flexible vertebrate which  composed of many {\dof}s.
+Such {\dof}s are similar and equally important, it is not proper reduced any \dof through symmetry or mechanical coupling.
 
-For these kind of mechanical structures, an adhoc method is proposed.
-The hypothesis is for each joint, since the dynamics is similar.
+For such mechanical structures, an ad-hoc method is proposed, each controller controls just one joint.
+The hypothesis that since the joints are similar, their dynamics and motion should also be similar.
 Thus the same control strategy is applied for every joint.
-joint are differentiate by the group action.
-This method potentially have two application.
+Motions of each joints are differentiate by the group action.
 
 
-The first idea is applying this method for the boid system.
-Original boid system is ruled based, but method don't promise stability.
-While we using group theory for simulation bold system, if all the agent using the same neural oscillator, they will converge to the same limit circle,
-The uniformity of final motion of agent is grantified.
-The different in the agent of modelled by lie group symmetry, different group action is applied to different agents, behavior will change accordingly.
-For such application, a important group action is the Time Shift.
+The idea can be applied for boid system\citep{reynolds1987flocks}.
+Compared with traditional boid method, the new method will make the boid system stable and easy to control.
+Traditional Rule based boid system does not grantee stability, and sometime result unexpected results.
+Based on the method of \moit, if all the agent motions are based on the same attractor, ,
+The uniformity of final motion of agent is a grantee.
+The difference  among the agents are modelled by different group actions.
+
+\subsection*{Fish Swimming}
+These ideas are applied to synthesis the fish swimming motion.
+In this application,the group action is the Time Shift.
+The fish is made up 8 links, and each {\dof} is controlled by a neural oscillator.
+The $8$ \cpg have the same parameters, but have different initial position. thus they have the same limit cycle, but different phases, as shown in Figure~\ref{fig:fishplot}
 
 
-
-The fish example in Figure~\ref{fig:fishplot} has $8$ joint,  which are controlled by the \cpg s with the same parameters but  different initial condition.
-They will result in the same limit cycle but maintain the phase difference.
-
-
-we expend this boid example to model the fish swimming.
-The fish is made up 8 links, and each dof is controlled by a neural oscillator.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -538,22 +541,14 @@ The fish is made up 8 links, and each dof is controlled by a neural oscillator.
 
 
 Simplified dynamic model are use.
-each joint is modelled as a spring system.
+each joint is modelled as a spring system, as Equation~\ref{eq:fishdynamics}
 \begin{equation}
 \label{eq:fishdynamics}
 \ddot{q}=Kq
 \end{equation}
-
-The swimming speed is proposinal to the square of the viborating velocity.
-All the group action can be used.
-Offset Action will result the fish turnning,
-Speed Action will make the fish swim more fast.
-Energy Action will modify the swimming intensity.
-
-
-Figure~\ref{fig:fishswimming} and Figure~\ref{fig:fishswimline} shows the swimming gaits in a line.
-Figure~\ref{fig:fishswimturn} shwo the the turning gait.
-
+where $q$ is the joint angle.
+A simple fluid dynamic model is adopted,  swimming speed is propositional to the square of the vibrating velocity.
+And Figure~\ref{} shows the gait of a fish swimming in line.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.5\textwidth]{fish_swimming}
@@ -562,6 +557,18 @@ Figure~\ref{fig:fishswimturn} shwo the the turning gait.
 \end{center}
 \end{figure}
 
+
+\subsection{Swimming Motion Tweaking}
+
+There are lots of group actions available for tweaking the fish swimming motion.
+Offset Action will result the fish turning,
+Speed Action will make the fish swim more fast.
+Energy Action will modify the swimming intensity.
+When a group action is chosen, the actions is applied on all the {\dof}s.
+
+
+Figure~\ref{fig:fishswimline} shows the swimming gaits in a line.
+Figure~\ref{fig:fishswimturn} shwo the the turning gait.
 
 
 \begin{figure}[!htbp]
