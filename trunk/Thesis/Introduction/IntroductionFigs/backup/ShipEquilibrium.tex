@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(0,0)(10,10)
+%\psgrid(0,0)(10,10)(1,1)
+\multido{\rA=2+0.25}{16}{
+\psline[linecolor=blue](0,\rA)(10,\rA)
+	}
+
+\rput(3,5){
+	\pspolygon*[linecolor=blue!40](-1,-1)(1,-1)(1.5,2)(-1.5,2)
+		\rput(0,1)
+		{
+		\psdots[dotstyle=Bo,dotscale=2.0,fillcolor=red](0,0)
+		\psline[linecolor=red,linewidth=2pt]{->}(0,0)(0,2)
+		\rput[r](0,2){$\mathbf{b}$}
+		}
+		
+		\rput(0,-0.5)
+		{
+		\psdots[dotstyle=Bo,dotscale=2.0,fillcolor=blue](0,0)
+		\psline[linecolor=blue,linewidth=2pt]{->}(0,0)(0,-2)
+		\rput[r](0,-2){$\mathbf{g}$}
+		}
+	}
+
+\rput(7,5){
+	\rput{180}(0,1.2){
+	\pspolygon*[linecolor=blue!40](-1,-1)(1,-1)(1.5,2)(-1.5,2)
+	}
+		\rput(0.05,0.8)
+		{
+		\psdots[dotstyle=Bo,dotscale=2.0,fillcolor=red](0,0)
+		\psline[linecolor=red,linewidth=2pt]{->}(0,0)(0,2)
+		\rput[r](0,2){$\mathbf{b}$}
+		}
+		
+		\rput(-0.05,1.5)
+		{
+		\psdots[dotstyle=Bo,dotscale=2.0,fillcolor=blue](0,0)
+		\psline[linecolor=blue,linewidth=2pt]{->}(0,0)(0,-2)
+		\rput[r](0,-2){$\mathbf{g}$}
+		}
+		
+	}
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
+

@@ -1,0 +1,30 @@
+\begin{center}
+\def\Func{y[1]|-0.5*y[1]-0.5*sin(y[0])}
+\def\Funcc{y[1]|-y[1]-sin(y[0])}
+\psset{unit=1cm,algebraic=true,linewidth=0.5pt}
+\begin {pspicture}(-2.5,-2.5)(2.5,2.5)
+\rput(3,0){
+\psgrid(0,0)(-2,-2)(2.2,2)
+\psset{method=rk4,plotpoints=400,linecolor=blue,linewidth=1pt,
+	whichabs=0,whichord=1}
+\multido{\r=0.5+0.5}{2}{%
+	\psplotDiffEqn{0}{30}{\r\space 0}{\Func}
+	\psdots[dotstyle=Bo,dotscale=0.5,fillcolor=red](\r,0)
+	}
+
+}
+\rput(-3,0)
+{
+
+\psgrid(0,0)(-2,-2)(2.2,2)
+\psset{method=rk4,plotpoints=400,linecolor=blue,linewidth=1pt,
+	whichabs=0,whichord=1}
+\multido{\r=1+1}{2}{%
+	\psplotDiffEqn{0}{30}{\r\space 0}{\Funcc}
+	\psdots[dotstyle=Bo,dotscale=0.5,fillcolor=red](\r,0)
+	}
+	
+}
+\end{pspicture}
+\end{center}
+

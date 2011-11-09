@@ -1,0 +1,19 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin {pspicture}(-3,-3)(3,3)
+\psarc[linewidth=2pt](0,0){2}{0}{360}
+\psdots[dotstyle=Bo,dotscale=3,fillcolor=red](0,2)
+\rput[r](0,2.5){Unstable Equilibrium}
+\psdots[dotstyle=Bo,dotscale=3,fillcolor=blue](0,-2)
+\rput[l](0,-2.5){Stable Equilibrium}
+\psarc{->}(0,0){2.5}{120}{240}
+\psarc{<-}(0,0){2.5}{-60}{60}
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
+
