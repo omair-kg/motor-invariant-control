@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{amsmath}
+
+
+\definecolor{LightYellow}{rgb}{1.,1.,0.88}
+\definecolor{Peach}      {rgb}{1,.859,.780}
+\definecolor{MyGray}     {gray}{.93}
+
+% Five curves (A, Bd and D in descending order, Ba, C and E in ascending order)
+\newcommand{\curveA}{\pscurve(0,16)(3,12)(0,8)}
+\newcommand{\curveBa}{\pscurve(6,3)(8,8)(7.5,10)(6,13)(6,15)(0,20)}
+\newcommand{\curveBd}{\pscurve(0,20)(6,15)(6,13)(7.5,10)(8,8)(6,3)}
+\newcommand{\curveC}{\pscurve(14,3)(13.5,10.5)(12,16)(11,18)(7,24)}
+\newcommand{\curveD}{\pscurve(17,24)(14.5,18)(14.5,16)(15.5,11)(17,9)(21,3)}
+\newcommand{\curveE}{\pscurve(27,10)(21,11)(21,20)(27,22)}
+
+
+% Two closed curves
+\newcommand{\curveIn}{%
+\psccurve[linewidth=.05]%
+  (7.5,10)(5.5,12)(6.5,13)(12,16)(14.5,16)(17,13)(15.5,11)(13.5,10.5)}
+\newcommand{\curveOut}[2]{%
+\psccurve[linewidth=.05,fillstyle=#1,hatchcolor=#2,hatchsep=10pt]%
+  (8,8)(5,12)(6,15)(11,18)(14.5,18.5)(19,14)(17,9)(12,7.5)}
+
+\pagestyle{empty}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\psset{unit=1.2em,linewidth=.15em,dimen=middle}
+
+%\begin{figure}
+%  \centering
+  \AltClipMode
+  \begin{pspicture}*(0.5,3.5)(26.5,23.5)
+    \psframe[fillstyle=solid,fillcolor=MyGray](0,3)(27,24)
+    % The first clipping, by Dom_C end Dom_E
+    \begin{psclip}{%
+      \pscustom[linestyle=dashed,fillstyle=solid,fillcolor=Peach]{%
+        \curveA
+        \moveto(0,3)            % At bottom left
+        \curveBa
+        \closepath              % End of filling between curves A and B
+        \curveC
+        \curveD
+	}
+	}
+      \curveIn
+      \curveOut{vlines}{red}
+    \end{psclip}%
+    %
+    % The second clipping, by Dom_B and Dom_D
+   % \begin{psclip}{%
+   %   \pscustom[linestyle=dashed,fillstyle=solid,fillcolor=LightYellow]{%
+   %     \moveto(0,24)           % At top left
+   %     \curveBd
+   %     \curveC
+   %     \closepath              % End of filling between curves B and C
+   %     \curveD
+   %     \lineto(27,3)           % At bottom right
+   %     \curveE
+   %     \lineto(27,24)}}        % At top right
+   %   \curveIn
+   %   \curveOut{hlines}{blue}
+   % \end{psclip}%
+    %
+    % Labels
+    \rput(4,6){$I_{\lambda_1}$}
+    \rput(10.8,6){$I_{\lambda_2}$}
+    \rput(23,6){$I_{\lambda_s}$}
+    \rput(7,9.3){$P^{(1)}$}
+    \rput(8.2,15.5){$P^{(2)}$}
+    \rput(17,15.5){$P^{(s)}$}
+  \end{pspicture}
+%  \caption{Associativity}
+%\end{figure}
+
+\end{TeXtoEPS}
+\end{document}
+
+
