@@ -9,11 +9,11 @@ Details are given about how to adapt a motion primitive for  environmental and a
 Combination and transitions of motion primitives are discussed in the next chapter.
 
 
-The motion primitive understudy in this chapter is \emph{bipedal walking}, which is a topic of great application value for both the graphic and robotic engineering.
+The motion primitive under study in this chapter is \emph{bipedal walking}, which is a topic of great application value for both the graphic and robotic engineering.
 In the past decades, many methods have been applied to the bipedal walking, but still we have not achieved  human bipedal walking ability yet.
 The early belief is that bipedal walking in nature is unstable, and many control methods are developed based on trajectory following.
 The turning point is the discovery of passive dynamic walking machine, which shows under specific conditions, walking needs not control effort.
-This idea lead us to believe that the walking ability is inborn and most problems can be solved by the mechanical structure.
+This idea leads us to believe that the walking ability is inborn and most problems can be solved by the mechanical structure.
 
 From the perspective of \moit, bipedal walking is  a motion primitive.
 In this chapter, the passive walking gait is treated as the template.
@@ -64,14 +64,14 @@ For human,the walking dynamic can be simplified.
 \end{center}
 \end{figure}
 
-As shown in Figure~\ref{fig:passivekneewalker}, motion are projected into there space:the sagittal plane, coronal plane and transverse plane.
+As shown in Figure~\ref{fig:passivekneewalker}, motion is projected into three spaces:the sagittal plane, coronal plane and transverse plane.
 For bipedal walking,
  yaw and roll motion are relative small and usually treated as secondary motion or totally neglected,  main motion happens in the \emph{sagittal plane}.
 
 
 
 
-This chapter focuses on the motions in sagittal plane,  \dof s in coronal plane and transverse plane are discussed in Chapter~\ref{chap:highdor}.
+This chapter focuses on the motions in sagittal plane, and  \dof s in coronal plane and transverse plane are discussed in Chapter~\ref{chap:highdor}.
 More \dof s will introduce perturbations to our model, but will not change the basic motion characteristics and adaptation tendency.
 They will make the ``symmetry'' not so perfect and may cause confusions in explaining the idea. thus the discussion is delayed.
 
@@ -101,14 +101,14 @@ $m_h$ represents the body and hip mass.
 
 
 
-Like the bouncing ball system, this system is hybrid\citep{ames2006categorical}, includes continuous and discrete dynamics.
-Passive walking with knees include four phases\citep{Chen2007}.
+Like the bouncing ball system, this system is hybrid\citep{ames2006categorical} and includes continuous and discrete dynamics.
+Passive walking with knees includes four phases\citep{Chen2007}.
 \begin{itemize}
 \HiItem{Free Swing Phase}
-The support leg (the blue one) is kept straight,during this phase the knee of the swing leg is bended, the thigh and shank swings freely.
+The support leg (the blue one) is kept straight,during this phase the knee of the swing leg is bended, the thigh and shank swing freely.
 \HiItem{Knee Strike Phase}
 The knee joint of the swing leg has a limit.
-When the knee angle reach the limit,a collision happens.
+When the knee angle reaches the limit,a collision happens.
 After the collision, the swing leg is kept straight.
 \HiItem{Knee Lock Swing Phase}
 During this swing phase, both the swing and support leg are kept straight.
@@ -137,11 +137,10 @@ Both equations are in the form of Equation~\ref{eq:flyequation}.
 \label{eq:flyequation}
 M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = 0
 \end{equation}
-$q=[q_1,q_2,q_3]$,$\qd=[\dot{q_1},\dot{q_2},\dot{q_3}]$
-where $M$ is the initial mass matrix, $C$ and $N$ are the centrifugal force matrix and gravity respectively. 
+where $q=[q_1,q_2,q_3]$,$\qd=[\dot{q_1},\dot{q_2},\dot{q_3}]$,$M$ is the initial mass matrix, $C$ and $N$ are the centrifugal force matrix and gravity respectively. 
 For Free Swing Phase,  $M$ and $C$ are $3$ by $3$ Matrix, $N$ is $3$ by $1$ vector.
 for Knee Lock Phase, $M$ and $C$ are $2$ by $2$ Matrix, $N$ is $2$ by $1$ vector.
-Put into the standard form, define $\state=[q,\qd]$, Equation~\ref{eq:flyequation} are transformed into Equation~\ref{eq:stateformpw}
+Put into the standard form, define $\state=[q,\qd]$, Equation~\ref{eq:flyequation} is transformed into Equation~\ref{eq:stateformpw}
 Then the function is in the form.
 \begin{equation}
 \label{eq:stateformpw}
@@ -175,12 +174,12 @@ both collision equations are in the form of Equation~\ref{eq:collidequ}.
 J^{+}\dot{\mathbf{q}}^{+} = J^{-}\dot{\mathbf{q}}^{-}
 \end{equation}
 
-where $J$ is the matrix of angular momentum inertia, the subscripts~$+,-$ represent after and before collision.
+where $J$ is the matrix of angular momentum inertia, the superscripts~$+,-$ represent those after and before collision.
 For Knees Strike,$J^-$ is a 3 by 2 Matrix, $J^+$ is 2 by 2 Matrix;
 For Heel Strike, both $J^{+,-}$ are 2 by 2 Matrix.
 \end{itemize}
 Dynamic equations are developed based on Lagrange Mechanics~\citep{Goldstein2002}.
-for details of calculating the dynamic equation, please reference\citep{Chen2007}
+For details of calculating the dynamic equation, please refer to \citep{Chen2007}
 For the components of each matrix, please refer to the appendix.
 
 
@@ -199,11 +198,11 @@ For the components of each matrix, please refer to the appendix.
 \end{center}
 \end{figure}
 With special initial conditions, the passive walker can walk down the slope with a stable gait.
-On the phase plot,  a limit cycle energy. 
+On the phase plot,  a limit cycle emerge. 
 Figure ~\ref{fig:phasesmaker} shows the phase plot of one thigh for a stable walking cycle.
 where the four phases are marked. 
 
-In theory, the generalize the coordinates for walking have $4$ degrees of freedom, with angle for shank and thigh for each leg.
+In theory, the generalized coordinates for walking have $4$ degrees of freedom, with angle for shank and thigh for each leg.
 Thus the state space is $8$ dimension, which is not possible to draw in a $2D$ picture.
 But since motions of the two legs are almost the same, so showing one motion is enough, the state space is reduced to $4$ dimension.
 In the further analysis, we show that knee motion is not very important, the motion of the thigh captures the most valuable motion.
@@ -211,9 +210,9 @@ Thus we only draw the phase plot of the thigh of one leg.
 Figure ~\ref{fig:phasesmaker} only shows the motion right leg.
 the green plot shows the stance phase, when the right leg is supporting the body.
 the blue parts shows the swing phase, when the the right is swing and the left leg is supporting.
-The yellow lines in fact does marker the $4$ collision events during walking.
+The yellow lines marker the $4$ collision events during walking.
 Note that during collision, the walking dynamic is discontinuous, the speed of walking is changed suddenly without changing the position.
-\moit, this means the yellow segments are not on the limit cycle, only the two ends are, if the walker start from the state in the middle of the yellow segment, it will fall.
+this means the yellow segments are not on the limit cycle, only the two ends are, if the walker starts from the state in the middle of the yellow segment, it will fall.
 
 
 
@@ -226,12 +225,12 @@ Note that during collision, the walking dynamic is discontinuous, the speed of w
 
 
 \section{Global Motor Control and Adaptive Gaits}
-The Passive Dynamic Walker exhibit natural looking gait, but the walking motion is not stable.
+The Passive Dynamic Walker exhibits natural looking gait, but the walking motion is not stable.
 In \moit, the repetitive walking motion suggests that the natural walking dynamic forms a limit cycle.
-human utilize the limit cycle for walking, which result in high energy efficiency.
+Human utilize the limit cycle for walking, which results in high energy efficiency.
 
 To overcome the fragile stability, \cpg is applied with the hope to make the walking more stable through entrainment.
-Experiment have shown that stability is enhance and different perturbations result in varied and natural looking responsive motions.
+Experiments have shown that stability is enhanced and different perturbations result in varied and natural looking responsive motions.
 
 
 
@@ -273,10 +272,10 @@ we have
     \label{fig:entrainmentgaitlimitcyle}
 \end{center}
 \end{figure}
-when the drive force is small, the limit cycle of entrainment system is similar to the passive one original passive one.
+when the drive force is small, the limit cycle of entrainment system is similar to original passive one.
 Both limit cycles are shown in Figure~\ref{fig:passivegaitlimitcycle} and Figure~\ref{fig:entrainmentgaitlimitcyle}.
 Walking gaits are shown in Figure~\ref{fig:entrainmentgait} and Figure~\ref{fig:passivegait}.
-Both figures are sample by the same time interval, the controlled gait looks a litte sparser, which means the controlled gait is a bit quicker. 
+Both figures are sampled by the same time interval, the controlled gait looks a little sparser, which means the controlled gait is a bit quicker. 
 
 
 
@@ -309,8 +308,8 @@ Entrainment  boosts structural stability of walking.
 The passive walking can not be maintained on plane, structure perturbation from slope angle violate the topology, limit cycle does not exist any more.
 
 
-When passive walker walk on a plane,
-the step-size decrease every step, after several steps, and the walker will stop or fall over,as shown in Figure~\ref{fig:passivegaitplane}
+When passive walker walks on a plane,the step-size decreases every step.
+After several steps, the walker will stop or fall over,as shown in Figure~\ref{fig:passivegaitplane}.
 
 After coupling with neural oscillator, the  walker maintain the gait with a small step size,as shown in Figure~\ref{fig:neuralwalkinggait}.
 To maintain the energy efficient property of natural motion, $\uout$ is limited to small, thus maintain a small step size,as shown in Figure~\ref{fig:entrainmentLimitCycleOnPlane}.
@@ -340,7 +339,7 @@ To maintain the energy efficient property of natural motion, $\uout$ is limited 
 \end{figure}
 
 Figure~\ref{fig:entrainmentLimitCycleOnPlane},the walking cycle is kept shrinking overtime, this results a gaits of walking to stop intention. 
-But after several steps, the walking gaits reaches a limit cycle (shown in red). 
+But after several steps, the walking gaits reach a limit cycle (shown in red). 
 The new walking limit cycle is of a smaller size, which means a smaller step.
 
 
@@ -379,7 +378,9 @@ when the character is pulled backward, the character will take a smaller step or
 \end{figure}
 
 Figure~\ref{fig:PushGaitPlot} and Figure~\ref{fig:PullGaitPhasePlot} show the flow convergence of the limit cycle.
-When the character is pushed, it takes a big walking cycle, but because of the entrainment, the walking cycle shrinks and tremble around the limit cycle. The pull effects make the character take a smaller step size, in the next several steps, the walker takes bigger and smaller step to adjust walking and finally return to the normal walking gait.
+When the character is pushed, it takes a big walking cycle. 
+However because of the entrainment, the walking cycle shrinks and trembles around the limit cycle. 
+The pull effects make the character take a smaller step size, in the next several steps, the walker takes bigger and smaller step to adjust walking and finally returns to the normal walking gait.
 
 
 \begin{figure}[!htbp]
@@ -400,7 +401,7 @@ When the character is pushed, it takes a big walking cycle, but because of the e
 \end{figure}
 
 
-Also the change the initial step size, the walker will adjust it automatically.
+The initial step size can also be changed, the walker will adjust it automatically.
 Figure~\ref{fig:bigStepIni} and Figure~\ref{fig:smallStepini} show the gaits.
 Figure~\ref{fig:bigstepiniGaitPlot} and Figure~\ref{fig:smallstepiniPhasePlot} show the phase plot.
 
@@ -446,13 +447,14 @@ The entrainment of \cpg greatly enlarge the basin of attraction, when the parame
 
 
 \subsection{Walking Re targeting}
-Transfer the gait of one character to another is an challenging job.
-\moit theory provides an method for physics based motion re-targeting.
-\cpg will maintain the topology of the dynamics, when the dynamic parameters is changed, the analogous system will result in an varied motion.
+Transferring the gait of one character to another is an challenging job.
+\moit theory provides a method for physics based motion re-targeting.
+\cpg will maintain the topology of the dynamics, when the dynamic parameters are changed, the analogous system will result in a varied motion.
 
-The passive walker has many parameters, like mass and leg length, different parameters will result in a different dynamics system.
+The passive walker has many parameters, like mass and leg length.
+Different parameters will result in a different dynamics system.
 But all these dynamic systems  share the same topology and generate different limit cycle and gaits.
-Some meaningful gaits are shown.
+Some meaningful gaits are shown in this section.
 
 If all the parameters are scaled in uniform, the gait will remain the same, only the velocity will be changed.
 To demonstrate different gaits, the ratio or relative parameters are modified. 
@@ -469,23 +471,23 @@ Mass Distribution Ratio is defined as the hip mass over leg mass.
 where $m_h$ is the mass of the hip and $m_t$ is mass of the thigh.
 The mass ratios of shank and thigh are kept.
 
-Different $\alpha_m$ will result in different gait, bigger $\alpha_m$ result gait to that burdened.
+Different $\alpha_m$ will result in different gaits, bigger $\alpha_m$ result gait to that burdened.
 Different limit cycles are shown in Figure ~\ref{fig:differentmh}.
 \begin{figure}[!htbp]
   \begin{center}
      \includegraphics[width=0.7\textwidth]{MassDistributionEffectsOnLimitCircle}
-    \caption{Different Gait Resulting From the Different Mass Ratio}
+    \caption{Different Gait Resulting from the Different Mass Ratio}
     \label{fig:differentmh}
 \end{center}
 \end{figure}
 
 For bigger $\alpha_m$, the walker will walk with bigger step but a slow speed($\qd$ is lower).
-Also the character tend to fall backward.
-For smaller $\alpha_m$, character will walk with quickly($\qd$ is bigger) and it tends to lean forward.
+Also the character tends to fall backward.
+For smaller $\alpha_m$, character will walk quickly($\qd$ is bigger) and it tends to lean forward.
 This may imply about the upper body motion.
 Usually, when we carry something heavier, we  tend to bend upper body forward.
 
-Different gaits are shown in Figure~\ref{fig:massh1},Figure~\ref{fig:massh2},Figure~\ref{fig:massh3}
+Different gaits are shown in Figure~\ref{fig:massh1},Figure~\ref{fig:massh2} and Figure~\ref{fig:massh3}
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{mhms3}
@@ -521,18 +523,18 @@ This demonstrated the motion re-targeting results.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{LegLengthDistributionEffectsOnLimitCircle}
-    \caption{Different Gait Resulting From the Different Mass Ratio}
+    \caption{Different Gait Resulting from the Different Mass Ratio}
     \label{fig:differentlr}
 \end{center}
 \end{figure}
 
-The limit cycle in Figure~\ref{fig:differentlr} imply something important about leg length in walking.
-Basically, the support leg motion is almost the same, while different leg length ration will result in different sway angle.
+The limit cycle in Figure~\ref{fig:differentlr} implies something important about leg length in walking.
+Basically, the support leg motion is almost the same, while different leg length rations will result in different sway angle.
 The step size is kept.
 The longer the shank, thigh has to sway quickly and with bigger amplitude.
 There are also bigger impulses during the strike phase. 
 For both the knee and heel strike, larger impulse is generated.
-This result may shows the effects of high heel shoes for walking.
+This result may show the effects of high heel shoes for walking.
 
 Figure~\ref{fig:lr1},Figure~\ref{fig:lr2},Figure~\ref{fig:lr3} show the different gaits.
 \begin{figure}[!htbp]
@@ -600,7 +602,7 @@ But in \moit, changing slope means changing the parameter of the dynamic equatio
 
 Figure ~\ref{fig:diffslopes} shows the limit cycle of walking on different slopes.
 For different slopes, entrainment maintains the limit cycle, but limit cycle changed its shape.
-Different stable limit cycles are show in Figure ~\ref{fig:diffslopes}
+Different stable limit cycles are show in Figure ~\ref{fig:diffslopes}.
 Basically, the bigger the slope, the bigger the step size, the higher the speed.
 Slope changing has similar effects to energy scaling.
 
@@ -614,7 +616,8 @@ Slope changing has similar effects to energy scaling.
 \end{center}
 \end{figure}
 
-Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} show different gaits.
+Figure~\ref{fig:ss1},Figure~\ref{fig:ss2} and Figure~\ref{fig:ss3} show different gaits.
+
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{Slope30}
@@ -645,7 +648,8 @@ Figure~\ref{fig:ss1},Figure~\ref{fig:ss2},Figure~\ref{fig:ss3} show different ga
 
 
 \section{Local Motor Invariant Control}
-Neural Oscillator boosts the stability, sometimes stability becomes an limitation in motion.
+Neural Oscillator boosts the stability.
+Sometimes stability becomes a limitation in motion.
 For the walking example, if the basin of attraction covers the whole space, then the passive walker can't walk up slope.
 If put the walker walk up slope, after a few steps, the passive walker will begin to walk backward down slope,as shown in Figure~\ref{fig:localcontrolwalking}.
 Also it is not convenient to adjust the speed of walking.
@@ -679,7 +683,7 @@ For the bipedal walking, Group actions provides a mechanism to adjust the walkin
 
 \subsubsection{Group Actions}
 
-Equation~\ref{eq:localcontrolwalking} describe walking with local control.
+Equation~\ref{eq:localcontrolwalking} describes walking with local control.
 \begin{equation}
 \label{eq:localcontrolwalking}
 M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{q}) = \ulocal
@@ -692,24 +696,25 @@ Lie group actions are developed for two types of symmetry.
 \begin{itemize}
 
 \HiItem{Offset Action}.
-Offset Action moves the phase plot horizontally, this will make the passive walking on terrain of different slope.
+Offset Action moves the phase plot horizontally.
+This will make the passive walking on terrain of different slope.
 For the bipedal walking, the offset action is:
 \[
 \ulocal=N(q)-N(q+\ep)
 \]
 \HiItem{Speed Action}
-Speed Action maintain the walking gait, but modify the walking speed.
+Speed Action maintains the walking gait, but modifies the walking speed.
 The local control is:
 \[  
 \ulocal=(1-\ep^2)N
 \]
 \end{itemize}
 
-The original system doest not have energy scaling symmetry.
-Energy Scaling is approximate by a combined method discussed later.
+The original system does not have energy scaling symmetry.
+Energy Scaling is approximated by a combined method discussed later.
 
-Figure~\ref{fig:walkliegroupphase} demonstrate different phase plot after applying lie group actions.
-The red on is the original limit cycle.
+Figure~\ref{fig:walkliegroupphase} demonstrates different phase plot after applying lie group actions.
+The red one is the original limit cycle.
 Green one are apply speed action
 Blue ones are applied local transform action
 
