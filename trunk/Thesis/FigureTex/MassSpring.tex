@@ -1,0 +1,28 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\usepackage{pst-plot,pst-coil}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+
+\begin {pspicture}(0,0)(6,6)
+
+\psframe[linecolor=blue](4,2)(6,4)
+ \pscoil[linecolor=blue]{|-}(0,3)(4,3)
+
+\psframe[linecolor=red](3,1)(5,3)
+ \pscoil[coilheight=0.5,linecolor=red]{|-}(0,2)(3,2)
+
+
+
+\psline[linewidth=0.1pt](4,0)(4,5)
+\psline[linewidth=0.1pt](5,0)(5,5)
+\psline[linewidth=0.1pt]{<->}(4,0.2)(5,0.2)
+\rput(4.5,0.5){$q$}
+	
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
+
