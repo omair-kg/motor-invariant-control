@@ -44,11 +44,12 @@
 \graphicspath{{GlobalInvariant/GlobalInvariantFigs/EPS/}{GlobalInvariant/GlobalInvariantFigs/}}
 
 
-Motions are similar but vary greatly, for example, different people will walk with different gaits. 
-A interesting question  is how the word ``walk'' refers to different gaits.
+Motions are similar but vary greatly.
+For example, different people will walk with different gaits. 
+An interesting question  is how the word ``walk'' refers to different gaits.
 Motor Invariant Theory(\moit) proposes an answer:  despite differences in gaits, we agree on the word ``walk''  because in essence, we all walk in the same manner.
 Intuitively, the gaits are periodic, energy efficient and stable.
-The variations comes from the differences in body, environment or purpose, but from dynamic perspective, qualitatively, all the gaits dynamics share the same structure, or the qualitative properties of walking are invariant.
+The variations come from the differences in body, environment or purpose, but from dynamic perspective, qualitatively, all the gaits dynamics share the same structure, or the qualitative properties of walking are invariant.
 In \moit, the qualitative invariant properties are \emph{Global Motor Invariant}.
 
 
@@ -59,11 +60,12 @@ Section~\ref{sec:GMIandMA} provides justification for the claim above in details
 
 
 In theory, it is difficult to define gait similarity mathematically.
-Topology is introduce to for a clear definition of global invariant.
-Such definition has important dynamic meaning, topologically equivalent means dynamic systems are qualitative the same.
+Topology is introduced for a clear definition of global invariant.
+Such definition has important dynamic meaning, topologically equivalent means dynamic systems are qualitatively the same.
 Basic ideas of topology and qualitative dynamics are summarized at first in Section \ref{sec:qualiDy}
 
-Entrainment are the biological based method to maintain global motor invariant, theory and experiment at discussed at the end of the chapter in Sections~\ref{sec:cpgcontrol} and Section~\ref{sec:qualyexample}
+Entrainment is the biological based method to maintain global motor invariant.
+The theory and experiment are discussed at the end of the chapter in Sections~\ref{sec:cpgcontrol} and Section~\ref{sec:qualyexample}
 
 
 
@@ -75,11 +77,11 @@ Entrainment are the biological based method to maintain global motor invariant, 
 \label{sec:qualiDy}
 Motion Primitives are ``trivial'' motion tasks.
 Evolution equips animals with the body structure that animals can finish such tasks mainly by exploring the natural dynamics without too much control effort.
-For dynamic perspective, the delicate design of body structure permit several patterns when interact with the living environment.  
+For dynamic perspective, the delicate design of body structure permits several patterns when interact with the living environment.  
 Such patterns exists across detail variations in body structure (the tall and short characters) and environment (rough or plain ground).
-Thus are robust or \emph{structural stable} in the dynamic term.
+They are robust or \emph{structural stable} in the dynamic term.
 In \moit, identification of motion primitives and adaptation are based on the structural stability.
-This section serve as a short introduction to concept idea and prepare mathematics.
+This section serves as a short introduction to concept idea and prepare mathematics.
 
 
 Qualitative dynamic properties are analysed with the tool of differential topology.
@@ -98,15 +100,15 @@ Qualitative properties can be obtained by analysing the topological  property of
 
 
 \subsection{Dynamic Systems and Differentiable Manifold}
-Motions of a mechanical system is determined by its configuration  $q$ in configuration space $Q$ and generalized speed $\qd$ in the tangent space $T_{q}Q$. 
-Define the state value $\state=[q,\qd] \in M$,  $M$ is the state space, or state manifold.
+Motions of a mechanical system are determined by its configuration  $q$ in configuration space $Q$ and generalized speed $\qd$ in the tangent space $T_{q}Q$. 
+Define the state value $\state=[q,\qd] \in M$, where $M$ is the state space, or state manifold.
 A motion is a trajectory $t \mapsto q(t)$ in the configuration space parametrized by time~$t$.
 For a dynamic system, $q(t)$ usually is derived from the state trajectory $\state(t)$, which is described by a differential equation. 
 
 
 
 For every point $\state \in M$, 
-$F$ and $u$ determines a derivative vector $\dot{\state}$ in the \emph{Tangent Space}~$T_{\state}M$. 
+$F$ and $u$ determine a derivative vector $\dot{\state}$ in the \emph{Tangent Space}~$T_{\state}M$. 
 Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}$, described by Equation~\ref{eq:ode}.
 
 \begin{equation}
@@ -118,7 +120,7 @@ Vectors over the full space of $\state$ form the \emph{vector field} $\mathbf{V}
 
 where $u$ is the control effort, 
 $\alpha$ is the system parameters,
-$F$ is determined by the system's natural property.
+and $F$ is determined by the system's natural property.
 If $u=0$,  no control effort is applied.
 Such systems are \emph{autonomous systems}. 
 
@@ -130,7 +132,7 @@ All the flows form the \emph{phase portrait}, which illustrates all the possible
 
 \textbf{Example}
 
-For the mass-spring system, define state variable~$\state=[q,\qd]$, Equation~\ref{eq:mass-spring} can be transformed into the equation~\ref{eq:stateform}.
+For the mass-spring system, state variable~$\state=[q,\qd]$ is defined, and Equation~\ref{eq:mass-spring} can be transformed into the equation~\ref{eq:stateform}.
 \begin{equation}
 \label{eq:stateform}
 \dot{\state}=
@@ -150,18 +152,18 @@ At each \textbf{equilibria}, the local space can be divided into subspaces:
 \emph{centre manifold}, \emph{stable manifold}, and \emph{unstable manifold}.
 \begin{description} 
 \item[centre manifold]
-For a flow $\phi_c$ pass through a point $\state_{c}$ on centre sub manifold $W_{c}$, $\phi_c$ will remain on the Centre Manifold. 
+For a flow $\phi_c$ passing through a point $\state_{c}$ on centre sub manifold $W_{c}$, $\phi_c$ will remain on the Centre Manifold. 
 \[
 \phi_{c}(t) \in W_{c}, t \in R
 \]
 
 \item [stable manifold]
-For a flow $\phi_{s}$ passes through a point $\state_{s}$ on stable sub manifold $W_{s}$, $\phi_s$ will finally converge to a flow $\phi_c$ on centre manifold.
+For a flow $\phi_{s}$ passing through a point $\state_{s}$ on stable sub manifold $W_{s}$, $\phi_s$ will finally converge to a flow $\phi_c$ on centre manifold.
 \[
 \phi_{s}(+\infty)=\phi_{c}
 \]
 \item[unstable manifold]
-For a flow $\phi_u$ passes through a point $\state_u$ on unstable manifold $W_{u}$, $\phi_u$ will be repelled from the $\phi_c$ on centre manifold, the inverse of $\phi_u$ converges to $\phi_c$. 
+For a flow $\phi_u$ passing through a point $\state_u$ on unstable manifold $W_{u}$, $\phi_u$ will be repelled from the $\phi_c$ on centre manifold, the inverse of $\phi_u$ converges to $\phi_c$. 
 \[
 \phi_{u}(-\infty)=\phi_{c}
 \] 
@@ -198,7 +200,7 @@ Stable limit-cycles imply self sustained oscillations. Any small perturbation fr
 
 
 For non-linear dynamic systems, there may exist many attractors.
-The phase plane is divided into different regions,result in a cellular structure.
+The phase plane is divided into different regions,resulting in a cellular structure.
 Within each region, all the flows converge to one attractor ~$\mathcal{A}$,
 and corresponding region is  the \emph{basin of attraction} ~$\mathcal{Boa}(\mathcal{A})$.
 Figure~\ref{fig:manyboa} shows the landscape of phase portrait of a dynamic system, in which the basins of attraction are coloured differently.
@@ -222,7 +224,7 @@ For example, the Duffin system described by Equation ~\ref{eq:duffin} is differe
 \ddot{q}+q+q^{3}=0
 \end{equation}
 
-But the two system share the topology. 
+But the two systems share the topology. 
 Phase plots of the two system are show in Figure~\ref{fig:msphaseplot},\ref{fig:duffin}.
 Flows of the two systems are similar, and we can ``deform '' one into another.
 This equivalence relationship is  \emph{topological conjugacy}.
@@ -250,7 +252,7 @@ Let $M$ and $M'$ be topological spaces, and let $F\colon M\to M$ and $F'\colon M
 be continuous functions. We say that $F$ is
 \emph{topologically conjugate} to $F'$, if there exists a continuous
 one-one continuous and invertible mapping $h \colon M\to M'$ such that $h(F(M))=F'(h(M))$.
-$S$ a \emph{topological conjugation} between $F$ and $F'$.
+$h$ is a \emph{topological conjugation} between $F$ and $F'$.
 if two system are topological conjugate, they are \emph{analogous systems}
 \end{mydef}
 
@@ -259,15 +261,14 @@ if two system are topological conjugate, they are \emph{analogous systems}
 
 \section{Global Motor Invariant and Motion Adaptation}
 \label{sec:GMIandMA}
-Qualitative  dynamic properties is determined by the attractors and its basin of attraction.
-\moit establish the relationship between motion primitives and dynamic theory.
-In \moit, each attractor and its basin of attraction defines a motion primitive.
- `` triviality'' of primitive tasks rely on the attraction.
-If the attractor is fixed point, then the motion will be terminated.
-if the attractor is limit cycle, then the motion will be periodic.
+Qualitative  dynamic properties are determined by the attractors and its basin of attraction.
+\moit establishes the relationship between motion primitives and dynamic theory.
+In \moit, each attractor and its basin of attraction define a motion primitive.
+ `` triviality'' of primitive tasks relies on the attraction.
+If the attractor is a fixed point, then the motion will be terminated.
+if the attractor is a limit cycle, then the motion will be periodic.
 Larger basin of attraction means motion is more stable, while narrow basin of attractions means the fragile stability.
-
-Qualitative property are the \emph{Global Motor Invariant}
+Qualitative property is the \emph{Global Motor Invariant}
 
 \begin{mydef}
 \emph{Global Motor Invariant} is the tuple of attractor and its basin of attraction
@@ -354,14 +355,14 @@ On the other side, for walking, although the rigid body dynamic are quantitative
 On the phase plane, there exist many equilibria and the basin of attraction of walking primitive has limited area,
 thus the  stability of walking is fragile and needs more complex measures to enhance.
 
-\moit also implies the similarity of the motion style for fish and whales
+\moit also implies the similarity of the motion style for fish and whales.
 In spite of their different position on evolution chain, animals move through similar environment in a similar manner usually developed similar body structure.
-The similarity in body structure promise the topological conjugacy and motions dynamics are qualitative equivalent.
-Also it reminded us motion primitive is close related to the environment, it is meaningless to talk about walking when the character floating on water, even with the same control strategy, body and environment can not form the dynamics with desired topological structure.
+The similarity in body structure promises the topological conjugacy and motions dynamics are qualitative equivalent.
+Also it reminded us motion primitive is closely related to the environment, it is meaningless to talk about walking when the character floating on water, even with the same control strategy, body and environment can not form the dynamics with desired topological structure.
 
 
 
-Further \moit suggest the direction of evolution.
+Further \moit suggests the direction of evolution.
 For one motion primitive, body may evolve to make the primitive more structural stable.
 
 
@@ -374,7 +375,7 @@ For one motion primitive, body may evolve to make the primitive more structural 
 
 In real-life,  natural dynamics can be extremely complex. 
 The corresponding manifolds has complex topological structure, which provides many motion primitives.
-For \cms application, the question arises that whether different motion primitives can be controlled with a simple and unified method.
+For \cms application, the question arises whether different motion primitives can be controlled with a simple and unified method.
 The idea is that even there are many motion primitives, the attractor type count is limited. 
 Also even the dimension of dynamic system is large, the dimension of the attractors is not. 
 \begin{itemize}
@@ -384,7 +385,7 @@ Also even the dimension of dynamic system is large, the dimension of the attract
 
 
 
-It is a still under hot debate which type attractor serve as the foundations for motor control\citep{Degallier2010}.
+It is a still under hot debate which type attractor serves as the foundations for motor control\citep{Degallier2010}.
 Current idea is that limit cycle is necessary, based on limit cycle, fix point can be achieved by
 \begin{enumerate} 
 \item terminate a limit cycle. 
@@ -396,7 +397,7 @@ Current idea is that limit cycle is necessary, based on limit cycle, fix point c
 In \moit, at current only the limit cycle is considered, mainly for two reasons: 
 \begin{itemize}
 \HiItem {periodic behaviour is common} 
-Besides the periodic motions such as swimming and running, other biological activity like heart beating, wake and sleep  are periodic.
+Besides the periodic motions such as swimming and running, other biological activities like heart beating, wake and sleep  are periodic.
 A periodic system has the potential to simulate more types of motion and integrate with other biological simulation.
 
 \HiItem{similar results} 
@@ -416,7 +417,7 @@ For the limit cycle attractors,  entrainment is proposed.
 Biology research suggested that motions are mainly controlled by the organ called \emph{Central Pattern Generator}, a small autonomous network that generates rhythmic signals.
 From dynamic perspective, this idea of control motion by rhythmic signals can be modelled as entrainment \citep{Gonz'alez-Miranda2004}.
 When coupling two oscillation system together, entrainment happens when two systems oscillate in synchronize. 
-This effect also known as resonant which will enhance the oscillating behaviour. 
+This effect is also known as resonant which will enhance the oscillating behaviour. 
 
 
 For neural system, precise computation is difficult,  building oscillation network is trivial. 
@@ -468,9 +469,9 @@ Figure~\ref{fig:entraint-oscillation} shows the entrainment oscillation,where  M
 \end{figure}
 
 Because of the non-linear properties, its behaviour is not completely understood. 
-\citet{Matsuoka1987} analyses the adaptive properties by investigating the location of the roots of characteristic equation. 
+\citet{Matsuoka1987} analysedd the adaptive properties by investigating the location of the roots of characteristic equation. 
 \citet{Williamson1998} analysed the properties in frequency domain.
-\citet{futakataentrainment} provide a rigid analyse of energy efficiency and stability for some specific examples.
+\citet{futakataentrainment} provided a rigid analyse of energy efficiency and stability for some specific examples.
 This research investigates the qualitative property by  empirical methods.
 
 After examining many simulation results, the Matsuoka Oscillator shows three important properties:
@@ -530,7 +531,7 @@ This system is of simple dynamics, but difficult to control with optimization or
 \end{figure}
  
 The bouncing ball system captures the complex discontinuous dynamics of body and environment interaction. 
-It can be treated the template model for many motion tasks like jumping, running and ball playing.
+It can be treated as the template model for many motion tasks like jumping, running and ball playing.
 This example demonstrates how limit cycle arises through entrainment.
  
 \subsection*{Dynamics}
@@ -584,7 +585,7 @@ The  bouncing ball system has only one fixed point attractor and its basin of at
 But its behaviour is near periodic, alternatively, it can be seen as bifurcation of a limit cycle.
 Neural Oscillator can be applied to recover the limit cycle through entrainment.
 The input of neural oscillator is the velocity $\uin=\qd_{ball}$, the output drives the paddle position $q_{paddle}=\uout$.
-Dropped from different position, after several bounces, the ball will maintain its bouncing at the height of $5 unit$,as shown in Figure~\ref{fig:bb_attractive_circle}.
+Dropped from different positions, after several bounces, the ball will maintain its bouncing at the height of $5 unit$,as shown in Figure~\ref{fig:bb_attractive_circle}.
 
 \begin{figure}[h]
 \begin{center}
