@@ -715,8 +715,7 @@ Energy Scaling is approximated by a combined method discussed later.
 
 Figure~\ref{fig:walkliegroupphase} demonstrates different phase plot after applying lie group actions.
 The red one is the original limit cycle.
-Green one are apply speed action
-Blue ones are applied local transform action
+Green ones are applied speed actions and blue ones are applied local transform action.
 
 
 \begin{figure}[!htbp]
@@ -738,9 +737,9 @@ By applying the offset action,   the passive walker to walk up slope, as shown i
 \end{figure}
 
 \section{Application of Combined Method}
-Global Motor Invariant Control boost the walking stability, but sometimes  the result motion does not meet application's needs.
+Global Motor Invariant Control boosts the walking stability, but sometimes  the result motion does not meet application's needs.
 Local Motor Invariant Control can adapt the walking to application purpose, but it can't boost the stability.
-Combined the two controllers make it possible to take advantage for the two methods.
+Combining the two controllers make it possible to take advantages of the two methods.
 
 The combined method is shown by Equation~\ref{eq:combinedcontrolwalking}
 \begin{equation}
@@ -751,15 +750,16 @@ M(\mathbf{q}) \ddot{\mathbf{q}} + C(\mathbf{q,\qd})\dot{\mathbf{q}} + N(\mathbf{
 In applications, animator can generate different gaits through  adjusting neural oscillator and the body parameters, then transform the different gaits by lie group actions.
 For animators, this method is efficient, natural looking and easy to use.
 
-Such combination will unlimited variations of gaits, in the following, we shown how some gaits variation can be achieved in this manner. 
+Such combinations will achieve unlimited variations of gaits.
+In the following, we shown how some gaits variation can be achieved in this manner. 
 
 \subsection{Step Size Adjust}
-The first examples shows how a character can adjust his step size realistically.
+The first example shows how a character can adjust his step size realistically.
 
 
 
-When the character walking down different slopes, steeper slope will result in a bigger step size as shown in Figure~\ref{fig:diffslopes}. 
-if Offset Lie Group actions is applied, then we can transform the gait of different slope on the plane, we can achieve different step gait on the plain.
+When the character walks down different slopes, steeper slope will result in a bigger step size as shown in Figure~\ref{fig:diffslopes}. 
+if Offset Lie Group actions is applied, then we can transform the gait of different slope on the plane, we can achieve different step gait on the plane.
 
 Figure~\ref{fig:differentstepsizeonplaine} shows limit cycles of the different step size gaits on the plane.
 \begin{figure}[!htbp]
@@ -803,14 +803,17 @@ And the different gaits are shown in Figure~\ref{fig:ssp1},Figure~\ref{fig:ssp2}
 
 
 \subsection{Varying Slopes}
-Neural Oscillator can maintain walking by varying slopes, but can't make character walking up slope.
-Lie Group action allow the character walking up a slope with a constant angle, but varying the slope will result walking failure.
-Combined the two methods, the passive walker can walk varying up slope.
+Neural Oscillator can maintain walking on varying slopes, but can't make character walk up slope.
+Lie Group action allow the character to walk up a slope with a constant angle.
+However varying the slope will result in walking failure.
+Combining the two methods, the passive walker can walk varying up slope.
 
 
-The control strategy it is straight forward, lie group action is maintained on each plane, during slope transition, controller look ahead and set the lie group action for to walking on the slope for the next step.
-At transition, the state will moved far away from the stable limit cycle, need a few steps to converge to the limit circle.
-This result gait adjustment, sometimes, character will take a few small steps and increase it to normal steps.
+The control strategy is straight forward.
+Lie group action is maintained on each plane, during slope transition, controller looks ahead and set the lie group action for to walking on the slope for the next step.
+At transition, the state will move far away from the stable limit cycle, and need a few steps to converge to the limit circle.
+This result in gait adjustment.
+Sometimes, character will take a few small steps and increase it to normal steps.
 
 
 Figure~\ref{fig:vp1} and Figure~\ref{fig:vp2} show the gaits on smooth slopes.
@@ -844,8 +847,8 @@ The phase plot of gaits of Figure~\ref{fig:vp1} is shown in Figure~\ref{fig:vp2p
 
 
 
-Figure~\ref{fig:nonsmoothterrain1}, Figure~\ref{fig:nonsmootterrain2} show gaits on none smooth terrain.
-Figure~\ref{fig:diffterrain2} shows the phase plot, where different color shows the different slope.
+Figure~\ref{fig:nonsmoothterrain1} and Figure~\ref{fig:nonsmootterrain2} show gaits on none smooth terrain.
+Figure~\ref{fig:diffterrain2} shows the phase plot, where different colors show different slopes.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{terrain2}
