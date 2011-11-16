@@ -1,7 +1,7 @@
 # make -f Makefile_latex
 
 
-R = basinOfAttraction
+R=ShapeCombination
 
 eps: 	$(R).tex
 	latex $(R).tex

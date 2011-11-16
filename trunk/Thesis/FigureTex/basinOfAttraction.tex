@@ -23,6 +23,10 @@
 \newcommand{\curveOut}[2]{%
 \psccurve[linewidth=.05,fillstyle=#1,hatchcolor=#2,hatchsep=10pt]%
   (8,8)(5,12)(6,15)(11,18)(14.5,18.5)(19,14)(17,9)(12,7.5)}
+\newcommand{\curvelimit}[2]{%
+\psccurve[linewidth=.05,fillstyle=#1,hatchcolor=#2,hatchsep=10pt]%
+(7.6,9)(5.3,13)(6.3,14)(11.4,17)(14.5,17.5)(18,13.5)(18,10)(13,8.5)}
+
 
 \pagestyle{empty}
 \pagestyle{empty}
@@ -30,26 +34,16 @@
 \begin{TeXtoEPS}
 \psset{unit=1.2em,linewidth=.15em,dimen=middle}
 
-%\begin{figure}
-%  \centering
-  \AltClipMode
+
   \begin{pspicture}*(0.5,3.5)(26.5,23.5)
     \psframe[fillstyle=solid,fillcolor=MyGray](0,3)(27,24)
     % The first clipping, by Dom_C end Dom_E
-    \begin{psclip}{%
-      \pscustom[linestyle=dashed,fillstyle=solid,fillcolor=Peach]{%
-        \curveA
-        \moveto(0,3)            % At bottom left
-        \curveBa
-        \closepath              % End of filling between curves A and B
-        \curveC
-        \curveD
-	}
-	}
+   	% \psgrid
+	
       \curveIn
       \curveOut{vlines}{red}
-    \end{psclip}%
-    %
+	\curvelimit{vlines}{red}	
+   
     % The second clipping, by Dom_B and Dom_D
    % \begin{psclip}{%
    %   \pscustom[linestyle=dashed,fillstyle=solid,fillcolor=LightYellow]{%
