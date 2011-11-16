@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\usepackage{pst-plot,pst-coil}
+\usepackage{pst-node}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+
+\begin {pspicture}(-5,-6)(7,6)
+\rput(-4,0){
+\psframe[fillstyle=solid,fillcolor=red](0,0)(2.0,2.0)
+}
+\rput(-2,0){
+\psrotate(1,1){30}{
+	\psframe[fillstyle=solid,fillcolor=lightgray](0,0)(2.0,2.0)
+		}
+}
+\rput(0,0){
+\psrotate(1,1){60}{
+	\psframe[fillstyle=solid,fillcolor=lightgray](0,0)(2.0,2.0)
+		}
+}
+
+\rput(2,0){
+\psrotate(1,1){90}{
+	\psframe[fillstyle=solid,fillcolor=red](0,0)(2.0,2.0)
+		}
+}
+\rput(4,0){
+\psrotate(1,1){120}{
+	\psframe[fillstyle=solid,fillcolor=lightgray](0,0)(2.0,2.0)
+		}
+}
+
+
+
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
+
