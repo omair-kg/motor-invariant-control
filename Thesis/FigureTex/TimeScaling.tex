@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\usepackage{pst-plot,pst-coil}
+\usepackage{pst-node}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+
+\begin {pspicture}(-6,-6)(6,6)
+\psaxes[labels=none,ticks=none]{->}(0,0)(-4,-4)(5,4)
+\pscircle[linecolor=red,linestyle=dashed](0,0){2.5}
+{\psscalebox {1 1.3}{
+	\pscircle[linecolor=red](0,0){2.5}
+	}
+}
+\rput(5.2,0){$q$}
+\rput(0,4.2){$\dot{q}$}	
+
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
+

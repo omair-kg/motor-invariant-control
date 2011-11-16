@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-all}
+\usepackage{amsmath}
+\usepackage{pst-plot,pst-coil}
+\usepackage{pst-node}
+
+
+
+
+\SpecialCoor
+\makeatletter
+\pst@addfams{demo}%		add family demo to the list
+\define@boolkey[psset]{demo}[Pst@]{showcircles}[true]{}% prefix is \Pst@
+\define@boolkey[psset]{demo}[Pst@]{hypocycloid}[true]{}%  "    "   "
+\define@key[psset]{demo}{nAngle}{\pst@getint{#1}\psk@nAngle}
+\define@key[psset]{demo}{dAngle}{\pst@getangle{#1}\psk@dAngle}
+%
+\psset[demo]{showcircles=false,nAngle=6,dAngle=60,hypocycloid=false}
+\newpsstyle{cycloid}{linecolor=black,linewidth=0.2\pslinewidth}
+%
+\def\psCycloid{\pst@object{psCycloid}}
+% A pstricks object reads a star and the optional arguments
+% and then cintinues with <name>@i
+% we use (#1), but will test, if we have another (#2,#3),
+% otherwise we use the default (0,720)
+\def\psCycloid@i(#1){%
+  \@ifnextchar({\psCycloid@ii(#1)}{\psCycloid@ii(#1)(0,360)}}
+% (#1)   : origin
+% (#2,#3): start and end angle for the parametrix plot
+% #4     : radius R of the big circle 
+% #5     : radius r of the small circle
+% #6     : radius A of the rotatetd point 
+\def\psCycloid@ii(#1)(#2,#3)#4#5#6{%
+  \pst@killglue					% no whitespace
+  \begingroup%					% hold all local
+  \addbefore@par{plotpoints=500}% can be overwritten by a following user set
+  \use@par%						% set the optional arguments
+  \pst@getlength{#4}\pst@tempB%	get the radius in pt (screen coors)
+  \pst@getlength{#5}\pst@tempC%	get the 2nd radius in pt
+  \pst@getlength{#6}\pst@tempD%	get the distance for a in pt
+  \pstVerb{						% define it only once (in user coors!!!)
+	/R \pst@tempB \pst@number\psunit div def 
+    /r \pst@tempC \pst@number\psunit div def 
+    /A \pst@tempD \pst@number\psunit div def
+    /Rr R r \ifPst@hypocycloid sub \else add \fi def 		% R +- r
+    /RDivr R r div def 			% R/r
+    /RrDivr RDivr 1 \ifPst@hypocycloid sub \else add \fi def % (R+-r)/r
+  }%
+  \if@star\psset{fillstyle=eofill,fillcolor=\pslinecolor}\fi%
+  \parametricplot{#2}{#3}{%
+      Rr t cos mul t RrDivr mul cos A mul sub  % x(t)
+      Rr t sin mul t RrDivr mul sin A mul 
+      \ifPst@hypocycloid add \else sub \fi }% y(t)
+  \ifPst@showcircles%
+    \psset{style=cycloid}%
+    \pscircle(#1){#4}%
+    \multido{\rA=0.0+\psk@dAngle}{\psk@nAngle}{%
+     \rput(!#4 #5 \ifPst@hypocycloid sub \else add \fi dup 
+       \rA\space cos mul exch \rA\space sin mul){% user coors!!
+        \pscircle{#5}\psline[linecolor=blue]{*-o}(!%
+          \rA\space RrDivr mul dup % the angle
+          cos A mul neg 
+          exch sin A mul \ifPst@hypocycloid\else neg \fi)%
+    }}%
+    \psarc[arrowscale=2]{->}(#1){0.5cm}{0}{270}
+  \fi%
+  \endgroup%					end of local macro
+  \ignorespacesafterend%				no whitespace at the end
+} 
+\makeatother
+\pagestyle{empty}
+\parindent=0pt
+
+\def\oneShot#1{%
+\begin{pspicture}(-3,-3)(3,3)
+  \psCycloid[linecolor=red,linewidth=1.5pt,showcircles,
+     dAngle=10,nAngle=1][#1](0,0){2}{0.5}{0.6}
+\end{pspicture}}
+
+
+
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+
+\begin {pspicture}(-6,-5)(20,5)
+\rput(-4,0){
+\psframe[linecolor=red,linewidth=1.5pt](-1.25,-1.25)(1.25,1.25)
+}
+
+\rput(0,0){
+\psCycloid[hypocycloid,linecolor=green,linewidth=1.5pt](0,0){2}{0.25}{0.6}
+}
+
+\rput(5,0){
+\psCycloid[hypocycloid,linewidth=1.5pt,linecolor=blue](0,0){2}{0.5}{1.5}
+}
+\rput(10,0){
+
+\psCycloid[linewidth=1.5pt](0,0){1}{0.25}{0.75}
+}
+\rput(15,0){
+\psframe[linecolor=red](-1.25,-1.25)(1.25,1.25)
+\psCycloid[linecolor=green,hypocycloid](0,0){2}{0.25}{0.6}
+\psCycloid[linecolor=blue,hypocycloid](0,0){2}{0.5}{1.5}
+\psCycloid(0,0){1}{0.25}{0.75}
+}
+
+
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
+
