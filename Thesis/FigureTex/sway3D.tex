@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-3d,pst-3dplot,pst-fr3d,pst-gr3d,pst-map3dII,pst-ob3d,pst-vue3d}
+\newcommand{\walkercolor}[1]{
+
+\rput(0,0)
+{
+
+\SpecialCoor
+\psline[linewidth=0.5pt,linestyle=dashed,linecolor=#1](!2 30 cos 8 mul)(2,0)
+\psline[linewidth=0.5pt,linecolor=#1](2,0.5)(1.5,0.5)
+\psline[linewidth=0.5pt,linecolor=#1](1.5,0.5)(1.5,0)
+\psgrid[subgriddiv=2,subgridcolor=#1,gridwidth=0.5pt,gridcolor=#1,xunit=2.5,yunit=2.5,gridlabels=0pt](0,0)(4,4)
+
+	\SpecialCoor
+	\rput{30}(!2 30 cos 8 mul)
+	{
+	
+	\psarc[linewidth=0.5pt,linestyle=dashed,linecolor=#1]{->}(0,0){3}{-120}{-90}
+	\psline[linecolor=#1,linewidth=3pt](0,0)(0,-8)
+	\psdots[dotstyle=Bo,dotscale=3.0,fillcolor=#1](0,-6)	
+}
+	\SpecialCoor
+	
+	\rput{60}(!2 30 cos 8 mul)
+	{
+
+	\psarc[linewidth=0.5pt,linestyle=dashed,linecolor=#1]{->}(0,0){5.5}{-150}{-90}	
+	\psline[linecolor=#1,linewidth=3pt](0,0)(0,-8)
+	\psdots[dotstyle=Bo,dotscale=3.0,fillcolor=#1](0,-6)	
+	}
+}
+\SpecialCoor
+\pscircle(!2 30 cos 8 mul){0.1}
+}
+
+
+
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(0,-2)(15,15)
+
+\pstilt{60}{%
+\walkercolor{lightgray}
+\psline[linewidth=2pt,linecolor=lightgray]{->}(9,7)(9,6)
+\rput(8.5,7){\textcolor{lightgray}{$\mathbf g'$}}
+\rput(8,8){\textcolor{lightgray}{Sagittal Plane}}
+}
+
+
+
+
+
+\SpecialCoor
+\psline[linewidth=2pt,linecolor=blue]{->}(9,8)(9,6)
+\rput(8.5,7){\textcolor{blue}{$\mathbf g$}}
+\walkercolor{blue}
+\rput(3,8){\textcolor{blue}{Sagittal Plane}}
+\psarcn[linewidth=1pt,linecolor=red]{->}(10,0){5}{90}{60}
+\rput(11.5,5){\textcolor{red}{$\mathbf{\alpha}$}}
+
+
+
+
+\end{pspicture}
+\end{TeXtoEPS}
+
+
+\end{document}
+

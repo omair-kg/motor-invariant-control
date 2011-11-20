@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-3d,pst-3dplot,pst-fr3d,pst-gr3d,pst-map3dII,pst-ob3d,pst-vue3d}
+\usepackage{pst-node}
+
+\SpecialCoor
+\definecolor{gray95}{gray}{0.95}
+\definecolor{gray90}{gray}{0.90}
+\definecolor{gray85}{gray}{0.85}
+\definecolor{gray80}{gray}{0.80}
+
+
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(0,0)(4,4)
+  \psframe[fillstyle=solid,fillcolor=green](4,4)
+	\pnode(2,2){A}
+	\pnode(2.667,2){B}
+	\pnode(3.7,3.6){C}
+	\pnode(1.2,1.8){D}
+  \pscustom[fillstyle=solid,fillcolor=lightgray]{
+    \pscurve(2,0)(D)(A)
+    \pscurve(A)(B)(C)
+    \psline(C)(4,4)(4,0)(2,0)
+  }
+  \pscustom[fillstyle=solid,fillcolor=blue]{
+    \pscurve(0,0)(1.2,1.8)(A)
+    \psline(A)(0.9,4)(0,4)(0,0)
+  }
+  \pscustom[fillstyle=solid,fillcolor=yellow]{
+    \pscurve(A)(B)(C)
+    \psline(C)(4,4)(0,4)(A)
+  }
+	%\psgrid
+
+	%\psccurve[linecolor=red,linewidth=2pt](2.0,1.0)(3.0,2.0)(3.6,2.0)(3.0,0.8)
+	%\psccurve[linecolor=red,linewidth=2pt](1.0,2.0)(0.8,3.0)(0.3,2.0)(0.1,1.0)
+	%\psccurve[linecolor=red,linewidth=2pt](1.2,3.2)(2.3,2.3)(3.1,3.3)
+  %\pscircle*[linecolor=red](1.1,1){2pt}
+	%\pscircle*[linecolor=black](1.1,1){2pt}
+	\cnode[linecolor=red](2.5,3){0.1}{A1}
+	\cnode[linecolor=red](0.5,2.2){0.1}{B1}
+	\cnode[linecolor=red](3,1.7){0.1}{C1}
+	\cnode[linecolor=red](0.6,0.6){0.1}{D1}
+	\ncline[linecolor=red]{<->}{A1}{B1}
+	\ncline[linecolor=red]{<->}{A1}{C1}
+	\ncline[linecolor=red]{<->}{C1}{B1}
+	\ncline[linecolor=red]{<->}{B1}{D1}
+	\ncline[linecolor=red]{<->}{C1}{D1}
+	
+	
+  %\psframe[fillstyle=solid,fillcolor=gray95](C)(4,4)  
+  %\psline[linestyle=dashed,linewidth=1pt](0,2)(4,2)
+ % \qdisk(A){3pt}\qdisk(B){3pt}\qdisk(C){3pt}
+ % \uput[-90](1,0){\footnotesize 0.01}
+  %\uput[-90](B|,0,0){\footnotesize 100}
+  %\uput[-90](C|,0,0){\footnotesize 374}
+  %\uput[180](0,1){\footnotesize 0.006}
+  %\uput[180](0,0|C){\footnotesize 218}
+  %\rput(2,-0.75){\footnotesize Temperature (C)}
+  %\rput{90}(-1.25,2){\footnotesize Pressure (Atm)}
+
+
+
+
+\end{pspicture}
+\end{TeXtoEPS}
+
+
+\end{document}
+

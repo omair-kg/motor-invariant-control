@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-3d,pst-3dplot,pst-fr3d,pst-gr3d,pst-map3dII,pst-ob3d,pst-vue3d}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(8,9)
+\newcommand{\PE}[1]{\pscirclebox[fillstyle=solid,fillcolor=yellow]{PE #1}}
+
+\begin{document}
+
+\begin{psmatrix}[rowsep=2cm,colsep=0.8cm]
+  % Nodes
+                    &                   & [name=PE0] \PE{0} \\[0cm]
+  [name=PE4] \PE{4} &                   &        & & [name=PE1] \PE{1} \\
+                    & [name=PE3] \PE{3} &        & [name=PE2] \PE{2}
+  % Links
+  \psset{arcangle=30,linewidth=0.6mm,arrows=->,arrowsize=2mm 3}
+  \ncarc{PE0}{PE1}\naput[npos=-0.13,labelsep=0.8]{\textit{Master}}
+                  \naput{\small S=100}
+  \ncarc{PE1}{PE2}\nbput{\small S=100+1=101}
+  \ncarc{PE2}{PE3}\naput{\small S=101+2=103}
+  \ncarc{PE3}{PE4}\nbput{\small S=103+3=106}
+  \ncarc{PE4}{PE0}\naput{\small
+                         \shortstack[r]{%
+                           S=106+4 \\
+                           = \psframebox[fillstyle=solid,fillcolor=black]{%
+                               \textcolor{white}{\textbf{110}}}}}
+
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
