@@ -1,7 +1,7 @@
 # make -f Makefile_latex
 
 
-R=ShapeCombination
+R=CPGOVERLAY
 
 eps: 	$(R).tex
 	latex $(R).tex

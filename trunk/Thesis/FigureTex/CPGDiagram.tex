@@ -1,0 +1,38 @@
+\listfiles
+\documentclass[12pt]{article}
+\usepackage{pstricks}
+\usepackage{pst-node}
+\usepackage{pstricks,pst-eps}
+\usepackage{pst-3d,pst-3dplot,pst-fr3d,pst-gr3d,pst-map3dII,pst-ob3d,pst-vue3d}
+\pagestyle{empty}
+\begin{document}
+\begin{TeXtoEPS}
+\begin{pspicture}(8,9)
+%\psgrid[subgriddiv=2,griddots=10,subgriddots=10]
+\pnode(0,4){V}
+\cnodeput(1.5,4){K1}{$h_i$}
+\cnodeput(6.5,4){K2}{$h_o$}
+\pnode(8,4){X}
+
+\fnode[framesize=1.5cm](4,6){G1}\rput(4,6){$S_1$}
+\fnode[framesize=1.5cm](4,2){G2}\rput(4,2){$S_2$}
+
+
+
+\psset{linewidth=1.5pt,arrows=->}
+\ncline{V}{K1}\naput{\Large $w_i$}
+\ncline{K2}{X}\naput{\Large $u_o$}
+
+\ncangle[angleA=90,angleB=180]{K1}{G1}\nbput[npos=0.1]{$[+]$}\nbput[npos=2.2]{$-$}
+\ncangle[angleA=0,angleB=90]{G1}{K2}\nbput[npos=2.2]{$+$}
+\ncangle[angleA=-90,angleB=180]{K1}{G2}\naput[npos=0.1]{$[-]$}\naput[npos=2.2]{$-$}
+\ncangle[angleA=0,angleB=-90]{G2}{K2}\naput[npos=2.2]{$-$}
+\nccircle{->}{G1}{1}\nbput{\tiny self inhibition}
+\nccircle[angleA=180]{<-}{G2}{1}
+\ncarc{->}{G1}{G2}
+\ncarc{->}{G2}{G1}\naput[nrot=:U]{\tiny mutual inhibiton}
+
+
+\end{pspicture}
+\end{TeXtoEPS}
+\end{document}
