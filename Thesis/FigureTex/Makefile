@@ -1,7 +1,7 @@
 # make -f Makefile_latex
 
 
-R=CPGOVERLAY
+R=FiveLinkSeperate
 
 eps: 	$(R).tex
 	latex $(R).tex

@@ -37,8 +37,8 @@ High level animation tools are badly needed.
 Real life motions highly interact with the environment.
 Physics based method  is most important research endeavour at current.
 Besides  the addition of the dynamic interactive responses, it is  expected  the elimination of  artefacts that violating physics  will make motions more natural looking.
-However, this paradigm faces many difficulties, dynamics of biological system are much more complex than artificial system,  attempts to dynamic simulation biological system face inhibitive  computational cost and modelling difficulty.
-In fact, such problems has been identified by biological researchers earlier.
+However, this paradigm faces many difficulties; dynamics of biological system are much more complex than artificial system,  attempts to dynamic simulation biological system face inhibitive  computational cost and modelling difficulty.
+In fact, such problems have been identified by biological researchers earlier.
 
 
 
@@ -47,7 +47,7 @@ In fact, such problems has been identified by biological researchers earlier.
 
 
 Motor Control and Motion Perception are close related.
-Difficulties in \cms reflects the inferiority of artificial control method.
+Difficulties in \cms reflect the inferiority of artificial control method.
 The peculiarity of motion perception and control suggests  biological systems may adopt a different principle.
 This thesis is founded on new ideas from biological research.
 
@@ -56,7 +56,7 @@ This thesis is founded on new ideas from biological research.
 \section{Agile Animals}
 %\note{Underlying these problems} is our misunderstanding of animal motions.
 Although animals have fascinated us for thousands of years, we still don't fully understand how they move.
-Animals are very different from artificial machines and such comparisons may reflects the  biological motor control principle.
+Animals are very different from artificial machines and such comparisons may reflect the  biological motor control principle.
 %some basic questions of motor control and motion perception remain open. 
 %And answers to such questions become even more valuable nowadays. 
 %Advance in this topic will greatly influence the biology, robotic engineering even intelligent research.
@@ -71,20 +71,20 @@ An artificial ship can be approximated by a simple rigid body; while a fish has 
 
 
 In principle, the extra {\dof}s admit more variations for adapting the environment. 
-But for the control system, too many extra {\dof}s is a disaster because of the computational burden. 
-For a human to take one step,  the neural system controls more than $600$ muscles .
+But for the control system, too many extra {\dof}s are a disaster because of the computational burden. 
+For a human to take one step,  the neural system controls more than $600$ muscles.
 With nowadays computer, solving the dynamics directly will require inhibitive long time.
 
  
 \HiItem {Versatility}
 Most artificial machines are designed with a single purpose,while animals are capable  of unlimited tasks.
-Many biological functions which often neglected by \cms research, such as the feeding, breeding, language and vision, depend on motor control. 
-Besides walking, swimming and many other styles of locomotion , we utilize many tools, such as cars, skate, bicycle and tennis.
+Many biological functions which are often neglected by \cms research, such as the feeding, breeding, language and vision, depend on motor control. 
+Besides walking, swimming and many other styles of locomotion, we utilize many tools, such as cars, skate, bicycle and tennis.
 
 Follow traditional control methods, it seems unlimited resources need to be  allocated for motor control, while biological research shows motor control cost very little mental resources.
 
 \HiItem{Performance}
-Although the problem of biological motor control is more complex , the resulting performance surpasses artificial machines in many aspects.
+Although the problem of biological motor control is more complex, the resulting performance surpasses artificial machines in many aspects.
 Natural motions are more
 \begin{enumerate} 
 
@@ -92,8 +92,8 @@ Natural motions are more
 Human can maintain walking stability on tough terrains inaccessible for vehicles.
 
 \HiItem{Manoeuvrable and speedy:}
-Typical modern aeroplanes will travel $32\: body\: lengths/sec$ and yaw $720\: deg/sec$ at max.
-while pigeons may travel $75 \:body\: length / sec$, yaw at about more than $5000 \: deg/sec$.
+Typical modern aeroplanes will travel $32\: body\: length/sec$ and yaw $720\: deg/sec$ at max.
+While pigeons may travel $75 \:body\: length / sec$, yaw at about more than $5000 \: deg/sec$.
 
 \HiItem{Energy Efficient:}
 The energy consumed by human walking is only $5\%$ of that for the world famous humanoid ASIMO.
@@ -133,12 +133,12 @@ These are the dreaming properties for \cms research and  their explanation  form
 
 
 Interactions between the body and environment pose  complex dynamic problems for motor control.
-For most \cms research, such natural dynamics are treated as noises or perturbations to preplanned motion command, and the  effects  of natural dynamics are cancelled by control effort.
+In most \cms research studies, such natural dynamics are treated as noises or perturbations to preplanned motion command, and the  effects  of natural dynamics are cancelled by control effort.
 But from the evolution perspective, the mechanical structures are product of natural selection which has evolved with the environment for millions of years. 
 They are advantages rather than handicap. 
 Without considering the stability, energy efficiency and real-time reaction can be easily achieved if the motion is totally governed by natural dynamics and requires no control effort.
-A new idea is motor control is based on the natural dynamics.
-Neural system plays a minor role in planning, it just utilizes the natural dynamic properties.
+A new idea is that motor control is based on the natural dynamics.
+Neural system plays a minor role in planning; it just utilizes the natural dynamic properties.
 
 Motor Invariant Theory (\moit) is a proposed idea of how to utilize the natural dynamics in a systematic manner.
 
@@ -328,11 +328,13 @@ The sway motion shown in Figure ~\ref{fig:ShipFloating} is described by Equation
 J\ddot{q}+d\dot{q}=\tau(q)_{g}+\tau(q)_{b}+\tau_{u}
 \end{equation}
 
-When the ship floats on the sea, motion is governed by the two forces, the buoyancy $b$ and gravity $g$.
+
 where $q$ is the swaying angle.
 $J$ is the inertia,  
 $d$ is the damping coefficient,
 and $\tau_{g}$,$\tau_{b}$,$\tau_{u}$ are the corresponding the torques of gravity, buoyancy and external control.
+
+When the ship floats on the sea, motion is governed by the two forces, the buoyancy $b$ and gravity $g$.
 When $\tau_{u}=0$,  the floating ship  becomes an \emph{autonomous system} governed by natural dynamics.
 
 To make it consistent with discussions in following chapters, Equation~\ref{eq:shipflow} is reformulated.
@@ -526,8 +528,9 @@ Compared with current \cms methods, the new approach has several advantages:
 \begin{enumerate}
 \HiItem {More Types of Adaptation}
 Most dynamic methods only focus on generating response motion to dynamic perturbation.
-Adaptations across different characters are treated as a separate  research topic(motion retargeting).
-\moit unified the theory for different adaptation, topology conjugacy  incorporate both motion re-targeting and  response  in an unified framework.
+Adaptations across different characters are treated as a separate  research topic(motion re-targeting).
+\moit unifies different theories for adaptation.
+The mathematical idea of topology conjugacy  incorporates both motion re-targeting and  perturbation response  in an unified framework.
 \moit can generate more types of adaptation.
 \HiItem {Better Usability}.
 For many \cms methods, each \dof ~is controlled independently.
@@ -551,7 +554,7 @@ Dynamic motion transition is developed upon solid theory foundation.
 \end{enumerate}
 
 Because of its biological foundation,
-algorithms and simulation results in \moit  might shed light into biology research.
+algorithms and simulation results of \moit  might shed light into biology research.
 Some conclusion and control techniques can be treated as candidate theory that needs further verification.
 
 \begin{enumerate}
@@ -569,7 +572,7 @@ Generating motion by actuating muscles, muscles are not controlled independently
 Many research in synergy by empirical methods. 
 
 In \moit, when control is applied to ensure transformation, actuators are controlled in an ``synergy manner''.
-\moit provides an candidate  ``synergy'' method for muscle control.
+\moit provides a candidate  ``synergy'' method for muscle control.
 
 \item For the neural structure \emph{Central Pattern Generator}(\cpg) , their roles in motor control are well agreed.
 While detail strategy for adjust \cpg parameters according to motor purpose is still lacking.

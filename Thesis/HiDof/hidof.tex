@@ -38,18 +38,18 @@ In certain occasions, the divide and conquer strategy works.
 Instead of simulating and developing controllers for a complex mechanical system, the complex system is divided into many  low {\dof}s components, and controllers are developed for each of them.
 
 \HiItem{Time Offset}
-In some cases, the motions of some {\dof}s are similar or mimic each other, the dynamics can be simplified as controlling just one {\dof}, and synthesis other {\dof} by mimic.
+In some cases, the motions of some {\dof}s are similar or mimic each other, the dynamics can be simplified as controlling just one {\dof}, and synthesizing other {\dof}s by mimic.
 \end{itemize} 
 
 \section{Negligible {\dof}s and Reduction}
 \subsection{Negligible \dof}
-Although biological mechanical structure is of high degree of freedom, many \dof s will not affect the topology or qualitative properties.
+Although biological mechanical structure is of high degree of freedom, many {\dof}s will not affect the topology or qualitative properties.
 For the walking example, \citet{Raibert1986} pointed out that walking is the same as a ball rolling down a slope while running is the same as ball bounding down a slope.
 In our research, control strategy is developed based on the compass gait model, as shown in Figure~\ref{fig:compassgait}.
 The degree of knees~\ref{fig:passivekneewalker} and foot~\ref{fig:arcfoot} will have little effects on the qualitative properties.
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{compassgait}
+      \includegraphics[width=0.7\textwidth]{CompassGait}
     \caption{Compass Gait}
     \label{fig:compassgait}
 \end{center}
@@ -59,7 +59,7 @@ The degree of knees~\ref{fig:passivekneewalker} and foot~\ref{fig:arcfoot} will 
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{rollfoot}
+      \includegraphics[width=0.7\textwidth]{CompassGaitArcFoot}
     \caption{Arc Foot Walker}
     \label{fig:arcfoot}
 \end{center}
@@ -147,7 +147,7 @@ The extra {\dof}s have the same effects of group actions, and the dynamics can b
 
 This idea helps to extend the 2D walker into 3 dimensions.
 Rather than develop the full 3D dynamics, 3D walker are developed based on the 2D walker.
-Motions in Coronal Plane and Transverse Plane transform sagittal plane dynamics.
+Motions in coronal plane and transverse plane transform sagittal plane dynamics.
 The motion in Coronal Plane and Transverse Plane can be simplified as rigid body simulation, which place the 2D walker at a correct position in 3D space.
 
 \subsubsection*{Lateral Motions}
@@ -155,7 +155,7 @@ An illustrative example shows the sway motions in the coronal plane.
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{Sidesway}
+      \includegraphics[width=0.7\textwidth]{sway3D}
     \caption{Sideway}
     \label{fig:sidesway}
 \end{center}
@@ -178,7 +178,7 @@ This has the same effect as applying speed action which the parameter $\ep$, whe
 The effects of sway motion on the 2D dynamics can be simulated by adjusting the speed action parameters $\ep$.
 For walker with speed action controller, the effects of this {\dof} can be totally compensated.
 
-For the sway motion on the Coronal Plane is not passive based and unstable in nature\citep{kuo1999stabilization}.
+The sway motion on the Coronal Plane is not passive based and unstable in nature\citep{kuo1999stabilization}.
 Great effort is executed at the angle and waist for maintaining the posture.
 Such motions are close relate to the character's motion purpose and not mainly governed by the natural dynamics, thus are left to the animators.
 For procedure method, we can use \pd based method to make the walker sway about the center position.
@@ -194,7 +194,7 @@ For the walker,  making a turning means rotate the spaghetti plane, this can be 
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{turn}
+      \includegraphics[width=0.7\textwidth]{Turn3d}
     \caption{Turn Actuation}
     \label{fig:turn}
 \end{center}
@@ -511,7 +511,7 @@ The motion of arms can be incorporated by following the same principles, it is j
 \section{Time Shift}
 
 For reptile and fish, the main challenge rests in synthesizing the flexible vertebrate which is composed of many {\dof}s.
-Such {\dof}s are similar and equally important, it is not proper to reduced any \dof through symmetry or mechanical coupling.
+Such {\dof}s are similar and equally important, it is not proper to reduce any \dof through symmetry or mechanical coupling.
 
 For such mechanical structures, an ad-hoc method is proposed, each controller controls just one joint.
 The hypothesis that since the joints are similar, their dynamics and motion should also be similar.
@@ -519,7 +519,7 @@ Thus the same control strategy is applied for every joint.
 Motions of each joints are differentiate by the group action.
 
 
-The idea can be applied for boid system\citep{reynolds1987flocks}.
+The idea can also be applied for boid system\citep{reynolds1987flocks}.
 Compared with traditional boid method, the new method will make the boid system stable and easy to control.
 Traditional Rule based boid system does not grantee stability, and sometime result in unexpected results.
 Based on the method of \moit, if all the agent motions are based on the same attractor, ,

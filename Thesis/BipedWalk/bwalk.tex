@@ -183,13 +183,6 @@ For details of calculating the dynamic equation, please refer to \citep{Chen2007
 For the components of each matrix, please refer to the appendix.
 
 
-
-
-
-
-
-
-
 \begin{figure}[!htbp]
   \begin{center}
     \includegraphics[width=0.7\textwidth]{walk_cycle_index}
@@ -197,8 +190,9 @@ For the components of each matrix, please refer to the appendix.
     \label{fig:phasesmaker}
 \end{center}
 \end{figure}
+
 With special initial conditions, the passive walker can walk down the slope with a stable gait.
-On the phase plot,  a limit cycle emerge. 
+On the phase plot,  a limit cycle emerges. 
 Figure ~\ref{fig:phasesmaker} shows the phase plot of one thigh for a stable walking cycle.
 where the four phases are marked. 
 
@@ -651,8 +645,8 @@ Figure~\ref{fig:ss1},Figure~\ref{fig:ss2} and Figure~\ref{fig:ss3} show differen
 Neural Oscillator boosts the stability.
 Sometimes stability becomes a limitation in motion.
 For the walking example, if the basin of attraction covers the whole space, then the passive walker can't walk up slope.
-If put the walker walk up slope, after a few steps, the passive walker will begin to walk backward down slope,as shown in Figure~\ref{fig:localcontrolwalking}.
-Also it is not convenient to adjust the speed of walking.
+If the walker is made walk up slope, after a few steps, it will begin to walk backward down slope,as shown in Figure~\ref{fig:localcontrolwalking}.
+Also it is not convenient to adjust the speed of walking,since the limit cycle is fixed.
 
 
 
@@ -681,7 +675,7 @@ For the bipedal walking, Group actions provides a mechanism to adjust the walkin
 
 
 
-\subsubsection{Group Actions}
+\subsection{Group Actions}
 
 Equation~\ref{eq:localcontrolwalking} describes walking with local control.
 \begin{equation}
@@ -727,7 +721,7 @@ Green ones are applied speed actions and blue ones are applied local transform a
 \end{figure}
 
 
-By applying the offset action,   the passive walker to walk up slope, as shown in Figure~\ref{fig:liegroupupslope}
+By applying the offset action,   the passive walker can walk up slope, as shown in Figure~\ref{fig:liegroupupslope}
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{LieUpslope}
@@ -806,7 +800,7 @@ And the different gaits are shown in Figure~\ref{fig:ssp1},Figure~\ref{fig:ssp2}
 Neural Oscillator can maintain walking on varying slopes, but can't make character walk up slope.
 Lie Group action allow the character to walk up a slope with a constant angle.
 However varying the slope will result in walking failure.
-Combining the two methods, the passive walker can walk varying up slope.
+Combining the two methods, the passive walker can walk on terrains of varying slopes.
 
 
 The control strategy is straight forward.

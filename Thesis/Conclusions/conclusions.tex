@@ -8,45 +8,49 @@
 
 \section{Conclusion}
 
-Inspired by the biological research and robotic engineering experiments, in this thesis, a new theory, the motor invariant theory, of motor control is established.
-In the \moit, the hypothesis is that animals explore the natural dynamics as the basis for synthesizing motion.
-The mathematical reason is because of the special properties of natural dynamics.
-The evolution of the body and environment forms some stable attractors in the dynamics, which provides the stability necessary for motion.
-To adapt motion, animals modify the system dynamics in a specific way.
+Inspired by the biological research and robotic engineering experiments, in this thesis, a new theory of motor control, the motor invariant theory(\moit),  is established.
+The hypothesis of \moit is that animals explore the natural dynamics as the basis for synthesizing motion.
+The underlying mathematical reason is that natural dynamics has some special properties. 
+The evolution of the body and environment forms some structural stable attractors, which provide the stability necessary for motion in the noisy environment.
+
+To adapt motion behaviour, animals modify the natural dynamics in a specific manner.
 They modify many properties of the attractor, but not the stability.
 New mathematical tools is introduced for modelling this idea, the topology conjugacy.
-Under this mathematical framework, many old ideas of biological motor control can be unified.
+This mathematical idea can be illustrate geometrically, topological conjugacy means the shape and position of the attractor are free to be modified, but the topology remained.
+Under this theoretical framework, many old ideas of biological motor control are unified.
 
 
-This theory is a contribution to the biological motor control research.
-It provides a clear mathematical meaning for  motion primitive hypothesis.
+\moit contributes the biological motor control research.
+It provides a clear mathematical definition for  motion primitive.
 It answers the question why motions are so similar but vary so much.
-In the \moit theory, the biological control is not based on tracking trajectories,
-but modifying the system properties to form attractors.
-In an certain environment and body dynamic property,
-the ways to form attractors are limited.
+With certain environment condition and body dynamic property, the ways to form attractors are limited.
 thus result in the limited number of motion primitives and stereotype patterns for many motion tasks.
 
-
-
-The new idea of motor dynamics provides a valuable alternative for motion synthesis paradigm.
+\moit believes that the biological control is not based on tracking trajectories,
+but modifying the system properties to form attractor of proper shape and position.
+The new idea of motor dynamics provides a valuable alternative paradigm.
 If motor control is based on utilizing the natural dynamics and involves little reasoning effort,
-then for  the computer animation research, complex trajectory planning and expensive inverse dynamic computation of current motion synthesis method can be get rid of.
-Motion synthesis almost as efficient as forward dynamic simulation.
-To this end, neural oscillating entrainment and lie group control actions are introduced, the two methods modify the motions qualitatively and quantitatively.
-Entrainment  models the biological center pattern generator, which exists in the spine cord in many vertebrate.
-While idea of lie group action is closely related to the vision system, maybe a model for control effects of vision system.
-A new hierarchy in control framework is established.
-The low level controller(\cpg) maintains the stability or qualitative property.
-While high level controller(the vision cortex) controls the precision or quantitative properties of motion.
-The new method has been applied to some typical motions, including walking, standing and swimming.
-Adaptive and natural looking results are achieved with very low computational cost.
-Compared with tradition methods, the new method is easier to set-up and has fewer parameters in adapting motion.
+in a similar manner,dynamic Motion Synthesis can be almost as efficient as forward dynamic simulation.
+Then the complex trajectory planning and expensive inverse dynamic computation of current dynamic motion synthesis are not necessary.
+
+This idea is partly proved in this research.
+A new control hierarchy framework is established.
+The low level controller maintains the stability or qualitative property,
+while high level controller controls the precision or quantitative properties of motion.
+The techniques of neural oscillating entrainment and Lie group control actions are introduced.
+As a low level control technique, Entrainment  models the biological center pattern generator, which exists in the spine cord in many vertebrate.
+While the high level lie group action controller is closely related to the vision system, may be a model for control function of vision system.
 
 
-The dynamic perspective may provide impactive insights in two main fields close related to motor control.
-A simple example is it may provided a different understanding of the evolution of motion, body structure and environment.
+The new method has been applied to synthesizing some typical motions, including walking, standing and swimming.
+Adaptive and natural looking results are achieved with extremely small computation and memory cost.
+Compared with tradition methods, the new method is also easier to set-up and use for the controllers have very a few parameter.
+
+
+The dynamic perspective may provide impactive insights into main fields which are closely related to motor control.
+A simple example is an understanding of the evolution  of motion, body structure and environment.
 Also the new insights of motor control are closely related to motion perception.
+
 Nature provides many insightful ideas, but lots questions remain to be answered.
 
 
@@ -68,9 +72,9 @@ Nature provides many insightful ideas, but lots questions remain to be answered.
 
 \section{Further Work}
 Motor Invariant Theory is not an improvement of existing \cms techniques, it is a different paradigm.
-Research in this thesis does not explore the full implication and potential of new born theory.
-For a new born theory, there are rooms for improvement, new techniques and even new questions.
-In this section, we discuss several potential topics that may interest computer graphic community or biological research.
+This thesis does not explore the full implication and potential of the new born theory.
+There are rooms for improvement, new techniques to developed and even new questions to be answered.
+This section summarize several potential topics that may interest computer graphic  or biological research communities.
 
 \subsection{Stable Templates Of Motion Primitives}
 
@@ -87,7 +91,7 @@ For characters performance acrobat, the characters must not fall even dynamic sy
 
 
 
-\subsection{More Type Of Symmetry}
+\subsection{More Types Of Symmetry}
 More type of symmetry will generate more type of transformation that can be applied  to the adapt motion.
 All the group actions adopted in this research are linear transformation group, which are easy to compute.
 But the types of transformation are very limited.
@@ -198,10 +202,10 @@ Neural system may not need to encode the details of dynamic system, neural syste
 Such model will lack the details accuracy, but get the qualitative properties right.
 
 Based on the idea of symmetry, neural system may store some experience and the symmetrical property of dynamics in memory.
-The dynamics validity by transform our experience to match observation.
+Our brain may validify dynamics by transforming our experience to match observation.
 
 
-We are still not sure which method is better, but both of methods are more practical for the neural system than forming a symbolic equation solving the differential equations numerically in our brain.
+We are still not sure which method is better, but both of methods are more practical for our brain than forming a symbolic equation solving the differential equations numerically.
 Maybe a new dynamic simulator can be designed to test this hypothesis.
 Dynamic simulator can be build upon the topology and the symmetry property.
 Animator can specify animation by specify its attractor and the transformation being  applied.
@@ -226,7 +230,7 @@ At the end of the the thesis, a conjecture is proposed by extending the idea of 
 \end{figure}
 
 The reason behind the uncanny valley is a  a switch of perception mechanism.
-For the unfamiliar, the perception mechanism is based on analogy,
+For the unfamiliar characters, the perception mechanism is based on analogy,
 where the the identification of qualitative properties plays the major role.
 As long as the qualitative properties is the the same with our experience, we may accept characters as ``believable''.
 In this situation we are checking the Global Motor Invariant.

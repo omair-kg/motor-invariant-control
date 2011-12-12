@@ -9,11 +9,11 @@
 For animals,  being able to maintain the global motor invariant is not enough.
 For a fish, preserving \emph{Global Motor Invariant}  means the swimming can be sustained and stable.
 But a fish also needs to adjust the swimming speed and swimming direction,which is of crucial importance for survival.
-In real-life, animal can adapt motion primitive according to its purpose with precision.
+In real-life, animal can adapt motion primitives according to its purpose with precision.
 This chapter develops the control strategies for tweaking motion patterns according to motion purpose.
 
 It is important to remember that such tweaking strategies are severely constrained by the computation and memory capacity of neural system,  and should resemble  motion primitive in exploring natural dynamics.
-For \cms, it is of no meaning developing walking pattern by exploring natural dynamics but use optimization to adjust the walking speed. To meet such requirements, \moit adopted a combination of ideas.
+For \cms, it is of no meaning developing walking pattern by exploring natural dynamics but using optimization to adjust the walking speed. To meet such requirements, \moit adopted a combination of ideas.
 
 At first, when tweaking motion patterns, stability should not be violated. 
 As stated in the previous chapter, a topology conjugation (one-one continuous invertible mapping)maintains the topology thus maintains the qualitative stability. Thus the ``tweaking'' action should be a topology conjugation. In an alternative perspective, such operations form a group and permit a combination operation. 
@@ -65,7 +65,7 @@ For the more traditional geometrical perspective, ''Symmetry''  means a geometry
 For the example, a square remains the same after  $90$ degree clockwise rotation, as shown in Figure~\ref{fig:symsquare}.
 \begin{figure}[!htbp]
   	\begin{center}
-   	\includegraphics[width=0.7\textwidth]{Symmetry}
+   	\includegraphics[width=0.7\textwidth]{SquareRotate}
 	\end{center}
 	\caption{Symmetry of The Square}
     \label{fig:symsquare}
@@ -106,7 +106,7 @@ In algebraic sense,  invariant functions of group $G$ form a space, the invarian
 
 \begin{figure}[!htbp]
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{SymmetrySpace}
+    \includegraphics[width=0.7\textwidth]{ShapeCombination}
     \caption{Two invariant Shapes and the invariant combination}
     \label{fig:SymmetrySpace}
 \end{center}
@@ -115,7 +115,7 @@ In algebraic sense,  invariant functions of group $G$ form a space, the invarian
 \subsection{Lie Group and Differential Equation}
 Physically-based motions are usually described by differential equations, and motion is the solution of the equation.
 As the square shape, there are also symmetry groups that keep the differential equations invariant.
-For differential equations, the important property is elements in such group can transform one solution into another\citep{olver1986applications}.
+For differential equations, the important property is that elements in such group can transform one solution into another\citep{olver1986applications}.
 For \cms, this property potential can help reduce computational burden, new motions can be achieved through applying group transformation to motion primitives.
 
 
@@ -256,8 +256,8 @@ It is not enough for animals  only to  explore symmetry groups of natural dynami
 For a dynamic system, the symmetry group is quite restricted and  working out the symmetry group might be a non-trivial task.
 In real-life, animal usually exert control effort during motion adaptations.
 
-\moit theory proposes the idea that control effort can make an non symmetrical group become symmetrical, and introduce the \emph{Control Lagrange} method.
-Based on biological research\citep{flash2007affine}, some simple group are selected the symmetry group for motor control,
+\moit theory proposes the idea that control effort can make an non symmetrical group become symmetrical, and introduce the \emph{Controlled Lagrange} technique.
+Based on biological research\citep{flash2007affine}, some simple groups are selected the symmetry group for motor control,
 control efforts are applied to ensure the symmetry.
 
 
@@ -310,7 +310,7 @@ From the geometrical perspective, offset actions will move the phase portrait ho
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{g_off}
+      \includegraphics[width=0.7\textwidth]{OffsetAction}
     \caption{Offset Action}
     \label{fig:goff}
 \end{center}
@@ -355,7 +355,7 @@ T\gts(\dot{\state})&=[\ep \qd,\ep^2 \ddot{q}]\nonumber
 From geometrical perspective, time scaling will stretch the phase portrait vertically,as shown in Figure~\ref{fig:gts}
 \begin{figure}[!htbp]
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{g_ts}
+    \includegraphics[width=0.7\textwidth]{TimeScaling}
 	 \caption{Time Scaling Action}
     \label{fig:gts}
 \end{center}
@@ -407,7 +407,7 @@ $f(\ep)$ is a function of $\ep$, which is determined by the conservative field.
 Geometrically, energy scaling action enlarges the phase portrait,as shown in Figure~\ref{fig:gen}.
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{g_en}
+      \includegraphics[width=0.7\textwidth]{EnergyScaling}
     \caption{Energy Scaling Action}
     \label{fig:gen}
 \end{center}
@@ -452,7 +452,7 @@ Time offset actions modify the time  variable $t$ by the parameter~$\ep$, the ma
 For a system oscillating with limit cycle, time offset action will modify the phase, as shown in Figure~\ref{fig:gtoff}.
 \begin{figure}
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{g_toff}
+      \includegraphics[width=0.7\textwidth]{TimeOffset}
     \caption{Offset Action}
     \label{fig:gtoff}
 \end{center}

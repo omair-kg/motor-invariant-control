@@ -120,7 +120,7 @@ is equivalent to time scaling the neural oscillator by parameter $\ep$.
 \end{myprop}
 
 This proposition can be easily proved by  substituting $\tilde{\tau}_{1,2}=\ep \tau_{1,2}$, and $\tilde{t}=\frac{t}{\ep}$ into the Matsuoka Oscillator( Equation~\ref{eq:matsuta}), the equation will remain the same.
-Based on the proposition above, a scheme of adjoint transformation to modify the parameters $\tau_{1,2}$,$\hin$,$\hout$ for maintain the symmetry of the  coupled system.
+Based on the proposition above, a scheme of adjoint transformation is proposed that modifies the parameters $\tau_{1,2}$,$\hin$,$\hout$ and maintains the symmetry of the  coupled system.
 The input and output of neural are chosen to maintain the shape.
 \begin{enumerate}
 \item Modify $\tau$ by the time scaling parameter $\tau \mapsto \ep \tau$.
@@ -184,7 +184,7 @@ The input coefficient is scaled to make the amplitude of the input signal mainta
 \]
 
 The output coefficient is scaled according to the connection of the control, 
-if the output is drive the velocity, then the output is $\hout$
+if the output drive the velocity, then the output is $\hout$
 \[
 \hout \mapsto \ep \hout
 \]
@@ -258,7 +258,7 @@ Each motion primitive is represented as a node, and two nodes are connected only
 
 \begin{figure}[!htbp]
   \begin{center}
-	\includegraphics[width=0.7\textwidth]{MotionPrimitiveGraph}
+	\includegraphics[width=0.7\textwidth]{CellBoa}
     \caption{Phase Plot of Motion Primitives}
     \label{fig:manyprimitives}
   \end{center}
@@ -267,7 +267,7 @@ Each motion primitive is represented as a node, and two nodes are connected only
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{motiongraphtopology}
+      \includegraphics[width=0.7\textwidth]{CellTopology}
     \caption{The Graph Structure of A Dynamic System}
     \label{fig:manyprimitivesgraph}
   \end{center}
@@ -301,32 +301,32 @@ This idea implies many efficient method.
 
 
 \subsubsection*{Entrainment Overlap}
-Empirically,when \cpg is applied for one motor primitive $\mathcal{A}$, the \boa $\BOA{A}$ is enlarged.
-Supposing the enlarged \boa  is  represented by $\BOA{A'}$.
-If \cpg are applied for two motion primitives $\mathcal{A_1,A_2}$ separately, the enlarged basin of attractions are $\BOA{A_1'}$ and
+Empirically,when \cpg is applied for one motor primitive $\mathcal{A}$, the basin of attraction $\BOA{A}$ is enlarged.
+Supposing the enlarged basin of attraction  is  represented by $\BOA{A'}$,
+if \cpg are applied for two motion primitives $\mathcal{A_1,A_2}$ separately, the enlarged basin of attractions ($\BOA{A_1'}$ and
 %$\omicron$
-$\BOA{A_2'}$ will overlap. 
-Supposing the overlap region is $O$,
-then we have
+$\BOA{A_2'}$ ) will overlap. 
 \[
 O =
 \BOA{A_1'} 
 \bigcap \BOA{A_2'} 
 \neq \varnothing
 \]
+where $O$ is the overlapping region.
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{OverLayTransition}
+      \includegraphics[width=0.7\textwidth]{CPGOVERLAY}
     \caption{OverLay Transition}
     \label{fig:motion-overlay}
   \end{center}
 \end{figure}
  
-If  state $\state$ lies in the $O$, by switching the \cpg controller, motion primitive is also switched.
-Figure~\ref{fig:motion-overlay} shows the idea through an example, one the phase plot shown two motion primitives which are connected.
-Basin of attractions of natural dynamics are represented by the dot line, \boa of natural dynamics are not overlay.
-When \cpg is applied, two \boa are enlarged, and the shared region are coloured in pink color.
+If  state $\state$ lies in the $O$, by switching the \cpg controller, motion primitive is changed and motion transition happens.
+Figure~\ref{fig:motion-overlay} shows the idea through an example.
+The phase plot shown two motion primitives which are connected.
+Basin of attractions of natural dynamics are represented by the dot line, which do not overlap.
+When \cpg is applied, two basin of attractions are enlarged, and the shared region are coloured in pink color.
 When the current state lies in $O$, if the \cpg of the left region is activated, the state will converge to the left limit cycle,
 if the right \cpg is activated, the state will converge to the right limit cycle.
 Motion Primitive can be switched in this manner.
@@ -342,7 +342,7 @@ We can change the \boa in which the current state lies by transforming the phase
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{OffsetTransition}
+      \includegraphics[width=0.7\textwidth]{TransformOverlay}
     \caption{Offset Transition}
     \label{fig:transform-offset}
   \end{center}
