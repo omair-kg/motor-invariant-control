@@ -1,7 +1,7 @@
 # make -f Makefile_latex
 
 
-R =MassSpringPhasePlot
+R =unstablePosition
 
 eps: 	$(R).tex
 	latex $(R).tex
