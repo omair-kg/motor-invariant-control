@@ -6,25 +6,25 @@
 \nomenclature[z1]{\cms}{Character Motion Synthesis}
 \nomenclature[z2]{\cpg}{Central Pattern Generator}
 \nomenclature[z3]{\dof}{Degree of Freedom}
-\nomenclature[z2]{\moit}{Motor Invariant Theory}
+\nomenclature[z2]{{\moit}}{Motor Invariant Theory}
 
 \section{The Challenge}
 Character Motion Synthesis (\cms) research aims at generating motion for virtual characters.
 It is a topic of significant value in terms of theory and application. 
 Besides major applications in the media industry, where both computer games and animation films depend heavily upon character motion for storytelling, 
-current research also has applications in user interface design, psychology, sports and medicine.
+current research also has applications in user interface design, psychology, sport and medicine.
 
 The challenge of \cms  is not to make characters move, but  to make them lifelike. 
 Underlying this challenge is the marvellous human ability of motion perception. 
-In real life,people's motion is very similar, yet individuals vary considerably.
+In real life, people's motion is very similar, yet individuals vary considerably.
 From the varieties in motion details, humans can infer mental states, health conditions or the surrounding environment.
 %\note{uncanny valley}
 Human motion perception has some very peculiar properties.
-When wathing a film with computer generated characters, some awkward artefacts are spotted instantly even though they are physically feasible, while many physically impossible motions are accepted as realistic and entertaining. 
+When watching a film with computer generated characters, some awkward artefacts are spotted instantly even though they are physically feasible, while many physically impossible motions are accepted as realistic and entertaining. 
 
 %nautral looking
 
-Nowadays in industry, high quality motions are mainly generated manully. 
+Nowadays in industry, high quality motions are mainly generated manually. 
 Very often, characters are complex and contain a large number of joints, making animation tedious work.
 To make it worse, reusing motion animation is also difficult and prone to artefacts.
 Therefore high level animation tools are badly needed. 
@@ -36,7 +36,7 @@ Real life motions interact extensively with the environment.
 Currently, the most important research endeavour is the physics based approach.
 Besides  the addition of the dynamic interactive responses, it is  expected that the elimination of  artefacts that violates physics  will make motions more natural looking.
 However, this paradigm faces many difficulties:
-dynamics of biological systems are much more complex than artificial systems,  attempts to dynamically simulate biological system face prohibitive  computational costs and modelling difficulties.
+dynamics of biological systems are much more complex than artificial systems;  attempts to dynamically simulate biological system face prohibitive  computational costs and modelling difficulties.
 In fact, such problems have already been identified by biological researchers.
 
 
@@ -47,8 +47,8 @@ In fact, such problems have already been identified by biological researchers.
 
 Motor Control and Motion Perception are close related.
 Difficulties in \cms reflect the inferiority of artificial control method.
-The peculiarity of motion perception and control suggests  biological systems may adopt a different principle.
-To generate natural looking motion, it is worthwhile to synthesize motion following the biological motor control principle. 
+The peculiarity of motion perception and control suggests  biological systems may adopt a very different principle.
+To keep motions natural looking, it is worthwhile to synthesize motion following the biological motor control principle. 
 This thesis is founded on new ideas from biological research.
 
  
@@ -67,17 +67,17 @@ Animals are very different from artificial machines and such comparisons may ref
 \begin{itemize}
 \HiItem {Degrees of freedom ({\dof}s)}.
 From a mechanical perspective, animals have many more {\dof}s than their artificial counterparts.
-An artificial ship can be approximated by a simple rigid body; whereas the flexible vertebrae of a finsih is made up of tens of {\dof}s.
+An artificial ship can be approximated by a simple rigid body; whereas the flexible verteb of a fish is made up of tens of {\dof}s.
 
 
 In principle, the extra {\dof}s allows for more variations in adapting the environment. 
-However, for the control system, too many extra {\dof}s are a disaster because of the computational burden. 
+However, for the control system, too many extra {\dof}s become a disaster because of the computational burden. 
 For a human to take one step,  the neural system controls more than $600$ muscles.
-Even with nowadays computer, solving the dynamics directly would spend thousands of hours.
+Even with nowadays computer, solving this dynamics directly would spend thousands of hours.
 
  
 \HiItem {Versatility}
-Most artificial machines are designed with a single purpose,while animals are capable  of unlimited tasks.
+Most artificial machines are designed with a single purpose, while animals are capable  of unlimited tasks.
 Many biological functions which are often neglected by \cms research, such as feeding, breeding, language and vision, depend on motor control. 
 Besides walking, swimming and many other styles of locomotion, we utilize many tools, such as cars, skates, bicycles and tennis rackets.
 
@@ -96,7 +96,7 @@ Typical modern aeroplanes  travel at a maximum of $32\: body\: length/sec$ and y
 While pigeons may travel at $75 \:body\: length / sec$, yaw at about  $5000 \: deg/sec$.
 
 \HiItem{Energy Efficiency:}
-The energy consumed by a human walking is only $5\%$ of that for the world famous humanoid ASIMO.
+The energy consumed by a walking human  is only $5\%$ of that for the world famous humanoid ASIMO.
 \end{enumerate}
 
 \end{itemize}
@@ -128,19 +128,18 @@ The energy consumed by a human walking is only $5\%$ of that for the world famou
 \subsection{Utilizing Natural Dynamics}
 Biological Motor Control has achieved a delicate balance of robustness, controllability and energy efficiency.
 The real-time performance may further suggest that the biological method  is simple and requires little computational load.
-These are the dreaming properties for \cms research and  the explanation that how biological system achieve this  forms the genesis of this thesis.
+These are the dreaming properties for \cms research and  the explanation that how biological systems achieve this  forms the genesis of this thesis.
 
 
 
-Interactions between the body and environment pose  complex dynamic problems for motor control.
-In most \cms research studies, such natural dynamics are treated as noises or perturbations to motion planning, and the  effects  of natural dynamics are cancelled by control effort.
-However from an evolutionary perspective, the mechanical structures are a product of natural selection which has evolved alongside with the environment for millions of years. 
-These structures are an advantages rather than a handicap. 
-Without the need to consider stability, energy efficiency and real-time constraints, motor control can be easily achieved if the motion is totally governed by natural dynamics and requires no control effort.
-A new idea is that motor control is based on natural dynamics.
+At first, interactions between the body and environment pose  complex dynamic problems for motor control.
+In most \cms research studies, effects of natural dynamics are treated  perturbations for planning, and are cancelled by control effort.
+However from an evolutionary perspective, the mechanical structures are a product of natural selection, which has evolved alongside with the environment for millions of years. 
+These structures are an advantage rather than a handicap. 
+Without the need to consider stability, energy efficiency and real-time constraints,   motion can be synthesized by natural dynamics without any control effort.
+Thus a new idea is that motor control is based on natural dynamics.
 The neural system plays a minor role in planning; it simply utilizes natural dynamic properties.
-
-Motor Invariant Theory (\moit)  proposes  how to utilize the natural dynamics in a systematic manner.
+From this perspective, the key question to be answered by Motor Invariant Theory ({\moit}) is how to utilize the natural dynamics in a systematic manner.
 
 
 
@@ -167,26 +166,23 @@ Motor Invariant Theory (\moit)  proposes  how to utilize the natural dynamics in
 
 
 This thesis proposes a new idea for the underlying reason for superiority of biological motor control.
-The insight is that in the process of motion adaption, some valuable properties of natural dynamics are kept invariant.
-The conjecture is that:  instead of detecting and cancelation all kinds of perturbations, biological motor control relies on the invariance of natural dynamic properties for motion success.
-This is \emph{Motor Invariant Theory(\moit)}.
+The insight is that in the process of motion adaptation, some valuable properties of natural dynamics are kept invariant.
+The conjecture is that:  instead of detecting and cancellation all kinds of perturbations, biological systems rely the success of motor control on the certain invariant properties of natural dynamic 
+This is \emph{Motor Invariant Theory({\moit})}.
 
 
-\moit incorporates the motion primitive conjecture.
-In dynamics, invariant properties are stable properties. 
-From a dynamic perspective, not all the motions generated by natural dynamics are stable, only the stable ones are utilized and treated as the templates.
+{\moit}\ incorporates the motion primitive conjecture.
 In dynamics, invariant properties are stable properties.
-From a dynamic perspective, not all the motions generated by natural dynamics are stable, only a few are stable, which can be utilized motion templates and become motion primitives.
-The remaining question is how the motor control system utilizes the templates to synthesize motion.
+From a dynamic perspective, not all the motions generated by natural dynamics are stable, only a few are stable, which can be utilized as templates and become motion primitives.
+The following question is how the motor control system utilizes these templates to synthesize new motion.
 
-The \moit propose that when facing a new situation, human don't solve motor control from ground up,
-motor control system utilizes successful experience in similar situations.
-In dynamics, adapted motions are qualitative the same with the motion primitives or templates.
+{\moit}\ proposes that when facing a new situation, humans don not solve motor control problem from ground up,
+our control system utilizes successful experience in similar situations.
 In dynamics, adapted motions are qualitative the same with the motion primitives or templates, and there is a one-one mapping relationship between the adapted motion and the motion primitive.
 This similarity in dynamics is topological conjugacy. 
 
 In dynamic \cms research, a motion is represented by  a curve  $x(t)$ parameterized by $t$.
-$x(t)$ is the solution to the equation (Equation ~\ref{eq:BodyEnvDym}) that describes the body and environment dynamics.
+$x(t)$ is the solution to the equation (Equation ~\ref{eq:BodyEnvDym}) that describes the dynamics between the body and environment.
 \begin{equation}
 \dot{x}=F(x)
 \label{eq:BodyEnvDym}
@@ -199,8 +195,8 @@ To illustrate adaptation, we define a transformation $T$ that acts on the space 
 \]
 
 In this way, each equation can be described in two coordinate systems: one by $x$ and one by $\tilde{x}$.
-As an example, Equation ~\ref{eq:EQtransform} is describes the same dynamics as  Equation ~\ref{eq:tranformedEQ} in a different coordinate system.
-then we can obtain two equations in  the transformed state $\tilde{x}$ ( )and original state $x$(Equation ~\ref{eq:EQtransform}).
+As an example, Equation ~\ref{eq:EQtransform} describes the same dynamics as  Equation ~\ref{eq:tranformedEQ}.
+Thus for each motion, we can obtain two equations of the transformed state~($\tilde{x}$ ) and original state $x$~(Equation ~\ref{eq:EQtransform}).
 
 \begin{equation}
 \dot{\tilde{x}}=F(\tilde{x})
@@ -212,7 +208,7 @@ then we can obtain two equations in  the transformed state $\tilde{x}$ ( )and or
 \label{eq:EQtransform}
 \end{equation}
 
-Since such two equations describe the same motion in different coordinate systems, the solution to one equation can be achieved by transforming the solution to the other equation.
+Since such two equations describe the same motion, the solution of one equation can be achieved by transforming the solution of the other.
 Supposing $x'(t)$ is the solution to Equation~\ref{eq:EQtransform} and $\tilde{x}(t)$ is the solution to the Equation~\ref{eq:tranformedEQ}, then we have
 \[
 x'(t)=T^{-1}(\tilde{x}(t))
@@ -240,25 +236,28 @@ By transformation, we obtained a new motion $x'(t)$ from $x(t)$.
 %
 %
 The  transformation method has many advantages: it is much less computational expensive and keeps many important properties untouched.
-For example, if the original dynamics is stable, then the transformed dynamics is also stable. 
+For example, if the original system ~$F$ is stable, then the transformed system $\tilde{F}$ should also be stable. 
 %
-If there exists continuous one-one mapping between the two dynamic equations, then the two are \emph{topological conjugate}.
+In mathematical language, if there exists continuous one-one mapping between the two dynamic systems, then the two are \emph{topological conjugate}.
 This relationship is presented by $F \simeq \tilde{F}$.
-$F$ and $\tilde{F}$ are called \emph{analogous systems},, which share the same topology structure.
-The existence of one-one mapping is the necessary and sufficient condition for topological conjugate, thus there are two basic approaches for motion adaption.
+$F$ and $\tilde{F}$ are called \emph{analogous systems}, which share the same topology structure.
+The existence of one-one mapping is the necessary and sufficient condition for sharing topology structure.
+Based on this, two  approaches for motion adaptation are developed.
 Transformation can be specified explicitly or implicitly by maintaining the topology.
 
 
 
 If the perturbation does not violate the topology, the corresponding one-one mapping will modify the motion without changing it qualitatively.
-In dynamics,the topology preserving ability is an intrinsic property of many dynamic systems:
+In dynamics, the topology preserving ability is an intrinsic property of many dynamic systems:
 \emph{structural stability}.
+
 One strategy of motor control is to enhance the structural stability. 
-With this approach, the qualitative property is preserved and there exists a one-one mapping relationship, but finding out details of motion will be difficult or computational expensive.
+By this approach, when the qualitative property is preserved by the control system, the one-one mapping that transforms motions is automatically specified. 
+However, in many cases, finding out details of one-one mapping maybe be difficult or computational expensive.
 Therefore this approach is qualitative.
 
-In \moit,this approach models the involuntary motion adaptation which is low level function of neural control system.
-The topological structure is one important property should be kept invariant, thus become a motor invariant in \moit: the \emph{Global Motor Invariant}.
+In {\moit}, this approach models the involuntary motion adaptation which is low level function of neural control system.
+The topological structure is one important property that should be kept invariant, thus become a motor invariant in {\moit}: the \emph{Global Motor Invariant}.
 
 
 
@@ -266,11 +265,12 @@ The topological structure is one important property should be kept invariant, th
 
 
 Also if the transformation is known, then the two systems must be topological equivalent.
-This method  modifies motion with precision and \moit applies this idea for high level voluntary motor control.
+Therefore, another approach is to directly specify the transformation.
+This method  modifies motion with precision and {\moit}\ apply it for high level voluntary motor control.
 In many situations, to achieve desired transform $T$, control effort needs to be applied.
-For this method, choosing a proper transformation $T$ is the most challenging  question.
+When applying this method, how to a proper transformation $T$ is the most challenging  question.
 
-In \moit, selection of $T$ is based on two principles.
+In {\moit}, the selection of $T$ is based on two principles.
 \begin{itemize}
 \item
 Parameters of transformation $T$ should be easy to detect and formulated, which meets the biological sensing and computational constraints. 
@@ -279,7 +279,8 @@ Parameters of transformation $T$ should be easy to detect and formulated, which 
 The transformation $T$ should be energy efficient.
 For differential dynamic system, some transformation explores the natural dynamics and requires little or no energy input.
 \end{itemize}
-Some quantitative properties will be unchanged during transformation, which are called \emph{Local Motor Invariant}
+
+When specifying transformation directly, some quantitative properties will be unchanged during transformation, which are \emph{Local Motor Invariant}
 
 
 
@@ -301,17 +302,17 @@ Some quantitative properties will be unchanged during transformation, which are 
 
 
 
-Although new mathematical language seems obscure at first glimpse, the properties that the mathematical language describes are universal in physical world, with or without life.
+Although the new mathematical language seems obscure at first glimpse, the properties that it describes are universal in physical world, with or without life.
 The underlying idea is intuitive and can be explained well through commonly observed phenomena.
 
 
 
-\subsection{The Floating Ship: An example of Stability}
+\subsection{The Floating Ship: An Example of Stability}
 The floating ship  example shows the idea of structural stability and topological conjugacy.
-In real life, ships floating on the wave are typically taller than they are wide,as shown in Figure~\ref{fig:ShipFloating}.
+In real life, ships floating on the wave are typically taller than they are wide, as shown in Figure~\ref{fig:ShipFloating}.
 An interesting  question is how the ship maintains its posture.
 
-Through analysing the topology and structural stability, we see that it is trivial to maintain posture.
+Through analysing the topology and structural stability, we see that it is trivial to maintain this posture.
 This conclusion applies to different ships since their dynamics are qualitative the same, or topological conjugate.
 
 
@@ -332,17 +333,17 @@ J\ddot{q}+d\dot{q}=\tau(q)_{g}+\tau(q)_{b}+\tau_{u}
 \end{equation}
 
 
-where $q$ is the swaying angle.
+where $q$ is the swaying angle,
 $J$ is the inertia,  
 $d$ is the damping coefficient,
 and $\tau_{g}$,$\tau_{b}$,$\tau_{u}$ are the corresponding the torques of gravity, buoyancy and external control.
 
-When a ship is on the sea, the motion is governed by the two forces, the buoyancy $b$ and gravity $g$.
-When $\tau_{u}=0$,  the dynamics is becomes governed by its natural property.
+When a ship is on the sea, its motion is mainly governed by the two forces, the buoyancy $b$ and gravity $g$.
+If $\tau_{u}=0$,  the ship motion is totally governed by the natural dynamical forces.
 Such a system is \emph{autonomous}.
 
 To make it consistent with discussions in following chapters, Equation~\ref{eq:shipflow} is reformulated.
-Defining the \emph{state} variable $\state=[q,\qd]$, then Equation~\ref{eq:shipflow} becomes
+By defining the \emph{state} variable $\state=[q,\qd]$, then Equation~\ref{eq:shipflow} becomes
 \[
 \dot{\state}=F_{J,d}(\state)+Du
 \]
@@ -350,13 +351,13 @@ Defining the \emph{state} variable $\state=[q,\qd]$, then Equation~\ref{eq:shipf
 where 
 $F$ is a function of $\state$, the subscripts~$J$ and~$d$ are \emph{system parameters},
 $D$ is a matrix, which describes how the control effort is applied,
-and $u$ is \emph{control input}, for this example $u$ is $\tau_{u}$
+and $u$ is \emph{control input}, for this example $u$ is $\tau_{u}$, which is $0$.
 
 
 
 \subsubsection*{Equilibrium Postures}
-A ship will only rest when $\tau_{g}+\tau_{b}+\tau_{u}=0$, which are called \emph{Equilibrium} Postures.
-The only two possible ones are show in Figure ~\ref{fig:ShipEqulibriumStable} and Figure~\ref{fig:ShipEqulibriumUnstable}.
+A ship will only rest at the postures where $\tau_{g}+\tau_{b}+\tau_{u}=0$, which are called \emph{Equilibrium} Postures.
+The only two possible ones are shown in Figure ~\ref{fig:ShipEqulibriumStable} and Figure~\ref{fig:ShipEqulibriumUnstable}.
 \begin{figure}[!htbp]
   \begin{center}
      \includegraphics{leftPos}
@@ -375,9 +376,9 @@ The only two possible ones are show in Figure ~\ref{fig:ShipEqulibriumStable} an
 
 
 
-The two postures are different, illustrated with the \emph{phase plot}.
+However, the two postures are different, which is illustrated with the \emph{phase plot}.
 On the phase plot, the horizontal axis represents  $q$; and the vertical axis represents velocity $\qd$. 
-The motion of the ship is shown as a curve on the phase plot, which is called \emph{flow}.
+On the phase plot, the motion of the ship is shown as a curve, which is called \emph{flow}.
 
 The posture in Figure ~\ref{fig:ShipEqulibriumStable} is \emph{attractive} or \emph{stable},
 for if a small perturbation moves the ship away from the left posture, it will return to the equilibrium posture automatically as shown in Figure~\ref{fig:StablePosture}.
@@ -390,7 +391,7 @@ for if a small perturbation moves the ship away from the left posture, it will r
 \end{figure}
 
 
-Whereas the  posture in Figure~\ref{fig:ShipEqulibriumUnstable} is \emph{repelling} or \emph{unstable}, if being moved away from the equilibrium posture, the ship will move away further, as shown in Figure~\ref{fig:unStablePosture}.
+Whereas the  posture in Figure~\ref{fig:ShipEqulibriumUnstable} is \emph{repelling} or \emph{unstable}, if being moved away from the equilibrium posture, by natural dynamics, the ship will move away even further, as shown in Figure~\ref{fig:unStablePosture}.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -402,18 +403,18 @@ Whereas the  posture in Figure~\ref{fig:ShipEqulibriumUnstable} is \emph{repelli
 
 
 \subsubsection*{Trivial Task}
-All the flows form the \emph{phase portrait} of the dynamic system. 
-The discovery is that all the flows start from the repelling posture and ends at the attractive posture.
-Several example curves are show in Figure ~\ref{fig:globalflow}.
+All the flows form the \emph{phase portrait} of the dynamic system, which illustrates all the possible motions. 
+The discovery is that all the flows start from the repelling posture and end at the attractive posture.
+Several curves are shown in Figure ~\ref{fig:globalflow}.
 This means no matter what the current posture is, the ship will return to the normal stable posture automatically.
 
 This is an intrinsic property of the natural dynamics, and thanks to this, balancing is a trivial task which requires no control effort. 
-This property is determined by the qualitative structure design criteria, makeing the centre of buoyancy  above the centre of gravity.
+This property is determined by the qualitative structure design criteria that the centre of buoyancy  is above the centre of gravity.
 
 \begin{figure}[!htbp]
   \begin{center}
    \includegraphics[width=0.7\textwidth]{ShipGlobalFlow}
-   \caption{Global Properties of the Flows: All the curves start from the repelling posture(Red) and end at the attractive one(Blue)}
+   \caption{Global Properties of the Flows: All the curves start from the repelling posture~(Red) and end at the attractive one(Blue)}
    \label{fig:globalflow}
   \end{center}
 \end{figure}
@@ -425,8 +426,8 @@ This property is determined by the qualitative structure design criteria, makein
 \subsubsection*{Generalization of the Ship Example} 
 This conclusion is independent of the shape, size, weight or material of the ship. 
 In general cases, the same wave perturbation will result in different sway motions for different ships.
-Howerver, as long as the qualitative structure design criteria is maintained, balancing remains ``easy''.
-On phase portraits,  all the ships share following properties. 
+However, as long as the qualitative structure design criterion is maintained, balancing remains ``easy''.
+The phase portraits of all the ships share following properties. 
 \begin{itemize}
 \item one repelling point 
 \item one attractive point 
@@ -435,8 +436,8 @@ On phase portraits,  all the ships share following properties.
 
 In mathematical terms, all the phase portraits share the same topology structure of Figure~\ref{fig:topologyStructure}.
 
-This phenomenon illustrates the principle idea of motion adaptation in \moit.
-When the variations among individuals or situations result in motion variation, the qualitative dynamics or topological structure of the dynamic system remains invariant.
+This phenomenon illustrates the principal idea of motion adaptation in {\moit}.
+When the variations among individuals or situations result in motion variations, the qualitative dynamics or topological structure of the dynamic system remains invariant.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -453,8 +454,8 @@ When the variations among individuals or situations result in motion variation, 
 Despite the complexity of body structure, biological motor control is fast and accurate.
 Such quantitative properties pose another puzzle in motor control research, as solving the complex dynamics directly would require prohibitive long computational time and excessive mental resources.
 
-\moit proposes a new method to achieve the  speed and accuracy of motor control.
-An efficient control strategy is based on the idea of transformation.
+{\moit}\ proposes a new method to achieve the  speed and accuracy of motor control.
+An efficient strategy is based on the ideas of transformation and symmetry.
 Without solving the dynamics, new motions are achieved through transforming template motions.
 To keep the motion natural looking, control system chooses the transformation directions that are energy efficient, or in another term, allowed by the natural dynamics.
 
@@ -473,7 +474,7 @@ The compliant actuators of muscles work like springs, and rigid bones are modell
 \end{figure}
 
 \subsubsection*{Dynamics}
-The canonical equation of mass spring system is
+The canonical equation of mass spring system is Equation~\ref{eq:mass-spring}
 \begin{equation}
 \label{eq:mass-spring}
 \ddot{q}+q=0.
@@ -485,13 +486,13 @@ By defining the \emph{state variable}, $\state=[q,\qd]$, Equation~\ref{eq:mass-s
 \dot{\state}=F(\state)
 \]
 
- Figure~\ref{fig:massSpringPhasePlot} shows two flows passing through different states $x$ and $x'$ on the phase plot.
+Figure~\ref{fig:massSpringPhasePlot} shows two flows passing through different states $x$ and $x'$ on the phase plot.
 
 
 \begin{figure}[!htbp]
   \begin{center}
      \includegraphics[width=0.5\textwidth]{MassSpringPhasePlot}
-    \caption{Mass Spring Phase Plot:two motion curves are shown.The red one and the green pass through different states ($\state$ and $\state'$}
+    \caption{Mass Spring Phase Plot: two flows pass through different states ($\state$ and ${\state}'$})
     \label{fig:massSpringPhasePlot}  
   \end{center}
 \end{figure}
@@ -500,31 +501,35 @@ By defining the \emph{state variable}, $\state=[q,\qd]$, Equation~\ref{eq:mass-s
 %It is highly unlikely animals can solve Equation~\ref{eq:mass-spring}.
 
 The mass spring system has some ``symmetrical properties''.
-Different flows share the same circle ``Shape''.
-Without sovling the Equation~\ref{eq:mass-spring}, neew flows(solid ones) can be obtained by scaling the original(red) flow.
+To an intuitive eye, different flows share the same circle ``Shape''.
+Without solving the Equation~\ref{eq:mass-spring}, new flows~(solid ones) can be obtained by scaling the original~(red) flow.
 
 From a mechanical viewpoint, this is because the flows of mass spring system are energy preserving.
-We can define the energy function
+To see this, we can define the energy function
 \[
 E=\frac{1}{2}(m\qd^2+kq^2)
 \]
 where $k$ is the stiffness, $m$ is the mass.
-When $m=1,k=1$, since $E$ is a constant, we can take $E=c$,
-and obtain $q^2+\qd^2=2c$, which is the implicit function of a circle.
+When $m=1,k=1$, since $E$ is a constant, let  us make $E=c$,
+and  we obtain
+\[
+ q^2+\qd^2=2c
+\]
+ which is the implicit function of a circle.
 
-Therefore, given the template flows that pass through  $\state$, for the state $\state'$, by checking the energy, the scale transformation from red to green can be worked out.
-In this manner, we botained the future motion after $\state'$, without sovling the dynamics.
+Therefore, given the template flows that pass through  $\state$, for the state $\state'$, its flow is of the cycle shape with different energy.
+In this manner, we obtained the future motion after $\state'$, without solving the dynamics.
 
 
 \subsubsection*{Dynamic Perception and Local Motor Invariant}
 
 The idea ``transformation and symmetry'' may shed light on dynamic perception. 
-It is highly unlikely animals can solve Equation~\ref{eq:mass-spring} to understand mass spring system.
+It is highly unlikely animals solve Equation~\ref{eq:mass-spring} to understand mass spring system.
 As an alternative, the dynamics can be encoded in a different manner: a motion template and the symmetry property. 
-If so, observed motions can be validated by being checked against motion templates in our memory.
+If so, observed motions can be validated by being checked against our memorized motion templates.
 
 To make it better, it is even unnecessary to working out the transformation, it is enough just to check some property invariant under transformation.
-For the mass spring system example, we can check the “shape” of the flow, or from a mechanical perspective, check the energy preserving property.
+For the mass spring system example, we can check the ``shape'' of the flow, or from a mechanical perspective, check the energy preserving property.
 
  
 The invariant properties like energy preserving or shape can be quantitative measured, they are invariant only when system flows move in a specific direction, thus are called  \emph{Local Motor Invariant}. 
@@ -535,60 +540,50 @@ The invariant properties like energy preserving or shape can be quantitative mea
 Compared with current \cms methods, the new approach has several advantages:
 \begin{enumerate}
 \HiItem {More Types of Adaptation}
-Most dynamic methods only focus on generating responsive motion to dynamic perturbation.
-Adaptations across different characters are solved with a different method and treated as a independent research topic(motion re-targeting).
-\moit unifies different  adaptations in one theory.
-The mathematical idea of topology conjugacy  incorporates both motion re-targeting and  perturbation responses  in an unified framework.
-Thus \moit can generate more types of adaptation.
+Most dynamic methods only focus on generating responsive motions to dynamic perturbations.
+Adaptations across different characters are treated as an independent research topic~(motion re-targeting) and tackled with very different methods.
+{\moit}\ solves the two problems with one approach.
+The mathematical idea of topology conjugacy  incorporates both motion re-targeting and  perturbation responses  in a unified framework.
+Thus {\moit}\ are capable of types of adaptation.
 \HiItem {Better Usability}.
 For many \cms methods, each \dof ~is controlled independently.
 When modifying motions, animator has to modify each \dof, which is tedious work.
 
-In \moit, adaptation is achieved by applying transformation.
+In {\moit}, adaptation is achieved by applying transformation.
 Each transformation can be parameterized by one parameter. 
-By specify only one parameter for the transformation, control inputs of all {\dof}s are modified automatically, which is more easy to use.
+By specify only one parameter for the transformation, control inputs of all {\dof}s are modified automatically, making this method more easy to use.
 
 \HiItem {No Reference Motion Needed}
-\moit relies on the dynamics of body and environment.
+{\moit}\ relies on the dynamics of body and environment.
 Motion Capture Data is not needed as reference input.
-In situations, this method can generate new motion that can not be captured.
+In situations, this method can generate new motion that cannot be captured.
 
 
 \HiItem {Computationally Efficient} 
 This motion synthesis approach requires little computation time and memory, it suits real-time applications.
 \HiItem {Dynamic Motion Transition}
-Dynamic motion transition is developed upon solid theory foundation.
+Transitional motion can also be simulated dynamically, and such methods are developed upon solid theory foundation.
 
 \end{enumerate}
 
 Because of its biological foundation,
-algorithms and simulation results of \moit  might shed light into biology research.
-Some conclusion and control techniques can be treated as candidate theory that needs further verification.
+algorithms and simulation results of {\moit}\  might shed light on biology research questions.
+Some conclusions and control techniques developed in this thesis provide alternative ideas for biological motor control, and potential may have theoretical value.
 
 \begin{enumerate}
 \item 
 Motion Primitive is an old idea in biological research, but there is no agreement on the definition and underlying reason.
 Biological research has tried to identify motion primitive by exploring the neural anatomy, EMG signal or muscle activation pattern.
 
-\moit  explains the motion primitive from dynamic viewpoint.
-This theory is more complete.
-Besides identification, it also answers why certain motions are primitives and others are not,
-how many motion primitives we have,  and where they come from.
-
-\item One supporting theory of motion primitive is the muscle synergy:
-Generating motion by actuating muscles, muscles are not controlled independently but worked in group. 
-Many research in synergy by empirical methods. 
-
-In \moit, when control is applied to ensure transformation, actuators are controlled in an ``synergy manner''.
-\moit provides a candidate  ``synergy'' method for muscle control.
-
-\item For the neural structure \emph{Central Pattern Generator}(\cpg) , their roles in motor control are well agreed.
-While detail strategy for adjust \cpg parameters according to motor purpose is still lacking.
-The \moit provides an theory for modifying the \cpg parameters with mathematical rigidity.
+{\moit}\ examines the motion primitive from the dynamic viewpoint.
+The discovery and conclusion are more logical and complete.
+Besides pointing out a motion primitive, {\moit}\ also explain why certain motions become primitive, how many primitives exist, and how they formed.
 
 
-\item  Motion and dynamic perception mechanism of neural system is still unclear.
-The motor invariant theory proposes a computationally efficient mathematical machinery.
+\item Many biological research ideas like \cpg and invariant based perception are proposed empirically. 
+To be a complete theory, much necessary detailed information is still missing.
+As a contrast, {\moit}\ is based on rigid mathematical theory, for many biological ideas, {\moit}\ provides workable mathematical machinery.
+
 \end{enumerate}
 
 
@@ -601,41 +596,42 @@ The motor invariant theory proposes a computationally efficient mathematical mac
 
 This thesis is organized as follows.
  
-In Chapter~\ref{chap:background}, previous research on motion synthesis and biological motor control are discussed, which are the motivation and justification of \moit.
+In Chapter~\ref{chap:background}, previous research on motion synthesis and biological motor control are discussed, which are the motivation and justification of {\moit}.
  
-In Chapter~\ref{chap:gi}, \emph{Qualitative Dynamicss} is introduced to explain motion primitives. 
+In Chapter~\ref{chap:gi}, \emph{Qualitative Dynamics} is introduced to explain motion primitives. 
 Biological based  methods for maintaining the global motor invariant are developed.
 
 Chapter~\ref{chap:li} focuses on the idea of Local Motor Invariant and Symmetry.
-Lie Group theory is  introduced  to analyse the symmetry properties in motion dynamics.
-Symmetry Controllers are developed for adaptation motions.
+Lie Group Theory is  introduced  to analyse the symmetry properties in motion dynamics.
+Symmetry Controllers are developed to provide necessary energy input for adapting motions.
  
 
 
 Chapter~\ref{chap:msf} discusses the combination problems.
-For each motion primitive,  strategies are developed to preserve global and local motor invariant simultaneously.
-Motion primitive transition is discussed and methods for combining motion elements into more complex motion is discussed.
+For a single motion primitive,  strategies are developed to preserve both the global and local motor invariant simultaneously.
+Motion primitive transition is discussed.
+Methods for combining motion elements into more complex motion are developed.
 As an animation system, the software architecture and work flow are discussed at the end.
 
-Chapter~\ref{chap:gi},~\ref{chap:li},~\ref{chap:msf} lay the theoretical foundation of \moit.
-Following chapters focus on application in \cms.
+Chapter~\ref{chap:gi},~\ref{chap:li},~\ref{chap:msf} lay the theoretical foundation of {\moit}.
+Following chapters provides experimental verification.
 
 
 
-Chapter~\ref{chap:walk} focuses the tweaking of one primitive.
-Bipedal walking is chosen, which is one of the most challenging problem for current \cms research.
-Motor Invariant Theory introduces a method to boost the stability and generate adaptive gaits.
+Chapter~\ref{chap:walk} focuses the synthesizing adaptive motions for one primitive.
+Bipedal walking is chosen as the example, which is commonly observed but proposes great challenges for current \cms research.
+Methods based {\moit}\ successfully boost the stability and generate adaptive gaits, and further validation shows the synthesized gaits comply with natural observation. 
 
-
-In Chapter~\ref{chap:stance}, combinations of motion primitives are discussed.
+In Chapter~\ref{chap:stance}, motion transition is discussed. 
 A new balancing motion primitive is developed. 
-Transitional motions are generated for stance to walk and walk to stance transitions.
+Adaptive transitional motions from stance to walk and walk to stance are generated dynamically.
+
 
 In Chapter~\ref{chap:highdor}, extensions of motor invariant theory to more complex characters are discussed.
 Three strategies are developed to simplify the problem for different situations.
 
 This thesis ended with Chapter~\ref{chap:con}. 
-After discussion of new finding of this research, some new questions and ideas for graphics and neural science are proposed for further research .
+After discussion of new finding of this research, some new questions and ideas for graphics and neural science are proposed for further research.
 
 
 
