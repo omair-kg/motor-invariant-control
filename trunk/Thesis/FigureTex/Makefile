@@ -1,7 +1,7 @@
 # make -f Makefile_latex
 
 
-R=FiveLinkSeperate
+R=RimlessWheel
 
 eps: 	$(R).tex
 	latex $(R).tex
