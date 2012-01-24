@@ -496,21 +496,21 @@ This research study investigates the qualitative property with  empirical method
 After examining many simulation results, the Matsuoka Oscillator shows three important properties:
 \begin{itemize}
 \item{Simple Topological Structure.}
-The topology structure of neural oscillator is simple, 
+The topology structure of a neural oscillator is simple: 
 it includes one  attractive limit circle and one fix repellor.
 \item{Large Basin of Attraction.}
-All the simulations we carried out converged to the same limited circle.
+All the simulations which we carried out converge to the same limited circle.
 \item{Fast Converging Speed.}
-In most of the case, the flow will converge to the limit circle within one period time.
+In most  cases, the flow will converge to the limit circle within one period time.
 \end{itemize}
 
 
-Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
+The above features are shown in Figure ~\ref{fig:time_timeAttraction}.
 \begin{figure}
 \begin{center}
 \includegraphics[height=0.4\textheight]{neural_attraction}
 \end{center}
-\caption{Neural output with different initial position}
+\caption{Neural output with different initial positions}
 \label{fig:time_timeAttraction}
 \end{figure}
 
@@ -518,22 +518,22 @@ Features above are shown in Figure ~\ref{fig:time_timeAttraction}.
 \begin{center}
 \includegraphics[height=0.4\textheight]{neural_attraction_phase}
 \end{center}
-\caption{Phase plot of oscillation with different initial condition}
+\caption{Phase plot of oscillation with different initial conditions}
 \label{fig:phase_attraction}
 \end{figure}
  
-The large area of basin of attraction means the final behaviour is totally determined by system parameters. 
-Initial condition will have no effects on the stable oscillation behaviour. 
-Matsuota oscillator can be treated as single input, single output system.
+The large area of basin of attraction means the final behaviour is totally determined by the system parameters. 
+The initial conditions will have no effects on the stable oscillation behaviour. 
+Matsuota oscillator can be treated as a single input single output(SISO) system.
 The output signal is controlled by three system parameters and input signal. 
-Equation ~\ref{eq:matsuta} can be reformed in the form of Equation~\ref{eq:simplematsuta}.
+Equation ~\ref{eq:matsuta} can be reformed as Equation~\ref{eq:simplematsuta}.
 \begin{equation}
 \uout=S_{[\hin,\hout,\tau]}(\uin)
 \label{eq:simplematsuta}
 \end{equation}
 where $\uin=\sum_{j}h_{j}[w_{j}]$, is the weighted sum of all the input signal.
 
-The converging speed can be seen as quick recovery ability, which is very valuable for motor control.
+The converging speed can be seen as a quick recovery ability, which is very valuable for motor control.
 When an impulse perturbation happens, it will recover in one period time.
 
 
@@ -550,15 +550,15 @@ This system is of simple dynamics, but difficult to control with optimization or
 \end{figure}
  
 The bouncing ball system captures the complex discontinuous dynamics of body and environment interaction. 
-It can be treated as the template model for many motion tasks like jumping, running and ball playing.
+It can be treated as a template model for many motion tasks like jumping, running and ball playing.
 This example demonstrates how limit cycle arises through entrainment.
  
 \subsection*{Dynamics}
 The bouncing ball system is of hybrid dynamic, which involves two phases.
 \begin{itemize}
-\HiItem{The Continuous Flying Phase}
+\HiItem{The Continuous Flying Phase:}
 When the ball is flying, it is only affected by the gravity.
-\HiItem{The Discontinuous Strike Phase}
+\HiItem{The Discontinuous Strike Phase:}
 When the ball hits the paddle, the speed of the ball is changed instantly.
 \end{itemize}
 The natural dynamics of bouncing ball system are described by  Equation~\ref{eq:bbeq}.
@@ -570,11 +570,11 @@ The natural dynamics of bouncing ball system are described by  Equation~\ref{eq:
 where $\ddot{q}_{ball}$ is the acceleration,
 $\gv$ is the gravity,
 $q_{ball},q_{paddle}$ are the positions of the ball and paddle,
-$\dot{q}^{+}_{ball,paddle}$ are the speed after paddle strike and $\dot{q}^{-}_{ball,paddle}$ are the speed before strike,
+$\dot{q}^{+}_{ball,paddle}$ are the speed after a paddle strike and $\dot{q}^{-}_{ball,paddle}$ are the speed before the strike,
 $\epsilon$ is collision coefficient $-1 < \epsilon <0$.
 
 Figure~\ref{fig:bborg} shows  plots of the system. 
-The ball will bounce with ever smaller height. 
+After each strike, the ball will bounce with a smaller height. 
 
 
 
@@ -593,7 +593,7 @@ The ball will bounce with ever smaller height.
 	}
 	
 \end{center}
-\caption{Original Bourncing Ball System}
+\caption{Original Bouncing Ball System}
 \label{fig:bborg}
 \end{figure}
 
@@ -601,10 +601,12 @@ The ball will bounce with ever smaller height.
 
 \subsection*{Emergence of Limit Cycle}
 The  bouncing ball system has only one fixed point attractor and its basin of attraction covers the whole phase space.
-But its behaviour is near periodic, alternatively, it can be seen as bifurcation of a limit cycle.
+However, its behaviour is near periodic.
+Or alternatively, it can be seen as a bifurcation of a limit cycle.
 Neural Oscillator can be applied to recover the limit cycle through entrainment.
-The input of neural oscillator is the velocity $\uin=\qd_{ball}$, the output drives the paddle position $q_{paddle}=\uout$.
-Dropped from different positions, after several bounces, the ball will maintain its bouncing at the height of $5 unit$,as shown in Figure~\ref{fig:bb_attractive_circle}.
+The input of the neural oscillator is the velocity $\uin=\qd_{ball}$, the output drives the paddle position $q_{paddle}=\uout$.
+If dropped from different positions, the ball will maintain its bouncing at the height of $5$ units after several strike,
+as shown in Figure~\ref{fig:bb_attractive_circle}.
 
 \begin{figure}[h]
 \begin{center}
@@ -620,7 +622,7 @@ Dropped from different positions, after several bounces, the ball will maintain 
 	}
 	
 \end{center}
-\caption{Attractive Limited Circle}
+\caption{The Attractive Limited Circle of Entrainment}
 \label{fig:bb_attractive_circle}
 \end{figure}
 
