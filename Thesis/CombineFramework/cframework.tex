@@ -3,18 +3,18 @@
 \nomenclature[z57]{\boa}{Basin of Attraction}
 \graphicspath{{CombineFramework/CombineFrameworkFigs/EPS/}{CombineFramework/CombineFrameworkFigs/}}
 The principal ideas of \moit are discussed in previous two chapters.
-Stability of motion is controlled by maintaining the topology, 
-for periodic motion, neural oscillator can be used to enhance the structural stability.
+The stability of motion is controlled by maintaining the topology.
+For the periodic motions, neural oscillator can be used to enhance the structural stability.
 And group Transformation provides a mechanism to modify motion with precision.
 
 
-Questions rise when these ideas are being applied  to \cms.
+Questions arise when these ideas are being applied  to \cms.
 The first question comes from combining the controller of neural oscillator and symmetry controller.
 We must ensure that the combination will violate neither the symmetry nor the topology,
 This question is discussed in details in Section~\ref{sec:combin}.
 
 
-Section~\ref{sec:procframe} provides more detailed information of the pipeline, or the procedure of applying this idea in \cms applications
+Section~\ref{sec:procframe} provides more detailed information of the pipeline, or the procedure of applying this idea in \cms applications.
 
 %Previous chapters only focus on how to maintain motion primitives, a further question is how motion primitives are connected, for example, how a character transit from walking to running. 
 %Section~\ref{sec:manyprimitive} shows how the method for maintaining motion primitive are used for motion primitive transition.
@@ -34,10 +34,28 @@ Section~\ref{sec:procframe} provides more detailed information of the pipeline, 
 \label{sec:combin}
 \subsection{ Combine Invariant Control}
 
-Neural control $\uout$ will maintain the topology and local control $ulocal$  maintains the symmetry.
-Combining two controllers will violate nor the global or local invariant:
+Neural control $\uout$ maintains the topology, and local control $ulocal$  maintains the symmetry.
+Combining two controllers will violate nor the global or local invariant.
+
+In order to adjust the combined controller for practical applications,
+\cpg is applied first to maintain the topology against the structural perturbation. 
+Then symmetry controllers are applied to meet application specific constraints.
+This idea is illustrated in the following Figure ~\ref{fig:sysoverview}
+
+\begin{figure}[!htbp]
+  \begin{center}
+      \includegraphics[width=0.7\textwidth]{LimitCircle}
+    \caption{System Overview }
+    \label{fig:sysoverview}
+  \end{center}
+\end{figure}
+
+
+
+
+
 From the perspective in Chapter~\ref{chap:gi},
-when the controlled symmetry  is applied, it must not violate the topology. 
+The inclusion of symmetry control must not violate the topology. 
 It is easy to prove that controlled symmetry maintains the topology.
 For the controlled symmetry's effect on topology, we have the following theorem:
 
@@ -50,20 +68,7 @@ From the perspective in Chapter~\ref{chap:li},
 we must ensure the inclusion of neural oscillator control $\ulocal$ will not break the controlled symmetry.
 
 
-In application, to adjust the combined controller,
-\cpg is applied first to maintain the topology against the structural perturbation. 
-Afterwards Symmetry Control is to meet application specific constraints.
-This idea is illustrated in the following Figure ~\ref{fig:sysoverview}
-
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.7\textwidth]{LimitCircle}
-    \caption{System Over View }
-    \label{fig:sysoverview}
-  \end{center}
-\end{figure}
-
-When a group action is applied to the mechanical system, parameters of \cpg should be transformed accordingly to maintain the symmetry property.
+For this, the parameters of \cpg need to be modified accordingly to maintain the symmetry property.
 This is called \emph{Adjoint Transformation}.
 
 
@@ -89,7 +94,7 @@ when controlled by neural oscillator, it becomes
 where $D$ is the connection matrix, which describes how the neural oscillator is connected to mechanical system.
 
 
-When group action $g$ is applied, the Equations~\ref{eq:gc} is transformed into
+When group action $g$ is applied, Equations~\ref{eq:gc} is transformed into
 \begin{equation}
 \label{eq:cc}
 Tg(\dot{\state})=F(g(\state))+DTg(\uout)
@@ -105,10 +110,11 @@ If symmetry is preserved, the Equation~\ref{eq:con} and Equation~\ref{eq:cc} sho
 \end{equation}
 where $\tilde{\uout}$ is the output of neural system after adjoint transformation.
 
-As shown in Equation~\ref{eq:simplematsuta},$\uout$ is a complex function of $\uin$.
-Developing close form formula will be difficult and not computational efficient.
-By exploring the symmetry property of Matsuoka Oscillator, transformation can be achieved by modifying the parameters.
-we have the following proposition.
+As shown in Equation~\ref{eq:simplematsuta}, since $\uout$ is a complex function of $\uin$,
+it is difficult   and not computational efficient to develop a closed form formula.
+As an alternative, the idea is to utilize the symmetry property  of Matsuoka Oscillator.
+In this way, CPG can be transformed by modifying the parameters.
+The transformation scheme is based on the following proposition.
 
 
 \begin{myprop}
@@ -116,29 +122,29 @@ By modifying parameter $\tau_{1,2}$
 \[
 \tau_{1,2} \mapsto \ep \tau_{1,2}
 \]
-is equivalent to time scaling the neural oscillator by parameter $\ep$.
+is equivalent to time scaling of the neural oscillator by parameter $\ep$.
 \end{myprop}
 
 This proposition can be easily proved by  substituting $\tilde{\tau}_{1,2}=\ep \tau_{1,2}$, and $\tilde{t}=\frac{t}{\ep}$ into the Matsuoka Oscillator( Equation~\ref{eq:matsuta}), the equation will remain the same.
-Based on the proposition above, a scheme of adjoint transformation is proposed that modifies the parameters $\tau_{1,2}$,$\hin$,$\hout$ and maintains the symmetry of the  coupled system.
+Based on above the proposition, a scheme of the adjoint transformation is proposed that modifies the parameters $\tau_{1,2}$,$\hin$,$\hout$ and maintains the symmetry of the  coupled system.
 The input and output of neural are chosen to maintain the shape.
 \begin{enumerate}
 \item Modify $\tau$ by the time scaling parameter $\tau \mapsto \ep \tau$.
-\item Input variable $w$ and input efficient $\hin$ are modified to make sure the input function satisfy the time scaling symmetry $\uin(t) \mapsto \uin(\frac{t}{\ep})$
-\item  Parameters of $\hout$ are modified according to connection matrix $D$, or how the mechanical system is drived.
-If $\uout$ drives the position variable $q$ then, $\hout$ should multiplied by the position scale factor. 
-If $\uout$ drives the velocity,$\hout$ is multiplied by the speed scale factor.
-If the $hout$ is force and acting on the acceleration $\ddot{q}$, then $\hout$ is multiplied by the acceleration scale factor.
+\item the input variable $w$ and input efficient $\hin$ are modified to make sure the input function satisfy the time scaling symmetry $\uin(t) \mapsto \uin(\frac{t}{\ep})$
+\item  Parameters of $\hout$ are modified according to the connection matrix $D$, or how the mechanical system is driven.
+If $\uout$ drives the position variable $q$ then, $\hout$ should be multiplied by the position scale factor. 
+If $\uout$ drives the velocity,$\hout$ should be  multiplied by the speed scale factor.
+If the $hout$ is force and acting on the acceleration $\ddot{q}$, then $\hout$ should be multiplied by the acceleration scale factor.
 \end{enumerate}
 
 
 According to this adjoint transformation strategy, we can get the following theorem
 \begin{mythe}
-For a transformation group $G$, if the parameters of the neural oscillator are modified according to adjoint transformation,
+For a transformation group $G$, if the parameters of the neural oscillator are modified according to the adjoint transformation,
 combined system preserves symmetry $I^G$.
 \end{mythe}
-For proof, readers can check the symmetry by substituting transformed variables into the original system to check the symmetry.
-Thus both the Local Motor Invariant and Global Motor Invariant are maintained
+To prove it, readers can check the symmetry by substituting transformed variables into the original system to check the symmetry.
+With such a treatment, both the Local Motor Invariant and Global Motor Invariant are maintained
 For the specific symmetry types proposed in Chapter~\ref{chap:li},several examples of adjoint transformations are provided
 
 
@@ -147,9 +153,9 @@ For offset symmetry:
 \[
 (t,q,\qd) \mapsto (t,q+\ep,\qd)
 \]
-there is no time scaling effects.
-To maintain the symmetry,  the simplest way is to select $\uin$ and $\uout$ from functions from invariant space$I^G$.
-For example, when all the $q$ is transformed by a constant, the difference and the velocity will not be transformed. 
+there is no time scaling effect.
+To maintain the symmetry,  the simplest way is to select $\uin$ and $\uout$ from the functions in the invariant space$I^G$.
+For example, when all  $q$ is transformed by a constant, the difference and the velocity will not be transformed. 
 Thus,the input of the neural oscillator is chosen to be the angle difference between the joints or velocity.
 
 
@@ -162,12 +168,12 @@ For time scaling:
 Adjoint Transformation
 $\tau \mapsto \ep \tau $.
 The input coefficient $\hin$ and output coefficient $\hout$ are scaled accordingly.
-if the output$\uout$ is applied as force, then it should be scaled by the acceleration factor
+if the output$\uout$ is applied as a force, then it should be scaled by the acceleration factor
 \[
  \hout \mapsto \ep^2 \hout
 \]
 \subsubsection*{ Energy Scaling}
-Energy Scaling is combined action of time scaling and posture scaling:
+Energy Scaling is a combined action of time scaling and posture scaling:
 \[
 (t,q,\qd ) \mapsto ( \frac{f(\ep)}{\ep}t ,f(\ep)q,\ep\qd)
 \]
@@ -194,9 +200,9 @@ if the output drive the velocity, then the output is $\hout$
 
 \subsection{Example: Height Control of Bouncing Ball}
 
-The Bouncing Ball has the energy scaling symmetry; a limit cycle emerged when coupled with neural oscillator.
-By combining both motor invariant controllers, energy transformation can be applied to the limit cycle.
-and the ball  bounces about a constant height with robust stability.
+The Bouncing Ball has the energy scaling symmetry, and a limit cycle emerged when coupled with a neural oscillator.
+By combining both motor invariant controllers, stability is maintained and motion can be adjusted precisely. 
+When energy transformation is applied to the limit cycle, the bouncing height can be adjusted according to the purpose.
 
 \subsubsection*{Adjoint Transformation}
 Supposing the coupled system is bouncing at height of $5$
@@ -204,7 +210,7 @@ For the energy scaling:
 \[
 (t,q,\qd ) \mapsto ( \ep t ,\ep^2 q,\ep \qd)
 \]
-and he time scaling factor is $\ep$, we have:
+the time scaling factor is $\ep$, and we have:
 \[
 \tau_{1,2} \mapsto \ep \tau_{1,2}
 \]
@@ -245,16 +251,16 @@ With this method, arbitrary bouncing height can be controlled.
 \label{sec:manyprimitive}
 
 \subsection{Dynamic Motion Graph}
-Virtual characters are capable of many type of motions and change its motion fluently.
+Virtual characters are capable of many types of motions and switch between them fluently.
 \emph{Motion Graph}\citep{kovar2008motion} is proposed for data-driven \cms:
 basic motion tasks are recorded, and a graph describes how a character can change from one motion into another motion. 
-The most popular method for synthesizing transition motion is through motion blending.
+For the transitional motions, the most popular synthesizing method is blending.
 
 
-\moit reaches a similar idea to motion graph through a different direction.
-Usually, traditional \emph{motion graph}s are manually designed, \moit proposes the idea generating the motion graph from the dynamics.
+\moit implies an idea similar to the motion graph but from a different direction.
+Usually, traditional \emph{motion graph}s are manually designed, while \moit proposes an idea which generates the motion graph from the dynamics automatically.
 In theory,the topological structure of a dynamic system can be represented by a  graph.
-Each motion primitive is represented as a node, and two nodes are connected only if their basin of attraction(\boa)s are in neighbour.
+Each motion primitive is represented as a node, and two nodes are connected only if their basins of attraction({\boa}s) are in neighbour.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -273,14 +279,19 @@ Each motion primitive is represented as a node, and two nodes are connected only
   \end{center}
 \end{figure}
 
-For example, Figure~\ref{fig:manyprimitives} shows the phase portrait of a hypothetical dynamic system,its phase space is divided into four region in different color, the four \boa s, within each region, there is a limit cycle(deep coloured).
-The graph in Figure~\ref{fig:manyprimitivesgraph} shows the corresponding graph structure, in which each node represents the \boa of the same color in Figure~\ref{fig:manyprimitives}, the connecting edge means the basin of {\boa}s of connected motion primitives are in neighbour, which can also be verified in Figure~\ref{fig:manyprimitives}.
+For example, Figure~\ref{fig:manyprimitives} shows the phase portrait of a hypothetical dynamic system.
+Its phase space is divided into four regions of different colors.
+The four \boa s, within each region, there is a limit cycle(deep coloured).
+The graph in Figure~\ref{fig:manyprimitivesgraph} shows the corresponding graph structure, in which each node represents the \boa of the same color in Figure~\ref{fig:manyprimitives}, the connecting edge means the basin of {\boa}s of connected motion primitives are in neighbour, which can also be verified by Figure~\ref{fig:manyprimitives}.
 
 
 \subsection{Dynamic Motion Transition}
-The transition of motion plays a very important role in \cms.
-Blending techniques tend to generate motions with little variation, while in reality, many variations happen during transition.
-\moit introduces the physics based method for generation of transition motion, which is exactly based on the control method for maintaining motion primitives.
+
+In real life, the transition of motion is an adaptive and interesting phenomenon.
+However, Blending techniques tend to generate motions with little variations. 
+Blending techniques tend to generate motions with little variation.
+While based on the control method for maintaining motion primitives, MoIT proposes a physics based method for generation of transitional motion.
+
 
 
 \begin{figure}[!htbp]
@@ -291,21 +302,18 @@ Blending techniques tend to generate motions with little variation, while in rea
   \end{center}
 \end{figure}
 
-From  geometrical perspective, motion transition means transform $\state$ from one \boa into another.
-As shown in Figure~\ref{fig:motion-transition}, the current state represented by the black dot lies in the left region of \boa, over the time, it will converge to the red limit cycle.
+From the geometrical perspective, motion transition means putting the current $\state$ out of one \boa into another.
+This process is illustrated in Figure~\ref{fig:motion-transition} where the current state represented by the black dot lies in the left region of \boa and will converge to the red limit cycle over time.
 
 The neighbouring region is the \boa of another primitive, in which if the current state lies, will converge to the green limit cycle.
-Without any effort, the transition will not happen automatically, for the two basic of attractions do not overlap.
-Motion Transition only needs a small action to push the state across the boundary, represented by the red line.
-This idea implies many efficient method.
+Because two basins of attractions do not overlap, the transition will not happen automatically without effort. 
+From a geometrical viewport,  to make motion transition happens, a small action is needed to push the state across the boundary, represented by the red line. This can be achieved by many efficient methods.
 
 
 \subsubsection*{Entrainment Overlap}
-Empirically,when \cpg is applied for one motor primitive $\mathcal{A}$, the basin of attraction $\BOA{A}$ is enlarged.
+Empirically,when a \cpg is applied for one motor primitive $\mathcal{A}$, the basin of attraction $\BOA{A}$ is enlarged.
 Supposing the enlarged basin of attraction  is  represented by $\BOA{A'}$,
-if \cpg are applied for two motion primitives $\mathcal{A_1,A_2}$ separately, the enlarged basin of attractions ($\BOA{A_1'}$ and
-%$\omicron$
-$\BOA{A_2'}$ ) will overlap. 
+if \cpg are applied for two motion primitives $\mathcal{A_1,A_2}$ in neighbour, the enlarged basins of attraction ($\BOA{A_1'}$ and $\BOA{A_2'}$ ) will overlap. 
 \[
 O =
 \BOA{A_1'} 
@@ -317,18 +325,17 @@ where $O$ is the overlapping region.
 \begin{figure}[!htbp]
   \begin{center}
       \includegraphics[width=0.7\textwidth]{CPGOVERLAY}
-    \caption{OverLay Transition}
+    \caption{ Motion Transition based on Motion Primitives Overlap}
     \label{fig:motion-overlay}
   \end{center}
 \end{figure}
  
-If  state $\state$ lies in the $O$, by switching the \cpg controller, motion primitive is changed and motion transition happens.
+If  state $\state$ lies in the $O$, the dynamic system will converge to a different attractor by switching the \cpg controller.
 Figure~\ref{fig:motion-overlay} shows the idea through an example.
 The phase plot shown two motion primitives which are connected.
-Basin of attractions of natural dynamics are represented by the dot line, which do not overlap.
-When \cpg is applied, two basin of attractions are enlarged, and the shared region are coloured in pink color.
-When the current state lies in $O$, if the \cpg of the left region is activated, the state will converge to the left limit cycle,
-if the right \cpg is activated, the state will converge to the right limit cycle.
+Basins of attraction of natural dynamics are represented by the dot line, which do not overlap.
+When \cpg is applied, two basins of attraction are enlarged, and the shared region is coloured in pink color.
+When the current state lies in $O$, the state will converge to the left limit cycle if the \cpg of the left region is activated  and converge to the right limit cycle if the right \cpg is activated.
 Motion Primitive can be switched in this manner.
 
 
@@ -337,8 +344,8 @@ Motion Primitive can be switched in this manner.
 
 
 \subsubsection*{Transform Method}
-Controlled Symmetry can also apply for motion primitive transition.
-We can change the \boa in which the current state lies by transforming the phase portrait.
+Controlled Symmetry can also be applied for motion primitive transition.
+We can change the \boa where the current state lies by transforming the phase portrait.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -351,10 +358,10 @@ We can change the \boa in which the current state lies by transforming the phase
 
 
 
-As shown in Figure~\ref{fig:transform-offset}, the phase portrait of natural dynamic system is the same as that of Figure~\ref{fig:motion-overlay}, which is also drawn by the dot.
+As shown in Figure~\ref{fig:transform-offset}, the phase portrait of natural dynamic system is the same as that of Figure~\ref{fig:motion-overlay}, which is also indicated by the dot.
 The current state converges to the left (red) limit cycle.
-By applying offset action to the dynamic system, the phase portrait  moves leftward, which make current state lie in the right \boa.
-Over the time, current state will converge to the right(green) limit cycle, accordingly, motion primitive is changed.
+By applying offset action to the dynamic system, the phase portrait  moves leftward, which makes current state lie in the right \boa.
+Over time, current state will converge to the right(green) limit cycle,  motion primitive is changed accordingly.
 
 
 
@@ -363,15 +370,14 @@ Over the time, current state will converge to the right(green) limit cycle, acco
 
 
 \subsection{Combined Method}
-Both methods utilize the natural dynamics and  result in physically realistic transition.
-The passivity also permits variability but requires $\state$ lies at specific region.
-In motor invariant theory, the current state $\state$ is not directly controlled,
-The measure taken is to make the overlap region $O$ cover part of both attractors.
+Both methods utilize the natural dynamics and  result in a physically realistic transition.
+However, both methods require x lies in the overlapping region.
+In the motor invariant theory, the current state x is not directly controlled. The measure is to make the overlap region O cover part of both attractors.
 
-As shown in Figure~\ref{fig:Combine}
-The overlap region covers both attractors $\mathcal{A}$, $\mathcal{A'}$,bidirectional transitions are possible when motions are near stable state.
+As shown in Figure~\ref{fig:Combine}.
+The overlap region covers both attractors $\mathcal{A}$, $\mathcal{A'}$, bidirectional transitions are possible when motion converge to to the limit cycle.
 
-More importantly, when transformation is applied, both motion primitives are transformed, this is the \emph{connection transformation }. 
+More importantly, when transformation is applied, the action is applied to the dynamic system. Thus both motion primitives are transformed, called the the \emph{connection transformation }. 
 As shown in Figure~\ref{fig:Combine}, both motion primitives are transformed by the time scaling action.
 
 \begin{figure}[!htbp]
