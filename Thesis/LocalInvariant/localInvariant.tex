@@ -8,25 +8,25 @@
 \graphicspath{{LocalInvariant/LocalInvariantFigs/EPS/}{LocalInvariant/LocalInvariantFigs/}}
 It is not enough that animals are able to maintain the global motor invariant.
 For a fish, preserving \emph{Global Motor Invariant}  means the swimming is stable and can be sustained.
-However,  a fish also needs to adjust the speed and direction during swimming,which is of crucial importance for survival.
+However,  a fish also needs to adjust the speed and direction during swimming, which is of crucial importance for survival.
 In real-life, animal can adapt motion primitives according to its purpose precisely.
 In this chapter, we will develop the control strategies for tweaking motion patterns according to the motion purposes.
 
 It is important to remember that such tweaking strategies are also constrained by the computation and memory capacity of the neural system, and should explore natural dynamics as the basic motion primitive theory. 
 For \cms, it is of no meaning developing walking pattern by exploring natural dynamics but using optimization to adjust the walking speed. 
-To meet such requirements, \moit adopted different ideas.
+To meet such requirements, \moit\ adopted different ideas.
 
 At first, when tweaking motion patterns, stability should not be violated. 
-As stated in the previous chapter, a topology conjugation (one-one continuous invertible mapping)maintains the topology thus maintains the qualitative stability. Thus the ``tweaking'' action should be a topology conjugation. In an alternative perspective, such operations form a group and permit a combination operation. 
+As stated in the previous chapter, a topological conjugation (one-one continuous invertible mapping)maintains the topology thus maintains the qualitative stability. Thus the ``tweaking'' action should be a topology conjugation. In an alternative perspective, such operations form a group and permit a combination operation. 
 
 According to Group Theory, this means if two tweaking actions preserve the stability separately, the combination of the two actions also preserve the stability.
 The space of topology conjugation is very large.
-Currently, \moit only investigates a subset called \emph{The Lie Transformation Group} that is supported by the biological research studies and can be calculated efficiently.
+Currently, \moit\ only investigates a subset called \emph{The Lie Transformation Group} that is supported by the biological research studies and can be calculated efficiently.
 The selected groups can be divided into orthodox subgroups, each of which is continuous and can be parameterized by one parameter.
 In \cms, such parameters are closely related to motion purposes such as walking speed or swimming direction.
 
 From the dynamic perspective, ``tweaking''  should also explore natural dynamics (passive based) as primitives.
-Methods adopted in \moit belong to  a popular passive-based control principle, which carries many names: Controlled Symmetry, Controlled Lagrange, or Potential Shaping.
+Methods adopted in \moit\ belong to  a popular passive-based control principle, which carries many names: Controlled Symmetry, Controlled Lagrange, or Potential Shaping.
 Different names reflect the fact that this method can be developed through different ways.
 Roughly speaking, the original dynamic system is transformed according to motion purpose, the kinematics is untouched and control is applied by modifying the potential energy.
 Such methods suit biological actuators like muscles and are also computationally efficient:
@@ -65,11 +65,11 @@ In Motor Invariant Theory, the quantitative properties that are  preserved durin
 
 
 
-For the more traditional geometrical perspective, ''Symmetry''  means a geometry is the same after certain transformation.
+For the more traditional geometrical perspective, ``Symmetry''  means a geometry is the same after certain transformation.
 For example, a square remains the same shape after  $90$ degree clockwise rotation, as shown in Figure~\ref{fig:symsquare}.
 \begin{figure}[!htbp]
   	\begin{center}
-   	\includegraphics[width=0.7\textwidth]{SquareRotate}
+   	\includegraphics[width=0.5\textwidth]{SquareRotate}
 	\end{center}
 	\caption{Symmetry of The Square}
     \label{fig:symsquare}
@@ -93,12 +93,12 @@ A group has the following properties.
 For the square example, all the actions preserve the square shape form the group $G$.
 $g_1$ is  $90$ degree clockwise rotation, identity element $e$ is the action of no rotation,
 $g_2=g_1*g_1$ is the action of rotating $90$ degree clockwise twice.
-Since $g_2$ preserve symmetry, $g_2$ is an element of the group $G$, 
+Since $g_2$ preserves symmetry, $g_2$ is an element of the group $G$, 
 
 
 From the algebraic perspective, ``Symmetry'' means the value of function is invariant after transformation.
 For a function $I(x)$,
-The group transformation is define by $\tilde{x}=g_a(x)$
+the group transformation is define by $\tilde{x}=g_a(x)$.
 By symmetry, we mean $I(x)=I(\tilde{x})$.
 $I(x)$ is an invariant function of group $G$.
 
@@ -119,15 +119,15 @@ In the algebraic sense,  invariant functions of group $G$ form a space, the inva
 \subsection{Lie Group and Differential Equation}
 Physically-based motions are usually described by differential equations, and motion is the solution of the equation.
 Same as the square shape, there are also symmetry groups that keep the differential equations invariant.
-An important property such a group  is that its elements can transform the solution of differential equations from one into another\citep{olver1986applications}.
-For \cms, this property  can potentially help reduce computational burden: new motions can be achieved through applying group transformation to the dynamic equations of motion primitives.
+An important property of such a group  is that its elements can transform the solution of differential equations from one into another\citep{olver1986applications}.
+For \cms, this property  can potentially help reduce computational burden: new motions can be achieved through applying  transformation to the dynamic equations of motion primitives.
 
 
 
 
-In Mathematical Theory, \emph{Lie Group} is continuous group, which is also a manifold.
+In mathematical theory, \emph{Lie Group} is continuous group, which is also a manifold.
 Since it is a manifold, coordinate system can be assigned to a Lie Group and each elements can be parameterized.
-For example,the symmetry rotation group of square is discrete,while symmetry group of circle is continuous.
+For example, the symmetry rotation group of square is discrete, while symmetry group of circle is continuous.
 For the symmetry group of the circle, each element can be parameterize by the the rotation angle.
 In the following discussions,  $\ep$ is the parameter of a element $g$ in the group $G$.
 
@@ -148,7 +148,7 @@ Solutions of the differential equation are the kernel of the invariant function 
  
  
 The group transformation will act on all the variables of the invariant function.
-Therefore $t$,$\state$ and $\dot{\state}$ are all transformed.
+Therefore $t$, $\state$ and $\dot{\state}$ are all transformed.
 \[
 (t,\state,\dot{\state}) \mapsto (\tilde{t},\tilde{\state},\dot{\tilde{\state}})
 \]
@@ -191,7 +191,7 @@ In the general cases, $g$ transforms Equation~\ref{eq:difforg} into Equation~\re
 \label{eq:trdiff}
 Tg(\dot{\state})=F(g(\state))
 \end{equation}
-if $g$ is symmetrical, Equation~\ref{eq:difforg} and Equation~\ref{eq:trdiff} are equivalent
+If $g$ is symmetrical, Equation~\ref{eq:difforg} and Equation~\ref{eq:trdiff} are equivalent
 
 
 
@@ -262,7 +262,7 @@ For a dynamic system, the symmetry group is quite restricted.
 Working out the symmetry group might be a non-trivial task.
 In real-life, animals usually exert control effort during motion adaptations.
 
-\moit theory proposes the idea that control effort can make a non symmetrical group become symmetrical, and introduce the \emph{Controlled Lagrange} technique.
+\moit\ theory proposes the idea that control effort can make a non symmetrical group become symmetrical, and introduce the \emph{Controlled Lagrange} technique.
 Based on biological research\citep{flash2007affine}, some simple groups are selected the symmetry group for motor control.
 When such group is applied to the dynamic system, control efforts are applied to ensure the symmetry.
 
@@ -290,8 +290,8 @@ Then symmetry control input $\ulocal$ can be calculated by comparing the two equ
 
 When the two equations are equivalent, their Lagrange $L$, Kinetic Energy $K$ and potential energy $V$ should be the same or of the same scale factor.
 Thus in theory, two strategies exist and will result in two different $\ulocal$:
-We can calibrate the kinetic by scaling and apply control effort to compensate the difference in potential energy, or calibrate potential energy and compensate the kinetic energy.
-\moit adopts the potential shaping strategy, for it is computational efficient and suitable for muscle like biological actuators.
+we can calibrate the kinetic by scaling and apply control effort to compensate the difference in potential energy, or calibrate potential energy and compensate the kinetic energy.
+\moit\ adopts the potential shaping strategy, for it is computational efficient and suitable for muscle like biological actuators.
 As a special case, potential energy shaping for homogeneous group or affine group promises a close form formulation.
 Several groups and their potential shaping control effort are as below:
 
@@ -316,7 +316,7 @@ From the geometrical perspective, offset actions will move the phase portrait ho
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{OffsetAction}
+      \includegraphics[width=0.5\textwidth]{OffsetAction}
     \caption{Offset Action}
     \label{fig:goff}
 \end{center}
@@ -328,7 +328,7 @@ the control input  can be worked out in the following closed form formula:
 \ulocal(q) = \frac{\partial}{\partial q} \left(V(q)-V(\tilde{q}) \right).
 \end{equation}
 
-Taking the mass spring system of Equation~\ref{eq:mass-spring} as an example,the transformed equation  and control equation are as follows.
+Taking the mass spring system of Equation~\ref{eq:mass-spring} as an example, the transformed equation  and control equation are as follows.
 \begin{align}
 \ddot{\tilde{q}}+\tilde{q}-\ep&=0 \nonumber \\
 \ddot{q}+q&=\ulocal \nonumber
@@ -344,8 +344,8 @@ By comparing the two equations, we work out that:
 \subsection*{Time Scaling}
 
 %g_st(q,dot{q})=(q,st*dot{q})
-Time scaling actions divide by the time variable by a factor $\ep$.
-The generalized coordinates are kept unchanged, and the generalized speed will be multiplied by $ep$.
+Time scaling actions divide the time variable by a factor $\ep$.
+The generalized coordinates are kept unchanged, and the generalized speed will be multiplied by $\ep$.
 For the action of parameter $\ep$, the action mapping is: 
 
 
@@ -359,10 +359,10 @@ The corresponding state transformation and lift action are
 T\gts(\dot{\state})&=[\ep \qd,\ep^2 \ddot{q}]\nonumber
 \end{align}
 
-From a geometrical perspective, time scaling will stretch the phase portrait vertically,as shown in Figure~\ref{fig:gts}
+From a geometrical perspective, time scaling will stretch the phase portrait vertically, as shown in Figure~\ref{fig:gts}.
 \begin{figure}[!htbp]
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{TimeScaling}
+    \includegraphics[width=0.5\textwidth]{TimeScaling}
 	 \caption{Time Scaling Action}
     \label{fig:gts}
 \end{center}
@@ -398,7 +398,7 @@ The scaling transformation has the following property:
 \[
 E(\tilde{\state})=\ep^2 E(\state)
 \]
-where$E$ is the energy, defined as $E(\state)=K+V$,  $K$ is the kinetic energy, and $V$ is the potential energy.
+where $E$ is the energy, defined as $E(\state)=K+V$,  $K$ is the kinetic energy, and $V$ is the potential energy.
 
 Further suppose that both the potential and kinetic energy are transformed uniformly.
 \begin{align}
@@ -413,7 +413,7 @@ $f(\ep)$ is a function of $\ep$, which is determined by the conservative field.
 Geometrically, an energy scaling action enlarges the phase portrait,as shown in Figure~\ref{fig:gen}.
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{EnergyScaling}
+      \includegraphics[width=0.5\textwidth]{EnergyScaling}
     \caption{Energy Scaling Action}
     \label{fig:gen}
 \end{center}
@@ -427,7 +427,7 @@ T\gen(\dot{\state})&=(\ep \dot{q},\frac{\ep^2}{f(\ep)}\qdd)
 
 $\ulocal$ can by worked out in the same manner as the above actions.
 Rather than write down the closed form formula, the thesis prefers an alternative process.
-Energy Scaling can be seen as a composed action of two actions: scaling the generalized coordinates and scaling the time variable.
+Energy Scaling can be seen as a combined action of two actions: scaling the generalized coordinates and scaling the time variable.
 Separate formula can be developed for two actions independently.
 This principle generates modular code structure.
 
@@ -460,7 +460,7 @@ The map is as follows
 For a system oscillating with limit cycle, time offset action will modify the phase, as shown in Figure~\ref{fig:gtoff}.
 \begin{figure}
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{TimeOffset}
+      \includegraphics[width=0.5\textwidth]{TimeOffset}
     \caption{Offset Action}
     \label{fig:gtoff}
 \end{center}
@@ -468,7 +468,7 @@ For a system oscillating with limit cycle, time offset action will modify the ph
 
 For a dynamic system, time offset is symmetrical for all dynamic system.
 At the first look, no control effort is needed.
-In practise, time offset is achieved by applying time scaling twice, after applying time scaling $\ep$ for sometime,and then apply then the inverse action(time scaling of $\frac{1}{\ep}$).
+In practise, time offset is achieved by applying time scaling twice, after applying time scaling $\ep$ for sometime, and then apply the inverse action(time scaling of $\frac{1}{\ep}$).
 
 
 \subsection{Action Selection}
@@ -509,10 +509,10 @@ the energy scaling transformation is
 For the bouncing ball system, the energy of a system can be characterized by the initial dropping height.
 
 Given the motion of a ball dropped at $5$ as shown in Figure~\ref{fig:bouncing5}, we set $\ep=\sqrt{2}$ and obtained the motion dropped from $10$ through the transformation as shown in Figure~\ref{fig:bouncing10}.
-Figure  motion dropped from $10$ is shown in Figure~\ref{fig:bouncing10sim}
+Figure  motion dropped from $10$ is shown in Figure~\ref{fig:bouncing10sim}.
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{BouncingBallPhasePlotuncontrolledDropAt5}
+      \includegraphics[width=0.5\textwidth]{BouncingBallPhasePlotuncontrolledDropAt5}
     \caption{Drop at 5}
     \label{fig:bouncing5}
 \end{center}
@@ -521,7 +521,7 @@ Figure  motion dropped from $10$ is shown in Figure~\ref{fig:bouncing10sim}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{BouncingBallPhasePlotuncontrolledDropAt10}
+      \includegraphics[width=0.5\textwidth]{BouncingBallPhasePlotuncontrolledDropAt10}
     \caption{Drop at 10 by transformation}
     \label{fig:bouncing10}
 \end{center}
@@ -529,7 +529,7 @@ Figure  motion dropped from $10$ is shown in Figure~\ref{fig:bouncing10sim}
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{BouncingBallPhasePlotuncontrolledDropAt10}
+      \includegraphics[width=0.5\textwidth]{BouncingBallPhasePlotuncontrolledDropAt10}
     \caption{The simulation result of dropped from 10}
     \label{fig:bouncing10sim}
 \end{center}

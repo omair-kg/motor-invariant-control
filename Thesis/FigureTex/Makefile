@@ -1,7 +1,7 @@
 # make -f Makefile_latex
 
 
-R=RimlessWheel
+R=overlay
 
 eps: 	$(R).tex
 	latex $(R).tex

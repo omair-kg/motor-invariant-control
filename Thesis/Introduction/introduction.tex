@@ -14,7 +14,7 @@ It is a topic of significant value in terms of theory and application.
 Besides major applications in the media industry, where both computer games and animation films depend heavily upon character motion for storytelling, 
 current research also has applications in user interface design, psychology, sport and medicine.
 
-The challenge of \cms  is not to make characters move, but  to make them lifelike. 
+The challenge of \cms\  is not to make characters move, but  to make them lifelike. 
 Underlying this challenge is the marvellous human ability of motion perception. 
 In real life, people's motion is very similar, yet individuals vary considerably.
 From the varieties in motion details, humans can infer mental states, health conditions or the surrounding environment.
@@ -46,7 +46,7 @@ In fact, such problems have already been identified by biological researchers.
 
 
 Motor Control and Motion Perception are close related.
-Difficulties in \cms reflect the inferiority of artificial control method.
+Difficulties in \cms\ reflect the inferiority of artificial control method.
 The peculiarity of motion perception and control suggests  biological systems may adopt a very different principle.
 To keep motions natural looking, it is worthwhile to synthesize motion following the biological motor control principle. 
 This thesis is founded on new ideas from biological research.
@@ -67,7 +67,7 @@ Animals are very different from artificial machines and such comparisons may ref
 \begin{itemize}
 \HiItem {Degrees of freedom ({\dof}s)}.
 From a mechanical perspective, animals have many more {\dof}s than their artificial counterparts.
-An artificial ship can be approximated by a simple rigid body; whereas the flexible verteb of a fish is made up of tens of {\dof}s.
+An artificial ship can be approximated by a simple rigid body; whereas the flexible spine of a fish is made up of tens of {\dof}s.
 
 
 In principle, the extra {\dof}s allows for more variations in adapting the environment. 
@@ -78,7 +78,7 @@ Even with nowadays computer, solving this dynamics directly would spend thousand
  
 \HiItem {Versatility}
 Most artificial machines are designed with a single purpose, while animals are capable  of unlimited tasks.
-Many biological functions which are often neglected by \cms research, such as feeding, breeding, language and vision, depend on motor control. 
+Many biological functions which are often neglected by \cms\ research, such as feeding, breeding, language and vision, depend on motor control. 
 Besides walking, swimming and many other styles of locomotion, we utilize many tools, such as cars, skates, bicycles and tennis rackets.
 
 Following traditional control methods, it seems that unlimited resources need to be  allocated for motor control, while biological research shows motor control requires very few mental resources.
@@ -126,14 +126,14 @@ The energy consumed by a walking human  is only $5\%$ of that for the world famo
 
 \section{Motor Invariant Theory}
 \subsection{Utilizing Natural Dynamics}
-Biological Motor Control has achieved a delicate balance of robustness, controllability and energy efficiency.
+Biological motor control has achieved a delicate balance of robustness, controllability and energy efficiency.
 The real-time performance may further suggest that the biological method  is simple and requires little computational load.
-These are the dreaming properties for \cms research and  the explanation that how biological systems achieve this  forms the genesis of this thesis.
+These are the dreaming properties for \cms\ research and  the explanation that how biological systems achieve this  forms the genesis of this thesis.
 
 
 
 At first, interactions between the body and environment pose  complex dynamic problems for motor control.
-In most \cms research studies, effects of natural dynamics are treated  perturbations for planning, and are cancelled by control effort.
+In most \cms\ research studies, effects of natural dynamics are treated  perturbations for planning, and are cancelled by control effort.
 However from an evolutionary perspective, the mechanical structures are a product of natural selection, which has evolved alongside with the environment for millions of years. 
 These structures are an advantage rather than a handicap. 
 Without the need to consider stability, energy efficiency and real-time constraints,   motion can be synthesized by natural dynamics without any control effort.
@@ -181,7 +181,7 @@ Instead, our control system utilizes successful experience in similar situations
 In dynamics, adapted motions are qualitatively the same with the motion primitives or templates, and there is a one-one mapping relationship between the adapted motion and the motion primitive.
 This similarity in dynamics is called topological conjugacy. 
 
-In dynamic \cms research, a motion is represented by  a curve  $x(t)$ parameterized by $t$.
+In dynamic \cms\ research, a motion is represented by  a curve  $x(t)$ parameterized by $t$.
 $x(t)$ is the solution to the equation (Equation ~\ref{eq:BodyEnvDym}) that describes the dynamics between the body and environment.
 \begin{equation}
 \dot{x}=F(x)
@@ -222,7 +222,7 @@ Then we have
 x'(t)=T^{-1}(x(t))
 \]
 
-By transformation, we obtained a new motion $x'(t)$ from $x(t)$.
+By transformation, we obtain a new motion $x'(t)$ from $x(t)$.
 
 
 
@@ -319,7 +319,7 @@ This conclusion applies to different ships since their dynamics are qualitativel
 
 \begin{figure}[!htbp]
   \begin{center}
-    \includegraphics{ShipExample}
+    \includegraphics[width=0.5\textwidth]{ShipExample}
     \caption{The Floating Ship Example}
     \label{fig:ShipFloating}
   \end{center}
@@ -358,21 +358,27 @@ For this example $u$ is $\tau_{u}$, which is $0$.
 \subsubsection*{Equilibrium Postures}
 A ship will only rest at the postures where $\tau_{g}+\tau_{b}+\tau_{u}=0$, which are called \emph{Equilibrium} Postures.
 The only two possible ones are shown in Figure ~\ref{fig:ShipEqulibriumStable} and Figure~\ref{fig:ShipEqulibriumUnstable}.
-\begin{figure}[!htbp]
-  \begin{center}
-     \includegraphics{leftPos}
-    \caption{The Stable Equilibrium Posture}
-    \label{fig:ShipEqulibriumStable}
-  \end{center}
+\begin{figure}[h]
+\begin{center}
+	\subfigure[The Stable Equilibrium Posture]
+	{
+	\includegraphics[width=0.45\textwidth]{leftPos}
+	\label{fig:ShipEqulibriumStable}
+	}
+	\subfigure[The Unstable Equilibrium Posture]
+	{
+	\includegraphics[width=0.45\textwidth]{rightPos}
+	\label{fig:ShipEqulibriumUnstable}
+	}
+	
+\end{center}
+\caption{The Equilibrium Postures}
+\label{fig:eqposture}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \begin{center}
-     \includegraphics{rightPos}
-    \caption{The Unstable Equilibrium Posture}
-    \label{fig:ShipEqulibriumUnstable}
-  \end{center}
-\end{figure}
+
+
+
 
 
 
@@ -382,24 +388,30 @@ On the phase plot, the motion of the ship is shown as a curve, which is called \
 
 The posture in Figure ~\ref{fig:ShipEqulibriumStable} is \emph{attractive} or \emph{stable}.
 If a small perturbation moves the ship away from the left posture, it will return to the equilibrium posture automatically as shown in Figure~\ref{fig:StablePosture}.
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics{stablePosition}
-    \caption{Phase Plot of the Stable Posture}
-    \label{fig:StablePosture}
-  \end{center}
-\end{figure}
+
 
 
 Whereas the  posture in Figure~\ref{fig:ShipEqulibriumUnstable} is \emph{repelling} or \emph{unstable}, if the ship is moved away from the equilibrium posture,  by natural dynamics, it will move away even further, as shown in Figure~\ref{fig:unStablePosture}.
 
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics{unstablePosition}
-    \caption{Phase Plot of the Unstable Posture}
-    \label{fig:unStablePosture}
-  \end{center}
+\begin{figure}[h]
+\begin{center}
+	\subfigure[The Stable Equilibrium Posture]
+	{
+	\includegraphics[width=0.45\textwidth]{stablePosition}
+	\label{fig:StablePosture}
+	}
+	\subfigure[The Unstable Equilibrium Posture]
+	{
+	\includegraphics[width=0.45\textwidth]{unstablePosition}
+	\label{fig:unStablePosture}
+	}	
+\end{center}
+\caption{Phase Plots of The Equilibrium Postures}
+\label{fig:eqposture}
 \end{figure}
+
+
+
 
 
 \subsubsection*{A Simple Task}
@@ -413,7 +425,7 @@ This property is determined by the qualitative structure design criterion which 
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.7\textwidth]{ShipGlobalFlow}
+   \includegraphics[width=0.5\textwidth]{ShipGlobalFlow}
    \caption{Global Properties of the Flows: All the curves start from the repelling posture~(Red) and end at the attractive one(Blue)}
    \label{fig:globalflow}
   \end{center}
@@ -441,8 +453,8 @@ When the variations among individuals or situations result in motion variations,
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics{topologyStructure}
-   \caption{the topology  the phase portraits of ship dynamic}
+   \includegraphics[width=0.5\textwidth]{topologyStructure}
+   \caption{the topology of the phase portraits of ship dynamic}
    \label{fig:topologyStructure}
   \end{center}
 \end{figure}
@@ -467,7 +479,7 @@ The compliant actuators of muscles work like springs, and rigid bones are modell
 
 \begin{figure}[!htbp]
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{MassSpring}
+    \includegraphics[width=0.5\textwidth]{MassSpring}
     \caption{the mass spring system}
     \label{fig:massspring}
   \end{center}
@@ -502,7 +514,7 @@ Figure~\ref{fig:massSpringPhasePlot} shows two flows passing through different s
 
 The mass spring system has some ``symmetrical properties''.
 To an intuitive eye, different flows share the same circle ``Shape''.
-Without solving the Equation~\ref{eq:mass-spring}, new flows~(solid ones) can be obtained by scaling the original~(red) flow.
+Without solving the Equation~\ref{eq:mass-spring}, new flows~(the solid one) can be obtained by scaling the original~(the dotted) flow.
 
 From a mechanical viewpoint, this is because the flows of a mass spring system preserve energy.
 To see this, we can define the energy function
@@ -531,7 +543,7 @@ If so, observed motions can be validated by checking them against our memorized 
 
 To make it better, it is even unnecessary to work out the transformation.
 In fact, it is enough just to check some property invariant under transformation.
-For the example of mass spring system , we can check the ``shape'' of the flow.
+For the example of mass spring system, we can check the ``shape'' of the flow.
 For a mechanical perspective, this means to check the energy preserving property.
 
  
@@ -539,7 +551,7 @@ The invariant properties like preserving energy or shape can be quantitatively m
 Since they are invariant only when flows move in a specific direction, they are called  \emph{Local Motor Invariant}. 
 
 
-\subsection{Rimless Wheel}
+\subsection{the Rimless Wheel}
 The third example is a mechanical system with a more complex structure, the rimless wheel.
 The complexity of the mechanical structure provides an opportunity to test various control ideas and compare them.
 
@@ -563,8 +575,9 @@ During the rolling phase, the rimless wheel works like a pendulum, the dynamics 
 \]
 When another spoke hits the ground, a strike happens. The impulse equation is
 \[
-\dot{\theta}=\cos(\alpha)\dot{\theta}
+\dot{\theta}^{+}=\cos(\alpha)\dot{\theta}^{-}
 \] 
+$+,-$ means after and before collision.
 
 Comparing with the mass spring system, the motion of a rimless wheel is more complex. 
 Depending on the initial condition, rimless wheel can roll uphill, roll downhill, stand with one spoke or stand with two spokes.
@@ -596,7 +609,7 @@ For the rimless wheel system, the angle $\alpha$ between spokes and the slope an
 By doing this, we can change the constant rolling speed of the rimless wheel.
 This will result in  a series of dynamic systems autonomous to the original one.
 By gradually changing the parameter, on the phase plot, the limit cycle changes its shape accordingly.
-The limit cycles of different mechanical parameters are shown in Figure~\ref{fig:morphyingrimlesss}
+The limit cycles of different mechanical parameters are shown in Figure~\ref{fig:morphyingrimlesss}.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -612,7 +625,7 @@ This is the qualitative approach; motion can be adapted by changing the paramete
 This method  requires no control energy input to maintain the new motion; it is energy efficient and easy to implement. 
 However, the relationship between system parameters and the deformation of the limit cycle is hard to find, which prevents applying this method for tasks that require precision. 
 
-For example, given a state on the state space, it is difficult to make limit cycle pass through the state by changing the parameters.
+For example, given a state on the state space, it is difficult to make the limit cycle pass through the state by changing the parameters.
 
 \subsubsection*{The Quantitative Approach}
 
@@ -622,9 +635,8 @@ For example, we apply control $u$ to the dynamic system, then the equation becom
 \ddot{\theta}=\frac{\gv}{L}\sin(\theta+\gamma)+u
 \]
 
-if we set $u = \ep\frac{\gv}{L}\sin(\theta+\gamma)$, where $\ep$ is a parameter,
-Then the rolling speed of the rimless wheel will be a parameter of $u$.
-Figure~\ref{fig:timescalingrimlesswheel} shows two limit cycles of different $\ep$ parameter on a phase plot.
+if we set $u = \ep\frac{\gv}{L}\sin(\theta+\gamma)$, where $\ep$ is a parameter, then the rolling speed of the rimless wheel will be a parameter of $u$.
+Figure~\ref{fig:timescalingrimlesswheel} shows limit cycles of different $\ep$ parameters on a phase plot.
 \begin{figure}[!htbp]
   \begin{center}
      \includegraphics[width=0.5\textwidth]{timescaling}
@@ -634,7 +646,7 @@ Figure~\ref{fig:timescalingrimlesswheel} shows two limit cycles of different $\e
 \end{figure}
 
  As shown in Figure~\ref{fig:timescalingrimlesswheel}, the limit cycle is stretched vertically.
-The relationship between $\ep$ and the rolling speed is simple, making this method computationally efficient and suitable for precise tasks. To make the limit cycle pass through a state $(\theta, \dot{\theta})$, if the state of same $\theta$ on the limit cycle is $ (\theta,\dot{\theta}’)$, then we have 
+The relationship between $\ep$ and the rolling speed is simple, making this method computationally efficient and suitable for precise tasks. To make the limit cycle pass through a state $(\theta, \dot{\theta})$, if the state of same $\theta$ on the limit cycle is $(\theta,\dot{\theta'})$, then we have 
 \[
 \ep= (\frac{\dot{\theta}}{\dot{\theta}'})^2-1
 \]
@@ -661,7 +673,7 @@ As further development, we propose this idea for motion control of dynamic chara
 
 \section{Contribution}
 
-Compared with current \cms methods, the new approach has several advantages:
+Compared with current \cms\ methods, the new approach has several advantages:
 \begin{enumerate}
 \HiItem {More Types of Adaptation.}
 Most dynamic methods only focus on generating responsive motions to dynamic perturbations.
@@ -670,7 +682,7 @@ Adaptations across different characters are treated as an independent research t
 The mathematical idea of topological conjugacy  incorporates both motion re-targeting and  perturbation responses  in a unified framework.
 Thus {\moit}\ is capable of more types of adaptation.
 \HiItem {Better Usability.}
-For many \cms methods, each \dof ~is controlled independently.
+For many \cms\ methods, each \dof ~is controlled independently.
 When modifying motions, the animator has to modify each \dof, which is tedious work.
 
 In {\moit}, adaptation is achieved by applying transformation.
@@ -704,7 +716,7 @@ The discovery and conclusion are more logical and complete.
 Besides pointing out a motion primitive, {\moit}\ also explains why certain motions become primitive, how many primitives exist, and how they are formed.
 
 
-\item Many biological research ideas like \cpg and invariant based perception are proposed empirically. 
+\item Many biological research ideas like \cpg\ and invariant based perception are proposed empirically. 
 For a complete theory, much necessary detailed information is still missing.
 As a contrast, {\moit}\ is based on rigid mathematical theory, for many biological ideas, {\moit}\ provides workable mathematical machinery.
 
@@ -726,7 +738,7 @@ In Chapter~\ref{chap:gi},  \emph{The Qualitative Dynamics Theory} is introduced 
 Biological based  methods for maintaining the global motor invariant are developed.
 
 Chapter~\ref{chap:li} focuses on the idea of Local Motor Invariant and Symmetry.
-Lie Group Theory is  introduced  to analyse the symmetrical properties in motion dynamics.
+Lie Group theory is  introduced  to analyse the symmetrical properties in motion dynamics.
 Symmetry Controllers are developed to provide necessary energy input for adapting motions.
  
 
@@ -743,7 +755,7 @@ The following chapter provides experimental verification.
 
 
 Chapter~\ref{chap:walk} focuses on the synthesizing adaptive motions for one primitive.
-Bipedal walking,  which is commonly observed but poses great challenges for current \cms research,is chosen as the example,.
+Bipedal walking,  which is commonly observed but poses great challenges for current \cms\ research,is chosen as the example,.
 Methods based on {\moit}\ successfully boost the stability and generate adaptive gaits, and further validation shows the synthesized gaits comply with natural observation. 
 
 In Chapter~\ref{chap:stance}, motion transition is discussed. 
