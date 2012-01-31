@@ -6,36 +6,34 @@ In the previous chapters, motions are dynamically synthesized for characters wit
 A question arises whether the  motor invariant theory(\moit) is applicable to characters with higher degrees of freedom.
 For walking and stance examples, high degree systems will incorporate the motions of the torso and arms.
 Also for snakes and fishes, synthesising motion for a flexible spine may also be  challenging.
-\moit provides a different perspective, and some of the challenges can be solved in a very different manner.
+\moit\ provides a different perspective, and some of the challenges can be solved in a very different manner.
 
 
 
 Redundant {\dof} is the key challenge in motion synthesis.
 From the theoretical perspective of \moit, redundant {\dof}s do not increase the computational burden exponentially.
-\moit explores the natural dynamics of the body and the redundant {\dof} can move passively.
-For the passive walker, all the \dof s are uncontrolled, increased {\dof} s will not increase controller burden.
-The computational burden of the neural oscillator remains constant during increase of {\dof} s in dynamic model.
-The computational burden for controlled symmetry is trivial and increased linearly with the number of {\dof} s, as long as the symbolic equations of dynamics is given.
+\moit\  explores the natural dynamics of the body and the redundant {\dof} can move passively.
+For the passive walker, all the \dof s are uncontrolled, increased {\dof}s will not increase controller burden.
+The computational burden of the neural oscillator remains constant during increase of {\dof}s in the dynamic model.
+The computational burden for controlled symmetry is trivial and increased linearly with the number of {\dof}s, as long as the symbolic equations of dynamics is given.
 
 
 However, the symmetrical controller requires symbolic expression of the dynamic systems, but with high dimensional systems, obtaining the symbolic expression is not a simple task. 
 This chapter focuses on techniques that avoid developing high {\dof} symbolic equations. Different strategies are developed to utilized low dimensional dynamic equations to simulate high dynamic systems.
 
 
-With high dimensional system,  the difficulties in applying \moit  come from  obtaining the symbolic equations.
-This chapter focuses on techniques that avoid developing high \dof symbolic equations.
-Different strategies are developed for different situations.
+
 
 \begin{itemize}
 \HiItem{Negligible {\dof}s}
 For characters with high {\dof}s, some {\dof}s can be simply neglected.
-\moit is based on two concepts, the qualitative property and symmetry actions.
+\moit\ is based on two concepts, the qualitative property and symmetry actions.
 \dof s can be neglected for two reasons:
-For some {\dof}s in some motion primitives, their motion is minor and has little effect on the system's dynamic property.
+first for some {\dof}s in some motion primitives, their motion is minor and has little effect on the system's dynamic property.
 For such {\dof}s, controller systems can be designed according to the simple model. 
 The high dimensional model can be used for simulation, but will not affect the burden of control calculation.
 
-For some other {\dof}s, their effects are equivalent to some group transformation.
+second for some other {\dof}s, their effects are equivalent to some group transformation.
 If a group action controller is developed, the effects of such {\dof}s can also be neglected.
 
 \HiItem{Mechanical Coupling}
@@ -51,10 +49,10 @@ In some cases, the motions of some {\dof}s are similar or mimic each other, the 
 Although biological mechanical structures have high degrees of freedom, many {\dof}s will not affect the topology or qualitative properties.
 For the walking example, \citet{Raibert1986} pointed out that walking is the same as a ball rolling down a slope while running is the same as a ball bouncing down a slope.
 In our research, a control strategy is developed based on the compass gait model, as shown in Figure~\ref{fig:compassgait}.
-The degree of knees~\ref{fig:passivekneewalker} and foot~\ref{fig:arcfoot} will have little effect on the qualitative properties.
+The degree of knees in Figure~\ref{fig:passivekneewalker} and foot in Figure~\ref{fig:arcfoot} will have little effect on the qualitative properties.
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{CompassGait}
+      \includegraphics[width=0.5\textwidth]{CompassGait}
     \caption{Compass Gait}
     \label{fig:compassgait}
 \end{center}
@@ -64,7 +62,7 @@ The degree of knees~\ref{fig:passivekneewalker} and foot~\ref{fig:arcfoot} will 
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{CompassGaitArcFoot}
+      \includegraphics[width=0.5\textwidth]{CompassGaitArcFoot}
     \caption{Arc Foot Walker}
     \label{fig:arcfoot}
 \end{center}
@@ -78,7 +76,7 @@ The degree of knees~\ref{fig:passivekneewalker} and foot~\ref{fig:arcfoot} will 
 Although the compass gait and arc foot model are different from  our walker with knees, the three models are all capable of passive walking and show limit cycles of similar shapes, as shown in Figure~\ref{fig:compassgaitlimitcycle} and Figure~\ref{fig:arcfootlimitcycle}.
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{compasGaitLimitCycle}
+      \includegraphics[width=0.5\textwidth]{compasGaitLimitCycle}
     \caption{the limit cycle of compass gait}
     \label{fig:compassgaitlimitcycle}
 \end{center}
@@ -86,7 +84,7 @@ Although the compass gait and arc foot model are different from  our walker with
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{arcfoot}
+      \includegraphics[width=0.5\textwidth]{arcfoot}
     \caption{the Limit Cycle of arc foot}
     \label{fig:arcfootlimitcycle}
 \end{center}
@@ -167,7 +165,7 @@ An illustrative example shows the sway motions in the coronal plane.
 
 \begin{figure}[!htbp]
   \begin{center}
-      \includegraphics[width=0.7\textwidth]{sway3D}
+      \includegraphics[width=0.5\textwidth]{sway3D}
     \caption{Sideway}
     \label{fig:sidesway}
 \end{center}
@@ -176,7 +174,7 @@ An illustrative example shows the sway motions in the coronal plane.
 As shown in Figure~\ref{fig:sidesway}, when the passive 2D walker walks on a terrain with a sway angle $\alpha$.
 The gravity force on the spaghetti plane is decreased.
 \[
-\gv'=\cos(\alpha)\gv)
+\gv'=\cos(\alpha)\gv
 \]
 where $\gv'$ is the projected gravity force on the spaghetti plane.
 By substituting the projected gravity in the dynamic equations, we have
@@ -188,7 +186,7 @@ The external force $N$ becomes $N'=cos(\alpha)N$
 
 This has the same effect as applying speed action of the parameter $\ep$, where $\ep^2-1=\cos(\alpha)$.
 The effects of sway motion on the 2D dynamics can be simulated by adjusting the speed action parameters $\ep$.
-For a walker with a speed action controller, the effects of this {\dof} can be totally compensated.
+For a walker with a speed action controller, this effect can be totally compensated.
 
 The sway motion on the coronal plane is not  based  on passive dynamics and unstable in nature\citep{kuo1999stabilization}.
 Great effort is executed at the ankle and waist for maintaining posture.
@@ -213,9 +211,10 @@ For the walker,  a turning means rotating the spaghetti plane, this can be achie
 \end{figure}
 
 
-As for the lateral motion, turning is not achieved by exploring  natural dynamics, but determined by the animator's purpose.
+The same as for the lateral motion, turning is not achieved by exploring  natural dynamics, but determined by the animator's purpose.
 The animator determines the turning angle and speed.
 As a simplification, during the turning, the dynamic equations of 2D walker remain the same.
+Turning gaits are shown in ~\ref{fig:walkturn}
 
 
 
@@ -260,7 +259,7 @@ As a simplification, during the turning, the dynamic equations of 2D walker rema
     \label{fig:walkturn}
 \end{center}
 \end{figure}
-Turning gaits are shown in ~\ref{fig:walkturn}
+
 
 
 
@@ -495,11 +494,11 @@ m_{tor}l_{tor}^{2}\ddot{q}_{tor}=gm_{tor}l_{tor}sin(q_{tor})-(m_{tor}l_{tor}Lcos
 \end{equation}
 
 by analysing the Equation~\ref{eq:torsodynamic},  torso motion is unstable in nature,  so control effort must be exerted to maintain its posture.
-Such a control task is trivial,  \pd controllers will work for maintaining stability, but the resulting swaying may not be natural looking..
+Such a control task is trivial,  \pd controllers will work for maintaining stability, but the resulting swaying may  be not natural looking.
 
 The control method adopted by this research is based on the controlled Lagrange method.
 Although an inverted pendulum is not stable, a pendulum is stable.
-Through shaping the potential energy by control effort, we  rotate the inverted pendulum to make it a pendulum.
+Through shaping the potential energy by control effort, we  turn the inverted pendulum into a pendulum.
 
 When the stable pendulum is coupled with the walking motion, stable entrainment happens, so the torso and walking motion coordinate naturally. 
 Figure ~\ref{fig:torsolegentrainment} shows the entrainment of the torso motion and walking, where the body sway and walking  are synchronized.
@@ -517,14 +516,14 @@ Figure ~\ref{fig:torsolegentrainment} shows the entrainment of the torso motion 
 Note that in real-life, the torso is closely related to the motion purpose and not governed by natural dynamic properties.
 For animation application,  it is unnecessary to control the upper body dynamically.
 We can use procedure or other ``IK'' methods to generate primary  motion of the upper body;
- walking dynamics perturbations are added for secondary motions.
+walking dynamics perturbations are added for secondary motions.
 The motion of arms can be incorporated by following the same principle, it is just another level of complexity.
 
 
 \section{Time Shift}
 
 For reptiles and fish, the main challenge rests in synthesizing the flexible spine which is composed of many {\dof}s.
-Such {\dof}s are similar and equally important, it is not appropriate to reduce any \dof through symmetry or mechanical coupling.
+Such {\dof}s are similar and equally important, it is not appropriate to reduce any \dof\  through symmetry or mechanical coupling.
 
 For such mechanical structures, an ad-hoc method is proposed.
 Each controller controls just one joint.
@@ -542,9 +541,9 @@ The differences  among the agents are modelled by different group actions.
 
 \subsection*{Fish Swimming}
 These ideas are applied to synthesising the fish swimming motion.
-In this application,the group action is the Time Shift.
+In this application, the group action is the Time Shift.
 The fish is made up of 8 links, and each {\dof} is controlled by a neural oscillator.
-The $8$ \cpg have the same parameters, but have different initial positions. 
+The $8$ \cpg\ have the same parameters, but have different initial positions. 
 Thus they have the same limit cycle, but different phases, as shown in Figure~\ref{fig:fishplot}
 
 
@@ -590,7 +589,7 @@ Figure~\ref{fig:fishswimturn} show the turning gait.
 
 \begin{figure}[!htbp]
 \begin{center}
-      \includegraphics[width=\textwidth]{SwimLine}
+      \includegraphics[width=0.7\textwidth]{SwimLine}
     \caption{Fish Swim}
     \label{fig:fishswimline}
 \end{center}
@@ -599,7 +598,7 @@ Figure~\ref{fig:fishswimturn} show the turning gait.
 
 \begin{figure}[!htbp]
 \begin{center}
-      \includegraphics[width=\textwidth]{SwimTurn}
+      \includegraphics[width=0.8\textwidth]{SwimTurn}
     \caption{Fish Swim Turn}
     \label{fig:fishswimturn}
 \end{center}

@@ -6,8 +6,8 @@
 \nomenclature[z25]{\cpg}{Central Pattern Generator}
 \nomenclature[z26]{\eph}{Equilibrium Point Hypothesis}
 \nomenclature[z27]{\umh}{Uncontrolled Manifold Hypothesis}
-Current \cms methods have different ideas of motor control.
-Many current \cms research studies adopted the control hierarchy of artificial systems.
+Current \cms\ methods have different ideas of motor control.
+Many current \cms\ research studies adopted the control hierarchy of artificial systems.
 No matter whether the control method is based on tracking or optimization, in such systems, there is a clear separation of planning and execution.
 The body is treated as the mechanical apparatus, which execute the motor commands from the neural system.
 
@@ -19,7 +19,7 @@ For biological systems,it is believed that the planning and execution can not be
 In the integrative theory framework, neural system plays a limited role in the planning.
 Body and environment are taken into consideration and motor control can only be understood from a broader perspective.
 
-In this chapter, limitations of current \cms methods are discussed first, which motivate this research.
+In this chapter, limitations of current \cms\ methods are discussed first, which motivate this research.
 New theory is developed because these limitations can not be overcome without breaking the current theoretical framework.
 Supporting biological research studies are discussed later,  which serve as justifications for \moit.
 
@@ -27,10 +27,10 @@ Supporting biological research studies are discussed later,  which serve as just
 
 \section{A survey of \cms}
 
-Many methods are developed in \cms, making it impossible to include all the work in this chapter.
-For a short discussion,\cms methods are categorized by the principal control model: memory based or computation based.
+Many methods are developed in {\cms}, making it impossible to include all the work in this chapter.
+For a short discussion, \cms\ methods are categorized by the principal control model: memory based or computation based.
 Memory based control ideas are the foundation of the  many data-driven techniques;
-while t procedural methods are computation based.
+while procedural methods are computation based.
 Pros and cons of methods are discussed category by category.
 
 \subsection{Data Driven}
@@ -39,7 +39,7 @@ In practice, motion data are segmented into short time clips.
 An animation is synthesized by selecting motion clips and connecting them together\citep{Parent2002,kovar2003flexible}.
 
 Like other example based methods, data driven methods can generate good results if similar motion clips are available, but difficult to generate  adaptation or novel motion, either for a different character or scenario. 
-The  ``re-targeting'' problem is a big challenge in \cms research.
+The  ``re-targeting'' problem is a big challenge in \cms\ research.
 
 In practise, motion versatility requires a large data base.
 As a consequence data management becomes another problem. 
@@ -54,21 +54,21 @@ For physics based \cms, different procedural approaches have been proposed.
 
 
 
-Some early research applied classical \pd controller for dynamic motion synthesis \citep{Raibert1991}.
+Some early research applied classical \pd\ controller for dynamic motion synthesis \citep{Raibert1991}.
 Later research \citep{Hodgins1995} applied the same method for different tasks like running, bicycling, vaulting and balancing. 
-For high dimensional characters, \pd controllers need to  track predefined motion curves\citep{Yin2007}.
+For high dimensional characters, \pd\ controllers need to  track predefined motion curves\citep{Yin2007}.
 
-\pd controller is shown in Equation~\ref{eq:pdcontrol}.
+A \pd\ controller is shown in Equation~\ref{eq:pdcontrol}.
 \begin{equation}
 \label{eq:pdcontrol}
 u=K(q -q_d)+d\qd
 \end{equation}
 where $u$ is the control effort, $K$ is the stiffness, $q_d$ is the desired or reference position, and $d$ is the damping efficient.
-\pd based methods can run in real-time and generate adaptive responses to small perturbation.
+\pd\ based methods can run in real-time and generate adaptive responses to small perturbation.
 But large perturbation responses or deviations from the reference trajectory are difficult to achieve.
 
 
-Most \pd based controllers use motion capture data as references.
+Most \pd\ based controllers use motion capture data as references.
 As an alternative, \citet{Laszlo1996} introduced Limit Cycle (\lc) as tracking reference for periodic locomotion animation. 
 Current research studies\citep{Coros2009,coros2010generalized,Laszlo1996} track fixed limit cycle.
 Such methods share many characteristics with \pd, which promise real-time speed, but lack adaptation ability and results are stereotype looking.
@@ -81,7 +81,7 @@ Such methods share many characteristics with \pd, which promise real-time speed,
 
 \HiItem{Optimization.}
 The redundant \dof s make motion planning non-deterministic.
-Optimization has been introduced to \cms for this problem.
+Optimization has been introduced to \cms\ for this problem.
 The idea is to choose the ``best'' one among all the possible motions.
 
 Many merits have been proposed for \cms.
@@ -90,7 +90,7 @@ For dynamic methods, a reasonable merit is the energy cost~$E$.
  \textbf{E}=\int_{t_0}^{t_1}f_{a}(t)^2dt
 \end{equation}
 where $f_{a}$ is the active force generated by actuators like motors or muscles. 
-This is introduced to \cms research as the influential Spacetime Constraints\citep{Witkin1988}. 
+This is introduced to \cms\ research as the influential Spacetime Constraints\citep{Witkin1988}. 
 It is based on the hypothesis that the natural looking trajectory costs minimum energy,
 which closely relates to the idea of Darwin's Theory of Evolution. 
 
@@ -130,7 +130,7 @@ Also new research propose use simplified dynamic models for optimization plannin
 
 
 These attempts may remove some limitations of tracking or optimization, and make them feasible for certain applications.
-But \cms problems can not be solved completely in this manner.
+But \cms\ problems can not be solved completely in this manner.
 Learning based methods are complex and  sensitive to training examples, the stability of such controllers can not be strictly proved.
 In addition,  offline optimization  does not reduce the computational burden in nature.
 
@@ -138,9 +138,9 @@ In addition,  offline optimization  does not reduce the computational burden in 
 
 
 \subsection{Biological Constraints}
-The problems of \cms has also been spotted earlier in biological motor control research.
+The problems of \cms\ has also been spotted earlier in biological motor control research.
 Biological researchers have dropped  tradition artificial control ideas long ago, because they  violates the biological constraints.
-Although the mechanism behind information processing remains obscure, some characteristics of biological information processing are well recognized,  making  \cms methods above questionable\citep{Glynn2003}. 
+Although the mechanism behind information processing remains obscure, some characteristics of biological information processing are well recognized,  making  \cms\ methods above questionable\citep{Glynn2003}. 
   
 \begin{itemize}
 \HiItem{Sensing and Control Limitations:}
@@ -198,7 +198,7 @@ Several theories are proposed for the neural control mechanism.
 
 Experiments have shown that even under the same conditions, the motions still vary. 
 Some \dof s are not controlled and freely influenced by the environment. 
-For this phenomenon, \emph{Uncontrolled Manifold Hypothesis(\umh)}\citep{latash2008neurophysiological} proposes that only the final results is the concern of motor control ,trajectory is not..
+For this phenomenon, \emph{Uncontrolled Manifold Hypothesis(\umh)}\citep{latash2008neurophysiological} proposes that only the final results is the concern of motor control, trajectory is not.
 
 
 \emph{Equilibrium Point Hypothesis(\eph)}\citep{feldman1986ome} explained below can be seen as a specification of \umh.
@@ -208,11 +208,11 @@ For a dynamic system
 \dot{\state}=F(\state)
 \]
 the equilibrium points $\state_{e}$ satisfies the condition $F(\state_{e})=0$.
-\eph suggests the neural system does not control motion trajectory, but the position of the equilibrium point.
+\eph\ suggests the neural system does not control motion trajectory, but the position of the equilibrium point.
 
 
 
-\emph{Impedance Control} \citep{hogan1985ica} refines the idea of \eph by providing a model for effects of the extra \dof s as explained below. 
+\emph{Impedance Control} \citep{hogan1985ica} refines the idea of \eph\ by providing a model for effects of the extra \dof s as explained below. 
 At an equilibrium point $\state_{e}$,
 \[
 F(\state_{e})=0 
@@ -270,9 +270,9 @@ A very important discovery is the bipedal walking can happen without any control
 Under specific conditions, a mechanic structure can walk down a slope passively, with natural looking gaits.
 Further research have shown that such a mechanical system can walk on a plane with a very simple control strategy\citep{Collins2005}.
 
-\HiItem{\cpg and entrainment}
-The \cpg based entrainment is applied for robotic research\citep{Williamson1999a}, the found results show the \cpg will boost the system stability and can maintain motion in unpredictable situations.
-\citet{fukuoka2003adaptive} has applied \cpg for quadrupedal walking.
+\HiItem{\cpg\ and entrainment}
+The \cpg\ based entrainment is applied for robotic research\citep{Williamson1999a}, the found results show the \cpg\ will boost the system stability and can maintain motion in unpredictable situations.
+\citet{fukuoka2003adaptive} has applied \cpg\ for quadrupedal walking.
 
 \HiItem{Passive based Control.}
 The control and mechanics community also starts thinking about passive based control methods that utilize the natural dynamics.
@@ -281,20 +281,20 @@ Controlled Lagrange \citep{bloch2000controlled,bloch2001controlled,bloch2000pote
 
 \section{Placement and Contrasts}
 New biological theories are the foundational idea of \moit.
-The contribution of \moit is a new mathematical language and workable algorithms for the biological ideas.
+The contribution of \moit\ is a new mathematical language and workable algorithms for the biological ideas.
 
-\moit introduces topological conjugacy to model adaptations,   and unifies different ideas from a new  perspective.
-The principle of \eph and Impedance Control are generalized as attractor and attraction control.
+\moit\ introduces topological conjugacy to model adaptations,   and unifies different ideas from a new  perspective.
+The principle of \eph\ and Impedance Control are generalized as attractor and attraction control.
 Also a new important property of  motion primitives is proposed, the \emph{structural stability}.
 
 
-\cpg comes from the research of spinal cord, which models the low level control; while the transformation idea comes from research of the cortex, which is a model for high level control.
-At first sight, Entrainment of \cpg and Group Transformation seem very different in principle , but  in \moit, both control principles maintain the qualitative property of natural dynamics.
+\cpg\ comes from the research of spinal cord, which models the low level control; while the transformation idea comes from research of the cortex, which is a model for high level control.
+At first sight, Entrainment of \cpg\ and Group Transformation seem very different in principle , but  in \moit, both control principles maintain the qualitative property of natural dynamics.
 Such unification implies a new control hierarchy framework and has a good biological meaning: 
-The low level system utilizes some robust and qualitative measures like entrainment or \cpg to boost the stability of motion;
+The low level system utilizes some robust and qualitative measures like entrainment or \cpg\ to boost the stability of motion;
 while high level control is quantitative and  precise, which adapts stable motion for specific purpose.
 
-As a straightforward extension, \moit also provides a theory for solving the dynamic problem during motion transition.
+As a straightforward extension, \moit\ also provides a theory for solving the dynamic problem during motion transition.
 
 
  

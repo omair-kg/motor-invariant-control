@@ -14,7 +14,7 @@ For physics based methods, the planning and inverse dynamic problems are very ch
 Optimization or Data Driven based methods are proposed, but such methods often require prohibitive computational time or extensive motion data that easily runs out of memory.
 
 Taking a different perspective, the underlying question of motor synthesis research is how animals move in a complex and variable environment. This topic is more valuable and interesting, and,  in fact, attracts even more research beyond the computer graphics community. 
-Biological and robotic researcher investigated  motor control from a very different perspective, and discovered some more properties which may be more crucial for understanding animal motions than visual properties that are  the  main concern of graphic researchers. 
+Biological and robotic researcher investigated  motor control from a very different perspective, and discovered some more properties which may be more crucial for understanding animal motions than the visual properties that are  the  main concern of graphic researchers. 
 They have identified the limited neural activity, stability and energy efficiency of motor control.
 
 The current idea from biological science and robotic engineering experience rejects the popular ideas of graphic researchers, because the sensing, computation and actuation systems of real animals are not suitable for optimization or database management. 
@@ -26,12 +26,11 @@ The new idea is that in fact most of the motion problems have already been solve
 Evolution has equipped animals with very handy mechanical apparatus, so that many motion tasks can be accomplished without any effort. 
 To meet a specific purpose, animals only need to modify basic motion behaviours in a clever way.
 
-These ideas inspired this research, to develop animation methods considering of the biological facts. 
+These ideas inspired this research to develop animation methods considering of the biological facts. 
 The belief is that if our animation methods follow the biological principle, potentially our characters in the virtual world will move and react in a more natural manner. Such a goal has been partly achieved in this research.  
 In addition, more valuable results arise from this process. 
 To develop simulation programs, intuitive biological ideas are tested for their computational efficiency and logical soundness. 
 As a consequence, a new mathematical interpretation and many algorithms are proposed in this research. 
-The new idea proposes more detailed information about the motor control process. 
 These new ideas are summarized as the Motor Invariant Theory. The new theory is more detailed and accurate compared with current biological ideas, and is applicable to controlling real robotics. 
 If it can be proved by further biological research and experiment, this theory may have significant meaning.
 
@@ -58,7 +57,6 @@ Given that the attractors are the starting point for motion planning, the follow
 During this process, the challenge is that stability must be maintained, energy cost must be minimized and the computation should not last long. 
 Optimization based methods are not suitable.  
 Also the tracking controllers are not appropriate for motor control, because motions vary greatly.
-People walk with different gaits in different situations. 
 The idea of local stability control that constrains the motion within a small error range from the reference will make motion lack variation.  Motor Invariant Theory proposes that the stability property should be controlled qualitatively. 
 Large deviations from the reference should be allowed while stability is controlled. 
 In the geometrical perspective, this means the shape and position of the attractor does not matter, the controller only needs to maintain the attractor and the current state within the basin of attraction. 
@@ -66,9 +64,10 @@ This idea is modelled by the mathematical language of topology.
 Maintaining the attractor without considering the shape and position means  the topology remained the same. 
 In motor invariant theory, changing the shape and position of attractors is not only allowed but utilized as a powerful tool.  
 The idea of changing the shape and position of the attractors not only generates adaptive motions, but also promises stability and energy efficiency and computation efficiency. 
+
 Two methods have been developed following this principle. 
 The first idea is entrainment. 
-This idea applies to almost all the periodic system. 
+This idea applies to almost all periodic systems. 
 For entrainment systems, the periodic behaviour will be enhanced and perturbations are rejected. 
 From the geometrical perspective, the entrainment will maintain the topology of limit cycle and enlarge the basin of attraction. 
 In addition, the idea of entrainment is well supported by biological research.  
@@ -83,7 +82,7 @@ It is easy to prove that a Lie group transformation will not alter the topology,
 This provides animators with a direct method for modifying the motion without concerns about stability.  
 Also this method is easy to use. 
 Because Lie group transformation can be parameterized with a few parameters. 
-Animators can modify motions by specifying very few parameters of Lie group, instead of each \dof of the character. 
+Animators can modify motions by specifying very few parameters of Lie group, instead of each \dof\ of the character. 
 As examples, three Lie groups are developed, the offset group which  changes the locator positions, which changes the direction of motion; the time scaling group which modifies the speed of motion, and also the energy scaling group which modifies the energy of motion. With such tools, given a motion primitive, animators are allowed to modify the position, speed and amplitude of motion, without worry about the stability. 
 As for the computation cost, this research found that for rigid body systems, control input of each group element has a close form formula, and the computational cost is trivial to compute. 
 The idea of Lie Group is also supported by biological research, which found that the motion trajectory has many transformation invariant properties.
@@ -101,7 +100,7 @@ This shows how motor invariant theory can be easily extended to explain more nat
 
 Such methods have been applied to control various mechanical systems and characters. 
 The bouncing ball example shows how the entrainment forms an attractive limit cycle and how group action changes the shape. 
-In this process the bouncing height is maintained and can be justified against many perturbations. 
+In this process the bouncing height is maintained and can be stabilized against many perturbations. 
 Another example is bipedal walking.  
 Although bipedal walking seems difficult to control,  it can happen naturally because a limit cycle exists.
 With the entrainment method, the periodic behaviour is enhanced and the basin of attraction is enlarged.  
@@ -113,8 +112,8 @@ Also the transitional motion of walking and balance can be synthesized with an e
 
 Such simulation results are compared with real life data and they comply with the observed facts. 
 
-This research provides an answer to the way animals achieve computational efficiency, energy efficiency and stability against various perturbations, Motor Invariant Theory proposes a feasible answer.
- For animation researchers, motor invariant theory proposes a method that generates adaptive and natural looking motions in a computationally efficient and reliable way.
+This research provides an answer to the way animals achieve computational efficiency, energy efficiency and stability against various perturbations.
+For animation researchers, motor invariant theory proposes a method that generates adaptive and natural looking motions in a computationally efficient and reliable way.
 
 But as a new theory, there are still many unanswered questions. 
 Finding the attractors in a high dimension dynamic system is not an easy task. 
@@ -134,12 +133,12 @@ Nature seems to outsmart us. Even though we have learned a lot from nature,  we 
 
 
 \section{Further Work}
-Motor Invariant Theory is not an improvement on existing \cms techniques, it is a different paradigm.
+Motor Invariant Theory is not an improvement on existing \cms\ techniques, it is a different paradigm.
 This thesis does not explore the full implication and potential of this new theory.
 There is room for improvement, new techniques to be developed and even new questions to be answered.
-This section summarizes several potential topics that may interest computer graphic  or biological research communities.
+This section lists several potential topics that may interest computer graphic  or biological research communities.
 
-\subsection{Stable Templates Of Motion Primitives}
+\subsection{Stable Templates of Motion Primitives}
 
 This research  started with a unstable system,  where stability is enhanced by adding control effort.
 Motor control is a complex task. 
@@ -221,16 +220,16 @@ Potentially, this method may retain the motion details and involves little compu
 
 
 \subsection{Muscle Actuation}
-In the thesis, control effort is applied directly to each \dof of the mechanical system.
+In the thesis, control effort is applied directly to each \dof\ of the mechanical system.
 In biological research, this process is not so direct.
 The neural system generates some chemicals which affect the material properties of muscles, and force is generated as an indirect side effect.
 
 
 The question of muscle actuation is untouched in this research,
-but with further thought, \moit could also provide an alternative idea of muscle action.
+but with further thought, \moit\ could also provide an alternative idea of muscle action.
 If transformation is the reason for applying control effort, the actuation of muscles can be calculated directly from the transformation, without considering the force generated.
 From this perspective, muscle actuation can be easier than calculating the forces.
-
+The reason is transformation can be achieved by two methods, either control effort or by changing the system parameters.
 
 For the simple  mass spring system,
 offset can be implemented by changing the rest length parameter $d$.
@@ -238,7 +237,7 @@ Speed action can be implemented by changing the stiffness $K$.
 and energy scaling can be achieved by adjusting the stiffness $K$ and then restoring it.
  
 
-The reason is transformation can be achieved by two methods, either control effort or by changing the system parameters.
+
 
 For biological systems, the method of changing parameters  may be better as it will help motor control system get rid of the necessary feedback and computation. 
 In fact most control effort in the thesis is potential energy shaping, which only involves  modifying the potential energy.
@@ -264,45 +263,13 @@ Based on the idea of symmetry, neural system may store some experience and the s
 Our brain may verify dynamics by transforming our experience to match our observation.
 
 
-We are still not sure which method is better, but for our brain, both methods are more practical than forming a symbolic equation solving the differential equations numerically.
+We are still not sure which method is better, but for our brain, both methods are more practical than forming a symbolic equation solving it numerically.
 Maybe a new dynamic simulator can be designed to test this hypothesis.
 
 A dynamic simulator can be built upon the topology and symmetry property.
 Animators can animate by specifying the attractor and the transformation being  applied.
 If the hypothesis is true, even though the method will generate physically inaccurate results, the audience will not notice it.
 
-\subsection{Rethink about the uncanny valley}
-In \cms research, uncanny valley is a challenging phenomenon of perception at the  central. 
-As shown in Figure~\ref{fig:uncannyValley},when the characters  become more and more realistic, there is a big drop in the perception of likeness.
-Only over the valley, perception likeness starts to increase;
-Currently, little is known about overcoming the phenomenon,
-mainly because the mechanism behind such phenomenon is unclear.
-
-At the end of the the thesis, a conjecture is proposed by extending the idea of motor invariant theory.
-
-
-\begin{figure}[!htbp]
-  \begin{center}
-      \includegraphics[width=0.5\textwidth]{Mori_Uncanny_Valley}
-    \caption{Uncanny Valley}
-    \label{fig:uncannyValley}
-\end{center}
-\end{figure}
-
-The reason behind the uncanny valley is a  a switch of perception mechanism.
-For the unfamiliar characters, the perception mechanism is based on analogy,
-where the the identification of qualitative properties plays the major role.
-As long as the qualitative properties is the the same with our experience, we may accept characters as ``believable''.
-In this situation we are checking the Global Motor Invariant.
-
-When the object becomes more familiar, it will trigger our experience memory.
-Details are utilized to check the observation against memory,
-which closely relate to the idea of Local Motor Invariant.
-
-
-A object that has desired qualitative property may not have the quantitative details for quantitative perception mechanism.
-When the switch of mechanism results in a drop in likeness.
-This proposal is bold and early, but might be a worthwhile topic for further biological and physiological research.
 
 
 
